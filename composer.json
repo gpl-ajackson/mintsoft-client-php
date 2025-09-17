@@ -1,5 +1,5 @@
 {
-    "name": "gpl-ajackson/mintsoft-php-client",
+    "name": "gpl-ajackson/mintsoft-client-php",
     "description": "A swagger generated PHP client for Mintsoft.",
     "keywords": [
         "swagger",
