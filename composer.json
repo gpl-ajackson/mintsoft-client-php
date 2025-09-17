@@ -1,15 +1,20 @@
 {
-    "name": "GIT_USER_ID/GIT_REPO_ID",
-    "description": "",
+    "name": "gpl-ajackson/mintsoft-php-client",
+    "description": "A swagger generated PHP client for Mintsoft.",
     "keywords": [
         "swagger",
         "php",
         "sdk",
-        "api"
+        "api",
+        "mintsoft"
     ],
-    "homepage": "http://swagger.io",
-    "license": "proprietary",
+    "homepage": "https://api.minstoft.com/v1/docs/",
+    "license": "MIT",
     "authors": [
+        {
+            "name": "Ash Jackson",
+            "homepage": "https://github.com/gpl-ajackson"
+        },
         {
             "name": "Swagger and contributors",
             "homepage": "https://github.com/swagger-api/swagger-codegen"
