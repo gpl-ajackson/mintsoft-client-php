@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\mintsoft-php;
+namespace Swagger\Client\Mintsoft;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;

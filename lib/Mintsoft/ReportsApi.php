@@ -1,6 +1,6 @@
 <?php
 /**
- * AuthApi
+ * ReportsApi
  * PHP version 5
  *
  * @category Class
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\mintsoft-php;
+namespace Swagger\Client\Mintsoft;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -40,14 +40,14 @@ use Swagger\Client\HeaderSelector;
 use Swagger\Client\ObjectSerializer;
 
 /**
- * AuthApi Class Doc Comment
+ * ReportsApi Class Doc Comment
  *
  * @category Class
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class AuthApi
+class ReportsApi
 {
     /**
      * @var ClientInterface
@@ -88,36 +88,45 @@ class AuthApi
     }
 
     /**
-     * Operation authPost
+     * Operation reportsCourierDespatchReport
      *
-     * Authenticate to get an API Key.
+     * Courier Despatch Report
      *
-     * @param  \Swagger\Client\Model\MintsoftAPICommonClassesMintsoftAuthRequest $request request (required)
+     * @param  \DateTime $despatch_date_start Despatch Start Date (required)
+     * @param  \DateTime $despatch_date_end Despatch End Date (required)
+     * @param  int $courier_id Optional - Filter the results by Courier (optional)
+     * @param  int $warehouse_id Optional - Filter the results by Warehouse (optional)
+     * @param  bool $breakdown_by_country Optional - Breakdown the results on Per Country Basis (optional)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return void
+     * @return \Swagger\Client\Model\ToolkitDataClassesReportsCourierDespatchReportLine[]
      */
-    public function authPost($request)
+    public function reportsCourierDespatchReport($despatch_date_start, $despatch_date_end, $courier_id = null, $warehouse_id = null, $breakdown_by_country = null)
     {
-        $this->authPostWithHttpInfo($request);
+        list($response) = $this->reportsCourierDespatchReportWithHttpInfo($despatch_date_start, $despatch_date_end, $courier_id, $warehouse_id, $breakdown_by_country);
+        return $response;
     }
 
     /**
-     * Operation authPostWithHttpInfo
+     * Operation reportsCourierDespatchReportWithHttpInfo
      *
-     * Authenticate to get an API Key.
+     * Courier Despatch Report
      *
-     * @param  \Swagger\Client\Model\MintsoftAPICommonClassesMintsoftAuthRequest $request (required)
+     * @param  \DateTime $despatch_date_start Despatch Start Date (required)
+     * @param  \DateTime $despatch_date_end Despatch End Date (required)
+     * @param  int $courier_id Optional - Filter the results by Courier (optional)
+     * @param  int $warehouse_id Optional - Filter the results by Warehouse (optional)
+     * @param  bool $breakdown_by_country Optional - Breakdown the results on Per Country Basis (optional)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\ToolkitDataClassesReportsCourierDespatchReportLine[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function authPostWithHttpInfo($request)
+    public function reportsCourierDespatchReportWithHttpInfo($despatch_date_start, $despatch_date_end, $courier_id = null, $warehouse_id = null, $breakdown_by_country = null)
     {
-        $returnType = '';
-        $request = $this->authPostRequest($request);
+        $returnType = '\Swagger\Client\Model\ToolkitDataClassesReportsCourierDespatchReportLine[]';
+        $request = $this->reportsCourierDespatchReportRequest($despatch_date_start, $despatch_date_end, $courier_id, $warehouse_id, $breakdown_by_country);
 
         try {
             $options = $this->createHttpClientOption();
@@ -147,28 +156,54 @@ class AuthApi
                 );
             }
 
-            return [null, $statusCode, $response->getHeaders()];
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = $responseBody->getContents();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Swagger\Client\Model\ToolkitDataClassesReportsCourierDespatchReportLine[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
             }
             throw $e;
         }
     }
 
     /**
-     * Operation authPostAsync
+     * Operation reportsCourierDespatchReportAsync
      *
-     * Authenticate to get an API Key.
+     * Courier Despatch Report
      *
-     * @param  \Swagger\Client\Model\MintsoftAPICommonClassesMintsoftAuthRequest $request (required)
+     * @param  \DateTime $despatch_date_start Despatch Start Date (required)
+     * @param  \DateTime $despatch_date_end Despatch End Date (required)
+     * @param  int $courier_id Optional - Filter the results by Courier (optional)
+     * @param  int $warehouse_id Optional - Filter the results by Warehouse (optional)
+     * @param  bool $breakdown_by_country Optional - Breakdown the results on Per Country Basis (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function authPostAsync($request)
+    public function reportsCourierDespatchReportAsync($despatch_date_start, $despatch_date_end, $courier_id = null, $warehouse_id = null, $breakdown_by_country = null)
     {
-        return $this->authPostAsyncWithHttpInfo($request)
+        return $this->reportsCourierDespatchReportAsyncWithHttpInfo($despatch_date_start, $despatch_date_end, $courier_id, $warehouse_id, $breakdown_by_country)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -177,25 +212,43 @@ class AuthApi
     }
 
     /**
-     * Operation authPostAsyncWithHttpInfo
+     * Operation reportsCourierDespatchReportAsyncWithHttpInfo
      *
-     * Authenticate to get an API Key.
+     * Courier Despatch Report
      *
-     * @param  \Swagger\Client\Model\MintsoftAPICommonClassesMintsoftAuthRequest $request (required)
+     * @param  \DateTime $despatch_date_start Despatch Start Date (required)
+     * @param  \DateTime $despatch_date_end Despatch End Date (required)
+     * @param  int $courier_id Optional - Filter the results by Courier (optional)
+     * @param  int $warehouse_id Optional - Filter the results by Warehouse (optional)
+     * @param  bool $breakdown_by_country Optional - Breakdown the results on Per Country Basis (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function authPostAsyncWithHttpInfo($request)
+    public function reportsCourierDespatchReportAsyncWithHttpInfo($despatch_date_start, $despatch_date_end, $courier_id = null, $warehouse_id = null, $breakdown_by_country = null)
     {
-        $returnType = '';
-        $request = $this->authPostRequest($request);
+        $returnType = '\Swagger\Client\Model\ToolkitDataClassesReportsCourierDespatchReportLine[]';
+        $request = $this->reportsCourierDespatchReportRequest($despatch_date_start, $despatch_date_end, $courier_id, $warehouse_id, $breakdown_by_country);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
-                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = $responseBody->getContents();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 },
                 function ($exception) {
                     $response = $exception->getResponse();
@@ -215,36 +268,63 @@ class AuthApi
     }
 
     /**
-     * Create request for operation 'authPost'
+     * Create request for operation 'reportsCourierDespatchReport'
      *
-     * @param  \Swagger\Client\Model\MintsoftAPICommonClassesMintsoftAuthRequest $request (required)
+     * @param  \DateTime $despatch_date_start Despatch Start Date (required)
+     * @param  \DateTime $despatch_date_end Despatch End Date (required)
+     * @param  int $courier_id Optional - Filter the results by Courier (optional)
+     * @param  int $warehouse_id Optional - Filter the results by Warehouse (optional)
+     * @param  bool $breakdown_by_country Optional - Breakdown the results on Per Country Basis (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function authPostRequest($request)
+    protected function reportsCourierDespatchReportRequest($despatch_date_start, $despatch_date_end, $courier_id = null, $warehouse_id = null, $breakdown_by_country = null)
     {
-        // verify the required parameter 'request' is set
-        if ($request === null || (is_array($request) && count($request) === 0)) {
+        // verify the required parameter 'despatch_date_start' is set
+        if ($despatch_date_start === null || (is_array($despatch_date_start) && count($despatch_date_start) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $request when calling authPost'
+                'Missing the required parameter $despatch_date_start when calling reportsCourierDespatchReport'
+            );
+        }
+        // verify the required parameter 'despatch_date_end' is set
+        if ($despatch_date_end === null || (is_array($despatch_date_end) && count($despatch_date_end) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $despatch_date_end when calling reportsCourierDespatchReport'
             );
         }
 
-        $resourcePath = '/api/Auth';
+        $resourcePath = '/api/Reports/CourierDespatchReport';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
         $httpBody = '';
         $multipart = false;
 
+        // query params
+        if ($despatch_date_start !== null) {
+            $queryParams['DespatchDateStart'] = ObjectSerializer::toQueryValue($despatch_date_start);
+        }
+        // query params
+        if ($despatch_date_end !== null) {
+            $queryParams['DespatchDateEnd'] = ObjectSerializer::toQueryValue($despatch_date_end);
+        }
+        // query params
+        if ($courier_id !== null) {
+            $queryParams['CourierId'] = ObjectSerializer::toQueryValue($courier_id);
+        }
+        // query params
+        if ($warehouse_id !== null) {
+            $queryParams['WarehouseId'] = ObjectSerializer::toQueryValue($warehouse_id);
+        }
+        // query params
+        if ($breakdown_by_country !== null) {
+            $queryParams['BreakdownByCountry'] = ObjectSerializer::toQueryValue($breakdown_by_country);
+        }
 
 
         // body params
         $_tempBody = null;
-        if (isset($request)) {
-            $_tempBody = $request;
-        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -253,7 +333,7 @@ class AuthApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json', 'text/json'],
-                ['application/json', 'text/json']
+                []
             );
         }
 
@@ -307,7 +387,7 @@ class AuthApi
 
         $query = \GuzzleHttp\Psr7\Query::build($queryParams);
         return new Request(
-            'POST',
+            'GET',
             $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
             $headers,
             $httpBody

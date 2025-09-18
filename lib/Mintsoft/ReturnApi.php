@@ -1,6 +1,6 @@
 <?php
 /**
- * BatchApi
+ * ReturnApi
  * PHP version 5
  *
  * @category Class
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\mintsoft-php;
+namespace Swagger\Client\Mintsoft;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -40,14 +40,14 @@ use Swagger\Client\HeaderSelector;
 use Swagger\Client\ObjectSerializer;
 
 /**
- * BatchApi Class Doc Comment
+ * ReturnApi Class Doc Comment
  *
  * @category Class
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class BatchApi
+class ReturnApi
 {
     /**
      * @var ClientInterface
@@ -88,41 +88,35 @@ class BatchApi
     }
 
     /**
-     * Operation batchAssignBatchToUser
+     * Operation returnAddReturnItem
      *
-     * Assign Batch To user
-     *
-     * @param  int $batch_id ID of Batch you want to assign. (required)
-     * @param  string $assign_to_user User to assign the Batch to. (required)
-     * @param  string $picking_type Picking Type to select. (required)
+     * @param  int $id id (required)
+     * @param  \Swagger\Client\Model\ToolkitDataClassesReturnsAPIReturnItemAPI $item item (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult
      */
-    public function batchAssignBatchToUser($batch_id, $assign_to_user, $picking_type)
+    public function returnAddReturnItem($id, $item)
     {
-        list($response) = $this->batchAssignBatchToUserWithHttpInfo($batch_id, $assign_to_user, $picking_type);
+        list($response) = $this->returnAddReturnItemWithHttpInfo($id, $item);
         return $response;
     }
 
     /**
-     * Operation batchAssignBatchToUserWithHttpInfo
+     * Operation returnAddReturnItemWithHttpInfo
      *
-     * Assign Batch To user
-     *
-     * @param  int $batch_id ID of Batch you want to assign. (required)
-     * @param  string $assign_to_user User to assign the Batch to. (required)
-     * @param  string $picking_type Picking Type to select. (required)
+     * @param  int $id (required)
+     * @param  \Swagger\Client\Model\ToolkitDataClassesReturnsAPIReturnItemAPI $item (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult, HTTP status code, HTTP response headers (array of strings)
      */
-    public function batchAssignBatchToUserWithHttpInfo($batch_id, $assign_to_user, $picking_type)
+    public function returnAddReturnItemWithHttpInfo($id, $item)
     {
         $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
-        $request = $this->batchAssignBatchToUserRequest($batch_id, $assign_to_user, $picking_type);
+        $request = $this->returnAddReturnItemRequest($id, $item);
 
         try {
             $options = $this->createHttpClientOption();
@@ -184,20 +178,19 @@ class BatchApi
     }
 
     /**
-     * Operation batchAssignBatchToUserAsync
+     * Operation returnAddReturnItemAsync
      *
-     * Assign Batch To user
+     * 
      *
-     * @param  int $batch_id ID of Batch you want to assign. (required)
-     * @param  string $assign_to_user User to assign the Batch to. (required)
-     * @param  string $picking_type Picking Type to select. (required)
+     * @param  int $id (required)
+     * @param  \Swagger\Client\Model\ToolkitDataClassesReturnsAPIReturnItemAPI $item (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function batchAssignBatchToUserAsync($batch_id, $assign_to_user, $picking_type)
+    public function returnAddReturnItemAsync($id, $item)
     {
-        return $this->batchAssignBatchToUserAsyncWithHttpInfo($batch_id, $assign_to_user, $picking_type)
+        return $this->returnAddReturnItemAsyncWithHttpInfo($id, $item)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -206,21 +199,20 @@ class BatchApi
     }
 
     /**
-     * Operation batchAssignBatchToUserAsyncWithHttpInfo
+     * Operation returnAddReturnItemAsyncWithHttpInfo
      *
-     * Assign Batch To user
+     * 
      *
-     * @param  int $batch_id ID of Batch you want to assign. (required)
-     * @param  string $assign_to_user User to assign the Batch to. (required)
-     * @param  string $picking_type Picking Type to select. (required)
+     * @param  int $id (required)
+     * @param  \Swagger\Client\Model\ToolkitDataClassesReturnsAPIReturnItemAPI $item (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function batchAssignBatchToUserAsyncWithHttpInfo($batch_id, $assign_to_user, $picking_type)
+    public function returnAddReturnItemAsyncWithHttpInfo($id, $item)
     {
         $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
-        $request = $this->batchAssignBatchToUserRequest($batch_id, $assign_to_user, $picking_type);
+        $request = $this->returnAddReturnItemRequest($id, $item);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -260,37 +252,331 @@ class BatchApi
     }
 
     /**
-     * Create request for operation 'batchAssignBatchToUser'
+     * Create request for operation 'returnAddReturnItem'
      *
-     * @param  int $batch_id ID of Batch you want to assign. (required)
-     * @param  string $assign_to_user User to assign the Batch to. (required)
-     * @param  string $picking_type Picking Type to select. (required)
+     * @param  int $id (required)
+     * @param  \Swagger\Client\Model\ToolkitDataClassesReturnsAPIReturnItemAPI $item (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function batchAssignBatchToUserRequest($batch_id, $assign_to_user, $picking_type)
+    protected function returnAddReturnItemRequest($id, $item)
     {
-        // verify the required parameter 'batch_id' is set
-        if ($batch_id === null || (is_array($batch_id) && count($batch_id) === 0)) {
+        // verify the required parameter 'id' is set
+        if ($id === null || (is_array($id) && count($id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $batch_id when calling batchAssignBatchToUser'
+                'Missing the required parameter $id when calling returnAddReturnItem'
             );
         }
-        // verify the required parameter 'assign_to_user' is set
-        if ($assign_to_user === null || (is_array($assign_to_user) && count($assign_to_user) === 0)) {
+        // verify the required parameter 'item' is set
+        if ($item === null || (is_array($item) && count($item) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $assign_to_user when calling batchAssignBatchToUser'
-            );
-        }
-        // verify the required parameter 'picking_type' is set
-        if ($picking_type === null || (is_array($picking_type) && count($picking_type) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $picking_type when calling batchAssignBatchToUser'
+                'Missing the required parameter $item when calling returnAddReturnItem'
             );
         }
 
-        $resourcePath = '/api/Batch/AssignBatchToUser';
+        $resourcePath = '/api/Return/{id}/AddItem';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'id' . '}',
+                ObjectSerializer::toPathValue($id),
+                $resourcePath
+            );
+        }
+
+        // body params
+        $_tempBody = null;
+        if (isset($item)) {
+            $_tempBody = $item;
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json', 'text/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json', 'text/json'],
+                ['application/json', 'text/json']
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            
+            if($headers['Content-Type'] === 'application/json') {
+                // \stdClass has no __toString(), so we should encode it manually
+                if ($httpBody instanceof \stdClass) {
+                    $httpBody = \GuzzleHttp\json_encode($httpBody);
+                }
+                // array has no __toString(), so we should encode it manually
+                if(is_array($httpBody)) {
+                    $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($httpBody));
+                }
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\Query::build($queryParams);
+        return new Request(
+            'POST',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation returnAllocateItemLocation
+     *
+     * @param  int $id id (required)
+     * @param  int $returnitem_id returnitem_id (required)
+     * @param  int $quantity quantity (required)
+     * @param  int $location_id location_id (required)
+     *
+     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult
+     */
+    public function returnAllocateItemLocation($id, $returnitem_id, $quantity, $location_id)
+    {
+        list($response) = $this->returnAllocateItemLocationWithHttpInfo($id, $returnitem_id, $quantity, $location_id);
+        return $response;
+    }
+
+    /**
+     * Operation returnAllocateItemLocationWithHttpInfo
+     *
+     * @param  int $id (required)
+     * @param  int $returnitem_id (required)
+     * @param  int $quantity (required)
+     * @param  int $location_id (required)
+     *
+     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function returnAllocateItemLocationWithHttpInfo($id, $returnitem_id, $quantity, $location_id)
+    {
+        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $request = $this->returnAllocateItemLocationRequest($id, $returnitem_id, $quantity, $location_id);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
+
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = $responseBody->getContents();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation returnAllocateItemLocationAsync
+     *
+     * 
+     *
+     * @param  int $id (required)
+     * @param  int $returnitem_id (required)
+     * @param  int $quantity (required)
+     * @param  int $location_id (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function returnAllocateItemLocationAsync($id, $returnitem_id, $quantity, $location_id)
+    {
+        return $this->returnAllocateItemLocationAsyncWithHttpInfo($id, $returnitem_id, $quantity, $location_id)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation returnAllocateItemLocationAsyncWithHttpInfo
+     *
+     * 
+     *
+     * @param  int $id (required)
+     * @param  int $returnitem_id (required)
+     * @param  int $quantity (required)
+     * @param  int $location_id (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function returnAllocateItemLocationAsyncWithHttpInfo($id, $returnitem_id, $quantity, $location_id)
+    {
+        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $request = $this->returnAllocateItemLocationRequest($id, $returnitem_id, $quantity, $location_id);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = $responseBody->getContents();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'returnAllocateItemLocation'
+     *
+     * @param  int $id (required)
+     * @param  int $returnitem_id (required)
+     * @param  int $quantity (required)
+     * @param  int $location_id (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function returnAllocateItemLocationRequest($id, $returnitem_id, $quantity, $location_id)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null || (is_array($id) && count($id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $id when calling returnAllocateItemLocation'
+            );
+        }
+        // verify the required parameter 'returnitem_id' is set
+        if ($returnitem_id === null || (is_array($returnitem_id) && count($returnitem_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $returnitem_id when calling returnAllocateItemLocation'
+            );
+        }
+        // verify the required parameter 'quantity' is set
+        if ($quantity === null || (is_array($quantity) && count($quantity) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $quantity when calling returnAllocateItemLocation'
+            );
+        }
+        // verify the required parameter 'location_id' is set
+        if ($location_id === null || (is_array($location_id) && count($location_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $location_id when calling returnAllocateItemLocation'
+            );
+        }
+
+        $resourcePath = '/api/Return/{id}/AllocateItemLocation';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -298,18 +584,26 @@ class BatchApi
         $multipart = false;
 
         // query params
-        if ($batch_id !== null) {
-            $queryParams['BatchID'] = ObjectSerializer::toQueryValue($batch_id);
+        if ($returnitem_id !== null) {
+            $queryParams['ReturnitemId'] = ObjectSerializer::toQueryValue($returnitem_id);
         }
         // query params
-        if ($assign_to_user !== null) {
-            $queryParams['AssignToUser'] = ObjectSerializer::toQueryValue($assign_to_user);
+        if ($quantity !== null) {
+            $queryParams['Quantity'] = ObjectSerializer::toQueryValue($quantity);
         }
         // query params
-        if ($picking_type !== null) {
-            $queryParams['PickingType'] = ObjectSerializer::toQueryValue($picking_type);
+        if ($location_id !== null) {
+            $queryParams['LocationId'] = ObjectSerializer::toQueryValue($location_id);
         }
 
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'id' . '}',
+                ObjectSerializer::toPathValue($id),
+                $resourcePath
+            );
+        }
 
         // body params
         $_tempBody = null;
@@ -383,39 +677,33 @@ class BatchApi
     }
 
     /**
-     * Operation batchAssignOrderToUser
+     * Operation returnConfirmReturn
      *
-     * Assign Order To user
-     *
-     * @param  int $order_id ID of Order you want to assign. (required)
-     * @param  string $assign_to_user User to assign the Order to. (required)
+     * @param  int $id id (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult
      */
-    public function batchAssignOrderToUser($order_id, $assign_to_user)
+    public function returnConfirmReturn($id)
     {
-        list($response) = $this->batchAssignOrderToUserWithHttpInfo($order_id, $assign_to_user);
+        list($response) = $this->returnConfirmReturnWithHttpInfo($id);
         return $response;
     }
 
     /**
-     * Operation batchAssignOrderToUserWithHttpInfo
+     * Operation returnConfirmReturnWithHttpInfo
      *
-     * Assign Order To user
-     *
-     * @param  int $order_id ID of Order you want to assign. (required)
-     * @param  string $assign_to_user User to assign the Order to. (required)
+     * @param  int $id (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult, HTTP status code, HTTP response headers (array of strings)
      */
-    public function batchAssignOrderToUserWithHttpInfo($order_id, $assign_to_user)
+    public function returnConfirmReturnWithHttpInfo($id)
     {
         $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
-        $request = $this->batchAssignOrderToUserRequest($order_id, $assign_to_user);
+        $request = $this->returnConfirmReturnRequest($id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -477,19 +765,18 @@ class BatchApi
     }
 
     /**
-     * Operation batchAssignOrderToUserAsync
+     * Operation returnConfirmReturnAsync
      *
-     * Assign Order To user
+     * 
      *
-     * @param  int $order_id ID of Order you want to assign. (required)
-     * @param  string $assign_to_user User to assign the Order to. (required)
+     * @param  int $id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function batchAssignOrderToUserAsync($order_id, $assign_to_user)
+    public function returnConfirmReturnAsync($id)
     {
-        return $this->batchAssignOrderToUserAsyncWithHttpInfo($order_id, $assign_to_user)
+        return $this->returnConfirmReturnAsyncWithHttpInfo($id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -498,20 +785,19 @@ class BatchApi
     }
 
     /**
-     * Operation batchAssignOrderToUserAsyncWithHttpInfo
+     * Operation returnConfirmReturnAsyncWithHttpInfo
      *
-     * Assign Order To user
+     * 
      *
-     * @param  int $order_id ID of Order you want to assign. (required)
-     * @param  string $assign_to_user User to assign the Order to. (required)
+     * @param  int $id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function batchAssignOrderToUserAsyncWithHttpInfo($order_id, $assign_to_user)
+    public function returnConfirmReturnAsyncWithHttpInfo($id)
     {
         $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
-        $request = $this->batchAssignOrderToUserRequest($order_id, $assign_to_user);
+        $request = $this->returnConfirmReturnRequest($id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -551,45 +837,303 @@ class BatchApi
     }
 
     /**
-     * Create request for operation 'batchAssignOrderToUser'
+     * Create request for operation 'returnConfirmReturn'
      *
-     * @param  int $order_id ID of Order you want to assign. (required)
-     * @param  string $assign_to_user User to assign the Order to. (required)
+     * @param  int $id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function batchAssignOrderToUserRequest($order_id, $assign_to_user)
+    protected function returnConfirmReturnRequest($id)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null || (is_array($id) && count($id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $id when calling returnConfirmReturn'
+            );
+        }
+
+        $resourcePath = '/api/Return/{id}/Confirm';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'id' . '}',
+                ObjectSerializer::toPathValue($id),
+                $resourcePath
+            );
+        }
+
+        // body params
+        $_tempBody = null;
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json', 'text/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json', 'text/json'],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            
+            if($headers['Content-Type'] === 'application/json') {
+                // \stdClass has no __toString(), so we should encode it manually
+                if ($httpBody instanceof \stdClass) {
+                    $httpBody = \GuzzleHttp\json_encode($httpBody);
+                }
+                // array has no __toString(), so we should encode it manually
+                if(is_array($httpBody)) {
+                    $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($httpBody));
+                }
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\Query::build($queryParams);
+        return new Request(
+            'POST',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation returnCreateReturn
+     *
+     * @param  int $order_id order_id (required)
+     *
+     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult
+     */
+    public function returnCreateReturn($order_id)
+    {
+        list($response) = $this->returnCreateReturnWithHttpInfo($order_id);
+        return $response;
+    }
+
+    /**
+     * Operation returnCreateReturnWithHttpInfo
+     *
+     * @param  int $order_id (required)
+     *
+     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function returnCreateReturnWithHttpInfo($order_id)
+    {
+        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $request = $this->returnCreateReturnRequest($order_id);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
+
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = $responseBody->getContents();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation returnCreateReturnAsync
+     *
+     * 
+     *
+     * @param  int $order_id (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function returnCreateReturnAsync($order_id)
+    {
+        return $this->returnCreateReturnAsyncWithHttpInfo($order_id)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation returnCreateReturnAsyncWithHttpInfo
+     *
+     * 
+     *
+     * @param  int $order_id (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function returnCreateReturnAsyncWithHttpInfo($order_id)
+    {
+        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $request = $this->returnCreateReturnRequest($order_id);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = $responseBody->getContents();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'returnCreateReturn'
+     *
+     * @param  int $order_id (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function returnCreateReturnRequest($order_id)
     {
         // verify the required parameter 'order_id' is set
         if ($order_id === null || (is_array($order_id) && count($order_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $order_id when calling batchAssignOrderToUser'
-            );
-        }
-        // verify the required parameter 'assign_to_user' is set
-        if ($assign_to_user === null || (is_array($assign_to_user) && count($assign_to_user) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $assign_to_user when calling batchAssignOrderToUser'
+                'Missing the required parameter $order_id when calling returnCreateReturn'
             );
         }
 
-        $resourcePath = '/api/Batch/AssignOrderToUser';
+        $resourcePath = '/api/Return/CreateReturn/{OrderId}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
         $httpBody = '';
         $multipart = false;
 
-        // query params
+
+        // path params
         if ($order_id !== null) {
-            $queryParams['OrderID'] = ObjectSerializer::toQueryValue($order_id);
+            $resourcePath = str_replace(
+                '{' . 'OrderId' . '}',
+                ObjectSerializer::toPathValue($order_id),
+                $resourcePath
+            );
         }
-        // query params
-        if ($assign_to_user !== null) {
-            $queryParams['AssignToUser'] = ObjectSerializer::toQueryValue($assign_to_user);
-        }
-
 
         // body params
         $_tempBody = null;
@@ -663,37 +1207,33 @@ class BatchApi
     }
 
     /**
-     * Operation batchCreateBatch
+     * Operation returnGetReturn
      *
-     * Create Batch
-     *
-     * @param  \Swagger\Client\Model\MintsoftAPICommonClassesNewBatch $batch  (required)
+     * @param  int $id id (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult
+     * @return \Swagger\Client\Model\ToolkitDataClassesReturnsReturn
      */
-    public function batchCreateBatch($batch)
+    public function returnGetReturn($id)
     {
-        list($response) = $this->batchCreateBatchWithHttpInfo($batch);
+        list($response) = $this->returnGetReturnWithHttpInfo($id);
         return $response;
     }
 
     /**
-     * Operation batchCreateBatchWithHttpInfo
+     * Operation returnGetReturnWithHttpInfo
      *
-     * Create Batch
-     *
-     * @param  \Swagger\Client\Model\MintsoftAPICommonClassesNewBatch $batch  (required)
+     * @param  int $id (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\ToolkitDataClassesReturnsReturn, HTTP status code, HTTP response headers (array of strings)
      */
-    public function batchCreateBatchWithHttpInfo($batch)
+    public function returnGetReturnWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
-        $request = $this->batchCreateBatchRequest($batch);
+        $returnType = '\Swagger\Client\Model\ToolkitDataClassesReturnsReturn';
+        $request = $this->returnGetReturnRequest($id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -744,7 +1284,7 @@ class BatchApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult',
+                        '\Swagger\Client\Model\ToolkitDataClassesReturnsReturn',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -755,18 +1295,18 @@ class BatchApi
     }
 
     /**
-     * Operation batchCreateBatchAsync
+     * Operation returnGetReturnAsync
      *
-     * Create Batch
+     * 
      *
-     * @param  \Swagger\Client\Model\MintsoftAPICommonClassesNewBatch $batch  (required)
+     * @param  int $id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function batchCreateBatchAsync($batch)
+    public function returnGetReturnAsync($id)
     {
-        return $this->batchCreateBatchAsyncWithHttpInfo($batch)
+        return $this->returnGetReturnAsyncWithHttpInfo($id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -775,19 +1315,19 @@ class BatchApi
     }
 
     /**
-     * Operation batchCreateBatchAsyncWithHttpInfo
+     * Operation returnGetReturnAsyncWithHttpInfo
      *
-     * Create Batch
+     * 
      *
-     * @param  \Swagger\Client\Model\MintsoftAPICommonClassesNewBatch $batch  (required)
+     * @param  int $id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function batchCreateBatchAsyncWithHttpInfo($batch)
+    public function returnGetReturnAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
-        $request = $this->batchCreateBatchRequest($batch);
+        $returnType = '\Swagger\Client\Model\ToolkitDataClassesReturnsReturn';
+        $request = $this->returnGetReturnRequest($id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -827,1082 +1367,23 @@ class BatchApi
     }
 
     /**
-     * Create request for operation 'batchCreateBatch'
+     * Create request for operation 'returnGetReturn'
      *
-     * @param  \Swagger\Client\Model\MintsoftAPICommonClassesNewBatch $batch  (required)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function batchCreateBatchRequest($batch)
-    {
-        // verify the required parameter 'batch' is set
-        if ($batch === null || (is_array($batch) && count($batch) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $batch when calling batchCreateBatch'
-            );
-        }
-
-        $resourcePath = '/api/Batch';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-
-
-        // body params
-        $_tempBody = null;
-        if (isset($batch)) {
-            $_tempBody = $batch;
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json', 'text/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json', 'text/json'],
-                ['application/json', 'text/json']
-            );
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            
-            if($headers['Content-Type'] === 'application/json') {
-                // \stdClass has no __toString(), so we should encode it manually
-                if ($httpBody instanceof \stdClass) {
-                    $httpBody = \GuzzleHttp\json_encode($httpBody);
-                }
-                // array has no __toString(), so we should encode it manually
-                if(is_array($httpBody)) {
-                    $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($httpBody));
-                }
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams);
-            }
-        }
-
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
-        }
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $query = \GuzzleHttp\Psr7\Query::build($queryParams);
-        return new Request(
-            'POST',
-            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
-            $headers,
-            $httpBody
-        );
-    }
-
-    /**
-     * Operation batchCreateBatchFromTemplate
-     *
-     * Create Batch from Template
-     *
-     * @param  int $batch_template_id Id of Template to create Batch from (required)
-     *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult
-     */
-    public function batchCreateBatchFromTemplate($batch_template_id)
-    {
-        list($response) = $this->batchCreateBatchFromTemplateWithHttpInfo($batch_template_id);
-        return $response;
-    }
-
-    /**
-     * Operation batchCreateBatchFromTemplateWithHttpInfo
-     *
-     * Create Batch from Template
-     *
-     * @param  int $batch_template_id Id of Template to create Batch from (required)
-     *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function batchCreateBatchFromTemplateWithHttpInfo($batch_template_id)
-    {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
-        $request = $this->batchCreateBatchFromTemplateRequest($batch_template_id);
-
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    $response->getBody()
-                );
-            }
-
-            $responseBody = $response->getBody();
-            if ($returnType === '\SplFileObject') {
-                $content = $responseBody; //stream goes to serializer
-            } else {
-                $content = $responseBody->getContents();
-                if ($returnType !== 'string') {
-                    $content = json_decode($content);
-                }
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-            }
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation batchCreateBatchFromTemplateAsync
-     *
-     * Create Batch from Template
-     *
-     * @param  int $batch_template_id Id of Template to create Batch from (required)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function batchCreateBatchFromTemplateAsync($batch_template_id)
-    {
-        return $this->batchCreateBatchFromTemplateAsyncWithHttpInfo($batch_template_id)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation batchCreateBatchFromTemplateAsyncWithHttpInfo
-     *
-     * Create Batch from Template
-     *
-     * @param  int $batch_template_id Id of Template to create Batch from (required)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function batchCreateBatchFromTemplateAsyncWithHttpInfo($batch_template_id)
-    {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
-        $request = $this->batchCreateBatchFromTemplateRequest($batch_template_id);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = $responseBody->getContents();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
-     * Create request for operation 'batchCreateBatchFromTemplate'
-     *
-     * @param  int $batch_template_id Id of Template to create Batch from (required)
+     * @param  int $id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function batchCreateBatchFromTemplateRequest($batch_template_id)
-    {
-        // verify the required parameter 'batch_template_id' is set
-        if ($batch_template_id === null || (is_array($batch_template_id) && count($batch_template_id) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $batch_template_id when calling batchCreateBatchFromTemplate'
-            );
-        }
-
-        $resourcePath = '/api/Batch/CreateBatchFromTemplate';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-        // query params
-        if ($batch_template_id !== null) {
-            $queryParams['batchTemplateId'] = ObjectSerializer::toQueryValue($batch_template_id);
-        }
-
-
-        // body params
-        $_tempBody = null;
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json', 'text/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json', 'text/json'],
-                []
-            );
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            
-            if($headers['Content-Type'] === 'application/json') {
-                // \stdClass has no __toString(), so we should encode it manually
-                if ($httpBody instanceof \stdClass) {
-                    $httpBody = \GuzzleHttp\json_encode($httpBody);
-                }
-                // array has no __toString(), so we should encode it manually
-                if(is_array($httpBody)) {
-                    $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($httpBody));
-                }
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams);
-            }
-        }
-
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
-        }
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $query = \GuzzleHttp\Psr7\Query::build($queryParams);
-        return new Request(
-            'POST',
-            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
-            $headers,
-            $httpBody
-        );
-    }
-
-    /**
-     * Operation batchDeleteBatch
-     *
-     * Delete Batch
-     *
-     * @param  int $batch_id Id of Batch to delete (required)
-     *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult
-     */
-    public function batchDeleteBatch($batch_id)
-    {
-        list($response) = $this->batchDeleteBatchWithHttpInfo($batch_id);
-        return $response;
-    }
-
-    /**
-     * Operation batchDeleteBatchWithHttpInfo
-     *
-     * Delete Batch
-     *
-     * @param  int $batch_id Id of Batch to delete (required)
-     *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function batchDeleteBatchWithHttpInfo($batch_id)
-    {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
-        $request = $this->batchDeleteBatchRequest($batch_id);
-
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    $response->getBody()
-                );
-            }
-
-            $responseBody = $response->getBody();
-            if ($returnType === '\SplFileObject') {
-                $content = $responseBody; //stream goes to serializer
-            } else {
-                $content = $responseBody->getContents();
-                if ($returnType !== 'string') {
-                    $content = json_decode($content);
-                }
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-            }
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation batchDeleteBatchAsync
-     *
-     * Delete Batch
-     *
-     * @param  int $batch_id Id of Batch to delete (required)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function batchDeleteBatchAsync($batch_id)
-    {
-        return $this->batchDeleteBatchAsyncWithHttpInfo($batch_id)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation batchDeleteBatchAsyncWithHttpInfo
-     *
-     * Delete Batch
-     *
-     * @param  int $batch_id Id of Batch to delete (required)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function batchDeleteBatchAsyncWithHttpInfo($batch_id)
-    {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
-        $request = $this->batchDeleteBatchRequest($batch_id);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = $responseBody->getContents();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
-     * Create request for operation 'batchDeleteBatch'
-     *
-     * @param  int $batch_id Id of Batch to delete (required)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function batchDeleteBatchRequest($batch_id)
-    {
-        // verify the required parameter 'batch_id' is set
-        if ($batch_id === null || (is_array($batch_id) && count($batch_id) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $batch_id when calling batchDeleteBatch'
-            );
-        }
-
-        $resourcePath = '/api/Batch/DeleteBatch';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-        // query params
-        if ($batch_id !== null) {
-            $queryParams['batchId'] = ObjectSerializer::toQueryValue($batch_id);
-        }
-
-
-        // body params
-        $_tempBody = null;
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json', 'text/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json', 'text/json'],
-                []
-            );
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            
-            if($headers['Content-Type'] === 'application/json') {
-                // \stdClass has no __toString(), so we should encode it manually
-                if ($httpBody instanceof \stdClass) {
-                    $httpBody = \GuzzleHttp\json_encode($httpBody);
-                }
-                // array has no __toString(), so we should encode it manually
-                if(is_array($httpBody)) {
-                    $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($httpBody));
-                }
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams);
-            }
-        }
-
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
-        }
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $query = \GuzzleHttp\Psr7\Query::build($queryParams);
-        return new Request(
-            'DELETE',
-            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
-            $headers,
-            $httpBody
-        );
-    }
-
-    /**
-     * Operation batchDespatchBatch
-     *
-     * Despatch a completed Batch
-     *
-     * @param  int $batch_id ID of Batch you want to despatch (required)
-     *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult[]
-     */
-    public function batchDespatchBatch($batch_id)
-    {
-        list($response) = $this->batchDespatchBatchWithHttpInfo($batch_id);
-        return $response;
-    }
-
-    /**
-     * Operation batchDespatchBatchWithHttpInfo
-     *
-     * Despatch a completed Batch
-     *
-     * @param  int $batch_id ID of Batch you want to despatch (required)
-     *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult[], HTTP status code, HTTP response headers (array of strings)
-     */
-    public function batchDespatchBatchWithHttpInfo($batch_id)
-    {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult[]';
-        $request = $this->batchDespatchBatchRequest($batch_id);
-
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    $response->getBody()
-                );
-            }
-
-            $responseBody = $response->getBody();
-            if ($returnType === '\SplFileObject') {
-                $content = $responseBody; //stream goes to serializer
-            } else {
-                $content = $responseBody->getContents();
-                if ($returnType !== 'string') {
-                    $content = json_decode($content);
-                }
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult[]',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-            }
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation batchDespatchBatchAsync
-     *
-     * Despatch a completed Batch
-     *
-     * @param  int $batch_id ID of Batch you want to despatch (required)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function batchDespatchBatchAsync($batch_id)
-    {
-        return $this->batchDespatchBatchAsyncWithHttpInfo($batch_id)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation batchDespatchBatchAsyncWithHttpInfo
-     *
-     * Despatch a completed Batch
-     *
-     * @param  int $batch_id ID of Batch you want to despatch (required)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function batchDespatchBatchAsyncWithHttpInfo($batch_id)
-    {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult[]';
-        $request = $this->batchDespatchBatchRequest($batch_id);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = $responseBody->getContents();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
-     * Create request for operation 'batchDespatchBatch'
-     *
-     * @param  int $batch_id ID of Batch you want to despatch (required)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function batchDespatchBatchRequest($batch_id)
-    {
-        // verify the required parameter 'batch_id' is set
-        if ($batch_id === null || (is_array($batch_id) && count($batch_id) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $batch_id when calling batchDespatchBatch'
-            );
-        }
-
-        $resourcePath = '/api/Batch/DespatchBatch';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-        // query params
-        if ($batch_id !== null) {
-            $queryParams['batchId'] = ObjectSerializer::toQueryValue($batch_id);
-        }
-
-
-        // body params
-        $_tempBody = null;
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json', 'text/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json', 'text/json'],
-                []
-            );
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            
-            if($headers['Content-Type'] === 'application/json') {
-                // \stdClass has no __toString(), so we should encode it manually
-                if ($httpBody instanceof \stdClass) {
-                    $httpBody = \GuzzleHttp\json_encode($httpBody);
-                }
-                // array has no __toString(), so we should encode it manually
-                if(is_array($httpBody)) {
-                    $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($httpBody));
-                }
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams);
-            }
-        }
-
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
-        }
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $query = \GuzzleHttp\Psr7\Query::build($queryParams);
-        return new Request(
-            'POST',
-            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
-            $headers,
-            $httpBody
-        );
-    }
-
-    /**
-     * Operation batchGetBatch
-     *
-     * Get Batch by ID
-     *
-     * @param  int $id Batch ID (required)
-     *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesOrdersOrder[]
-     */
-    public function batchGetBatch($id)
-    {
-        list($response) = $this->batchGetBatchWithHttpInfo($id);
-        return $response;
-    }
-
-    /**
-     * Operation batchGetBatchWithHttpInfo
-     *
-     * Get Batch by ID
-     *
-     * @param  int $id Batch ID (required)
-     *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ToolkitDataClassesOrdersOrder[], HTTP status code, HTTP response headers (array of strings)
-     */
-    public function batchGetBatchWithHttpInfo($id)
-    {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesOrdersOrder[]';
-        $request = $this->batchGetBatchRequest($id);
-
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    $response->getBody()
-                );
-            }
-
-            $responseBody = $response->getBody();
-            if ($returnType === '\SplFileObject') {
-                $content = $responseBody; //stream goes to serializer
-            } else {
-                $content = $responseBody->getContents();
-                if ($returnType !== 'string') {
-                    $content = json_decode($content);
-                }
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesOrdersOrder[]',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-            }
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation batchGetBatchAsync
-     *
-     * Get Batch by ID
-     *
-     * @param  int $id Batch ID (required)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function batchGetBatchAsync($id)
-    {
-        return $this->batchGetBatchAsyncWithHttpInfo($id)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation batchGetBatchAsyncWithHttpInfo
-     *
-     * Get Batch by ID
-     *
-     * @param  int $id Batch ID (required)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function batchGetBatchAsyncWithHttpInfo($id)
-    {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesOrdersOrder[]';
-        $request = $this->batchGetBatchRequest($id);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = $responseBody->getContents();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
-     * Create request for operation 'batchGetBatch'
-     *
-     * @param  int $id Batch ID (required)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function batchGetBatchRequest($id)
+    protected function returnGetReturnRequest($id)
     {
         // verify the required parameter 'id' is set
         if ($id === null || (is_array($id) && count($id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $id when calling batchGetBatch'
+                'Missing the required parameter $id when calling returnGetReturn'
             );
         }
 
-        $resourcePath = '/api/Batch/{id}';
+        $resourcePath = '/api/Return/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1991,35 +1472,33 @@ class BatchApi
     }
 
     /**
-     * Operation batchListBatches
+     * Operation returnGetReturnItems
      *
-     * List Batches
-     *
+     * @param  int $id id (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesOrdersBatch[]
+     * @return \Swagger\Client\Model\ToolkitDataClassesReturnsReturnItem[]
      */
-    public function batchListBatches()
+    public function returnGetReturnItems($id)
     {
-        list($response) = $this->batchListBatchesWithHttpInfo();
+        list($response) = $this->returnGetReturnItemsWithHttpInfo($id);
         return $response;
     }
 
     /**
-     * Operation batchListBatchesWithHttpInfo
+     * Operation returnGetReturnItemsWithHttpInfo
      *
-     * List Batches
-     *
+     * @param  int $id (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ToolkitDataClassesOrdersBatch[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\ToolkitDataClassesReturnsReturnItem[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function batchListBatchesWithHttpInfo()
+    public function returnGetReturnItemsWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesOrdersBatch[]';
-        $request = $this->batchListBatchesRequest();
+        $returnType = '\Swagger\Client\Model\ToolkitDataClassesReturnsReturnItem[]';
+        $request = $this->returnGetReturnItemsRequest($id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2070,7 +1549,7 @@ class BatchApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesOrdersBatch[]',
+                        '\Swagger\Client\Model\ToolkitDataClassesReturnsReturnItem[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2081,17 +1560,18 @@ class BatchApi
     }
 
     /**
-     * Operation batchListBatchesAsync
+     * Operation returnGetReturnItemsAsync
      *
-     * List Batches
+     * 
      *
+     * @param  int $id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function batchListBatchesAsync()
+    public function returnGetReturnItemsAsync($id)
     {
-        return $this->batchListBatchesAsyncWithHttpInfo()
+        return $this->returnGetReturnItemsAsyncWithHttpInfo($id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2100,18 +1580,19 @@ class BatchApi
     }
 
     /**
-     * Operation batchListBatchesAsyncWithHttpInfo
+     * Operation returnGetReturnItemsAsyncWithHttpInfo
      *
-     * List Batches
+     * 
      *
+     * @param  int $id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function batchListBatchesAsyncWithHttpInfo()
+    public function returnGetReturnItemsAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesOrdersBatch[]';
-        $request = $this->batchListBatchesRequest();
+        $returnType = '\Swagger\Client\Model\ToolkitDataClassesReturnsReturnItem[]';
+        $request = $this->returnGetReturnItemsRequest($id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2151,548 +1632,29 @@ class BatchApi
     }
 
     /**
-     * Create request for operation 'batchListBatches'
+     * Create request for operation 'returnGetReturnItems'
      *
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function batchListBatchesRequest()
-    {
-
-        $resourcePath = '/api/Batch/List';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-
-
-        // body params
-        $_tempBody = null;
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json', 'text/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json', 'text/json'],
-                []
-            );
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            
-            if($headers['Content-Type'] === 'application/json') {
-                // \stdClass has no __toString(), so we should encode it manually
-                if ($httpBody instanceof \stdClass) {
-                    $httpBody = \GuzzleHttp\json_encode($httpBody);
-                }
-                // array has no __toString(), so we should encode it manually
-                if(is_array($httpBody)) {
-                    $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($httpBody));
-                }
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams);
-            }
-        }
-
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
-        }
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $query = \GuzzleHttp\Psr7\Query::build($queryParams);
-        return new Request(
-            'GET',
-            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
-            $headers,
-            $httpBody
-        );
-    }
-
-    /**
-     * Operation batchTemplates
-     *
-     * List available Batch Templates
-     *
-     *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesOrdersBatchTemplate[]
-     */
-    public function batchTemplates()
-    {
-        list($response) = $this->batchTemplatesWithHttpInfo();
-        return $response;
-    }
-
-    /**
-     * Operation batchTemplatesWithHttpInfo
-     *
-     * List available Batch Templates
-     *
-     *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ToolkitDataClassesOrdersBatchTemplate[], HTTP status code, HTTP response headers (array of strings)
-     */
-    public function batchTemplatesWithHttpInfo()
-    {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesOrdersBatchTemplate[]';
-        $request = $this->batchTemplatesRequest();
-
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    $response->getBody()
-                );
-            }
-
-            $responseBody = $response->getBody();
-            if ($returnType === '\SplFileObject') {
-                $content = $responseBody; //stream goes to serializer
-            } else {
-                $content = $responseBody->getContents();
-                if ($returnType !== 'string') {
-                    $content = json_decode($content);
-                }
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesOrdersBatchTemplate[]',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-            }
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation batchTemplatesAsync
-     *
-     * List available Batch Templates
-     *
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function batchTemplatesAsync()
-    {
-        return $this->batchTemplatesAsyncWithHttpInfo()
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation batchTemplatesAsyncWithHttpInfo
-     *
-     * List available Batch Templates
-     *
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function batchTemplatesAsyncWithHttpInfo()
-    {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesOrdersBatchTemplate[]';
-        $request = $this->batchTemplatesRequest();
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = $responseBody->getContents();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
-     * Create request for operation 'batchTemplates'
-     *
+     * @param  int $id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function batchTemplatesRequest()
-    {
-
-        $resourcePath = '/api/Batch/Templates';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-
-
-        // body params
-        $_tempBody = null;
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json', 'text/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json', 'text/json'],
-                []
-            );
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            
-            if($headers['Content-Type'] === 'application/json') {
-                // \stdClass has no __toString(), so we should encode it manually
-                if ($httpBody instanceof \stdClass) {
-                    $httpBody = \GuzzleHttp\json_encode($httpBody);
-                }
-                // array has no __toString(), so we should encode it manually
-                if(is_array($httpBody)) {
-                    $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($httpBody));
-                }
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams);
-            }
-        }
-
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
-        }
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $query = \GuzzleHttp\Psr7\Query::build($queryParams);
-        return new Request(
-            'GET',
-            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
-            $headers,
-            $httpBody
-        );
-    }
-
-    /**
-     * Operation batchUpdateBatchStatus
-     *
-     * Update Batch Status
-     *
-     * @param  int $id Batch ID (required)
-     * @param  int $order_status Order Status ID (required)
-     *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult
-     */
-    public function batchUpdateBatchStatus($id, $order_status)
-    {
-        list($response) = $this->batchUpdateBatchStatusWithHttpInfo($id, $order_status);
-        return $response;
-    }
-
-    /**
-     * Operation batchUpdateBatchStatusWithHttpInfo
-     *
-     * Update Batch Status
-     *
-     * @param  int $id Batch ID (required)
-     * @param  int $order_status Order Status ID (required)
-     *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function batchUpdateBatchStatusWithHttpInfo($id, $order_status)
-    {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
-        $request = $this->batchUpdateBatchStatusRequest($id, $order_status);
-
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    $response->getBody()
-                );
-            }
-
-            $responseBody = $response->getBody();
-            if ($returnType === '\SplFileObject') {
-                $content = $responseBody; //stream goes to serializer
-            } else {
-                $content = $responseBody->getContents();
-                if ($returnType !== 'string') {
-                    $content = json_decode($content);
-                }
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-            }
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation batchUpdateBatchStatusAsync
-     *
-     * Update Batch Status
-     *
-     * @param  int $id Batch ID (required)
-     * @param  int $order_status Order Status ID (required)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function batchUpdateBatchStatusAsync($id, $order_status)
-    {
-        return $this->batchUpdateBatchStatusAsyncWithHttpInfo($id, $order_status)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation batchUpdateBatchStatusAsyncWithHttpInfo
-     *
-     * Update Batch Status
-     *
-     * @param  int $id Batch ID (required)
-     * @param  int $order_status Order Status ID (required)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function batchUpdateBatchStatusAsyncWithHttpInfo($id, $order_status)
-    {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
-        $request = $this->batchUpdateBatchStatusRequest($id, $order_status);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = $responseBody->getContents();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
-     * Create request for operation 'batchUpdateBatchStatus'
-     *
-     * @param  int $id Batch ID (required)
-     * @param  int $order_status Order Status ID (required)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function batchUpdateBatchStatusRequest($id, $order_status)
+    protected function returnGetReturnItemsRequest($id)
     {
         // verify the required parameter 'id' is set
         if ($id === null || (is_array($id) && count($id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $id when calling batchUpdateBatchStatus'
-            );
-        }
-        // verify the required parameter 'order_status' is set
-        if ($order_status === null || (is_array($order_status) && count($order_status) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $order_status when calling batchUpdateBatchStatus'
+                'Missing the required parameter $id when calling returnGetReturnItems'
             );
         }
 
-        $resourcePath = '/api/Batch/StatusUpdate/{id}';
+        $resourcePath = '/api/Return/{id}/Items';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
         $httpBody = '';
         $multipart = false;
 
-        // query params
-        if ($order_status !== null) {
-            $queryParams['OrderStatus'] = ObjectSerializer::toQueryValue($order_status);
-        }
 
         // path params
         if ($id !== null) {
@@ -2767,7 +1729,514 @@ class BatchApi
 
         $query = \GuzzleHttp\Psr7\Query::build($queryParams);
         return new Request(
-            'PUT',
+            'GET',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation returnGetReturnReasons
+     *
+     *
+     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Swagger\Client\Model\ToolkitDataClassesReturnsReturnReason[]
+     */
+    public function returnGetReturnReasons()
+    {
+        list($response) = $this->returnGetReturnReasonsWithHttpInfo();
+        return $response;
+    }
+
+    /**
+     * Operation returnGetReturnReasonsWithHttpInfo
+     *
+     *
+     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Swagger\Client\Model\ToolkitDataClassesReturnsReturnReason[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function returnGetReturnReasonsWithHttpInfo()
+    {
+        $returnType = '\Swagger\Client\Model\ToolkitDataClassesReturnsReturnReason[]';
+        $request = $this->returnGetReturnReasonsRequest();
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
+
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = $responseBody->getContents();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Swagger\Client\Model\ToolkitDataClassesReturnsReturnReason[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation returnGetReturnReasonsAsync
+     *
+     * 
+     *
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function returnGetReturnReasonsAsync()
+    {
+        return $this->returnGetReturnReasonsAsyncWithHttpInfo()
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation returnGetReturnReasonsAsyncWithHttpInfo
+     *
+     * 
+     *
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function returnGetReturnReasonsAsyncWithHttpInfo()
+    {
+        $returnType = '\Swagger\Client\Model\ToolkitDataClassesReturnsReturnReason[]';
+        $request = $this->returnGetReturnReasonsRequest();
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = $responseBody->getContents();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'returnGetReturnReasons'
+     *
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function returnGetReturnReasonsRequest()
+    {
+
+        $resourcePath = '/api/Return/Reasons';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+        // body params
+        $_tempBody = null;
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json', 'text/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json', 'text/json'],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            
+            if($headers['Content-Type'] === 'application/json') {
+                // \stdClass has no __toString(), so we should encode it manually
+                if ($httpBody instanceof \stdClass) {
+                    $httpBody = \GuzzleHttp\json_encode($httpBody);
+                }
+                // array has no __toString(), so we should encode it manually
+                if(is_array($httpBody)) {
+                    $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($httpBody));
+                }
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\Query::build($queryParams);
+        return new Request(
+            'GET',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation returnGetReturnsOnDate
+     *
+     * @param  \DateTime $date date (required)
+     *
+     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Swagger\Client\Model\ToolkitDataClassesReturnsReturn[]
+     */
+    public function returnGetReturnsOnDate($date)
+    {
+        list($response) = $this->returnGetReturnsOnDateWithHttpInfo($date);
+        return $response;
+    }
+
+    /**
+     * Operation returnGetReturnsOnDateWithHttpInfo
+     *
+     * @param  \DateTime $date (required)
+     *
+     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Swagger\Client\Model\ToolkitDataClassesReturnsReturn[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function returnGetReturnsOnDateWithHttpInfo($date)
+    {
+        $returnType = '\Swagger\Client\Model\ToolkitDataClassesReturnsReturn[]';
+        $request = $this->returnGetReturnsOnDateRequest($date);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
+
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = $responseBody->getContents();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Swagger\Client\Model\ToolkitDataClassesReturnsReturn[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation returnGetReturnsOnDateAsync
+     *
+     * 
+     *
+     * @param  \DateTime $date (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function returnGetReturnsOnDateAsync($date)
+    {
+        return $this->returnGetReturnsOnDateAsyncWithHttpInfo($date)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation returnGetReturnsOnDateAsyncWithHttpInfo
+     *
+     * 
+     *
+     * @param  \DateTime $date (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function returnGetReturnsOnDateAsyncWithHttpInfo($date)
+    {
+        $returnType = '\Swagger\Client\Model\ToolkitDataClassesReturnsReturn[]';
+        $request = $this->returnGetReturnsOnDateRequest($date);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = $responseBody->getContents();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'returnGetReturnsOnDate'
+     *
+     * @param  \DateTime $date (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function returnGetReturnsOnDateRequest($date)
+    {
+        // verify the required parameter 'date' is set
+        if ($date === null || (is_array($date) && count($date) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $date when calling returnGetReturnsOnDate'
+            );
+        }
+
+        $resourcePath = '/api/Return/SearchByDate';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        if ($date !== null) {
+            $queryParams['Date'] = ObjectSerializer::toQueryValue($date);
+        }
+
+
+        // body params
+        $_tempBody = null;
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json', 'text/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json', 'text/json'],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            
+            if($headers['Content-Type'] === 'application/json') {
+                // \stdClass has no __toString(), so we should encode it manually
+                if ($httpBody instanceof \stdClass) {
+                    $httpBody = \GuzzleHttp\json_encode($httpBody);
+                }
+                // array has no __toString(), so we should encode it manually
+                if(is_array($httpBody)) {
+                    $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($httpBody));
+                }
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\Query::build($queryParams);
+        return new Request(
+            'GET',
             $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
             $headers,
             $httpBody
