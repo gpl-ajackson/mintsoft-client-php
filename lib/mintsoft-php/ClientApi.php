@@ -362,11 +362,12 @@ class ClientApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return void
+     * @return array
      */
     public function clientGet($page_no = null, $limit = null, $since_last_updated = null)
     {
-        $this->clientGetWithHttpInfo($page_no, $limit, $since_last_updated);
+        list($response) =         $this->clientGetWithHttpInfo($page_no, $limit, $since_last_updated);
+        return $response;
     }
 
     /**
@@ -384,7 +385,7 @@ class ClientApi
      */
     public function clientGetWithHttpInfo($page_no = null, $limit = null, $since_last_updated = null)
     {
-        $returnType = '';
+        $returnType = '\Swagger\Client\Model\ToolkitDataClassesClientsClient[]';
         $request = $this->clientGetRequest($page_no, $limit, $since_last_updated);
 
         try {
@@ -415,7 +416,21 @@ class ClientApi
                 );
             }
 
-            return [null, $statusCode, $response->getHeaders()];
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = $responseBody->getContents();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {
@@ -467,7 +482,22 @@ class ClientApi
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
-                    return [null, $response->getStatusCode(), $response->getHeaders()];
+
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = $responseBody->getContents();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
                 },
                 function ($exception) {
                     $response = $exception->getResponse();
