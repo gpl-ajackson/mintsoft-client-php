@@ -2,26 +2,25 @@
 
 All URIs are relative to *https://api.mintsoft.co.uk*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**warehouseBulkStockMovement**](WarehouseApi.md#warehouseBulkStockMovement) | **POST** /api/Warehouse/BulkStockMovement | 
-[**warehouseCancelWarehouseTransfer**](WarehouseApi.md#warehouseCancelWarehouseTransfer) | **GET** /api/WarehouseTransfer/{id}/Cancel | Cancel WarehouseTransfer
-[**warehouseConfirmWarehouseTransfer**](WarehouseApi.md#warehouseConfirmWarehouseTransfer) | **GET** /api/WarehouseTransfer/{id}/Confirm | Confirm WarehouseTransfer
-[**warehouseCreateWarehouseTransfer**](WarehouseApi.md#warehouseCreateWarehouseTransfer) | **PUT** /api/WarehouseTransfer | Create new WarehouseTransfer
-[**warehouseDeleteWarehouseTransfer**](WarehouseApi.md#warehouseDeleteWarehouseTransfer) | **DELETE** /api/WarehouseTransfer/{id} | Delete WarehouseTransfer
-[**warehouseGetLocation**](WarehouseApi.md#warehouseGetLocation) | **GET** /api/Warehouse/{WarehouseId}/Location/{LocationId} | 
-[**warehouseGetLocationTypes**](WarehouseApi.md#warehouseGetLocationTypes) | **GET** /api/Warehouse/LocationTypes | 
-[**warehouseGetLocations**](WarehouseApi.md#warehouseGetLocations) | **GET** /api/Warehouse/{WarehouseId}/Location/All | 
-[**warehouseGetStatuses**](WarehouseApi.md#warehouseGetStatuses) | **GET** /api/WarehouseTransfer/Statuses | Get WarehouseTransfer Statuses
-[**warehouseGetWarehouseTransfer**](WarehouseApi.md#warehouseGetWarehouseTransfer) | **GET** /api/WarehouseTransfer/{id} | Get WarehouseTransfer
-[**warehouseGetWarehouseZones**](WarehouseApi.md#warehouseGetWarehouseZones) | **GET** /api/Warehouse/{id}/Zones | 
-[**warehouseGetWarehouses**](WarehouseApi.md#warehouseGetWarehouses) | **GET** /api/Warehouse | 
-[**warehouseListWarehouseTransfers**](WarehouseApi.md#warehouseListWarehouseTransfers) | **GET** /api/WarehouseTransfer/List | 
-[**warehouseLookupLocationId**](WarehouseApi.md#warehouseLookupLocationId) | **GET** /api/Warehouse/{WarehouseId}/Location/LookupLocationId | 
-[**warehouseStockMovement**](WarehouseApi.md#warehouseStockMovement) | **POST** /api/Warehouse/StockMovement | 
-[**warehouseStockMovements**](WarehouseApi.md#warehouseStockMovements) | **GET** /api/Warehouse/{warehouseId}/StockMovements | Get a List of Stock Movements that have happened in a warehouse e.g. moving stock from one location to another
-[**warehouseUpdateWarehouseTransfer**](WarehouseApi.md#warehouseUpdateWarehouseTransfer) | **POST** /api/WarehouseTransfer/{id} | Update WarehouseTransfer Details
-
+| Method                                                                                     | HTTP request                                                   | Description                                                                                                    |
+|--------------------------------------------------------------------------------------------|----------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
+| [**warehouseBulkStockMovement**](WarehouseApi.md#warehouseBulkStockMovement)               | **POST** /api/Warehouse/BulkStockMovement                      |                                                                                                                |
+| [**warehouseCancelWarehouseTransfer**](WarehouseApi.md#warehouseCancelWarehouseTransfer)   | **GET** /api/WarehouseTransfer/{id}/Cancel                     | Cancel WarehouseTransfer                                                                                       |
+| [**warehouseConfirmWarehouseTransfer**](WarehouseApi.md#warehouseConfirmWarehouseTransfer) | **GET** /api/WarehouseTransfer/{id}/Confirm                    | Confirm WarehouseTransfer                                                                                      |
+| [**warehouseCreateWarehouseTransfer**](WarehouseApi.md#warehouseCreateWarehouseTransfer)   | **PUT** /api/WarehouseTransfer                                 | Create new WarehouseTransfer                                                                                   |
+| [**warehouseDeleteWarehouseTransfer**](WarehouseApi.md#warehouseDeleteWarehouseTransfer)   | **DELETE** /api/WarehouseTransfer/{id}                         | Delete WarehouseTransfer                                                                                       |
+| [**warehouseGetLocation**](WarehouseApi.md#warehouseGetLocation)                           | **GET** /api/Warehouse/{WarehouseId}/Location/{LocationId}     |                                                                                                                |
+| [**warehouseGetLocationTypes**](WarehouseApi.md#warehouseGetLocationTypes)                 | **GET** /api/Warehouse/LocationTypes                           |                                                                                                                |
+| [**warehouseGetLocations**](WarehouseApi.md#warehouseGetLocations)                         | **GET** /api/Warehouse/{WarehouseId}/Location/All              |                                                                                                                |
+| [**warehouseGetStatuses**](WarehouseApi.md#warehouseGetStatuses)                           | **GET** /api/WarehouseTransfer/Statuses                        | Get WarehouseTransfer Statuses                                                                                 |
+| [**warehouseGetWarehouseTransfer**](WarehouseApi.md#warehouseGetWarehouseTransfer)         | **GET** /api/WarehouseTransfer/{id}                            | Get WarehouseTransfer                                                                                          |
+| [**warehouseGetWarehouseZones**](WarehouseApi.md#warehouseGetWarehouseZones)               | **GET** /api/Warehouse/{id}/Zones                              |                                                                                                                |
+| [**warehouseGetWarehouses**](WarehouseApi.md#warehouseGetWarehouses)                       | **GET** /api/Warehouse                                         |                                                                                                                |
+| [**warehouseListWarehouseTransfers**](WarehouseApi.md#warehouseListWarehouseTransfers)     | **GET** /api/WarehouseTransfer/List                            |                                                                                                                |
+| [**warehouseLookupLocationId**](WarehouseApi.md#warehouseLookupLocationId)                 | **GET** /api/Warehouse/{WarehouseId}/Location/LookupLocationId |                                                                                                                |
+| [**warehouseStockMovement**](WarehouseApi.md#warehouseStockMovement)                       | **POST** /api/Warehouse/StockMovement                          |                                                                                                                |
+| [**warehouseStockMovements**](WarehouseApi.md#warehouseStockMovements)                     | **GET** /api/Warehouse/{warehouseId}/StockMovements            | Get a List of Stock Movements that have happened in a warehouse e.g. moving stock from one location to another |
+| [**warehouseUpdateWarehouseTransfer**](WarehouseApi.md#warehouseUpdateWarehouseTransfer)   | **POST** /api/WarehouseTransfer/{id}                           | Update WarehouseTransfer Details                                                                               |
 
 # **warehouseBulkStockMovement**
 > \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult[] warehouseBulkStockMovement($action, $requests)
@@ -29,6 +28,7 @@ Method | HTTP request | Description
 
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
@@ -39,7 +39,7 @@ $apiInstance = new Swagger\Client\Api\WarehouseApi(
     new GuzzleHttp\Client()
 );
 $action = 56; // int | 
-$requests = array(new \Swagger\Client\Model\ToolkitDataClassesWarehouseBookStockRequest()); // \Swagger\Client\Model\ToolkitDataClassesWarehouseBookStockRequest[] | 
+$requests = array(new \Swagger\Client\Model\MintsoftWarehouseBookStockRequest()); // \Swagger\Client\Model\ToolkitDataClassesWarehouseBookStockRequest[] | 
 
 try {
     $result = $apiInstance->warehouseBulkStockMovement($action, $requests);
@@ -178,6 +178,7 @@ Create new WarehouseTransfer
 Used to Creating a new WarehouseTransfer i.e. Advising of a Delivery into the Warehouse
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
@@ -187,7 +188,7 @@ $apiInstance = new Swagger\Client\Api\WarehouseApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$warehouse_transfer = new \Swagger\Client\Model\ToolkitDataClassesWarehouseAPIWarehouseTransfer(); // \Swagger\Client\Model\ToolkitDataClassesWarehouseAPIWarehouseTransfer | WarehouseTransfer Json in the Body of the request
+$warehouse_transfer = new \Swagger\Client\Model\MintsoftWarehouseAPIWarehouseTransfer(); // \Swagger\Client\Model\ToolkitDataClassesWarehouseAPIWarehouseTransfer | WarehouseTransfer Json in the Body of the request
 
 try {
     $result = $apiInstance->warehouseCreateWarehouseTransfer($warehouse_transfer);
@@ -709,6 +710,7 @@ No authorization required
 
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
@@ -719,7 +721,7 @@ $apiInstance = new Swagger\Client\Api\WarehouseApi(
     new GuzzleHttp\Client()
 );
 $action = 56; // int | 
-$request = new \Swagger\Client\Model\ToolkitDataClassesWarehouseBookStockRequest(); // \Swagger\Client\Model\ToolkitDataClassesWarehouseBookStockRequest | 
+$request = new \Swagger\Client\Model\MintsoftWarehouseBookStockRequest(); // \Swagger\Client\Model\ToolkitDataClassesWarehouseBookStockRequest | 
 
 try {
     $result = $apiInstance->warehouseStockMovement($action, $request);
@@ -815,6 +817,7 @@ Update WarehouseTransfer Details
 Update WarehouseTransfer Details for an Existing WarehouseTransfer (Excluding Items)
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
@@ -825,7 +828,7 @@ $apiInstance = new Swagger\Client\Api\WarehouseApi(
     new GuzzleHttp\Client()
 );
 $id = 56; // int | ID of the WarehouseTransfer
-$warehouse_transfer = new \Swagger\Client\Model\ToolkitDataClassesWarehouseAPIWarehouseTransfer(); // \Swagger\Client\Model\ToolkitDataClassesWarehouseAPIWarehouseTransfer | 
+$warehouse_transfer = new \Swagger\Client\Model\MintsoftWarehouseAPIWarehouseTransfer(); // \Swagger\Client\Model\ToolkitDataClassesWarehouseAPIWarehouseTransfer | 
 
 try {
     $result = $apiInstance->warehouseUpdateWarehouseTransfer($id, $warehouse_transfer);

@@ -95,7 +95,7 @@ class RefDataApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesCommonCountry[]
+     * @return \Swagger\Client\Model\MintsoftCommonCountry[]
      */
     public function refDataCountries()
     {
@@ -345,7 +345,7 @@ class RefDataApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesCurrenciesCurrency[]
+     * @return \Swagger\Client\Model\MintsoftCurrenciesCurrency[]
      */
     public function refDataCurrencies()
     {
@@ -845,7 +845,7 @@ class RefDataApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesStockProductPriceType[]
+     * @return \Swagger\Client\Model\MintsoftStockProductPriceType[]
      */
     public function refDataPricingTypes()
     {
@@ -1097,7 +1097,7 @@ class RefDataApi
     {
         $options = [];
         if ($this->config->getDebug()) {
-            $options[RequestOptions::DEBUG] = fopen($this->config->getDebugFile(), 'a');
+            $options[RequestOptions::DEBUG] = fopen($this->config->getDebugFile(), 'ab');
             if (!$options[RequestOptions::DEBUG]) {
                 throw new \RuntimeException('Failed to open the debug file: ' . $this->config->getDebugFile());
             }

@@ -355,11 +355,11 @@ class ProductApi
      * Bulk Add Cartons
      *
      * @param  int $id Product ID (required)
-     * @param  \Swagger\Client\Model\ToolkitDataClassesStockProductContainer[] $cartons Array of Cartons for product (required)
+     * @param  \Swagger\Client\Model\MintsoftStockProductContainer[] $cartons Array of Cartons for product (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
      * @return void
+     *@throws \InvalidArgumentException
+     * @throws \Swagger\Client\ApiException on non-2xx response
      */
     public function productBulkAddCartons($id, $cartons)
     {
@@ -372,11 +372,11 @@ class ProductApi
      * Bulk Add Cartons
      *
      * @param  int $id Product ID (required)
-     * @param  \Swagger\Client\Model\ToolkitDataClassesStockProductContainer[] $cartons Array of Cartons for product (required)
+     * @param  \Swagger\Client\Model\MintsoftStockProductContainer[] $cartons Array of Cartons for product (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     *@throws \InvalidArgumentException
+     * @throws \Swagger\Client\ApiException on non-2xx response
      */
     public function productBulkAddCartonsWithHttpInfo($id, $cartons)
     {
@@ -426,10 +426,10 @@ class ProductApi
      * Bulk Add Cartons
      *
      * @param  int $id Product ID (required)
-     * @param  \Swagger\Client\Model\ToolkitDataClassesStockProductContainer[] $cartons Array of Cartons for product (required)
+     * @param  \Swagger\Client\Model\MintsoftStockProductContainer[] $cartons Array of Cartons for product (required)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
+     *@throws \InvalidArgumentException
      */
     public function productBulkAddCartonsAsync($id, $cartons)
     {
@@ -447,10 +447,10 @@ class ProductApi
      * Bulk Add Cartons
      *
      * @param  int $id Product ID (required)
-     * @param  \Swagger\Client\Model\ToolkitDataClassesStockProductContainer[] $cartons Array of Cartons for product (required)
+     * @param  \Swagger\Client\Model\MintsoftStockProductContainer[] $cartons Array of Cartons for product (required)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
+     *@throws \InvalidArgumentException
      */
     public function productBulkAddCartonsAsyncWithHttpInfo($id, $cartons)
     {
@@ -484,10 +484,10 @@ class ProductApi
      * Create request for operation 'productBulkAddCartons'
      *
      * @param  int $id Product ID (required)
-     * @param  \Swagger\Client\Model\ToolkitDataClassesStockProductContainer[] $cartons Array of Cartons for product (required)
+     * @param  \Swagger\Client\Model\MintsoftStockProductContainer[] $cartons Array of Cartons for product (required)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
+     *@throws \InvalidArgumentException
      */
     protected function productBulkAddCartonsRequest($id, $cartons)
     {
@@ -600,12 +600,12 @@ class ProductApi
      *
      * Bulk On Hand Stock Update
      *
-     * @param  \Swagger\Client\Model\ToolkitDataClassesStockAPIBulkOnHandStockUpdate[] $records Update Requests (required)
+     * @param  \Swagger\Client\Model\MintsoftStockAPIBulkOnHandStockUpdate[] $records Update Requests (required)
      * @param  int $client_id Client ID (optional)
      *
+     * @return \Swagger\Client\Model\MintsoftProductsAPIBulkStockUpdateResult[]
+     *@throws \InvalidArgumentException
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesProductsAPIBulkStockUpdateResult[]
      */
     public function productBulkOnHandStockUpdate($records, $client_id = null)
     {
@@ -618,12 +618,12 @@ class ProductApi
      *
      * Bulk On Hand Stock Update
      *
-     * @param  \Swagger\Client\Model\ToolkitDataClassesStockAPIBulkOnHandStockUpdate[] $records Update Requests (required)
+     * @param  \Swagger\Client\Model\MintsoftStockAPIBulkOnHandStockUpdate[] $records Update Requests (required)
      * @param  int $client_id Client ID (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\Model\ToolkitDataClassesProductsAPIBulkStockUpdateResult[], HTTP status code, HTTP response headers (array of strings)
+     *@throws \InvalidArgumentException
+     * @throws \Swagger\Client\ApiException on non-2xx response
      */
     public function productBulkOnHandStockUpdateWithHttpInfo($records, $client_id = null)
     {
@@ -694,11 +694,11 @@ class ProductApi
      *
      * Bulk On Hand Stock Update
      *
-     * @param  \Swagger\Client\Model\ToolkitDataClassesStockAPIBulkOnHandStockUpdate[] $records Update Requests (required)
+     * @param  \Swagger\Client\Model\MintsoftStockAPIBulkOnHandStockUpdate[] $records Update Requests (required)
      * @param  int $client_id Client ID (optional)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
+     *@throws \InvalidArgumentException
      */
     public function productBulkOnHandStockUpdateAsync($records, $client_id = null)
     {
@@ -715,11 +715,11 @@ class ProductApi
      *
      * Bulk On Hand Stock Update
      *
-     * @param  \Swagger\Client\Model\ToolkitDataClassesStockAPIBulkOnHandStockUpdate[] $records Update Requests (required)
+     * @param  \Swagger\Client\Model\MintsoftStockAPIBulkOnHandStockUpdate[] $records Update Requests (required)
      * @param  int $client_id Client ID (optional)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
+     *@throws \InvalidArgumentException
      */
     public function productBulkOnHandStockUpdateAsyncWithHttpInfo($records, $client_id = null)
     {
@@ -766,11 +766,11 @@ class ProductApi
     /**
      * Create request for operation 'productBulkOnHandStockUpdate'
      *
-     * @param  \Swagger\Client\Model\ToolkitDataClassesStockAPIBulkOnHandStockUpdate[] $records Update Requests (required)
+     * @param  \Swagger\Client\Model\MintsoftStockAPIBulkOnHandStockUpdate[] $records Update Requests (required)
      * @param  int $client_id Client ID (optional)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
+     *@throws \InvalidArgumentException
      */
     protected function productBulkOnHandStockUpdateRequest($records, $client_id = null)
     {
@@ -873,11 +873,11 @@ class ProductApi
      *
      * Create New Bundle
      *
-     * @param  \Swagger\Client\Model\ToolkitDataClassesStockAPIBundle $bundle Bundle (required)
+     * @param  \Swagger\Client\Model\MintsoftStockAPIBundle $bundle Bundle (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
      * @return void
+     *@throws \InvalidArgumentException
+     * @throws \Swagger\Client\ApiException on non-2xx response
      */
     public function productCreateBundle($bundle)
     {
@@ -889,11 +889,11 @@ class ProductApi
      *
      * Create New Bundle
      *
-     * @param  \Swagger\Client\Model\ToolkitDataClassesStockAPIBundle $bundle Bundle (required)
+     * @param  \Swagger\Client\Model\MintsoftStockAPIBundle $bundle Bundle (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     *@throws \InvalidArgumentException
+     * @throws \Swagger\Client\ApiException on non-2xx response
      */
     public function productCreateBundleWithHttpInfo($bundle)
     {
@@ -942,10 +942,10 @@ class ProductApi
      *
      * Create New Bundle
      *
-     * @param  \Swagger\Client\Model\ToolkitDataClassesStockAPIBundle $bundle Bundle (required)
+     * @param  \Swagger\Client\Model\MintsoftStockAPIBundle $bundle Bundle (required)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
+     *@throws \InvalidArgumentException
      */
     public function productCreateBundleAsync($bundle)
     {
@@ -962,10 +962,10 @@ class ProductApi
      *
      * Create New Bundle
      *
-     * @param  \Swagger\Client\Model\ToolkitDataClassesStockAPIBundle $bundle Bundle (required)
+     * @param  \Swagger\Client\Model\MintsoftStockAPIBundle $bundle Bundle (required)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
+     *@throws \InvalidArgumentException
      */
     public function productCreateBundleAsyncWithHttpInfo($bundle)
     {
@@ -998,10 +998,10 @@ class ProductApi
     /**
      * Create request for operation 'productCreateBundle'
      *
-     * @param  \Swagger\Client\Model\ToolkitDataClassesStockAPIBundle $bundle Bundle (required)
+     * @param  \Swagger\Client\Model\MintsoftStockAPIBundle $bundle Bundle (required)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
+     *@throws \InvalidArgumentException
      */
     protected function productCreateBundleRequest($bundle)
     {
@@ -1100,11 +1100,11 @@ class ProductApi
      *
      * Create New Product
      *
-     * @param  \Swagger\Client\Model\ToolkitDataClassesStockProduct $product Product ID (required)
+     * @param  \Swagger\Client\Model\MintsoftStockProduct $product Product ID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
      * @return void
+     *@throws \InvalidArgumentException
+     * @throws \Swagger\Client\ApiException on non-2xx response
      */
     public function productCreateProduct($product)
     {
@@ -1116,11 +1116,11 @@ class ProductApi
      *
      * Create New Product
      *
-     * @param  \Swagger\Client\Model\ToolkitDataClassesStockProduct $product Product ID (required)
+     * @param  \Swagger\Client\Model\MintsoftStockProduct $product Product ID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     *@throws \InvalidArgumentException
+     * @throws \Swagger\Client\ApiException on non-2xx response
      */
     public function productCreateProductWithHttpInfo($product)
     {
@@ -1169,10 +1169,10 @@ class ProductApi
      *
      * Create New Product
      *
-     * @param  \Swagger\Client\Model\ToolkitDataClassesStockProduct $product Product ID (required)
+     * @param  \Swagger\Client\Model\MintsoftStockProduct $product Product ID (required)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
+     *@throws \InvalidArgumentException
      */
     public function productCreateProductAsync($product)
     {
@@ -1189,10 +1189,10 @@ class ProductApi
      *
      * Create New Product
      *
-     * @param  \Swagger\Client\Model\ToolkitDataClassesStockProduct $product Product ID (required)
+     * @param  \Swagger\Client\Model\MintsoftStockProduct $product Product ID (required)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
+     *@throws \InvalidArgumentException
      */
     public function productCreateProductAsyncWithHttpInfo($product)
     {
@@ -1225,10 +1225,10 @@ class ProductApi
     /**
      * Create request for operation 'productCreateProduct'
      *
-     * @param  \Swagger\Client\Model\ToolkitDataClassesStockProduct $product Product ID (required)
+     * @param  \Swagger\Client\Model\MintsoftStockProduct $product Product ID (required)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
+     *@throws \InvalidArgumentException
      */
     protected function productCreateProductRequest($product)
     {
@@ -1327,11 +1327,11 @@ class ProductApi
      *
      * Create New Product Supplier
      *
-     * @param  \Swagger\Client\Model\ToolkitDataClassesStockProductSupplier $product_supplier ProductSupplier (required)
+     * @param  \Swagger\Client\Model\MintsoftStockProductSupplier $product_supplier ProductSupplier (required)
      *
+     * @return \Swagger\Client\Model\MintsoftCommonToolkitResult
+     *@throws \InvalidArgumentException
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult
      */
     public function productCreateSupplier($product_supplier)
     {
@@ -1344,15 +1344,15 @@ class ProductApi
      *
      * Create New Product Supplier
      *
-     * @param  \Swagger\Client\Model\ToolkitDataClassesStockProductSupplier $product_supplier ProductSupplier (required)
+     * @param  \Swagger\Client\Model\MintsoftStockProductSupplier $product_supplier ProductSupplier (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult, HTTP status code, HTTP response headers (array of strings)
+     *@throws \InvalidArgumentException
+     * @throws \Swagger\Client\ApiException on non-2xx response
      */
     public function productCreateSupplierWithHttpInfo($product_supplier)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->productCreateSupplierRequest($product_supplier);
 
         try {
@@ -1404,7 +1404,7 @@ class ProductApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult',
+                        '\Swagger\Client\Model\MintsoftCommonToolkitResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1419,10 +1419,10 @@ class ProductApi
      *
      * Create New Product Supplier
      *
-     * @param  \Swagger\Client\Model\ToolkitDataClassesStockProductSupplier $product_supplier ProductSupplier (required)
+     * @param  \Swagger\Client\Model\MintsoftStockProductSupplier $product_supplier ProductSupplier (required)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
+     *@throws \InvalidArgumentException
      */
     public function productCreateSupplierAsync($product_supplier)
     {
@@ -1439,14 +1439,14 @@ class ProductApi
      *
      * Create New Product Supplier
      *
-     * @param  \Swagger\Client\Model\ToolkitDataClassesStockProductSupplier $product_supplier ProductSupplier (required)
+     * @param  \Swagger\Client\Model\MintsoftStockProductSupplier $product_supplier ProductSupplier (required)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
+     *@throws \InvalidArgumentException
      */
     public function productCreateSupplierAsyncWithHttpInfo($product_supplier)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->productCreateSupplierRequest($product_supplier);
 
         return $this->client
@@ -1489,10 +1489,10 @@ class ProductApi
     /**
      * Create request for operation 'productCreateSupplier'
      *
-     * @param  \Swagger\Client\Model\ToolkitDataClassesStockProductSupplier $product_supplier ProductSupplier (required)
+     * @param  \Swagger\Client\Model\MintsoftStockProductSupplier $product_supplier ProductSupplier (required)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
+     *@throws \InvalidArgumentException
      */
     protected function productCreateSupplierRequest($product_supplier)
     {
@@ -2074,11 +2074,11 @@ class ProductApi
      *
      * Delete Product Prices
      *
-     * @param  \Swagger\Client\Model\ToolkitDataClassesProductsAPINewProductPrice[] $prices Product Prices (required)
+     * @param  \Swagger\Client\Model\MintsoftProductsAPINewProductPrice[] $prices Product Prices (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
      * @return void
+     *@throws \InvalidArgumentException
+     * @throws \Swagger\Client\ApiException on non-2xx response
      */
     public function productDeleteProductPrices($prices)
     {
@@ -2090,11 +2090,11 @@ class ProductApi
      *
      * Delete Product Prices
      *
-     * @param  \Swagger\Client\Model\ToolkitDataClassesProductsAPINewProductPrice[] $prices Product Prices (required)
+     * @param  \Swagger\Client\Model\MintsoftProductsAPINewProductPrice[] $prices Product Prices (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     *@throws \InvalidArgumentException
+     * @throws \Swagger\Client\ApiException on non-2xx response
      */
     public function productDeleteProductPricesWithHttpInfo($prices)
     {
@@ -2143,10 +2143,10 @@ class ProductApi
      *
      * Delete Product Prices
      *
-     * @param  \Swagger\Client\Model\ToolkitDataClassesProductsAPINewProductPrice[] $prices Product Prices (required)
+     * @param  \Swagger\Client\Model\MintsoftProductsAPINewProductPrice[] $prices Product Prices (required)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
+     *@throws \InvalidArgumentException
      */
     public function productDeleteProductPricesAsync($prices)
     {
@@ -2163,10 +2163,10 @@ class ProductApi
      *
      * Delete Product Prices
      *
-     * @param  \Swagger\Client\Model\ToolkitDataClassesProductsAPINewProductPrice[] $prices Product Prices (required)
+     * @param  \Swagger\Client\Model\MintsoftProductsAPINewProductPrice[] $prices Product Prices (required)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
+     *@throws \InvalidArgumentException
      */
     public function productDeleteProductPricesAsyncWithHttpInfo($prices)
     {
@@ -2199,10 +2199,10 @@ class ProductApi
     /**
      * Create request for operation 'productDeleteProductPrices'
      *
-     * @param  \Swagger\Client\Model\ToolkitDataClassesProductsAPINewProductPrice[] $prices Product Prices (required)
+     * @param  \Swagger\Client\Model\MintsoftProductsAPINewProductPrice[] $prices Product Prices (required)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
+     *@throws \InvalidArgumentException
      */
     protected function productDeleteProductPricesRequest($prices)
     {
@@ -5253,9 +5253,9 @@ class ProductApi
      * @param  int $client_id client_id (optional)
      * @param  \DateTime $since_last_updated since_last_updated (optional)
      *
+     * @return \Swagger\Client\Model\MintsoftStockProduct[]
+     *@throws \InvalidArgumentException
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesStockProduct[]
      */
     public function productListProducts($page_no = null, $limit = null, $client_id = null, $since_last_updated = null)
     {
@@ -5536,9 +5536,9 @@ class ProductApi
      * @param  int $page_no Page No - Default 1 (optional)
      * @param  int $limit Number of Results to Return - Default 100 - Max 100 (optional)
      *
+     * @return \Swagger\Client\Model\MintsoftStockProductSupplier[]
+     *@throws \InvalidArgumentException
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesStockProductSupplier[]
      */
     public function productListSuppliers($client_id = null, $page_no = null, $limit = null)
     {
@@ -6772,11 +6772,11 @@ class ProductApi
      *
      * Update Product
      *
-     * @param  \Swagger\Client\Model\ToolkitDataClassesStockProduct $product Product (required)
+     * @param  \Swagger\Client\Model\MintsoftStockProduct $product Product (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
      * @return void
+     *@throws \InvalidArgumentException
+     * @throws \Swagger\Client\ApiException on non-2xx response
      */
     public function productUpdateProduct($product)
     {
@@ -6788,11 +6788,11 @@ class ProductApi
      *
      * Update Product
      *
-     * @param  \Swagger\Client\Model\ToolkitDataClassesStockProduct $product Product (required)
+     * @param  \Swagger\Client\Model\MintsoftStockProduct $product Product (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     *@throws \InvalidArgumentException
+     * @throws \Swagger\Client\ApiException on non-2xx response
      */
     public function productUpdateProductWithHttpInfo($product)
     {
@@ -6841,10 +6841,10 @@ class ProductApi
      *
      * Update Product
      *
-     * @param  \Swagger\Client\Model\ToolkitDataClassesStockProduct $product Product (required)
+     * @param  \Swagger\Client\Model\MintsoftStockProduct $product Product (required)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
+     *@throws \InvalidArgumentException
      */
     public function productUpdateProductAsync($product)
     {
@@ -6861,10 +6861,10 @@ class ProductApi
      *
      * Update Product
      *
-     * @param  \Swagger\Client\Model\ToolkitDataClassesStockProduct $product Product (required)
+     * @param  \Swagger\Client\Model\MintsoftStockProduct $product Product (required)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
+     *@throws \InvalidArgumentException
      */
     public function productUpdateProductAsyncWithHttpInfo($product)
     {
@@ -6897,10 +6897,10 @@ class ProductApi
     /**
      * Create request for operation 'productUpdateProduct'
      *
-     * @param  \Swagger\Client\Model\ToolkitDataClassesStockProduct $product Product (required)
+     * @param  \Swagger\Client\Model\MintsoftStockProduct $product Product (required)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
+     *@throws \InvalidArgumentException
      */
     protected function productUpdateProductRequest($product)
     {
@@ -6999,11 +6999,11 @@ class ProductApi
      *
      * Add or Update Product Prices
      *
-     * @param  \Swagger\Client\Model\ToolkitDataClassesProductsAPINewProductPrice[] $prices Prices (required)
+     * @param  \Swagger\Client\Model\MintsoftProductsAPINewProductPrice[] $prices Prices (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
      * @return void
+     *@throws \InvalidArgumentException
+     * @throws \Swagger\Client\ApiException on non-2xx response
      */
     public function productUpdateProductPrices($prices)
     {
@@ -7015,11 +7015,11 @@ class ProductApi
      *
      * Add or Update Product Prices
      *
-     * @param  \Swagger\Client\Model\ToolkitDataClassesProductsAPINewProductPrice[] $prices Prices (required)
+     * @param  \Swagger\Client\Model\MintsoftProductsAPINewProductPrice[] $prices Prices (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     *@throws \InvalidArgumentException
+     * @throws \Swagger\Client\ApiException on non-2xx response
      */
     public function productUpdateProductPricesWithHttpInfo($prices)
     {
@@ -7068,10 +7068,10 @@ class ProductApi
      *
      * Add or Update Product Prices
      *
-     * @param  \Swagger\Client\Model\ToolkitDataClassesProductsAPINewProductPrice[] $prices Prices (required)
+     * @param  \Swagger\Client\Model\MintsoftProductsAPINewProductPrice[] $prices Prices (required)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
+     *@throws \InvalidArgumentException
      */
     public function productUpdateProductPricesAsync($prices)
     {
@@ -7088,10 +7088,10 @@ class ProductApi
      *
      * Add or Update Product Prices
      *
-     * @param  \Swagger\Client\Model\ToolkitDataClassesProductsAPINewProductPrice[] $prices Prices (required)
+     * @param  \Swagger\Client\Model\MintsoftProductsAPINewProductPrice[] $prices Prices (required)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
+     *@throws \InvalidArgumentException
      */
     public function productUpdateProductPricesAsyncWithHttpInfo($prices)
     {
@@ -7124,10 +7124,10 @@ class ProductApi
     /**
      * Create request for operation 'productUpdateProductPrices'
      *
-     * @param  \Swagger\Client\Model\ToolkitDataClassesProductsAPINewProductPrice[] $prices Prices (required)
+     * @param  \Swagger\Client\Model\MintsoftProductsAPINewProductPrice[] $prices Prices (required)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
+     *@throws \InvalidArgumentException
      */
     protected function productUpdateProductPricesRequest($prices)
     {

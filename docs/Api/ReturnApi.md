@@ -2,17 +2,16 @@
 
 All URIs are relative to *https://api.mintsoft.co.uk*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**returnAddReturnItem**](ReturnApi.md#returnAddReturnItem) | **POST** /api/Return/{id}/AddItem | 
-[**returnAllocateItemLocation**](ReturnApi.md#returnAllocateItemLocation) | **POST** /api/Return/{id}/AllocateItemLocation | 
-[**returnConfirmReturn**](ReturnApi.md#returnConfirmReturn) | **POST** /api/Return/{id}/Confirm | 
-[**returnCreateReturn**](ReturnApi.md#returnCreateReturn) | **POST** /api/Return/CreateReturn/{OrderId} | 
-[**returnGetReturn**](ReturnApi.md#returnGetReturn) | **GET** /api/Return/{id} | 
-[**returnGetReturnItems**](ReturnApi.md#returnGetReturnItems) | **GET** /api/Return/{id}/Items | 
-[**returnGetReturnReasons**](ReturnApi.md#returnGetReturnReasons) | **GET** /api/Return/Reasons | 
-[**returnGetReturnsOnDate**](ReturnApi.md#returnGetReturnsOnDate) | **GET** /api/Return/SearchByDate | 
-
+| Method                                                                    | HTTP request                                   | Description |
+|---------------------------------------------------------------------------|------------------------------------------------|-------------|
+| [**returnAddReturnItem**](ReturnApi.md#returnAddReturnItem)               | **POST** /api/Return/{id}/AddItem              |             |
+| [**returnAllocateItemLocation**](ReturnApi.md#returnAllocateItemLocation) | **POST** /api/Return/{id}/AllocateItemLocation |             |
+| [**returnConfirmReturn**](ReturnApi.md#returnConfirmReturn)               | **POST** /api/Return/{id}/Confirm              |             |
+| [**returnCreateReturn**](ReturnApi.md#returnCreateReturn)                 | **POST** /api/Return/CreateReturn/{OrderId}    |             |
+| [**returnGetReturn**](ReturnApi.md#returnGetReturn)                       | **GET** /api/Return/{id}                       |             |
+| [**returnGetReturnItems**](ReturnApi.md#returnGetReturnItems)             | **GET** /api/Return/{id}/Items                 |             |
+| [**returnGetReturnReasons**](ReturnApi.md#returnGetReturnReasons)         | **GET** /api/Return/Reasons                    |             |
+| [**returnGetReturnsOnDate**](ReturnApi.md#returnGetReturnsOnDate)         | **GET** /api/Return/SearchByDate               |             |
 
 # **returnAddReturnItem**
 > \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult returnAddReturnItem($id, $item)
@@ -20,6 +19,7 @@ Method | HTTP request | Description
 
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
@@ -30,7 +30,7 @@ $apiInstance = new Swagger\Client\Api\ReturnApi(
     new GuzzleHttp\Client()
 );
 $id = 56; // int | 
-$item = new \Swagger\Client\Model\ToolkitDataClassesReturnsAPIReturnItemAPI(); // \Swagger\Client\Model\ToolkitDataClassesReturnsAPIReturnItemAPI | 
+$item = new \Swagger\Client\Model\MintsoftReturnsAPIReturnItemAPI(); // \Swagger\Client\Model\ToolkitDataClassesReturnsAPIReturnItemAPI | 
 
 try {
     $result = $apiInstance->returnAddReturnItem($id, $item);

@@ -96,9 +96,9 @@ class BatchApi
      * @param  string $assign_to_user User to assign the Batch to. (required)
      * @param  string $picking_type Picking Type to select. (required)
      *
+     * @return \Swagger\Client\Model\MintsoftCommonToolkitResult
+     *@throws \InvalidArgumentException
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult
      */
     public function batchAssignBatchToUser($batch_id, $assign_to_user, $picking_type)
     {
@@ -121,7 +121,7 @@ class BatchApi
      */
     public function batchAssignBatchToUserWithHttpInfo($batch_id, $assign_to_user, $picking_type)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->batchAssignBatchToUserRequest($batch_id, $assign_to_user, $picking_type);
 
         try {
@@ -173,7 +173,7 @@ class BatchApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult',
+                        '\Swagger\Client\Model\MintsoftCommonToolkitResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -219,7 +219,7 @@ class BatchApi
      */
     public function batchAssignBatchToUserAsyncWithHttpInfo($batch_id, $assign_to_user, $picking_type)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->batchAssignBatchToUserRequest($batch_id, $assign_to_user, $picking_type);
 
         return $this->client
@@ -390,9 +390,9 @@ class BatchApi
      * @param  int $order_id ID of Order you want to assign. (required)
      * @param  string $assign_to_user User to assign the Order to. (required)
      *
+     * @return \Swagger\Client\Model\MintsoftCommonToolkitResult
+     *@throws \InvalidArgumentException
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult
      */
     public function batchAssignOrderToUser($order_id, $assign_to_user)
     {
@@ -414,7 +414,7 @@ class BatchApi
      */
     public function batchAssignOrderToUserWithHttpInfo($order_id, $assign_to_user)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->batchAssignOrderToUserRequest($order_id, $assign_to_user);
 
         try {
@@ -466,7 +466,7 @@ class BatchApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult',
+                        '\Swagger\Client\Model\MintsoftCommonToolkitResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -510,7 +510,7 @@ class BatchApi
      */
     public function batchAssignOrderToUserAsyncWithHttpInfo($order_id, $assign_to_user)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->batchAssignOrderToUserRequest($order_id, $assign_to_user);
 
         return $this->client
@@ -669,9 +669,9 @@ class BatchApi
      *
      * @param  \Swagger\Client\Model\MintsoftAPICommonClassesNewBatch $batch  (required)
      *
+     * @return \Swagger\Client\Model\MintsoftCommonToolkitResult
+     *@throws \InvalidArgumentException
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult
      */
     public function batchCreateBatch($batch)
     {
@@ -692,7 +692,7 @@ class BatchApi
      */
     public function batchCreateBatchWithHttpInfo($batch)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->batchCreateBatchRequest($batch);
 
         try {
@@ -744,7 +744,7 @@ class BatchApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult',
+                        '\Swagger\Client\Model\MintsoftCommonToolkitResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -786,7 +786,7 @@ class BatchApi
      */
     public function batchCreateBatchAsyncWithHttpInfo($batch)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->batchCreateBatchRequest($batch);
 
         return $this->client
@@ -933,9 +933,9 @@ class BatchApi
      *
      * @param  int $batch_template_id Id of Template to create Batch from (required)
      *
+     * @return \Swagger\Client\Model\MintsoftCommonToolkitResult
+     *@throws \InvalidArgumentException
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult
      */
     public function batchCreateBatchFromTemplate($batch_template_id)
     {
@@ -956,7 +956,7 @@ class BatchApi
      */
     public function batchCreateBatchFromTemplateWithHttpInfo($batch_template_id)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->batchCreateBatchFromTemplateRequest($batch_template_id);
 
         try {
@@ -1008,7 +1008,7 @@ class BatchApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult',
+                        '\Swagger\Client\Model\MintsoftCommonToolkitResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1050,7 +1050,7 @@ class BatchApi
      */
     public function batchCreateBatchFromTemplateAsyncWithHttpInfo($batch_template_id)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->batchCreateBatchFromTemplateRequest($batch_template_id);
 
         return $this->client
@@ -1198,9 +1198,9 @@ class BatchApi
      *
      * @param  int $batch_id Id of Batch to delete (required)
      *
+     * @return \Swagger\Client\Model\MintsoftCommonToolkitResult
+     *@throws \InvalidArgumentException
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult
      */
     public function batchDeleteBatch($batch_id)
     {
@@ -1221,7 +1221,7 @@ class BatchApi
      */
     public function batchDeleteBatchWithHttpInfo($batch_id)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->batchDeleteBatchRequest($batch_id);
 
         try {
@@ -1273,7 +1273,7 @@ class BatchApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult',
+                        '\Swagger\Client\Model\MintsoftCommonToolkitResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1315,7 +1315,7 @@ class BatchApi
      */
     public function batchDeleteBatchAsyncWithHttpInfo($batch_id)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->batchDeleteBatchRequest($batch_id);
 
         return $this->client
@@ -1463,9 +1463,9 @@ class BatchApi
      *
      * @param  int $batch_id ID of Batch you want to despatch (required)
      *
+     * @return \Swagger\Client\Model\MintsoftCommonToolkitResult[]
+     *@throws \InvalidArgumentException
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult[]
      */
     public function batchDespatchBatch($batch_id)
     {
@@ -1730,7 +1730,7 @@ class BatchApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesOrdersOrder[]
+     * @return \Swagger\Client\Model\MintsoftOrdersOrder[]
      */
     public function batchGetBatch($id)
     {
@@ -1998,7 +1998,7 @@ class BatchApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesOrdersBatch[]
+     * @return \Swagger\Client\Model\MintsoftOrdersBatch[]
      */
     public function batchListBatches()
     {
@@ -2248,7 +2248,7 @@ class BatchApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesOrdersBatchTemplate[]
+     * @return \Swagger\Client\Model\MintsoftOrdersBatchTemplate[]
      */
     public function batchTemplates()
     {
@@ -2498,9 +2498,9 @@ class BatchApi
      * @param  int $id Batch ID (required)
      * @param  int $order_status Order Status ID (required)
      *
+     * @return \Swagger\Client\Model\MintsoftCommonToolkitResult
+     *@throws \InvalidArgumentException
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult
      */
     public function batchUpdateBatchStatus($id, $order_status)
     {
@@ -2522,7 +2522,7 @@ class BatchApi
      */
     public function batchUpdateBatchStatusWithHttpInfo($id, $order_status)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->batchUpdateBatchStatusRequest($id, $order_status);
 
         try {
@@ -2574,7 +2574,7 @@ class BatchApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult',
+                        '\Swagger\Client\Model\MintsoftCommonToolkitResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2618,7 +2618,7 @@ class BatchApi
      */
     public function batchUpdateBatchStatusAsyncWithHttpInfo($id, $order_status)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->batchUpdateBatchStatusRequest($id, $order_status);
 
         return $this->client
@@ -2784,7 +2784,7 @@ class BatchApi
     {
         $options = [];
         if ($this->config->getDebug()) {
-            $options[RequestOptions::DEBUG] = fopen($this->config->getDebugFile(), 'a');
+            $options[RequestOptions::DEBUG] = fopen($this->config->getDebugFile(), 'ab');
             if (!$options[RequestOptions::DEBUG]) {
                 throw new \RuntimeException('Failed to open the debug file: ' . $this->config->getDebugFile());
             }

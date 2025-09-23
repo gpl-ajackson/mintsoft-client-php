@@ -100,7 +100,7 @@ class ReportsApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesReportsCourierDespatchReportLine[]
+     * @return \Swagger\Client\Model\MintsoftReportsCourierDespatchReportLine[]
      */
     public function reportsCourierDespatchReport($despatch_date_start, $despatch_date_end, $courier_id = null, $warehouse_id = null, $breakdown_by_country = null)
     {
@@ -404,7 +404,7 @@ class ReportsApi
     {
         $options = [];
         if ($this->config->getDebug()) {
-            $options[RequestOptions::DEBUG] = fopen($this->config->getDebugFile(), 'a');
+            $options[RequestOptions::DEBUG] = fopen($this->config->getDebugFile(), 'ab');
             if (!$options[RequestOptions::DEBUG]) {
                 throw new \RuntimeException('Failed to open the debug file: ' . $this->config->getDebugFile());
             }

@@ -92,9 +92,9 @@ class CourierApi
      *
      * @param  int $id id (required)
      *
+     * @return \Swagger\Client\Model\MintsoftShippingCourierService
+     *@throws \InvalidArgumentException
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesShippingCourierService
      */
     public function courierGetCourierService($id)
     {
@@ -113,7 +113,7 @@ class CourierApi
      */
     public function courierGetCourierServiceWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesShippingCourierService';
+        $returnType = '\Swagger\Client\Model\MintsoftShippingCourierService';
         $request = $this->courierGetCourierServiceRequest($id);
 
         try {
@@ -165,7 +165,7 @@ class CourierApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesShippingCourierService',
+                        '\Swagger\Client\Model\MintsoftShippingCourierService',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -207,7 +207,7 @@ class CourierApi
      */
     public function courierGetCourierServiceAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesShippingCourierService';
+        $returnType = '\Swagger\Client\Model\MintsoftShippingCourierService';
         $request = $this->courierGetCourierServiceRequest($id);
 
         return $this->client
@@ -358,7 +358,7 @@ class CourierApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesShippingCourierServiceType[]
+     * @return \Swagger\Client\Model\MintsoftShippingCourierServiceType[]
      */
     public function courierGetCourierServiceTypes()
     {
@@ -602,9 +602,9 @@ class CourierApi
      * Operation courierGetCourierServices
      *
      *
+     * @return \Swagger\Client\Model\MintsoftShippingCourierService[]
+     *@throws \InvalidArgumentException
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesShippingCourierService[]
      */
     public function courierGetCourierServices()
     {
@@ -851,7 +851,7 @@ class CourierApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesShippingExternalCourierServiceName[]
+     * @return \Swagger\Client\Model\MintsoftShippingExternalCourierServiceName[]
      */
     public function courierGetExternalCourierServiceNames($id)
     {
@@ -1119,7 +1119,7 @@ class CourierApi
     {
         $options = [];
         if ($this->config->getDebug()) {
-            $options[RequestOptions::DEBUG] = fopen($this->config->getDebugFile(), 'a');
+            $options[RequestOptions::DEBUG] = fopen($this->config->getDebugFile(), 'ab');
             if (!$options[RequestOptions::DEBUG]) {
                 throw new \RuntimeException('Failed to open the debug file: ' . $this->config->getDebugFile());
             }

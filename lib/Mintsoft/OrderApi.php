@@ -91,11 +91,11 @@ class OrderApi
      * Operation orderAddOrderComment
      *
      * @param  int $id id (required)
-     * @param  \Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrderComment $comment comment (required)
+     * @param  \Swagger\Client\Model\MintsoftOrdersAPINewOrderComment $comment comment (required)
      *
+     * @return \Swagger\Client\Model\MintsoftCommonToolkitResult
+     *@throws \InvalidArgumentException
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult
      */
     public function orderAddOrderComment($id, $comment)
     {
@@ -107,15 +107,15 @@ class OrderApi
      * Operation orderAddOrderCommentWithHttpInfo
      *
      * @param  int $id (required)
-     * @param  \Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrderComment $comment (required)
+     * @param  \Swagger\Client\Model\MintsoftOrdersAPINewOrderComment $comment (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult, HTTP status code, HTTP response headers (array of strings)
+     *@throws \InvalidArgumentException
+     * @throws \Swagger\Client\ApiException on non-2xx response
      */
     public function orderAddOrderCommentWithHttpInfo($id, $comment)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->orderAddOrderCommentRequest($id, $comment);
 
         try {
@@ -167,7 +167,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult',
+                        '\Swagger\Client\Model\MintsoftCommonToolkitResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -183,10 +183,10 @@ class OrderApi
      * 
      *
      * @param  int $id (required)
-     * @param  \Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrderComment $comment (required)
+     * @param  \Swagger\Client\Model\MintsoftOrdersAPINewOrderComment $comment (required)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
+     *@throws \InvalidArgumentException
      */
     public function orderAddOrderCommentAsync($id, $comment)
     {
@@ -204,14 +204,14 @@ class OrderApi
      * 
      *
      * @param  int $id (required)
-     * @param  \Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrderComment $comment (required)
+     * @param  \Swagger\Client\Model\MintsoftOrdersAPINewOrderComment $comment (required)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
+     *@throws \InvalidArgumentException
      */
     public function orderAddOrderCommentAsyncWithHttpInfo($id, $comment)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->orderAddOrderCommentRequest($id, $comment);
 
         return $this->client
@@ -255,10 +255,10 @@ class OrderApi
      * Create request for operation 'orderAddOrderComment'
      *
      * @param  int $id (required)
-     * @param  \Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrderComment $comment (required)
+     * @param  \Swagger\Client\Model\MintsoftOrdersAPINewOrderComment $comment (required)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
+     *@throws \InvalidArgumentException
      */
     protected function orderAddOrderCommentRequest($id, $comment)
     {
@@ -372,11 +372,11 @@ class OrderApi
      * Add new item to the existing order
      *
      * @param  int $id OrderId (required)
-     * @param  \Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrderItem $order_item order_item (required)
+     * @param  \Swagger\Client\Model\MintsoftOrdersAPINewOrderItem $order_item order_item (required)
      *
+     * @return \Swagger\Client\Model\MintsoftCommonToolkitResult
+     *@throws \InvalidArgumentException
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult
      */
     public function orderAddOrderItem($id, $order_item)
     {
@@ -390,15 +390,15 @@ class OrderApi
      * Add new item to the existing order
      *
      * @param  int $id OrderId (required)
-     * @param  \Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrderItem $order_item (required)
+     * @param  \Swagger\Client\Model\MintsoftOrdersAPINewOrderItem $order_item (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult, HTTP status code, HTTP response headers (array of strings)
+     *@throws \InvalidArgumentException
+     * @throws \Swagger\Client\ApiException on non-2xx response
      */
     public function orderAddOrderItemWithHttpInfo($id, $order_item)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->orderAddOrderItemRequest($id, $order_item);
 
         try {
@@ -450,7 +450,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult',
+                        '\Swagger\Client\Model\MintsoftCommonToolkitResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -466,10 +466,10 @@ class OrderApi
      * Add new item to the existing order
      *
      * @param  int $id OrderId (required)
-     * @param  \Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrderItem $order_item (required)
+     * @param  \Swagger\Client\Model\MintsoftOrdersAPINewOrderItem $order_item (required)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
+     *@throws \InvalidArgumentException
      */
     public function orderAddOrderItemAsync($id, $order_item)
     {
@@ -487,14 +487,14 @@ class OrderApi
      * Add new item to the existing order
      *
      * @param  int $id OrderId (required)
-     * @param  \Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrderItem $order_item (required)
+     * @param  \Swagger\Client\Model\MintsoftOrdersAPINewOrderItem $order_item (required)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
+     *@throws \InvalidArgumentException
      */
     public function orderAddOrderItemAsyncWithHttpInfo($id, $order_item)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->orderAddOrderItemRequest($id, $order_item);
 
         return $this->client
@@ -538,10 +538,10 @@ class OrderApi
      * Create request for operation 'orderAddOrderItem'
      *
      * @param  int $id OrderId (required)
-     * @param  \Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrderItem $order_item (required)
+     * @param  \Swagger\Client\Model\MintsoftOrdersAPINewOrderItem $order_item (required)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
+     *@throws \InvalidArgumentException
      */
     protected function orderAddOrderItemRequest($id, $order_item)
     {
@@ -655,9 +655,9 @@ class OrderApi
      * @param  int $id id (required)
      * @param  string $tag tag (required)
      *
+     * @return \Swagger\Client\Model\MintsoftCommonToolkitResult
+     *@throws \InvalidArgumentException
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult
      */
     public function orderAddOrderTag($id, $tag)
     {
@@ -677,7 +677,7 @@ class OrderApi
      */
     public function orderAddOrderTagWithHttpInfo($id, $tag)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->orderAddOrderTagRequest($id, $tag);
 
         try {
@@ -729,7 +729,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult',
+                        '\Swagger\Client\Model\MintsoftCommonToolkitResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -773,7 +773,7 @@ class OrderApi
      */
     public function orderAddOrderTagAsyncWithHttpInfo($id, $tag)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->orderAddOrderTagRequest($id, $tag);
 
         return $this->client
@@ -938,7 +938,7 @@ class OrderApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesWarehouseProductInLocation[]
+     * @return \Swagger\Client\Model\MintsoftWarehouseProductInLocation[]
      */
     public function orderAllocations($id)
     {
@@ -1207,7 +1207,7 @@ class OrderApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesOrdersBarcodeVerifiedOrderItem[]
+     * @return \Swagger\Client\Model\MintsoftOrdersBarcodeVerifiedOrderItem[]
      */
     public function orderBarcodeVerifiedOrderItems($id)
     {
@@ -1474,9 +1474,9 @@ class OrderApi
      *
      * @param  int $id OrderId (required)
      *
+     * @return \Swagger\Client\Model\MintsoftOrdersAddress
+     *@throws \InvalidArgumentException
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesOrdersAddress
      */
     public function orderBillingAddress($id)
     {
@@ -1497,7 +1497,7 @@ class OrderApi
      */
     public function orderBillingAddressWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesOrdersAddress';
+        $returnType = '\Swagger\Client\Model\MintsoftOrdersAddress';
         $request = $this->orderBillingAddressRequest($id);
 
         try {
@@ -1549,7 +1549,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesOrdersAddress',
+                        '\Swagger\Client\Model\MintsoftOrdersAddress',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1591,7 +1591,7 @@ class OrderApi
      */
     public function orderBillingAddressAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesOrdersAddress';
+        $returnType = '\Swagger\Client\Model\MintsoftOrdersAddress';
         $request = $this->orderBillingAddressRequest($id);
 
         return $this->client
@@ -1741,9 +1741,9 @@ class OrderApi
      *
      * @param  int $id id (required)
      *
+     * @return \Swagger\Client\Model\MintsoftCommonToolkitResult
+     *@throws \InvalidArgumentException
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult
      */
     public function orderCancelOrder($id)
     {
@@ -1762,7 +1762,7 @@ class OrderApi
      */
     public function orderCancelOrderWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->orderCancelOrderRequest($id);
 
         try {
@@ -1814,7 +1814,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult',
+                        '\Swagger\Client\Model\MintsoftCommonToolkitResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1856,7 +1856,7 @@ class OrderApi
      */
     public function orderCancelOrderAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->orderCancelOrderRequest($id);
 
         return $this->client
@@ -2008,9 +2008,9 @@ class OrderApi
      *
      * @param  int $id OrderId (required)
      *
+     * @return \Swagger\Client\Model\MintsoftCommonToolkitResult
+     *@throws \InvalidArgumentException
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult
      */
     public function orderCancelShipment($id)
     {
@@ -2031,7 +2031,7 @@ class OrderApi
      */
     public function orderCancelShipmentWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->orderCancelShipmentRequest($id);
 
         try {
@@ -2083,7 +2083,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult',
+                        '\Swagger\Client\Model\MintsoftCommonToolkitResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2125,7 +2125,7 @@ class OrderApi
      */
     public function orderCancelShipmentAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->orderCancelShipmentRequest($id);
 
         return $this->client
@@ -2277,7 +2277,7 @@ class OrderApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesOrdersOrderComment[]
+     * @return \Swagger\Client\Model\MintsoftOrdersOrderComment[]
      */
     public function orderComments($id)
     {
@@ -2540,11 +2540,11 @@ class OrderApi
      *
      * Create a New Order
      *
-     * @param  \Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrderWithItems $order order (required)
+     * @param  \Swagger\Client\Model\MintsoftOrdersAPINewOrderWithItems $order order (required)
      *
+     * @return \Swagger\Client\Model\MintsoftOrdersAPINewOrderResult[]
+     *@throws \InvalidArgumentException
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrderResult[]
      */
     public function orderCreateOrder($order)
     {
@@ -2557,11 +2557,11 @@ class OrderApi
      *
      * Create a New Order
      *
-     * @param  \Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrderWithItems $order (required)
+     * @param  \Swagger\Client\Model\MintsoftOrdersAPINewOrderWithItems $order (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrderResult[], HTTP status code, HTTP response headers (array of strings)
+     *@throws \InvalidArgumentException
+     * @throws \Swagger\Client\ApiException on non-2xx response
      */
     public function orderCreateOrderWithHttpInfo($order)
     {
@@ -2632,10 +2632,10 @@ class OrderApi
      *
      * Create a New Order
      *
-     * @param  \Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrderWithItems $order (required)
+     * @param  \Swagger\Client\Model\MintsoftOrdersAPINewOrderWithItems $order (required)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
+     *@throws \InvalidArgumentException
      */
     public function orderCreateOrderAsync($order)
     {
@@ -2652,10 +2652,10 @@ class OrderApi
      *
      * Create a New Order
      *
-     * @param  \Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrderWithItems $order (required)
+     * @param  \Swagger\Client\Model\MintsoftOrdersAPINewOrderWithItems $order (required)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
+     *@throws \InvalidArgumentException
      */
     public function orderCreateOrderAsyncWithHttpInfo($order)
     {
@@ -2702,10 +2702,10 @@ class OrderApi
     /**
      * Create request for operation 'orderCreateOrder'
      *
-     * @param  \Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrderWithItems $order (required)
+     * @param  \Swagger\Client\Model\MintsoftOrdersAPINewOrderWithItems $order (required)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
+     *@throws \InvalidArgumentException
      */
     protected function orderCreateOrderRequest($order)
     {
@@ -2808,9 +2808,9 @@ class OrderApi
      * @param  int $courier_service_id Optional - CourierServiceId if you want to update CourierService before creating a shipment (optional)
      * @param  int $number_of_parcels Optional - NumberOfParcels if you want to update NumberOfParcels field before creating a shipment (optional)
      *
+     * @return \Swagger\Client\Model\MintsoftShippingShipmentResult
+     *@throws \InvalidArgumentException
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesShippingShipmentResult
      */
     public function orderCreateShipment($id, $courier_service_id = null, $number_of_parcels = null)
     {
@@ -2833,7 +2833,7 @@ class OrderApi
      */
     public function orderCreateShipmentWithHttpInfo($id, $courier_service_id = null, $number_of_parcels = null)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesShippingShipmentResult';
+        $returnType = '\Swagger\Client\Model\MintsoftShippingShipmentResult';
         $request = $this->orderCreateShipmentRequest($id, $courier_service_id, $number_of_parcels);
 
         try {
@@ -2885,7 +2885,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesShippingShipmentResult',
+                        '\Swagger\Client\Model\MintsoftShippingShipmentResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2931,7 +2931,7 @@ class OrderApi
      */
     public function orderCreateShipmentAsyncWithHttpInfo($id, $courier_service_id = null, $number_of_parcels = null)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesShippingShipmentResult';
+        $returnType = '\Swagger\Client\Model\MintsoftShippingShipmentResult';
         $request = $this->orderCreateShipmentRequest($id, $courier_service_id, $number_of_parcels);
 
         return $this->client
@@ -3094,9 +3094,9 @@ class OrderApi
      * @param  int $id OrderId (required)
      * @param  int $item_id OrderItemId (required)
      *
+     * @return \Swagger\Client\Model\MintsoftCommonToolkitResult
+     *@throws \InvalidArgumentException
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult
      */
     public function orderDeleteOrderItem($id, $item_id)
     {
@@ -3118,7 +3118,7 @@ class OrderApi
      */
     public function orderDeleteOrderItemWithHttpInfo($id, $item_id)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->orderDeleteOrderItemRequest($id, $item_id);
 
         try {
@@ -3170,7 +3170,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult',
+                        '\Swagger\Client\Model\MintsoftCommonToolkitResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3214,7 +3214,7 @@ class OrderApi
      */
     public function orderDeleteOrderItemAsyncWithHttpInfo($id, $item_id)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->orderDeleteOrderItemRequest($id, $item_id);
 
         return $this->client
@@ -3380,9 +3380,9 @@ class OrderApi
      * @param  int $id id (required)
      * @param  int $order_shipment_id order_shipment_id (required)
      *
+     * @return \Swagger\Client\Model\MintsoftCommonToolkitResult
+     *@throws \InvalidArgumentException
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult
      */
     public function orderDeleteOrderShipment($id, $order_shipment_id)
     {
@@ -3402,7 +3402,7 @@ class OrderApi
      */
     public function orderDeleteOrderShipmentWithHttpInfo($id, $order_shipment_id)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->orderDeleteOrderShipmentRequest($id, $order_shipment_id);
 
         try {
@@ -3454,7 +3454,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult',
+                        '\Swagger\Client\Model\MintsoftCommonToolkitResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3498,7 +3498,7 @@ class OrderApi
      */
     public function orderDeleteOrderShipmentAsyncWithHttpInfo($id, $order_shipment_id)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->orderDeleteOrderShipmentRequest($id, $order_shipment_id);
 
         return $this->client
@@ -3664,9 +3664,9 @@ class OrderApi
      * @param  int $id id (required)
      * @param  string $tag tag (required)
      *
+     * @return \Swagger\Client\Model\MintsoftCommonToolkitResult
+     *@throws \InvalidArgumentException
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult
      */
     public function orderDeleteOrderTag($id, $tag)
     {
@@ -3686,7 +3686,7 @@ class OrderApi
      */
     public function orderDeleteOrderTagWithHttpInfo($id, $tag)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->orderDeleteOrderTagRequest($id, $tag);
 
         try {
@@ -3738,7 +3738,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult',
+                        '\Swagger\Client\Model\MintsoftCommonToolkitResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3782,7 +3782,7 @@ class OrderApi
      */
     public function orderDeleteOrderTagAsyncWithHttpInfo($id, $tag)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->orderDeleteOrderTagRequest($id, $tag);
 
         return $this->client
@@ -4208,9 +4208,9 @@ class OrderApi
      *
      * @param  int $id id (required)
      *
+     * @return \Swagger\Client\Model\MintsoftOrdersOrderDocument[]
+     *@throws \InvalidArgumentException
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesOrdersOrderDocument[]
      */
     public function orderDocuments($id)
     {
@@ -4473,9 +4473,9 @@ class OrderApi
      *
      * @param  int $id id (required)
      *
+     * @return \Swagger\Client\Model\MintsoftOrdersOrder
+     *@throws \InvalidArgumentException
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesOrdersOrder
      */
     public function orderGet($id)
     {
@@ -4494,7 +4494,7 @@ class OrderApi
      */
     public function orderGetWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesOrdersOrder';
+        $returnType = '\Swagger\Client\Model\MintsoftOrdersOrder';
         $request = $this->orderGetRequest($id);
 
         try {
@@ -4546,7 +4546,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesOrdersOrder',
+                        '\Swagger\Client\Model\MintsoftOrdersOrder',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4588,7 +4588,7 @@ class OrderApi
      */
     public function orderGetAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesOrdersOrder';
+        $returnType = '\Swagger\Client\Model\MintsoftOrdersOrder';
         $request = $this->orderGetRequest($id);
 
         return $this->client
@@ -4739,7 +4739,7 @@ class OrderApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesChannelsChannel[]
+     * @return \Swagger\Client\Model\MintsoftChannelsChannel[]
      */
     public function orderGetChannels()
     {
@@ -4986,7 +4986,7 @@ class OrderApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesOrdersOrderAwaitingAction[]
+     * @return \Swagger\Client\Model\MintsoftOrdersOrderAwaitingAction[]
      */
     public function orderGetConnectAction($id)
     {
@@ -5250,9 +5250,9 @@ class OrderApi
      * @param  int $id id (required)
      * @param  int $document_id document_id (required)
      *
+     * @return \Swagger\Client\Model\MintsoftOrdersOrderDocument
+     *@throws \InvalidArgumentException
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesOrdersOrderDocument
      */
     public function orderGetDocument($id, $document_id)
     {
@@ -5272,7 +5272,7 @@ class OrderApi
      */
     public function orderGetDocumentWithHttpInfo($id, $document_id)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesOrdersOrderDocument';
+        $returnType = '\Swagger\Client\Model\MintsoftOrdersOrderDocument';
         $request = $this->orderGetDocumentRequest($id, $document_id);
 
         try {
@@ -5324,7 +5324,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesOrdersOrderDocument',
+                        '\Swagger\Client\Model\MintsoftOrdersOrderDocument',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5368,7 +5368,7 @@ class OrderApi
      */
     public function orderGetDocumentAsyncWithHttpInfo($id, $document_id)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesOrdersOrderDocument';
+        $returnType = '\Swagger\Client\Model\MintsoftOrdersOrderDocument';
         $request = $this->orderGetDocumentRequest($id, $document_id);
 
         return $this->client
@@ -5816,9 +5816,9 @@ class OrderApi
      * Operation orderGetOrderDocumentPaperSizes
      *
      *
+     * @return \Swagger\Client\Model\MintsoftCommonEnumPair[]
+     *@throws \InvalidArgumentException
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesCommonEnumPair[]
      */
     public function orderGetOrderDocumentPaperSizes()
     {
@@ -6064,7 +6064,7 @@ class OrderApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesOrdersOrderDocumentType[]
+     * @return \Swagger\Client\Model\MintsoftOrdersOrderDocumentType[]
      */
     public function orderGetOrderDocumentTypes()
     {
@@ -6311,7 +6311,7 @@ class OrderApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesOrdersOrderShipment[]
+     * @return \Swagger\Client\Model\MintsoftOrdersOrderShipment[]
      */
     public function orderGetOrderShipment($id)
     {
@@ -6575,9 +6575,9 @@ class OrderApi
      * Tracking Event - Statuses
      *
      *
+     * @return \Swagger\Client\Model\MintsoftCommonEnumPair[]
+     *@throws \InvalidArgumentException
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesCommonEnumPair[]
      */
     public function orderGetOrderShipmentTrackingEventsStatuses()
     {
@@ -6825,7 +6825,7 @@ class OrderApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesOrdersOrderStatus[]
+     * @return \Swagger\Client\Model\MintsoftOrdersOrderStatus[]
      */
     public function orderGetOrderStatuses()
     {
@@ -7074,7 +7074,7 @@ class OrderApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesOrdersOrderItem[]
+     * @return \Swagger\Client\Model\MintsoftOrdersOrderItem[]
      */
     public function orderItems($id)
     {
@@ -7352,9 +7352,9 @@ class OrderApi
      * @param  bool $include_order_items include_order_items (optional)
      * @param  bool $show_b2_b_only show_b2_b_only (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @return \Swagger\Client\Model\MintsoftOrdersOrder[]
+     *@throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesOrdersOrder[]
      */
     public function orderListOrders($order_status_id = null, $client_id = null, $channel_id = null, $courier_service_id = null, $warehouse_id = null, $page_no = null, $limit = null, $since_date = null, $since_last_updated = null, $since_despatch_date = null, $exclude_tags = null, $include_tags = null, $include_order_items = null, $show_b2_b_only = null)
     {
@@ -7718,7 +7718,7 @@ class OrderApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesOrdersOrderShipmentTrackingEvent[]
+     * @return \Swagger\Client\Model\MintsoftOrdersOrderShipmentTrackingEvent[]
      */
     public function orderListTrackingEvents($page_no = null, $limit = null, $tracking_status_id = null, $since_last_updated = null)
     {
@@ -7999,9 +7999,9 @@ class OrderApi
      *
      * @param  int $id OrderId (required)
      *
+     * @return \Swagger\Client\Model\MintsoftCommonToolkitResult
+     *@throws \InvalidArgumentException
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult
      */
     public function orderMarkAwaitingConfirmation($id)
     {
@@ -8022,7 +8022,7 @@ class OrderApi
      */
     public function orderMarkAwaitingConfirmationWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->orderMarkAwaitingConfirmationRequest($id);
 
         try {
@@ -8074,7 +8074,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult',
+                        '\Swagger\Client\Model\MintsoftCommonToolkitResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8116,7 +8116,7 @@ class OrderApi
      */
     public function orderMarkAwaitingConfirmationAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->orderMarkAwaitingConfirmationRequest($id);
 
         return $this->client
@@ -8270,7 +8270,7 @@ class OrderApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult
+     * @return \Swagger\Client\Model\MintsoftCommonToolkitResult
      */
     public function orderMarkAwaitingPayment($id)
     {
@@ -8291,7 +8291,7 @@ class OrderApi
      */
     public function orderMarkAwaitingPaymentWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->orderMarkAwaitingPaymentRequest($id);
 
         try {
@@ -8343,7 +8343,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult',
+                        '\Swagger\Client\Model\MintsoftCommonToolkitResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8385,7 +8385,7 @@ class OrderApi
      */
     public function orderMarkAwaitingPaymentAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->orderMarkAwaitingPaymentRequest($id);
 
         return $this->client
@@ -8539,7 +8539,7 @@ class OrderApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult
+     * @return \Swagger\Client\Model\MintsoftCommonToolkitResult
      */
     public function orderMarkConfirmed($id)
     {
@@ -8560,7 +8560,7 @@ class OrderApi
      */
     public function orderMarkConfirmedWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->orderMarkConfirmedRequest($id);
 
         try {
@@ -8612,7 +8612,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult',
+                        '\Swagger\Client\Model\MintsoftCommonToolkitResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8654,7 +8654,7 @@ class OrderApi
      */
     public function orderMarkConfirmedAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->orderMarkConfirmedRequest($id);
 
         return $this->client
@@ -8809,7 +8809,7 @@ class OrderApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult
+     * @return \Swagger\Client\Model\MintsoftCommonToolkitResult
      */
     public function orderMarkDespatched($id, $tracking_number = null)
     {
@@ -8831,7 +8831,7 @@ class OrderApi
      */
     public function orderMarkDespatchedWithHttpInfo($id, $tracking_number = null)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->orderMarkDespatchedRequest($id, $tracking_number);
 
         try {
@@ -8883,7 +8883,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult',
+                        '\Swagger\Client\Model\MintsoftCommonToolkitResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8927,7 +8927,7 @@ class OrderApi
      */
     public function orderMarkDespatchedAsyncWithHttpInfo($id, $tracking_number = null)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->orderMarkDespatchedRequest($id, $tracking_number);
 
         return $this->client
@@ -9333,7 +9333,7 @@ class OrderApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult
+     * @return \Swagger\Client\Model\MintsoftCommonToolkitResult
      */
     public function orderMarkFraudRisk($id)
     {
@@ -9354,7 +9354,7 @@ class OrderApi
      */
     public function orderMarkFraudRiskWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->orderMarkFraudRiskRequest($id);
 
         try {
@@ -9406,7 +9406,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult',
+                        '\Swagger\Client\Model\MintsoftCommonToolkitResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9448,7 +9448,7 @@ class OrderApi
      */
     public function orderMarkFraudRiskAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->orderMarkFraudRiskRequest($id);
 
         return $this->client
@@ -9602,7 +9602,7 @@ class OrderApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult
+     * @return \Swagger\Client\Model\MintsoftCommonToolkitResult
      */
     public function orderMarkFraudRiskAccepted($id)
     {
@@ -9623,7 +9623,7 @@ class OrderApi
      */
     public function orderMarkFraudRiskAcceptedWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->orderMarkFraudRiskAcceptedRequest($id);
 
         try {
@@ -9675,7 +9675,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult',
+                        '\Swagger\Client\Model\MintsoftCommonToolkitResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9717,7 +9717,7 @@ class OrderApi
      */
     public function orderMarkFraudRiskAcceptedAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->orderMarkFraudRiskAcceptedRequest($id);
 
         return $this->client
@@ -9872,7 +9872,7 @@ class OrderApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult
+     * @return \Swagger\Client\Model\MintsoftCommonToolkitResult
      */
     public function orderMarkPackAndHold($id, $release_date)
     {
@@ -9894,7 +9894,7 @@ class OrderApi
      */
     public function orderMarkPackAndHoldWithHttpInfo($id, $release_date)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->orderMarkPackAndHoldRequest($id, $release_date);
 
         try {
@@ -9946,7 +9946,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult',
+                        '\Swagger\Client\Model\MintsoftCommonToolkitResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9990,7 +9990,7 @@ class OrderApi
      */
     public function orderMarkPackAndHoldAsyncWithHttpInfo($id, $release_date)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->orderMarkPackAndHoldRequest($id, $release_date);
 
         return $this->client
@@ -10155,7 +10155,7 @@ class OrderApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult
+     * @return \Swagger\Client\Model\MintsoftCommonToolkitResult
      */
     public function orderMarkPaymentReceived($id)
     {
@@ -10176,7 +10176,7 @@ class OrderApi
      */
     public function orderMarkPaymentReceivedWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->orderMarkPaymentReceivedRequest($id);
 
         try {
@@ -10228,7 +10228,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult',
+                        '\Swagger\Client\Model\MintsoftCommonToolkitResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10270,7 +10270,7 @@ class OrderApi
      */
     public function orderMarkPaymentReceivedAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->orderMarkPaymentReceivedRequest($id);
 
         return $this->client
@@ -10425,7 +10425,7 @@ class OrderApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult
+     * @return \Swagger\Client\Model\MintsoftCommonToolkitResult
      */
     public function orderMarkPrinted($id, $comment = null)
     {
@@ -10447,7 +10447,7 @@ class OrderApi
      */
     public function orderMarkPrintedWithHttpInfo($id, $comment = null)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->orderMarkPrintedRequest($id, $comment);
 
         try {
@@ -10499,7 +10499,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult',
+                        '\Swagger\Client\Model\MintsoftCommonToolkitResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10543,7 +10543,7 @@ class OrderApi
      */
     public function orderMarkPrintedAsyncWithHttpInfo($id, $comment = null)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->orderMarkPrintedRequest($id, $comment);
 
         return $this->client
@@ -10702,7 +10702,7 @@ class OrderApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult
+     * @return \Swagger\Client\Model\MintsoftCommonToolkitResult
      */
     public function orderMarkReleasePackAndHold($id)
     {
@@ -10723,7 +10723,7 @@ class OrderApi
      */
     public function orderMarkReleasePackAndHoldWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->orderMarkReleasePackAndHoldRequest($id);
 
         try {
@@ -10775,7 +10775,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult',
+                        '\Swagger\Client\Model\MintsoftCommonToolkitResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10817,7 +10817,7 @@ class OrderApi
      */
     public function orderMarkReleasePackAndHoldAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->orderMarkReleasePackAndHoldRequest($id);
 
         return $this->client
@@ -10969,7 +10969,7 @@ class OrderApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesOrdersOrderSplit[]
+     * @return \Swagger\Client\Model\MintsoftOrdersOrderSplit[]
      */
     public function orderOrderSplit($id)
     {
@@ -11234,7 +11234,7 @@ class OrderApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesHelpOrderQueriesOrderQuery[]
+     * @return \Swagger\Client\Model\MintsoftHelpOrderQueriesOrderQuery[]
      */
     public function orderQueries($id)
     {
@@ -11500,7 +11500,7 @@ class OrderApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesHelpOrderQueriesOrderQueryComment[]
+     * @return \Swagger\Client\Model\MintsoftHelpOrderQueriesOrderQueryComment[]
      */
     public function orderQueryComments($id, $query_id)
     {
@@ -11781,9 +11781,9 @@ class OrderApi
      *
      * @param  string $order_number order_number (required)
      *
+     * @return \Swagger\Client\Model\MintsoftOrdersOrder[]
+     *@throws \InvalidArgumentException
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesOrdersOrder[]
      */
     public function orderSearchOrder($order_number)
     {
@@ -12043,11 +12043,11 @@ class OrderApi
      * SplitOrderItems
      *
      * @param  int $id OrderId (required)
-     * @param  \Swagger\Client\Model\ToolkitDataClassesOrdersSplitOrderOnOrderItems[] $order_items_to_split Order Items to Split onto new order (required)
+     * @param  \Swagger\Client\Model\MintsoftOrdersSplitOrderOnOrderItems[] $order_items_to_split Order Items to Split onto new order (required)
      *
+     * @return \Swagger\Client\Model\MintsoftCommonToolkitResult
+     *@throws \InvalidArgumentException
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult
      */
     public function orderSplitOrderItems($id, $order_items_to_split)
     {
@@ -12061,15 +12061,15 @@ class OrderApi
      * SplitOrderItems
      *
      * @param  int $id OrderId (required)
-     * @param  \Swagger\Client\Model\ToolkitDataClassesOrdersSplitOrderOnOrderItems[] $order_items_to_split Order Items to Split onto new order (required)
+     * @param  \Swagger\Client\Model\MintsoftOrdersSplitOrderOnOrderItems[] $order_items_to_split Order Items to Split onto new order (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult, HTTP status code, HTTP response headers (array of strings)
+     *@throws \InvalidArgumentException
+     * @throws \Swagger\Client\ApiException on non-2xx response
      */
     public function orderSplitOrderItemsWithHttpInfo($id, $order_items_to_split)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->orderSplitOrderItemsRequest($id, $order_items_to_split);
 
         try {
@@ -12121,7 +12121,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult',
+                        '\Swagger\Client\Model\MintsoftCommonToolkitResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -12137,10 +12137,10 @@ class OrderApi
      * SplitOrderItems
      *
      * @param  int $id OrderId (required)
-     * @param  \Swagger\Client\Model\ToolkitDataClassesOrdersSplitOrderOnOrderItems[] $order_items_to_split Order Items to Split onto new order (required)
+     * @param  \Swagger\Client\Model\MintsoftOrdersSplitOrderOnOrderItems[] $order_items_to_split Order Items to Split onto new order (required)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
+     *@throws \InvalidArgumentException
      */
     public function orderSplitOrderItemsAsync($id, $order_items_to_split)
     {
@@ -12158,14 +12158,14 @@ class OrderApi
      * SplitOrderItems
      *
      * @param  int $id OrderId (required)
-     * @param  \Swagger\Client\Model\ToolkitDataClassesOrdersSplitOrderOnOrderItems[] $order_items_to_split Order Items to Split onto new order (required)
+     * @param  \Swagger\Client\Model\MintsoftOrdersSplitOrderOnOrderItems[] $order_items_to_split Order Items to Split onto new order (required)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
+     *@throws \InvalidArgumentException
      */
     public function orderSplitOrderItemsAsyncWithHttpInfo($id, $order_items_to_split)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->orderSplitOrderItemsRequest($id, $order_items_to_split);
 
         return $this->client
@@ -12209,10 +12209,10 @@ class OrderApi
      * Create request for operation 'orderSplitOrderItems'
      *
      * @param  int $id OrderId (required)
-     * @param  \Swagger\Client\Model\ToolkitDataClassesOrdersSplitOrderOnOrderItems[] $order_items_to_split Order Items to Split onto new order (required)
+     * @param  \Swagger\Client\Model\MintsoftOrdersSplitOrderOnOrderItems[] $order_items_to_split Order Items to Split onto new order (required)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
+     *@throws \InvalidArgumentException
      */
     protected function orderSplitOrderItemsRequest($id, $order_items_to_split)
     {
@@ -12330,7 +12330,7 @@ class OrderApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult
+     * @return \Swagger\Client\Model\MintsoftCommonToolkitResult
      */
     public function orderUpdateNumberOfParcels($id, $number_of_parcels)
     {
@@ -12352,7 +12352,7 @@ class OrderApi
      */
     public function orderUpdateNumberOfParcelsWithHttpInfo($id, $number_of_parcels)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->orderUpdateNumberOfParcelsRequest($id, $number_of_parcels);
 
         try {
@@ -12404,7 +12404,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult',
+                        '\Swagger\Client\Model\MintsoftCommonToolkitResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -12448,7 +12448,7 @@ class OrderApi
      */
     public function orderUpdateNumberOfParcelsAsyncWithHttpInfo($id, $number_of_parcels)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->orderUpdateNumberOfParcelsRequest($id, $number_of_parcels);
 
         return $this->client
@@ -12610,11 +12610,11 @@ class OrderApi
      * Update Order Details
      *
      * @param  int $id id (required)
-     * @param  \Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrder $order order (required)
+     * @param  \Swagger\Client\Model\MintsoftOrdersAPINewOrder $order order (required)
      *
+     * @return \Swagger\Client\Model\MintsoftCommonToolkitResult
+     *@throws \InvalidArgumentException
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult
      */
     public function orderUpdateOrder($id, $order)
     {
@@ -12628,15 +12628,15 @@ class OrderApi
      * Update Order Details
      *
      * @param  int $id (required)
-     * @param  \Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrder $order (required)
+     * @param  \Swagger\Client\Model\MintsoftOrdersAPINewOrder $order (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult, HTTP status code, HTTP response headers (array of strings)
+     *@throws \InvalidArgumentException
+     * @throws \Swagger\Client\ApiException on non-2xx response
      */
     public function orderUpdateOrderWithHttpInfo($id, $order)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->orderUpdateOrderRequest($id, $order);
 
         try {
@@ -12688,7 +12688,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult',
+                        '\Swagger\Client\Model\MintsoftCommonToolkitResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -12704,10 +12704,10 @@ class OrderApi
      * Update Order Details
      *
      * @param  int $id (required)
-     * @param  \Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrder $order (required)
+     * @param  \Swagger\Client\Model\MintsoftOrdersAPINewOrder $order (required)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
+     *@throws \InvalidArgumentException
      */
     public function orderUpdateOrderAsync($id, $order)
     {
@@ -12725,14 +12725,14 @@ class OrderApi
      * Update Order Details
      *
      * @param  int $id (required)
-     * @param  \Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrder $order (required)
+     * @param  \Swagger\Client\Model\MintsoftOrdersAPINewOrder $order (required)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
+     *@throws \InvalidArgumentException
      */
     public function orderUpdateOrderAsyncWithHttpInfo($id, $order)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->orderUpdateOrderRequest($id, $order);
 
         return $this->client
@@ -12776,10 +12776,10 @@ class OrderApi
      * Create request for operation 'orderUpdateOrder'
      *
      * @param  int $id (required)
-     * @param  \Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrder $order (required)
+     * @param  \Swagger\Client\Model\MintsoftOrdersAPINewOrder $order (required)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
+     *@throws \InvalidArgumentException
      */
     protected function orderUpdateOrderRequest($id, $order)
     {
@@ -12894,11 +12894,11 @@ class OrderApi
      *
      * @param  int $id OrderId (required)
      * @param  int $item_id item_id (required)
-     * @param  \Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrderItem $order_item order_item (required)
+     * @param  \Swagger\Client\Model\MintsoftOrdersAPINewOrderItem $order_item order_item (required)
      *
+     * @return \Swagger\Client\Model\MintsoftCommonToolkitResult
+     *@throws \InvalidArgumentException
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult
      */
     public function orderUpdateOrderItem($id, $item_id, $order_item)
     {
@@ -12913,15 +12913,15 @@ class OrderApi
      *
      * @param  int $id OrderId (required)
      * @param  int $item_id (required)
-     * @param  \Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrderItem $order_item (required)
+     * @param  \Swagger\Client\Model\MintsoftOrdersAPINewOrderItem $order_item (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult, HTTP status code, HTTP response headers (array of strings)
+     *@throws \InvalidArgumentException
+     * @throws \Swagger\Client\ApiException on non-2xx response
      */
     public function orderUpdateOrderItemWithHttpInfo($id, $item_id, $order_item)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->orderUpdateOrderItemRequest($id, $item_id, $order_item);
 
         try {
@@ -12973,7 +12973,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult',
+                        '\Swagger\Client\Model\MintsoftCommonToolkitResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -12990,10 +12990,10 @@ class OrderApi
      *
      * @param  int $id OrderId (required)
      * @param  int $item_id (required)
-     * @param  \Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrderItem $order_item (required)
+     * @param  \Swagger\Client\Model\MintsoftOrdersAPINewOrderItem $order_item (required)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
+     *@throws \InvalidArgumentException
      */
     public function orderUpdateOrderItemAsync($id, $item_id, $order_item)
     {
@@ -13012,14 +13012,14 @@ class OrderApi
      *
      * @param  int $id OrderId (required)
      * @param  int $item_id (required)
-     * @param  \Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrderItem $order_item (required)
+     * @param  \Swagger\Client\Model\MintsoftOrdersAPINewOrderItem $order_item (required)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
+     *@throws \InvalidArgumentException
      */
     public function orderUpdateOrderItemAsyncWithHttpInfo($id, $item_id, $order_item)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->orderUpdateOrderItemRequest($id, $item_id, $order_item);
 
         return $this->client
@@ -13064,10 +13064,10 @@ class OrderApi
      *
      * @param  int $id OrderId (required)
      * @param  int $item_id (required)
-     * @param  \Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrderItem $order_item (required)
+     * @param  \Swagger\Client\Model\MintsoftOrdersAPINewOrderItem $order_item (required)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
+     *@throws \InvalidArgumentException
      */
     protected function orderUpdateOrderItemRequest($id, $item_id, $order_item)
     {
@@ -13193,11 +13193,11 @@ class OrderApi
      * Operation orderUploadConnectAction
      *
      * @param  int $id id (required)
-     * @param  \Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrderConnectAction $order_shipment order_shipment (required)
+     * @param  \Swagger\Client\Model\MintsoftOrdersAPINewOrderConnectAction $order_shipment order_shipment (required)
      *
+     * @return \Swagger\Client\Model\MintsoftCommonToolkitResult
+     *@throws \InvalidArgumentException
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult
      */
     public function orderUploadConnectAction($id, $order_shipment)
     {
@@ -13209,15 +13209,15 @@ class OrderApi
      * Operation orderUploadConnectActionWithHttpInfo
      *
      * @param  int $id (required)
-     * @param  \Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrderConnectAction $order_shipment (required)
+     * @param  \Swagger\Client\Model\MintsoftOrdersAPINewOrderConnectAction $order_shipment (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult, HTTP status code, HTTP response headers (array of strings)
+     *@throws \InvalidArgumentException
+     * @throws \Swagger\Client\ApiException on non-2xx response
      */
     public function orderUploadConnectActionWithHttpInfo($id, $order_shipment)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->orderUploadConnectActionRequest($id, $order_shipment);
 
         try {
@@ -13269,7 +13269,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult',
+                        '\Swagger\Client\Model\MintsoftCommonToolkitResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -13285,10 +13285,10 @@ class OrderApi
      * 
      *
      * @param  int $id (required)
-     * @param  \Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrderConnectAction $order_shipment (required)
+     * @param  \Swagger\Client\Model\MintsoftOrdersAPINewOrderConnectAction $order_shipment (required)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
+     *@throws \InvalidArgumentException
      */
     public function orderUploadConnectActionAsync($id, $order_shipment)
     {
@@ -13306,14 +13306,14 @@ class OrderApi
      * 
      *
      * @param  int $id (required)
-     * @param  \Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrderConnectAction $order_shipment (required)
+     * @param  \Swagger\Client\Model\MintsoftOrdersAPINewOrderConnectAction $order_shipment (required)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
+     *@throws \InvalidArgumentException
      */
     public function orderUploadConnectActionAsyncWithHttpInfo($id, $order_shipment)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->orderUploadConnectActionRequest($id, $order_shipment);
 
         return $this->client
@@ -13357,10 +13357,10 @@ class OrderApi
      * Create request for operation 'orderUploadConnectAction'
      *
      * @param  int $id (required)
-     * @param  \Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrderConnectAction $order_shipment (required)
+     * @param  \Swagger\Client\Model\MintsoftOrdersAPINewOrderConnectAction $order_shipment (required)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
+     *@throws \InvalidArgumentException
      */
     protected function orderUploadConnectActionRequest($id, $order_shipment)
     {
@@ -13472,14 +13472,14 @@ class OrderApi
      * Operation orderUploadOrderDocument
      *
      * @param  int $id id (required)
-     * @param  \Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrderDocument $order_document order_document (required)
+     * @param  \Swagger\Client\Model\MintsoftOrdersAPINewOrderDocument $order_document order_document (required)
      * @param  bool $print_with_order print_with_order (required)
      * @param  int $document_type_id document_type_id (required)
      * @param  int $paper_size paper_size (optional)
      *
+     * @return \Swagger\Client\Model\MintsoftCommonToolkitResult
+     *@throws \InvalidArgumentException
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult
      */
     public function orderUploadOrderDocument($id, $order_document, $print_with_order, $document_type_id, $paper_size = null)
     {
@@ -13491,18 +13491,18 @@ class OrderApi
      * Operation orderUploadOrderDocumentWithHttpInfo
      *
      * @param  int $id (required)
-     * @param  \Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrderDocument $order_document (required)
+     * @param  \Swagger\Client\Model\MintsoftOrdersAPINewOrderDocument $order_document (required)
      * @param  bool $print_with_order (required)
      * @param  int $document_type_id (required)
      * @param  int $paper_size (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult, HTTP status code, HTTP response headers (array of strings)
+     *@throws \InvalidArgumentException
+     * @throws \Swagger\Client\ApiException on non-2xx response
      */
     public function orderUploadOrderDocumentWithHttpInfo($id, $order_document, $print_with_order, $document_type_id, $paper_size = null)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->orderUploadOrderDocumentRequest($id, $order_document, $print_with_order, $document_type_id, $paper_size);
 
         try {
@@ -13554,7 +13554,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult',
+                        '\Swagger\Client\Model\MintsoftCommonToolkitResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -13570,13 +13570,13 @@ class OrderApi
      * 
      *
      * @param  int $id (required)
-     * @param  \Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrderDocument $order_document (required)
+     * @param  \Swagger\Client\Model\MintsoftOrdersAPINewOrderDocument $order_document (required)
      * @param  bool $print_with_order (required)
      * @param  int $document_type_id (required)
      * @param  int $paper_size (optional)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
+     *@throws \InvalidArgumentException
      */
     public function orderUploadOrderDocumentAsync($id, $order_document, $print_with_order, $document_type_id, $paper_size = null)
     {
@@ -13594,17 +13594,17 @@ class OrderApi
      * 
      *
      * @param  int $id (required)
-     * @param  \Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrderDocument $order_document (required)
+     * @param  \Swagger\Client\Model\MintsoftOrdersAPINewOrderDocument $order_document (required)
      * @param  bool $print_with_order (required)
      * @param  int $document_type_id (required)
      * @param  int $paper_size (optional)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
+     *@throws \InvalidArgumentException
      */
     public function orderUploadOrderDocumentAsyncWithHttpInfo($id, $order_document, $print_with_order, $document_type_id, $paper_size = null)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->orderUploadOrderDocumentRequest($id, $order_document, $print_with_order, $document_type_id, $paper_size);
 
         return $this->client
@@ -13648,13 +13648,13 @@ class OrderApi
      * Create request for operation 'orderUploadOrderDocument'
      *
      * @param  int $id (required)
-     * @param  \Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrderDocument $order_document (required)
+     * @param  \Swagger\Client\Model\MintsoftOrdersAPINewOrderDocument $order_document (required)
      * @param  bool $print_with_order (required)
      * @param  int $document_type_id (required)
      * @param  int $paper_size (optional)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
+     *@throws \InvalidArgumentException
      */
     protected function orderUploadOrderDocumentRequest($id, $order_document, $print_with_order, $document_type_id, $paper_size = null)
     {
@@ -13790,11 +13790,11 @@ class OrderApi
      * Operation orderUploadOrderShipment
      *
      * @param  int $id id (required)
-     * @param  \Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrderShipment $order_shipment order_shipment (required)
+     * @param  \Swagger\Client\Model\MintsoftOrdersAPINewOrderShipment $order_shipment order_shipment (required)
      *
+     * @return \Swagger\Client\Model\MintsoftCommonToolkitResult
+     *@throws \InvalidArgumentException
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult
      */
     public function orderUploadOrderShipment($id, $order_shipment)
     {
@@ -13806,15 +13806,15 @@ class OrderApi
      * Operation orderUploadOrderShipmentWithHttpInfo
      *
      * @param  int $id (required)
-     * @param  \Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrderShipment $order_shipment (required)
+     * @param  \Swagger\Client\Model\MintsoftOrdersAPINewOrderShipment $order_shipment (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult, HTTP status code, HTTP response headers (array of strings)
+     *@throws \InvalidArgumentException
+     * @throws \Swagger\Client\ApiException on non-2xx response
      */
     public function orderUploadOrderShipmentWithHttpInfo($id, $order_shipment)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->orderUploadOrderShipmentRequest($id, $order_shipment);
 
         try {
@@ -13866,7 +13866,7 @@ class OrderApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult',
+                        '\Swagger\Client\Model\MintsoftCommonToolkitResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -13882,10 +13882,10 @@ class OrderApi
      * 
      *
      * @param  int $id (required)
-     * @param  \Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrderShipment $order_shipment (required)
+     * @param  \Swagger\Client\Model\MintsoftOrdersAPINewOrderShipment $order_shipment (required)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
+     *@throws \InvalidArgumentException
      */
     public function orderUploadOrderShipmentAsync($id, $order_shipment)
     {
@@ -13903,14 +13903,14 @@ class OrderApi
      * 
      *
      * @param  int $id (required)
-     * @param  \Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrderShipment $order_shipment (required)
+     * @param  \Swagger\Client\Model\MintsoftOrdersAPINewOrderShipment $order_shipment (required)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
+     *@throws \InvalidArgumentException
      */
     public function orderUploadOrderShipmentAsyncWithHttpInfo($id, $order_shipment)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->orderUploadOrderShipmentRequest($id, $order_shipment);
 
         return $this->client
@@ -13954,10 +13954,10 @@ class OrderApi
      * Create request for operation 'orderUploadOrderShipment'
      *
      * @param  int $id (required)
-     * @param  \Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrderShipment $order_shipment (required)
+     * @param  \Swagger\Client\Model\MintsoftOrdersAPINewOrderShipment $order_shipment (required)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
+     *@throws \InvalidArgumentException
      */
     protected function orderUploadOrderShipmentRequest($id, $order_shipment)
     {
@@ -14075,7 +14075,7 @@ class OrderApi
     {
         $options = [];
         if ($this->config->getDebug()) {
-            $options[RequestOptions::DEBUG] = fopen($this->config->getDebugFile(), 'a');
+            $options[RequestOptions::DEBUG] = fopen($this->config->getDebugFile(), 'ab');
             if (!$options[RequestOptions::DEBUG]) {
                 throw new \RuntimeException('Failed to open the debug file: ' . $this->config->getDebugFile());
             }

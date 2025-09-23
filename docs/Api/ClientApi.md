@@ -2,12 +2,11 @@
 
 All URIs are relative to *https://api.mintsoft.co.uk*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**clientAddSubClient**](ClientApi.md#clientAddSubClient) | **POST** /api/Client/SubClients | Add SubClient
-[**clientGet**](ClientApi.md#clientGet) | **GET** /api/Client | Get Clients
-[**clientSubClients**](ClientApi.md#clientSubClients) | **GET** /api/Client/SubClients | Get a list of SubClients
-
+| Method                                                    | HTTP request                    | Description              |
+|-----------------------------------------------------------|---------------------------------|--------------------------|
+| [**clientAddSubClient**](ClientApi.md#clientAddSubClient) | **POST** /api/Client/SubClients | Add SubClient            |
+| [**clientGet**](ClientApi.md#clientGet)                   | **GET** /api/Client             | Get Clients              |
+| [**clientSubClients**](ClientApi.md#clientSubClients)     | **GET** /api/Client/SubClients  | Get a list of SubClients |
 
 # **clientAddSubClient**
 > \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult clientAddSubClient($client)
@@ -17,6 +16,7 @@ Add SubClient
 Adds a New SubClient - Available to MasterClient users only
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
@@ -26,7 +26,7 @@ $apiInstance = new Swagger\Client\Api\ClientApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$client = new \Swagger\Client\Model\ToolkitDataClassesClientsAPIAddSubClient(); // \Swagger\Client\Model\ToolkitDataClassesClientsAPIAddSubClient | 
+$client = new \Swagger\Client\Model\MintsoftClientsAPIAddSubClient(); // \Swagger\Client\Model\ToolkitDataClassesClientsAPIAddSubClient | 
 
 try {
     $result = $apiInstance->clientAddSubClient($client);

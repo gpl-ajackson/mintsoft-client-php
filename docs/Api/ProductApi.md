@@ -2,38 +2,37 @@
 
 All URIs are relative to *https://api.mintsoft.co.uk*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**productAddAddAlt**](ProductApi.md#productAddAddAlt) | **POST** /api/Product/{id}/AltCodes | Add Alt Code
-[**productBulkAddCartons**](ProductApi.md#productBulkAddCartons) | **POST** /api/Product/{id}/Cartons | Bulk Add Cartons
-[**productBulkOnHandStockUpdate**](ProductApi.md#productBulkOnHandStockUpdate) | **POST** /api/Product/BulkOnHandStockUpdate | Bulk On Hand Stock Update
-[**productCreateBundle**](ProductApi.md#productCreateBundle) | **PUT** /api/Product/Bundle | Create New Bundle
-[**productCreateProduct**](ProductApi.md#productCreateProduct) | **PUT** /api/Product | Create New Product
-[**productCreateSupplier**](ProductApi.md#productCreateSupplier) | **PUT** /api/Product/Suppliers | Create New Product Supplier
-[**productDeleteCarton**](ProductApi.md#productDeleteCarton) | **DELETE** /api/Product/{id}/Carton/{cartonId} | Delete Carton
-[**productDeleteProduct**](ProductApi.md#productDeleteProduct) | **DELETE** /api/Product/{id} | Delete a Product
-[**productDeleteProductPrices**](ProductApi.md#productDeleteProductPrices) | **DELETE** /api/Product/ProductPrices | Delete Product Prices
-[**productGet**](ProductApi.md#productGet) | **GET** /api/Product/{id} | Get Product
-[**productGetAltCodes**](ProductApi.md#productGetAltCodes) | **GET** /api/Product/{id}/AltCodes | Get Alt Codes
-[**productGetBundle**](ProductApi.md#productGetBundle) | **GET** /api/Product/{id}/Bundle | Get Bundle
-[**productGetCartons**](ProductApi.md#productGetCartons) | **GET** /api/Product/{id}/Cartons | Get Cartons
-[**productGetInventory**](ProductApi.md#productGetInventory) | **GET** /api/Product/{id}/Inventory | Get Inventory Records
-[**productGetInventoryPreOrderBreakdown**](ProductApi.md#productGetInventoryPreOrderBreakdown) | **GET** /api/Product/{id}/Inventory/PreOrderBreakdown | Get an Inventory Pre Order Breakdown for a specified Product and WarehouseId
-[**productGetInventoryPreOrderBreakdownAllWarehouses**](ProductApi.md#productGetInventoryPreOrderBreakdownAllWarehouses) | **GET** /api/Product/{id}/Inventory/PreOrderBreakdown/All | Get an Inventory Pre Order Breakdown for a specified Product and All Warehouses
-[**productGetProductChanges**](ProductApi.md#productGetProductChanges) | **GET** /api/Product/UpdatedSince | Products Updated Since
-[**productGetStockFlow**](ProductApi.md#productGetStockFlow) | **GET** /api/Product/{id}/StockFlow | Get Stock Flow Records
-[**productGetStockFlowFiltered**](ProductApi.md#productGetStockFlowFiltered) | **GET** /api/Product/{id}/StockFlow/Filtered | Get Stock Flow Records - Filtered
-[**productGetStockLevels**](ProductApi.md#productGetStockLevels) | **GET** /api/Product/StockLevels | Get Stock Levels
-[**productGetStockLevelsUpdatedSince**](ProductApi.md#productGetStockLevelsUpdatedSince) | **GET** /api/Product/StockLevels/UpdatedSince | Products StockLevels Updated Since
-[**productListProducts**](ProductApi.md#productListProducts) | **GET** /api/Product/List | 
-[**productListSuppliers**](ProductApi.md#productListSuppliers) | **GET** /api/Product/Suppliers | List Product Suppliers
-[**productLookupProductId**](ProductApi.md#productLookupProductId) | **GET** /api/Product/LookupProductId | Lookup Product Id
-[**productSearchBarcode**](ProductApi.md#productSearchBarcode) | **GET** /api/Product/SearchBarcode | Search Product Barcode
-[**productSearchProducts**](ProductApi.md#productSearchProducts) | **GET** /api/Product/Search | Product Search by SKU/Name
-[**productStockLevelsByWarehouse**](ProductApi.md#productStockLevelsByWarehouse) | **GET** /api/Product/StockLevelsByWarehouse | Get Stock Levels By Warehouse
-[**productUpdateProduct**](ProductApi.md#productUpdateProduct) | **POST** /api/Product | Update Product
-[**productUpdateProductPrices**](ProductApi.md#productUpdateProductPrices) | **PUT** /api/Product/ProductPrices | Add or Update Product Prices
-
+| Method                                                                                                                   | HTTP request                                              | Description                                                                     |
+|--------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------|---------------------------------------------------------------------------------|
+| [**productAddAddAlt**](ProductApi.md#productAddAddAlt)                                                                   | **POST** /api/Product/{id}/AltCodes                       | Add Alt Code                                                                    |
+| [**productBulkAddCartons**](ProductApi.md#productBulkAddCartons)                                                         | **POST** /api/Product/{id}/Cartons                        | Bulk Add Cartons                                                                |
+| [**productBulkOnHandStockUpdate**](ProductApi.md#productBulkOnHandStockUpdate)                                           | **POST** /api/Product/BulkOnHandStockUpdate               | Bulk On Hand Stock Update                                                       |
+| [**productCreateBundle**](ProductApi.md#productCreateBundle)                                                             | **PUT** /api/Product/Bundle                               | Create New Bundle                                                               |
+| [**productCreateProduct**](ProductApi.md#productCreateProduct)                                                           | **PUT** /api/Product                                      | Create New Product                                                              |
+| [**productCreateSupplier**](ProductApi.md#productCreateSupplier)                                                         | **PUT** /api/Product/Suppliers                            | Create New Product Supplier                                                     |
+| [**productDeleteCarton**](ProductApi.md#productDeleteCarton)                                                             | **DELETE** /api/Product/{id}/Carton/{cartonId}            | Delete Carton                                                                   |
+| [**productDeleteProduct**](ProductApi.md#productDeleteProduct)                                                           | **DELETE** /api/Product/{id}                              | Delete a Product                                                                |
+| [**productDeleteProductPrices**](ProductApi.md#productDeleteProductPrices)                                               | **DELETE** /api/Product/ProductPrices                     | Delete Product Prices                                                           |
+| [**productGet**](ProductApi.md#productGet)                                                                               | **GET** /api/Product/{id}                                 | Get Product                                                                     |
+| [**productGetAltCodes**](ProductApi.md#productGetAltCodes)                                                               | **GET** /api/Product/{id}/AltCodes                        | Get Alt Codes                                                                   |
+| [**productGetBundle**](ProductApi.md#productGetBundle)                                                                   | **GET** /api/Product/{id}/Bundle                          | Get Bundle                                                                      |
+| [**productGetCartons**](ProductApi.md#productGetCartons)                                                                 | **GET** /api/Product/{id}/Cartons                         | Get Cartons                                                                     |
+| [**productGetInventory**](ProductApi.md#productGetInventory)                                                             | **GET** /api/Product/{id}/Inventory                       | Get Inventory Records                                                           |
+| [**productGetInventoryPreOrderBreakdown**](ProductApi.md#productGetInventoryPreOrderBreakdown)                           | **GET** /api/Product/{id}/Inventory/PreOrderBreakdown     | Get an Inventory Pre Order Breakdown for a specified Product and WarehouseId    |
+| [**productGetInventoryPreOrderBreakdownAllWarehouses**](ProductApi.md#productGetInventoryPreOrderBreakdownAllWarehouses) | **GET** /api/Product/{id}/Inventory/PreOrderBreakdown/All | Get an Inventory Pre Order Breakdown for a specified Product and All Warehouses |
+| [**productGetProductChanges**](ProductApi.md#productGetProductChanges)                                                   | **GET** /api/Product/UpdatedSince                         | Products Updated Since                                                          |
+| [**productGetStockFlow**](ProductApi.md#productGetStockFlow)                                                             | **GET** /api/Product/{id}/StockFlow                       | Get Stock Flow Records                                                          |
+| [**productGetStockFlowFiltered**](ProductApi.md#productGetStockFlowFiltered)                                             | **GET** /api/Product/{id}/StockFlow/Filtered              | Get Stock Flow Records - Filtered                                               |
+| [**productGetStockLevels**](ProductApi.md#productGetStockLevels)                                                         | **GET** /api/Product/StockLevels                          | Get Stock Levels                                                                |
+| [**productGetStockLevelsUpdatedSince**](ProductApi.md#productGetStockLevelsUpdatedSince)                                 | **GET** /api/Product/StockLevels/UpdatedSince             | Products StockLevels Updated Since                                              |
+| [**productListProducts**](ProductApi.md#productListProducts)                                                             | **GET** /api/Product/List                                 |                                                                                 |
+| [**productListSuppliers**](ProductApi.md#productListSuppliers)                                                           | **GET** /api/Product/Suppliers                            | List Product Suppliers                                                          |
+| [**productLookupProductId**](ProductApi.md#productLookupProductId)                                                       | **GET** /api/Product/LookupProductId                      | Lookup Product Id                                                               |
+| [**productSearchBarcode**](ProductApi.md#productSearchBarcode)                                                           | **GET** /api/Product/SearchBarcode                        | Search Product Barcode                                                          |
+| [**productSearchProducts**](ProductApi.md#productSearchProducts)                                                         | **GET** /api/Product/Search                               | Product Search by SKU/Name                                                      |
+| [**productStockLevelsByWarehouse**](ProductApi.md#productStockLevelsByWarehouse)                                         | **GET** /api/Product/StockLevelsByWarehouse               | Get Stock Levels By Warehouse                                                   |
+| [**productUpdateProduct**](ProductApi.md#productUpdateProduct)                                                           | **POST** /api/Product                                     | Update Product                                                                  |
+| [**productUpdateProductPrices**](ProductApi.md#productUpdateProductPrices)                                               | **PUT** /api/Product/ProductPrices                        | Add or Update Product Prices                                                    |
 
 # **productAddAddAlt**
 > productAddAddAlt($id, $sku, $connect_mapping_type)
@@ -95,6 +94,7 @@ Bulk Add Cartons
 Add Cartons against a Product
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
@@ -105,7 +105,7 @@ $apiInstance = new Swagger\Client\Api\ProductApi(
     new GuzzleHttp\Client()
 );
 $id = 56; // int | Product ID
-$cartons = array(new \Swagger\Client\Model\ToolkitDataClassesStockProductContainer()); // \Swagger\Client\Model\ToolkitDataClassesStockProductContainer[] | Array of Cartons for product
+$cartons = array(new \Swagger\Client\Model\MintsoftStockProductContainer()); // \Swagger\Client\Model\ToolkitDataClassesStockProductContainer[] | Array of Cartons for product
 
 try {
     $apiInstance->productBulkAddCartons($id, $cartons);
@@ -145,6 +145,7 @@ Bulk On Hand Stock Update
 Update OnHand Stock Level to Provided Level and return results.
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
@@ -154,7 +155,7 @@ $apiInstance = new Swagger\Client\Api\ProductApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$records = array(new \Swagger\Client\Model\ToolkitDataClassesStockAPIBulkOnHandStockUpdate()); // \Swagger\Client\Model\ToolkitDataClassesStockAPIBulkOnHandStockUpdate[] | Update Requests
+$records = array(new \Swagger\Client\Model\MintsoftStockAPIBulkOnHandStockUpdate()); // \Swagger\Client\Model\ToolkitDataClassesStockAPIBulkOnHandStockUpdate[] | Update Requests
 $client_id = 56; // int | Client ID
 
 try {
@@ -196,6 +197,7 @@ Create New Bundle
 Create a new Bundle
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
@@ -205,7 +207,7 @@ $apiInstance = new Swagger\Client\Api\ProductApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$bundle = new \Swagger\Client\Model\ToolkitDataClassesStockAPIBundle(); // \Swagger\Client\Model\ToolkitDataClassesStockAPIBundle | Bundle
+$bundle = new \Swagger\Client\Model\MintsoftStockAPIBundle(); // \Swagger\Client\Model\ToolkitDataClassesStockAPIBundle | Bundle
 
 try {
     $apiInstance->productCreateBundle($bundle);
@@ -244,6 +246,7 @@ Create New Product
 Create a new Product
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
@@ -253,7 +256,7 @@ $apiInstance = new Swagger\Client\Api\ProductApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$product = new \Swagger\Client\Model\ToolkitDataClassesStockProduct(); // \Swagger\Client\Model\ToolkitDataClassesStockProduct | Product ID
+$product = new \Swagger\Client\Model\MintsoftStockProduct(); // \Swagger\Client\Model\ToolkitDataClassesStockProduct | Product ID
 
 try {
     $apiInstance->productCreateProduct($product);
@@ -292,6 +295,7 @@ Create New Product Supplier
 Create a New Product Supplier
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
@@ -301,7 +305,7 @@ $apiInstance = new Swagger\Client\Api\ProductApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$product_supplier = new \Swagger\Client\Model\ToolkitDataClassesStockProductSupplier(); // \Swagger\Client\Model\ToolkitDataClassesStockProductSupplier | ProductSupplier
+$product_supplier = new \Swagger\Client\Model\MintsoftStockProductSupplier(); // \Swagger\Client\Model\ToolkitDataClassesStockProductSupplier | ProductSupplier
 
 try {
     $result = $apiInstance->productCreateSupplier($product_supplier);
@@ -439,6 +443,7 @@ Delete Product Prices
 Deletes an Existing Product Price
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
@@ -448,7 +453,7 @@ $apiInstance = new Swagger\Client\Api\ProductApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$prices = array(new \Swagger\Client\Model\ToolkitDataClassesProductsAPINewProductPrice()); // \Swagger\Client\Model\ToolkitDataClassesProductsAPINewProductPrice[] | Product Prices
+$prices = array(new \Swagger\Client\Model\MintsoftProductsAPINewProductPrice()); // \Swagger\Client\Model\ToolkitDataClassesProductsAPINewProductPrice[] | Product Prices
 
 try {
     $apiInstance->productDeleteProductPrices($prices);
@@ -1405,6 +1410,7 @@ Update Product
 Updates an Existing Product
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
@@ -1414,7 +1420,7 @@ $apiInstance = new Swagger\Client\Api\ProductApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$product = new \Swagger\Client\Model\ToolkitDataClassesStockProduct(); // \Swagger\Client\Model\ToolkitDataClassesStockProduct | Product
+$product = new \Swagger\Client\Model\MintsoftStockProduct(); // \Swagger\Client\Model\ToolkitDataClassesStockProduct | Product
 
 try {
     $apiInstance->productUpdateProduct($product);
@@ -1453,6 +1459,7 @@ Add or Update Product Prices
 Adds new Product Prices (Limit of 1 Concurrent Request per Mintsoft Customer)
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
@@ -1462,7 +1469,7 @@ $apiInstance = new Swagger\Client\Api\ProductApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$prices = array(new \Swagger\Client\Model\ToolkitDataClassesProductsAPINewProductPrice()); // \Swagger\Client\Model\ToolkitDataClassesProductsAPINewProductPrice[] | Prices
+$prices = array(new \Swagger\Client\Model\MintsoftProductsAPINewProductPrice()); // \Swagger\Client\Model\ToolkitDataClassesProductsAPINewProductPrice[] | Prices
 
 try {
     $apiInstance->productUpdateProductPrices($prices);

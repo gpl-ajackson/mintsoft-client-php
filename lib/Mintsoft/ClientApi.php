@@ -92,11 +92,11 @@ class ClientApi
      *
      * Add SubClient
      *
-     * @param  \Swagger\Client\Model\ToolkitDataClassesClientsAPIAddSubClient $client client (required)
+     * @param  \Swagger\Client\Model\MintsoftClientsAPIAddSubClient $client client (required)
      *
+     * @return \Swagger\Client\Model\MintsoftCommonToolkitResult
+     *@throws \InvalidArgumentException
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult
      */
     public function clientAddSubClient($client)
     {
@@ -109,15 +109,15 @@ class ClientApi
      *
      * Add SubClient
      *
-     * @param  \Swagger\Client\Model\ToolkitDataClassesClientsAPIAddSubClient $client (required)
+     * @param  \Swagger\Client\Model\MintsoftClientsAPIAddSubClient $client (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult, HTTP status code, HTTP response headers (array of strings)
+     *@throws \InvalidArgumentException
+     * @throws \Swagger\Client\ApiException on non-2xx response
      */
     public function clientAddSubClientWithHttpInfo($client)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->clientAddSubClientRequest($client);
 
         try {
@@ -169,7 +169,7 @@ class ClientApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult',
+                        '\Swagger\Client\Model\MintsoftCommonToolkitResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -184,10 +184,10 @@ class ClientApi
      *
      * Add SubClient
      *
-     * @param  \Swagger\Client\Model\ToolkitDataClassesClientsAPIAddSubClient $client (required)
+     * @param  \Swagger\Client\Model\MintsoftClientsAPIAddSubClient $client (required)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
+     *@throws \InvalidArgumentException
      */
     public function clientAddSubClientAsync($client)
     {
@@ -204,14 +204,14 @@ class ClientApi
      *
      * Add SubClient
      *
-     * @param  \Swagger\Client\Model\ToolkitDataClassesClientsAPIAddSubClient $client (required)
+     * @param  \Swagger\Client\Model\MintsoftClientsAPIAddSubClient $client (required)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
+     *@throws \InvalidArgumentException
      */
     public function clientAddSubClientAsyncWithHttpInfo($client)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->clientAddSubClientRequest($client);
 
         return $this->client
@@ -254,10 +254,10 @@ class ClientApi
     /**
      * Create request for operation 'clientAddSubClient'
      *
-     * @param  \Swagger\Client\Model\ToolkitDataClassesClientsAPIAddSubClient $client (required)
+     * @param  \Swagger\Client\Model\MintsoftClientsAPIAddSubClient $client (required)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
+     *@throws \InvalidArgumentException
      */
     protected function clientAddSubClientRequest($client)
     {
@@ -629,7 +629,7 @@ class ClientApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesClientsAPISubClient[]
+     * @return \Swagger\Client\Model\MintsoftClientsAPISubClient[]
      */
     public function clientSubClients()
     {
@@ -881,7 +881,7 @@ class ClientApi
     {
         $options = [];
         if ($this->config->getDebug()) {
-            $options[RequestOptions::DEBUG] = fopen($this->config->getDebugFile(), 'a');
+            $options[RequestOptions::DEBUG] = fopen($this->config->getDebugFile(), 'ab');
             if (!$options[RequestOptions::DEBUG]) {
                 throw new \RuntimeException('Failed to open the debug file: ' . $this->config->getDebugFile());
             }

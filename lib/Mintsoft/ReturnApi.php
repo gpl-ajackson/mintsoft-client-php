@@ -91,11 +91,11 @@ class ReturnApi
      * Operation returnAddReturnItem
      *
      * @param  int $id id (required)
-     * @param  \Swagger\Client\Model\ToolkitDataClassesReturnsAPIReturnItemAPI $item item (required)
+     * @param  \Swagger\Client\Model\MintsoftReturnsAPIReturnItemAPI $item item (required)
      *
+     * @return \Swagger\Client\Model\MintsoftCommonToolkitResult
+     *@throws \InvalidArgumentException
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult
      */
     public function returnAddReturnItem($id, $item)
     {
@@ -107,15 +107,15 @@ class ReturnApi
      * Operation returnAddReturnItemWithHttpInfo
      *
      * @param  int $id (required)
-     * @param  \Swagger\Client\Model\ToolkitDataClassesReturnsAPIReturnItemAPI $item (required)
+     * @param  \Swagger\Client\Model\MintsoftReturnsAPIReturnItemAPI $item (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult, HTTP status code, HTTP response headers (array of strings)
+     *@throws \InvalidArgumentException
+     * @throws \Swagger\Client\ApiException on non-2xx response
      */
     public function returnAddReturnItemWithHttpInfo($id, $item)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->returnAddReturnItemRequest($id, $item);
 
         try {
@@ -167,7 +167,7 @@ class ReturnApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult',
+                        '\Swagger\Client\Model\MintsoftCommonToolkitResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -183,10 +183,10 @@ class ReturnApi
      * 
      *
      * @param  int $id (required)
-     * @param  \Swagger\Client\Model\ToolkitDataClassesReturnsAPIReturnItemAPI $item (required)
+     * @param  \Swagger\Client\Model\MintsoftReturnsAPIReturnItemAPI $item (required)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
+     *@throws \InvalidArgumentException
      */
     public function returnAddReturnItemAsync($id, $item)
     {
@@ -204,14 +204,14 @@ class ReturnApi
      * 
      *
      * @param  int $id (required)
-     * @param  \Swagger\Client\Model\ToolkitDataClassesReturnsAPIReturnItemAPI $item (required)
+     * @param  \Swagger\Client\Model\MintsoftReturnsAPIReturnItemAPI $item (required)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
+     *@throws \InvalidArgumentException
      */
     public function returnAddReturnItemAsyncWithHttpInfo($id, $item)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->returnAddReturnItemRequest($id, $item);
 
         return $this->client
@@ -255,10 +255,10 @@ class ReturnApi
      * Create request for operation 'returnAddReturnItem'
      *
      * @param  int $id (required)
-     * @param  \Swagger\Client\Model\ToolkitDataClassesReturnsAPIReturnItemAPI $item (required)
+     * @param  \Swagger\Client\Model\MintsoftReturnsAPIReturnItemAPI $item (required)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
+     *@throws \InvalidArgumentException
      */
     protected function returnAddReturnItemRequest($id, $item)
     {
@@ -374,9 +374,9 @@ class ReturnApi
      * @param  int $quantity quantity (required)
      * @param  int $location_id location_id (required)
      *
+     * @return \Swagger\Client\Model\MintsoftCommonToolkitResult
+     *@throws \InvalidArgumentException
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult
      */
     public function returnAllocateItemLocation($id, $returnitem_id, $quantity, $location_id)
     {
@@ -398,7 +398,7 @@ class ReturnApi
      */
     public function returnAllocateItemLocationWithHttpInfo($id, $returnitem_id, $quantity, $location_id)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->returnAllocateItemLocationRequest($id, $returnitem_id, $quantity, $location_id);
 
         try {
@@ -450,7 +450,7 @@ class ReturnApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult',
+                        '\Swagger\Client\Model\MintsoftCommonToolkitResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -498,7 +498,7 @@ class ReturnApi
      */
     public function returnAllocateItemLocationAsyncWithHttpInfo($id, $returnitem_id, $quantity, $location_id)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->returnAllocateItemLocationRequest($id, $returnitem_id, $quantity, $location_id);
 
         return $this->client
@@ -681,9 +681,9 @@ class ReturnApi
      *
      * @param  int $id id (required)
      *
+     * @return \Swagger\Client\Model\MintsoftCommonToolkitResult
+     *@throws \InvalidArgumentException
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult
      */
     public function returnConfirmReturn($id)
     {
@@ -702,7 +702,7 @@ class ReturnApi
      */
     public function returnConfirmReturnWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->returnConfirmReturnRequest($id);
 
         try {
@@ -754,7 +754,7 @@ class ReturnApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult',
+                        '\Swagger\Client\Model\MintsoftCommonToolkitResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -796,7 +796,7 @@ class ReturnApi
      */
     public function returnConfirmReturnAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->returnConfirmReturnRequest($id);
 
         return $this->client
@@ -946,9 +946,9 @@ class ReturnApi
      *
      * @param  int $order_id order_id (required)
      *
+     * @return \Swagger\Client\Model\MintsoftCommonToolkitResult
+     *@throws \InvalidArgumentException
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult
      */
     public function returnCreateReturn($order_id)
     {
@@ -967,7 +967,7 @@ class ReturnApi
      */
     public function returnCreateReturnWithHttpInfo($order_id)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->returnCreateReturnRequest($order_id);
 
         try {
@@ -1019,7 +1019,7 @@ class ReturnApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult',
+                        '\Swagger\Client\Model\MintsoftCommonToolkitResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1061,7 +1061,7 @@ class ReturnApi
      */
     public function returnCreateReturnAsyncWithHttpInfo($order_id)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->returnCreateReturnRequest($order_id);
 
         return $this->client
@@ -1211,9 +1211,9 @@ class ReturnApi
      *
      * @param  int $id id (required)
      *
+     * @return \Swagger\Client\Model\MintsoftReturnsReturn
+     *@throws \InvalidArgumentException
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesReturnsReturn
      */
     public function returnGetReturn($id)
     {
@@ -1232,7 +1232,7 @@ class ReturnApi
      */
     public function returnGetReturnWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesReturnsReturn';
+        $returnType = '\Swagger\Client\Model\MintsoftReturnsReturn';
         $request = $this->returnGetReturnRequest($id);
 
         try {
@@ -1284,7 +1284,7 @@ class ReturnApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesReturnsReturn',
+                        '\Swagger\Client\Model\MintsoftReturnsReturn',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1326,7 +1326,7 @@ class ReturnApi
      */
     public function returnGetReturnAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesReturnsReturn';
+        $returnType = '\Swagger\Client\Model\MintsoftReturnsReturn';
         $request = $this->returnGetReturnRequest($id);
 
         return $this->client
@@ -1478,7 +1478,7 @@ class ReturnApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesReturnsReturnItem[]
+     * @return \Swagger\Client\Model\MintsoftReturnsReturnItem[]
      */
     public function returnGetReturnItems($id)
     {
@@ -1742,7 +1742,7 @@ class ReturnApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesReturnsReturnReason[]
+     * @return \Swagger\Client\Model\MintsoftReturnsReturnReason[]
      */
     public function returnGetReturnReasons()
     {
@@ -1987,9 +1987,9 @@ class ReturnApi
      *
      * @param  \DateTime $date date (required)
      *
+     * @return \Swagger\Client\Model\MintsoftReturnsReturn[]
+     *@throws \InvalidArgumentException
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesReturnsReturn[]
      */
     public function returnGetReturnsOnDate($date)
     {
@@ -2253,7 +2253,7 @@ class ReturnApi
     {
         $options = [];
         if ($this->config->getDebug()) {
-            $options[RequestOptions::DEBUG] = fopen($this->config->getDebugFile(), 'a');
+            $options[RequestOptions::DEBUG] = fopen($this->config->getDebugFile(), 'ab');
             if (!$options[RequestOptions::DEBUG]) {
                 throw new \RuntimeException('Failed to open the debug file: ' . $this->config->getDebugFile());
             }

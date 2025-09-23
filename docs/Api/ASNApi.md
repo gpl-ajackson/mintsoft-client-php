@@ -2,25 +2,24 @@
 
 All URIs are relative to *https://api.mintsoft.co.uk*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**aSNBookInASN**](ASNApi.md#aSNBookInASN) | **GET** /api/ASN/{id}/BookIn | Book In ASN - Admin Only
-[**aSNBookInASNPartial**](ASNApi.md#aSNBookInASNPartial) | **GET** /api/ASN/{id}/BookInPartial | Book In  Partial ASN - Admin Only
-[**aSNConfirmASN**](ASNApi.md#aSNConfirmASN) | **GET** /api/ASN/{id}/Confirm | Confirm ASN
-[**aSNCreateASN**](ASNApi.md#aSNCreateASN) | **PUT** /api/ASN | Create new ASN(Advanced Shipping Notice)
-[**aSNDeleteASN**](ASNApi.md#aSNDeleteASN) | **DELETE** /api/ASN/{id} | Delete ASN
-[**aSNGetASN**](ASNApi.md#aSNGetASN) | **GET** /api/ASN/{id} | Get ASN(Advanced Shipping Notice)
-[**aSNGetGoodsInTypes**](ASNApi.md#aSNGetGoodsInTypes) | **GET** /api/ASN/GoodsInTypes | Get Goods In Types
-[**aSNGetPaperwork**](ASNApi.md#aSNGetPaperwork) | **GET** /api/ASN/{id}/Paperwork | Get ASN Paperwork
-[**aSNGetStatuses**](ASNApi.md#aSNGetStatuses) | **GET** /api/ASN/Statuses | Get ASN Statuses
-[**aSNListASNs**](ASNApi.md#aSNListASNs) | **GET** /api/ASN/List | List Of ASN(Advanced Shipping Notice)
-[**aSNMarkAwaitingPutAway**](ASNApi.md#aSNMarkAwaitingPutAway) | **GET** /api/ASN/{id}/MarkAwaitingPutAway | Mark ASN as Awiating PutAway - Admin Only
-[**aSNMarkPutAwayComplete**](ASNApi.md#aSNMarkPutAwayComplete) | **GET** /api/ASN/{id}/MarkPutAwayComplete | Mark ASN as PutAway Complete - Admin Only
-[**aSNPartBook**](ASNApi.md#aSNPartBook) | **GET** /api/ASN/{id}/PartBook | Part Book In ASN - Admin Only
-[**aSNReceiveItem**](ASNApi.md#aSNReceiveItem) | **POST** /api/ASN/{id}/Items/Receive | ASN - Receive Items
-[**aSNUpdateASN**](ASNApi.md#aSNUpdateASN) | **POST** /api/ASN/{id} | Update ASN Details
-[**aSNUploadConnectAction**](ASNApi.md#aSNUploadConnectAction) | **PUT** /api/ASN/{id}/ConnectActions | Register ASN Webhook / ASNConnect Action
-
+| Method                                                         | HTTP request                              | Description                               |
+|----------------------------------------------------------------|-------------------------------------------|-------------------------------------------|
+| [**aSNBookInASN**](ASNApi.md#aSNBookInASN)                     | **GET** /api/ASN/{id}/BookIn              | Book In ASN - Admin Only                  |
+| [**aSNBookInASNPartial**](ASNApi.md#aSNBookInASNPartial)       | **GET** /api/ASN/{id}/BookInPartial       | Book In  Partial ASN - Admin Only         |
+| [**aSNConfirmASN**](ASNApi.md#aSNConfirmASN)                   | **GET** /api/ASN/{id}/Confirm             | Confirm ASN                               |
+| [**aSNCreateASN**](ASNApi.md#aSNCreateASN)                     | **PUT** /api/ASN                          | Create new ASN(Advanced Shipping Notice)  |
+| [**aSNDeleteASN**](ASNApi.md#aSNDeleteASN)                     | **DELETE** /api/ASN/{id}                  | Delete ASN                                |
+| [**aSNGetASN**](ASNApi.md#aSNGetASN)                           | **GET** /api/ASN/{id}                     | Get ASN(Advanced Shipping Notice)         |
+| [**aSNGetGoodsInTypes**](ASNApi.md#aSNGetGoodsInTypes)         | **GET** /api/ASN/GoodsInTypes             | Get Goods In Types                        |
+| [**aSNGetPaperwork**](ASNApi.md#aSNGetPaperwork)               | **GET** /api/ASN/{id}/Paperwork           | Get ASN Paperwork                         |
+| [**aSNGetStatuses**](ASNApi.md#aSNGetStatuses)                 | **GET** /api/ASN/Statuses                 | Get ASN Statuses                          |
+| [**aSNListASNs**](ASNApi.md#aSNListASNs)                       | **GET** /api/ASN/List                     | List Of ASN(Advanced Shipping Notice)     |
+| [**aSNMarkAwaitingPutAway**](ASNApi.md#aSNMarkAwaitingPutAway) | **GET** /api/ASN/{id}/MarkAwaitingPutAway | Mark ASN as Awiating PutAway - Admin Only |
+| [**aSNMarkPutAwayComplete**](ASNApi.md#aSNMarkPutAwayComplete) | **GET** /api/ASN/{id}/MarkPutAwayComplete | Mark ASN as PutAway Complete - Admin Only |
+| [**aSNPartBook**](ASNApi.md#aSNPartBook)                       | **GET** /api/ASN/{id}/PartBook            | Part Book In ASN - Admin Only             |
+| [**aSNReceiveItem**](ASNApi.md#aSNReceiveItem)                 | **POST** /api/ASN/{id}/Items/Receive      | ASN - Receive Items                       |
+| [**aSNUpdateASN**](ASNApi.md#aSNUpdateASN)                     | **POST** /api/ASN/{id}                    | Update ASN Details                        |
+| [**aSNUploadConnectAction**](ASNApi.md#aSNUploadConnectAction) | **PUT** /api/ASN/{id}/ConnectActions      | Register ASN Webhook / ASNConnect Action  |
 
 # **aSNBookInASN**
 > \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult aSNBookInASN($id)
@@ -177,6 +176,7 @@ Create new ASN(Advanced Shipping Notice)
 Used to Creating a new ASN i.e. Advising of a Delivery into the Warehouse
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
@@ -186,7 +186,7 @@ $apiInstance = new Swagger\Client\Api\ASNApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$asn = new \Swagger\Client\Model\ToolkitDataClassesStockAPINewASN(); // \Swagger\Client\Model\ToolkitDataClassesStockAPINewASN | ASN Json in the Body of the request
+$asn = new \Swagger\Client\Model\MintsoftStockAPINewASN(); // \Swagger\Client\Model\ToolkitDataClassesStockAPINewASN | ASN Json in the Body of the request
 
 try {
     $result = $apiInstance->aSNCreateASN($asn);
@@ -675,6 +675,7 @@ ASN - Receive Items
 Receive Items against a ASN
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
@@ -685,7 +686,7 @@ $apiInstance = new Swagger\Client\Api\ASNApi(
     new GuzzleHttp\Client()
 );
 $id = 56; // int | ID of the ASN
-$items = array(new \Swagger\Client\Model\ToolkitDataClassesStockASNItemAllocation()); // \Swagger\Client\Model\ToolkitDataClassesStockASNItemAllocation[] | Json list of the Items being receieved in the body of the request
+$items = array(new \Swagger\Client\Model\MintsoftStockASNItemAllocation()); // \Swagger\Client\Model\ToolkitDataClassesStockASNItemAllocation[] | Json list of the Items being receieved in the body of the request
 
 try {
     $result = $apiInstance->aSNReceiveItem($id, $items);
@@ -726,6 +727,7 @@ Update ASN Details
 Update ASN Details for an Existing ASN
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
@@ -736,7 +738,7 @@ $apiInstance = new Swagger\Client\Api\ASNApi(
     new GuzzleHttp\Client()
 );
 $id = 56; // int | ID of the ASN
-$asn = new \Swagger\Client\Model\ToolkitDataClassesStockAPINewASN(); // \Swagger\Client\Model\ToolkitDataClassesStockAPINewASN | 
+$asn = new \Swagger\Client\Model\MintsoftStockAPINewASN(); // \Swagger\Client\Model\ToolkitDataClassesStockAPINewASN | 
 
 try {
     $result = $apiInstance->aSNUpdateASN($id, $asn);
@@ -777,6 +779,7 @@ Register ASN Webhook / ASNConnect Action
 Can be used to register a Webhook event so that when ASN is booked in a specified URL can be called with details of the book in
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
@@ -787,7 +790,7 @@ $apiInstance = new Swagger\Client\Api\ASNApi(
     new GuzzleHttp\Client()
 );
 $id = 56; // int | ID of the ASN
-$connect_action = new \Swagger\Client\Model\ToolkitDataClassesStockAPINewASNConnectAction(); // \Swagger\Client\Model\ToolkitDataClassesStockAPINewASNConnectAction | Connect Action in Body of Result as Json - Type = API, ExtraCode1 = Callback Url,ExtraCode4 = Auth Header Values Complete = false
+$connect_action = new \Swagger\Client\Model\MintsoftStockAPINewASNConnectAction(); // \Swagger\Client\Model\ToolkitDataClassesStockAPINewASNConnectAction | Connect Action in Body of Result as Json - Type = API, ExtraCode1 = Callback Url,ExtraCode4 = Auth Header Values Complete = false
 
 try {
     $result = $apiInstance->aSNUploadConnectAction($id, $connect_action);

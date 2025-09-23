@@ -2,60 +2,59 @@
 
 All URIs are relative to *https://api.mintsoft.co.uk*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**orderAddOrderComment**](OrderApi.md#orderAddOrderComment) | **POST** /api/Order/{id}/Comments | 
-[**orderAddOrderItem**](OrderApi.md#orderAddOrderItem) | **PUT** /api/Order/{id}/Items | Add new item to the existing order
-[**orderAddOrderTag**](OrderApi.md#orderAddOrderTag) | **PUT** /api/Order/{id}/Tag | 
-[**orderAllocations**](OrderApi.md#orderAllocations) | **GET** /api/Order/{id}/Allocations | Order Allocations
-[**orderBarcodeVerifiedOrderItems**](OrderApi.md#orderBarcodeVerifiedOrderItems) | **GET** /api/Order/{id}/BarcodeVerifiedOrderItems | Order Barcode Verifications
-[**orderBillingAddress**](OrderApi.md#orderBillingAddress) | **GET** /api/Order/{id}/BillingAddress | Get Billing Address for Order
-[**orderCancelOrder**](OrderApi.md#orderCancelOrder) | **GET** /api/Order/{id}/Cancel | 
-[**orderCancelShipment**](OrderApi.md#orderCancelShipment) | **DELETE** /api/Order/{id}/Shipments/CancelShipment | Cancel Shipment - using Courier API Connection
-[**orderComments**](OrderApi.md#orderComments) | **GET** /api/Order/{id}/Comments | 
-[**orderCreateOrder**](OrderApi.md#orderCreateOrder) | **PUT** /api/Order | Create a New Order
-[**orderCreateShipment**](OrderApi.md#orderCreateShipment) | **POST** /api/Order/{id}/Shipments/CreateShipment | Create Shipment - using Courier API Connection
-[**orderDeleteOrderItem**](OrderApi.md#orderDeleteOrderItem) | **DELETE** /api/Order/{id}/Items/{ItemId} | Delete Order Item
-[**orderDeleteOrderShipment**](OrderApi.md#orderDeleteOrderShipment) | **DELETE** /api/Order/{id}/Shipments/{OrderShipmentId} | 
-[**orderDeleteOrderTag**](OrderApi.md#orderDeleteOrderTag) | **DELETE** /api/Order/{id}/Tag | 
-[**orderDespatchNote**](OrderApi.md#orderDespatchNote) | **GET** /api/Order/{id}/DespatchNote | 
-[**orderDocuments**](OrderApi.md#orderDocuments) | **GET** /api/Order/{id}/Documents | 
-[**orderGet**](OrderApi.md#orderGet) | **GET** /api/Order/{id} | 
-[**orderGetChannels**](OrderApi.md#orderGetChannels) | **GET** /api/Order/Channels | 
-[**orderGetConnectAction**](OrderApi.md#orderGetConnectAction) | **GET** /api/Order/{id}/ConnectActions | 
-[**orderGetDocument**](OrderApi.md#orderGetDocument) | **GET** /api/Order/{id}/Documents/{DocumentId} | 
-[**orderGetDocumentData**](OrderApi.md#orderGetDocumentData) | **GET** /api/Order/{id}/Documents/{DocumentId}/Data | 
-[**orderGetOrderDocumentPaperSizes**](OrderApi.md#orderGetOrderDocumentPaperSizes) | **GET** /api/Order/Documents/PaperSizes | 
-[**orderGetOrderDocumentTypes**](OrderApi.md#orderGetOrderDocumentTypes) | **GET** /api/Order/Documents/DocumentTypes | 
-[**orderGetOrderShipment**](OrderApi.md#orderGetOrderShipment) | **GET** /api/Order/{id}/Shipments | 
-[**orderGetOrderShipmentTrackingEventsStatuses**](OrderApi.md#orderGetOrderShipmentTrackingEventsStatuses) | **GET** /api/Order/Shipments/TrackingEvents/Statuses | Tracking Event - Statuses
-[**orderGetOrderStatuses**](OrderApi.md#orderGetOrderStatuses) | **GET** /api/Order/Statuses | 
-[**orderItems**](OrderApi.md#orderItems) | **GET** /api/Order/{id}/Items | Get Order Items
-[**orderListOrders**](OrderApi.md#orderListOrders) | **GET** /api/Order/List | 
-[**orderListTrackingEvents**](OrderApi.md#orderListTrackingEvents) | **GET** /api/Order/Shipments/TrackingEvents/List | Shipment Tracking Events - List
-[**orderMarkAwaitingConfirmation**](OrderApi.md#orderMarkAwaitingConfirmation) | **GET** /api/Order/{id}/MarkAwaitingConfirmation | MarkAwaitingConfirmation
-[**orderMarkAwaitingPayment**](OrderApi.md#orderMarkAwaitingPayment) | **GET** /api/Order/{id}/MarkAwaitingPayment | MarkAwaitingPayment
-[**orderMarkConfirmed**](OrderApi.md#orderMarkConfirmed) | **GET** /api/Order/{id}/MarkConfirmed | MarkConfirmed
-[**orderMarkDespatched**](OrderApi.md#orderMarkDespatched) | **GET** /api/Order/{id}/MarkDespatched | MarkDespatched
-[**orderMarkDocumentAsPrinted**](OrderApi.md#orderMarkDocumentAsPrinted) | **GET** /api/Order/{id}/Documents/{DocumentId}/MarkPrinted | 
-[**orderMarkFraudRisk**](OrderApi.md#orderMarkFraudRisk) | **POST** /api/Order/{id}/MarkFraudRisk | Marks Fraud Risk
-[**orderMarkFraudRiskAccepted**](OrderApi.md#orderMarkFraudRiskAccepted) | **POST** /api/Order/{id}/MarkFraudRiskAccepted | Marks Fraud Risk Accepted
-[**orderMarkPackAndHold**](OrderApi.md#orderMarkPackAndHold) | **GET** /api/Order/{id}/MarkPackAndHold | MarkPackAndHold
-[**orderMarkPaymentReceived**](OrderApi.md#orderMarkPaymentReceived) | **GET** /api/Order/{id}/MarkPaymentReceived | MarkPaymentReceived
-[**orderMarkPrinted**](OrderApi.md#orderMarkPrinted) | **GET** /api/Order/{id}/MarkPrinted | MarkPrinted
-[**orderMarkReleasePackAndHold**](OrderApi.md#orderMarkReleasePackAndHold) | **GET** /api/Order/{id}/MarkReleasePackAndHold | MarkReleasePackAndHold
-[**orderOrderSplit**](OrderApi.md#orderOrderSplit) | **GET** /api/Order/{id}/Splits | 
-[**orderQueries**](OrderApi.md#orderQueries) | **GET** /api/Order/{id}/Queries | 
-[**orderQueryComments**](OrderApi.md#orderQueryComments) | **GET** /api/Order/{id}/Queries/{QueryId}/Comments | 
-[**orderSearchOrder**](OrderApi.md#orderSearchOrder) | **GET** /api/Order/Search | 
-[**orderSplitOrderItems**](OrderApi.md#orderSplitOrderItems) | **POST** /api/Order/{id}/SplitOrderItems | SplitOrderItems
-[**orderUpdateNumberOfParcels**](OrderApi.md#orderUpdateNumberOfParcels) | **GET** /api/Order/{id}/UpdateNumberOfParcels | Update Number Of Parcels
-[**orderUpdateOrder**](OrderApi.md#orderUpdateOrder) | **POST** /api/Order/{id} | Update Order Details
-[**orderUpdateOrderItem**](OrderApi.md#orderUpdateOrderItem) | **POST** /api/Order/{id}/Items/{ItemId} | Update Order Item
-[**orderUploadConnectAction**](OrderApi.md#orderUploadConnectAction) | **PUT** /api/Order/{id}/ConnectActions | 
-[**orderUploadOrderDocument**](OrderApi.md#orderUploadOrderDocument) | **PUT** /api/Order/{id}/Documents | 
-[**orderUploadOrderShipment**](OrderApi.md#orderUploadOrderShipment) | **PUT** /api/Order/{id}/Shipments | 
-
+|Method | HTTP request | Description|
+|------------- | ------------- | -------------|
+|[**orderAddOrderComment**](OrderApi.md#orderAddOrderComment) | **POST** /api/Order/{id}/Comments |     |
+|[**orderAddOrderItem**](OrderApi.md#orderAddOrderItem) | **PUT** /api/Order/{id}/Items | Add new item to the existing order|
+|[**orderAddOrderTag**](OrderApi.md#orderAddOrderTag) | **PUT** /api/Order/{id}/Tag |     |
+|[**orderAllocations**](OrderApi.md#orderAllocations) | **GET** /api/Order/{id}/Allocations | Order Allocations|
+|[**orderBarcodeVerifiedOrderItems**](OrderApi.md#orderBarcodeVerifiedOrderItems) | **GET** /api/Order/{id}/BarcodeVerifiedOrderItems | Order Barcode Verifications|
+|[**orderBillingAddress**](OrderApi.md#orderBillingAddress) | **GET** /api/Order/{id}/BillingAddress | Get Billing Address for Order|
+|[**orderCancelOrder**](OrderApi.md#orderCancelOrder) | **GET** /api/Order/{id}/Cancel |     |
+|[**orderCancelShipment**](OrderApi.md#orderCancelShipment) | **DELETE** /api/Order/{id}/Shipments/CancelShipment | Cancel Shipment - using Courier API Connection|
+|[**orderComments**](OrderApi.md#orderComments) | **GET** /api/Order/{id}/Comments |     |
+|[**orderCreateOrder**](OrderApi.md#orderCreateOrder) | **PUT** /api/Order | Create a New Order|
+|[**orderCreateShipment**](OrderApi.md#orderCreateShipment) | **POST** /api/Order/{id}/Shipments/CreateShipment | Create Shipment - using Courier API Connection|
+|[**orderDeleteOrderItem**](OrderApi.md#orderDeleteOrderItem) | **DELETE** /api/Order/{id}/Items/{ItemId} | Delete Order Item|
+|[**orderDeleteOrderShipment**](OrderApi.md#orderDeleteOrderShipment) | **DELETE** /api/Order/{id}/Shipments/{OrderShipmentId} |     |
+|[**orderDeleteOrderTag**](OrderApi.md#orderDeleteOrderTag) | **DELETE** /api/Order/{id}/Tag |     |
+|[**orderDespatchNote**](OrderApi.md#orderDespatchNote) | **GET** /api/Order/{id}/DespatchNote |     |
+|[**orderDocuments**](OrderApi.md#orderDocuments) | **GET** /api/Order/{id}/Documents |     |
+|[**orderGet**](OrderApi.md#orderGet) | **GET** /api/Order/{id} |     |
+|[**orderGetChannels**](OrderApi.md#orderGetChannels) | **GET** /api/Order/Channels |     |
+|[**orderGetConnectAction**](OrderApi.md#orderGetConnectAction) | **GET** /api/Order/{id}/ConnectActions |     |
+|[**orderGetDocument**](OrderApi.md#orderGetDocument) | **GET** /api/Order/{id}/Documents/{DocumentId} |     |
+|[**orderGetDocumentData**](OrderApi.md#orderGetDocumentData) | **GET** /api/Order/{id}/Documents/{DocumentId}/Data |     |
+|[**orderGetOrderDocumentPaperSizes**](OrderApi.md#orderGetOrderDocumentPaperSizes) | **GET** /api/Order/Documents/PaperSizes |     |
+|[**orderGetOrderDocumentTypes**](OrderApi.md#orderGetOrderDocumentTypes) | **GET** /api/Order/Documents/DocumentTypes |     |
+|[**orderGetOrderShipment**](OrderApi.md#orderGetOrderShipment) | **GET** /api/Order/{id}/Shipments |     |
+|[**orderGetOrderShipmentTrackingEventsStatuses**](OrderApi.md#orderGetOrderShipmentTrackingEventsStatuses) | **GET** /api/Order/Shipments/TrackingEvents/Statuses | Tracking Event - Statuses|
+|[**orderGetOrderStatuses**](OrderApi.md#orderGetOrderStatuses) | **GET** /api/Order/Statuses |     |
+|[**orderItems**](OrderApi.md#orderItems) | **GET** /api/Order/{id}/Items | Get Order Items|
+|[**orderListOrders**](OrderApi.md#orderListOrders) | **GET** /api/Order/List |     |
+|[**orderListTrackingEvents**](OrderApi.md#orderListTrackingEvents) | **GET** /api/Order/Shipments/TrackingEvents/List | Shipment Tracking Events - List|
+|[**orderMarkAwaitingConfirmation**](OrderApi.md#orderMarkAwaitingConfirmation) | **GET** /api/Order/{id}/MarkAwaitingConfirmation | MarkAwaitingConfirmation|
+|[**orderMarkAwaitingPayment**](OrderApi.md#orderMarkAwaitingPayment) | **GET** /api/Order/{id}/MarkAwaitingPayment | MarkAwaitingPayment|
+|[**orderMarkConfirmed**](OrderApi.md#orderMarkConfirmed) | **GET** /api/Order/{id}/MarkConfirmed | MarkConfirmed|
+|[**orderMarkDespatched**](OrderApi.md#orderMarkDespatched) | **GET** /api/Order/{id}/MarkDespatched | MarkDespatched|
+|[**orderMarkDocumentAsPrinted**](OrderApi.md#orderMarkDocumentAsPrinted) | **GET** /api/Order/{id}/Documents/{DocumentId}/MarkPrinted |     |
+|[**orderMarkFraudRisk**](OrderApi.md#orderMarkFraudRisk) | **POST** /api/Order/{id}/MarkFraudRisk | Marks Fraud Risk|
+|[**orderMarkFraudRiskAccepted**](OrderApi.md#orderMarkFraudRiskAccepted) | **POST** /api/Order/{id}/MarkFraudRiskAccepted | Marks Fraud Risk Accepted|
+|[**orderMarkPackAndHold**](OrderApi.md#orderMarkPackAndHold) | **GET** /api/Order/{id}/MarkPackAndHold | MarkPackAndHold|
+|[**orderMarkPaymentReceived**](OrderApi.md#orderMarkPaymentReceived) | **GET** /api/Order/{id}/MarkPaymentReceived | MarkPaymentReceived|
+|[**orderMarkPrinted**](OrderApi.md#orderMarkPrinted) | **GET** /api/Order/{id}/MarkPrinted | MarkPrinted|
+|[**orderMarkReleasePackAndHold**](OrderApi.md#orderMarkReleasePackAndHold) | **GET** /api/Order/{id}/MarkReleasePackAndHold | MarkReleasePackAndHold|
+|[**orderOrderSplit**](OrderApi.md#orderOrderSplit) | **GET** /api/Order/{id}/Splits |     |
+|[**orderQueries**](OrderApi.md#orderQueries) | **GET** /api/Order/{id}/Queries |     |
+|[**orderQueryComments**](OrderApi.md#orderQueryComments) | **GET** /api/Order/{id}/Queries/{QueryId}/Comments |     |
+|[**orderSearchOrder**](OrderApi.md#orderSearchOrder) | **GET** /api/Order/Search |     |
+|[**orderSplitOrderItems**](OrderApi.md#orderSplitOrderItems) | **POST** /api/Order/{id}/SplitOrderItems | SplitOrderItems|
+|[**orderUpdateNumberOfParcels**](OrderApi.md#orderUpdateNumberOfParcels) | **GET** /api/Order/{id}/UpdateNumberOfParcels | Update Number Of Parcels|
+|[**orderUpdateOrder**](OrderApi.md#orderUpdateOrder) | **POST** /api/Order/{id} | Update Order Details|
+|[**orderUpdateOrderItem**](OrderApi.md#orderUpdateOrderItem) | **POST** /api/Order/{id}/Items/{ItemId} | Update Order Item|
+|[**orderUploadConnectAction**](OrderApi.md#orderUploadConnectAction) | **PUT** /api/Order/{id}/ConnectActions |     |
+|[**orderUploadOrderDocument**](OrderApi.md#orderUploadOrderDocument) | **PUT** /api/Order/{id}/Documents |     |
+|[**orderUploadOrderShipment**](OrderApi.md#orderUploadOrderShipment) | **PUT** /api/Order/{id}/Shipments |     |
 
 # **orderAddOrderComment**
 > \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult orderAddOrderComment($id, $comment)
@@ -63,6 +62,7 @@ Method | HTTP request | Description
 
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
@@ -73,7 +73,7 @@ $apiInstance = new Swagger\Client\Api\OrderApi(
     new GuzzleHttp\Client()
 );
 $id = 56; // int | 
-$comment = new \Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrderComment(); // \Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrderComment | 
+$comment = new \Swagger\Client\Model\MintsoftOrdersAPINewOrderComment(); // \Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrderComment | 
 
 try {
     $result = $apiInstance->orderAddOrderComment($id, $comment);
@@ -114,6 +114,7 @@ Add new item to the existing order
 Add new Order Item - Can be used for adding an new Item
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
@@ -124,7 +125,7 @@ $apiInstance = new Swagger\Client\Api\OrderApi(
     new GuzzleHttp\Client()
 );
 $id = 56; // int | OrderId
-$order_item = new \Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrderItem(); // \Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrderItem | 
+$order_item = new \Swagger\Client\Model\MintsoftOrdersAPINewOrderItem(); // \Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrderItem | 
 
 try {
     $result = $apiInstance->orderAddOrderItem($id, $order_item);
@@ -137,10 +138,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**| OrderId |
- **order_item** | [**\Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrderItem**](../Model/ToolkitDataClassesOrdersAPINewOrderItem.md)|  |
+| Name           | Type                                                                                                                     | Description | Notes |
+|----------------|--------------------------------------------------------------------------------------------------------------------------|-------------|-------|
+| **id**         | **int**                                                                                                                  | OrderId     |       |
+| **order_item** | [**\Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrderItem**](../Model/ToolkitDataClassesOrdersAPINewOrderItem.md) |             |       |
 
 ### Return type
 
@@ -504,6 +505,7 @@ Create a New Order
 Creates a new order in the system
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
@@ -513,7 +515,7 @@ $apiInstance = new Swagger\Client\Api\OrderApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$order = new \Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrderWithItems(); // \Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrderWithItems | 
+$order = new \Swagger\Client\Model\MintsoftOrdersAPINewOrderWithItems(); // \Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrderWithItems | 
 
 try {
     $result = $apiInstance->orderCreateOrder($order);
@@ -2216,6 +2218,7 @@ SplitOrderItems
 Split given OrderItems from existing order onto a new Order that could be despatched seperately.
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
@@ -2226,7 +2229,7 @@ $apiInstance = new Swagger\Client\Api\OrderApi(
     new GuzzleHttp\Client()
 );
 $id = 56; // int | OrderId
-$order_items_to_split = array(new \Swagger\Client\Model\ToolkitDataClassesOrdersSplitOrderOnOrderItems()); // \Swagger\Client\Model\ToolkitDataClassesOrdersSplitOrderOnOrderItems[] | Order Items to Split onto new order
+$order_items_to_split = array(new \Swagger\Client\Model\MintsoftOrdersSplitOrderOnOrderItems()); // \Swagger\Client\Model\ToolkitDataClassesOrdersSplitOrderOnOrderItems[] | Order Items to Split onto new order
 
 try {
     $result = $apiInstance->orderSplitOrderItems($id, $order_items_to_split);
@@ -2318,6 +2321,7 @@ Update Order Details
 Update Order Details for an Existing Order - Note Will not Update Order Items use speicified methods for them
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
@@ -2328,7 +2332,7 @@ $apiInstance = new Swagger\Client\Api\OrderApi(
     new GuzzleHttp\Client()
 );
 $id = 56; // int | 
-$order = new \Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrder(); // \Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrder | 
+$order = new \Swagger\Client\Model\MintsoftOrdersAPINewOrder(); // \Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrder | 
 
 try {
     $result = $apiInstance->orderUpdateOrder($id, $order);
@@ -2369,6 +2373,7 @@ Update Order Item
 Update Order Item - Can be used for editing the quantity of an Item
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
@@ -2380,7 +2385,7 @@ $apiInstance = new Swagger\Client\Api\OrderApi(
 );
 $id = 56; // int | OrderId
 $item_id = 56; // int | 
-$order_item = new \Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrderItem(); // \Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrderItem | 
+$order_item = new \Swagger\Client\Model\MintsoftOrdersAPINewOrderItem(); // \Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrderItem | 
 
 try {
     $result = $apiInstance->orderUpdateOrderItem($id, $item_id, $order_item);
@@ -2420,6 +2425,7 @@ No authorization required
 
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
@@ -2430,7 +2436,7 @@ $apiInstance = new Swagger\Client\Api\OrderApi(
     new GuzzleHttp\Client()
 );
 $id = 56; // int | 
-$order_shipment = new \Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrderConnectAction(); // \Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrderConnectAction | 
+$order_shipment = new \Swagger\Client\Model\MintsoftOrdersAPINewOrderConnectAction(); // \Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrderConnectAction | 
 
 try {
     $result = $apiInstance->orderUploadConnectAction($id, $order_shipment);
@@ -2469,6 +2475,7 @@ No authorization required
 
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
@@ -2479,7 +2486,7 @@ $apiInstance = new Swagger\Client\Api\OrderApi(
     new GuzzleHttp\Client()
 );
 $id = 56; // int | 
-$order_document = new \Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrderDocument(); // \Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrderDocument | 
+$order_document = new \Swagger\Client\Model\MintsoftOrdersAPINewOrderDocument(); // \Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrderDocument | 
 $print_with_order = true; // bool | 
 $document_type_id = 56; // int | 
 $paper_size = 56; // int | 
@@ -2524,6 +2531,7 @@ No authorization required
 
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
@@ -2534,7 +2542,7 @@ $apiInstance = new Swagger\Client\Api\OrderApi(
     new GuzzleHttp\Client()
 );
 $id = 56; // int | 
-$order_shipment = new \Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrderShipment(); // \Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrderShipment | 
+$order_shipment = new \Swagger\Client\Model\MintsoftOrdersAPINewOrderShipment(); // \Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrderShipment | 
 
 try {
     $result = $apiInstance->orderUploadOrderShipment($id, $order_shipment);

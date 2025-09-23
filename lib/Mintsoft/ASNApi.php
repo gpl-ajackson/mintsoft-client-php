@@ -94,9 +94,9 @@ class ASNApi
      *
      * @param  int $id ID of the ASN (required)
      *
+     * @return \Swagger\Client\Model\MintsoftCommonToolkitResult
+     *@throws \InvalidArgumentException
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult
      */
     public function aSNBookInASN($id)
     {
@@ -117,7 +117,7 @@ class ASNApi
      */
     public function aSNBookInASNWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->aSNBookInASNRequest($id);
 
         try {
@@ -169,7 +169,7 @@ class ASNApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult',
+                        '\Swagger\Client\Model\MintsoftCommonToolkitResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -211,7 +211,7 @@ class ASNApi
      */
     public function aSNBookInASNAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->aSNBookInASNRequest($id);
 
         return $this->client
@@ -363,9 +363,9 @@ class ASNApi
      *
      * @param  int $id ID of the ASN (required)
      *
+     * @return \Swagger\Client\Model\MintsoftCommonToolkitResult
+     *@throws \InvalidArgumentException
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult
      */
     public function aSNBookInASNPartial($id)
     {
@@ -386,7 +386,7 @@ class ASNApi
      */
     public function aSNBookInASNPartialWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->aSNBookInASNPartialRequest($id);
 
         try {
@@ -438,7 +438,7 @@ class ASNApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult',
+                        '\Swagger\Client\Model\MintsoftCommonToolkitResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -480,7 +480,7 @@ class ASNApi
      */
     public function aSNBookInASNPartialAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->aSNBookInASNPartialRequest($id);
 
         return $this->client
@@ -632,9 +632,9 @@ class ASNApi
      *
      * @param  int $id ID of the ASN (required)
      *
+     * @return \Swagger\Client\Model\MintsoftCommonToolkitResult
+     *@throws \InvalidArgumentException
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult
      */
     public function aSNConfirmASN($id)
     {
@@ -655,7 +655,7 @@ class ASNApi
      */
     public function aSNConfirmASNWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->aSNConfirmASNRequest($id);
 
         try {
@@ -707,7 +707,7 @@ class ASNApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult',
+                        '\Swagger\Client\Model\MintsoftCommonToolkitResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -749,7 +749,7 @@ class ASNApi
      */
     public function aSNConfirmASNAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->aSNConfirmASNRequest($id);
 
         return $this->client
@@ -899,11 +899,11 @@ class ASNApi
      *
      * Create new ASN(Advanced Shipping Notice)
      *
-     * @param  \Swagger\Client\Model\ToolkitDataClassesStockAPINewASN $asn ASN Json in the Body of the request (required)
+     * @param  \Swagger\Client\Model\MintsoftStockAPINewASN $asn ASN Json in the Body of the request (required)
      *
+     * @return \Swagger\Client\Model\MintsoftCommonToolkitResult
+     *@throws \InvalidArgumentException
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult
      */
     public function aSNCreateASN($asn)
     {
@@ -916,15 +916,15 @@ class ASNApi
      *
      * Create new ASN(Advanced Shipping Notice)
      *
-     * @param  \Swagger\Client\Model\ToolkitDataClassesStockAPINewASN $asn ASN Json in the Body of the request (required)
+     * @param  \Swagger\Client\Model\MintsoftStockAPINewASN $asn ASN Json in the Body of the request (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult, HTTP status code, HTTP response headers (array of strings)
+     *@throws \InvalidArgumentException
+     * @throws \Swagger\Client\ApiException on non-2xx response
      */
     public function aSNCreateASNWithHttpInfo($asn)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->aSNCreateASNRequest($asn);
 
         try {
@@ -976,7 +976,7 @@ class ASNApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult',
+                        '\Swagger\Client\Model\MintsoftCommonToolkitResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -991,10 +991,10 @@ class ASNApi
      *
      * Create new ASN(Advanced Shipping Notice)
      *
-     * @param  \Swagger\Client\Model\ToolkitDataClassesStockAPINewASN $asn ASN Json in the Body of the request (required)
+     * @param  \Swagger\Client\Model\MintsoftStockAPINewASN $asn ASN Json in the Body of the request (required)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
+     *@throws \InvalidArgumentException
      */
     public function aSNCreateASNAsync($asn)
     {
@@ -1011,14 +1011,14 @@ class ASNApi
      *
      * Create new ASN(Advanced Shipping Notice)
      *
-     * @param  \Swagger\Client\Model\ToolkitDataClassesStockAPINewASN $asn ASN Json in the Body of the request (required)
+     * @param  \Swagger\Client\Model\MintsoftStockAPINewASN $asn ASN Json in the Body of the request (required)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
+     *@throws \InvalidArgumentException
      */
     public function aSNCreateASNAsyncWithHttpInfo($asn)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->aSNCreateASNRequest($asn);
 
         return $this->client
@@ -1061,10 +1061,10 @@ class ASNApi
     /**
      * Create request for operation 'aSNCreateASN'
      *
-     * @param  \Swagger\Client\Model\ToolkitDataClassesStockAPINewASN $asn ASN Json in the Body of the request (required)
+     * @param  \Swagger\Client\Model\MintsoftStockAPINewASN $asn ASN Json in the Body of the request (required)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
+     *@throws \InvalidArgumentException
      */
     protected function aSNCreateASNRequest($asn)
     {
@@ -1165,9 +1165,9 @@ class ASNApi
      *
      * @param  int $id ID of the ASN (required)
      *
+     * @return \Swagger\Client\Model\MintsoftCommonToolkitResult
+     *@throws \InvalidArgumentException
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult
      */
     public function aSNDeleteASN($id)
     {
@@ -1188,7 +1188,7 @@ class ASNApi
      */
     public function aSNDeleteASNWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->aSNDeleteASNRequest($id);
 
         try {
@@ -1240,7 +1240,7 @@ class ASNApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult',
+                        '\Swagger\Client\Model\MintsoftCommonToolkitResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1282,7 +1282,7 @@ class ASNApi
      */
     public function aSNDeleteASNAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->aSNDeleteASNRequest($id);
 
         return $this->client
@@ -1434,9 +1434,9 @@ class ASNApi
      *
      * @param  int $id ID of the ASN (required)
      *
+     * @return \Swagger\Client\Model\MintsoftStockASN
+     *@throws \InvalidArgumentException
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesStockASN
      */
     public function aSNGetASN($id)
     {
@@ -1457,7 +1457,7 @@ class ASNApi
      */
     public function aSNGetASNWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesStockASN';
+        $returnType = '\Swagger\Client\Model\MintsoftStockASN';
         $request = $this->aSNGetASNRequest($id);
 
         try {
@@ -1509,7 +1509,7 @@ class ASNApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesStockASN',
+                        '\Swagger\Client\Model\MintsoftStockASN',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1551,7 +1551,7 @@ class ASNApi
      */
     public function aSNGetASNAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesStockASN';
+        $returnType = '\Swagger\Client\Model\MintsoftStockASN';
         $request = $this->aSNGetASNRequest($id);
 
         return $this->client
@@ -1704,7 +1704,7 @@ class ASNApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesCommonEnumPair[]
+     * @return \Swagger\Client\Model\MintsoftCommonEnumPair[]
      */
     public function aSNGetGoodsInTypes()
     {
@@ -2223,7 +2223,7 @@ class ASNApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesStockASNStatus[]
+     * @return \Swagger\Client\Model\MintsoftStockASNStatus[]
      */
     public function aSNGetStatuses()
     {
@@ -2480,9 +2480,9 @@ class ASNApi
      * @param  \DateTime $booked_in_end_interval Filter by any ASNs that have been booked supplied Timestamp (optional)
      * @param  bool $include_asn_items Request the ASN items (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @return \Swagger\Client\Model\MintsoftStockASN[]
+     *@throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesStockASN[]
      */
     public function aSNListASNs($asn_status_id = null, $client_id = null, $page_no = null, $limit = null, $warehouse_id = null, $since_last_updated = null, $booked_in_start_interval = null, $booked_in_end_interval = null, $include_asn_items = null)
     {
@@ -2803,9 +2803,9 @@ class ASNApi
      *
      * @param  int $id ID of the ASN (required)
      *
+     * @return \Swagger\Client\Model\MintsoftCommonToolkitResult
+     *@throws \InvalidArgumentException
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult
      */
     public function aSNMarkAwaitingPutAway($id)
     {
@@ -2826,7 +2826,7 @@ class ASNApi
      */
     public function aSNMarkAwaitingPutAwayWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->aSNMarkAwaitingPutAwayRequest($id);
 
         try {
@@ -2878,7 +2878,7 @@ class ASNApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult',
+                        '\Swagger\Client\Model\MintsoftCommonToolkitResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2920,7 +2920,7 @@ class ASNApi
      */
     public function aSNMarkAwaitingPutAwayAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->aSNMarkAwaitingPutAwayRequest($id);
 
         return $this->client
@@ -3072,9 +3072,9 @@ class ASNApi
      *
      * @param  int $id ID of the ASN (required)
      *
+     * @return \Swagger\Client\Model\MintsoftCommonToolkitResult
+     *@throws \InvalidArgumentException
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult
      */
     public function aSNMarkPutAwayComplete($id)
     {
@@ -3095,7 +3095,7 @@ class ASNApi
      */
     public function aSNMarkPutAwayCompleteWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->aSNMarkPutAwayCompleteRequest($id);
 
         try {
@@ -3147,7 +3147,7 @@ class ASNApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult',
+                        '\Swagger\Client\Model\MintsoftCommonToolkitResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3189,7 +3189,7 @@ class ASNApi
      */
     public function aSNMarkPutAwayCompleteAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->aSNMarkPutAwayCompleteRequest($id);
 
         return $this->client
@@ -3341,9 +3341,9 @@ class ASNApi
      *
      * @param  int $id ID of the ASN (required)
      *
+     * @return \Swagger\Client\Model\MintsoftCommonToolkitResult
+     *@throws \InvalidArgumentException
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult
      */
     public function aSNPartBook($id)
     {
@@ -3364,7 +3364,7 @@ class ASNApi
      */
     public function aSNPartBookWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->aSNPartBookRequest($id);
 
         try {
@@ -3416,7 +3416,7 @@ class ASNApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult',
+                        '\Swagger\Client\Model\MintsoftCommonToolkitResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3458,7 +3458,7 @@ class ASNApi
      */
     public function aSNPartBookAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->aSNPartBookRequest($id);
 
         return $this->client
@@ -3609,11 +3609,11 @@ class ASNApi
      * ASN - Receive Items
      *
      * @param  int $id ID of the ASN (required)
-     * @param  \Swagger\Client\Model\ToolkitDataClassesStockASNItemAllocation[] $items Json list of the Items being receieved in the body of the request (required)
+     * @param  \Swagger\Client\Model\MintsoftStockASNItemAllocation[] $items Json list of the Items being receieved in the body of the request (required)
      *
+     * @return \Swagger\Client\Model\MintsoftCommonToolkitResult
+     *@throws \InvalidArgumentException
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult
      */
     public function aSNReceiveItem($id, $items)
     {
@@ -3627,15 +3627,15 @@ class ASNApi
      * ASN - Receive Items
      *
      * @param  int $id ID of the ASN (required)
-     * @param  \Swagger\Client\Model\ToolkitDataClassesStockASNItemAllocation[] $items Json list of the Items being receieved in the body of the request (required)
+     * @param  \Swagger\Client\Model\MintsoftStockASNItemAllocation[] $items Json list of the Items being receieved in the body of the request (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult, HTTP status code, HTTP response headers (array of strings)
+     *@throws \InvalidArgumentException
+     * @throws \Swagger\Client\ApiException on non-2xx response
      */
     public function aSNReceiveItemWithHttpInfo($id, $items)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->aSNReceiveItemRequest($id, $items);
 
         try {
@@ -3687,7 +3687,7 @@ class ASNApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult',
+                        '\Swagger\Client\Model\MintsoftCommonToolkitResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3703,10 +3703,10 @@ class ASNApi
      * ASN - Receive Items
      *
      * @param  int $id ID of the ASN (required)
-     * @param  \Swagger\Client\Model\ToolkitDataClassesStockASNItemAllocation[] $items Json list of the Items being receieved in the body of the request (required)
+     * @param  \Swagger\Client\Model\MintsoftStockASNItemAllocation[] $items Json list of the Items being receieved in the body of the request (required)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
+     *@throws \InvalidArgumentException
      */
     public function aSNReceiveItemAsync($id, $items)
     {
@@ -3724,14 +3724,14 @@ class ASNApi
      * ASN - Receive Items
      *
      * @param  int $id ID of the ASN (required)
-     * @param  \Swagger\Client\Model\ToolkitDataClassesStockASNItemAllocation[] $items Json list of the Items being receieved in the body of the request (required)
+     * @param  \Swagger\Client\Model\MintsoftStockASNItemAllocation[] $items Json list of the Items being receieved in the body of the request (required)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
+     *@throws \InvalidArgumentException
      */
     public function aSNReceiveItemAsyncWithHttpInfo($id, $items)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->aSNReceiveItemRequest($id, $items);
 
         return $this->client
@@ -3775,10 +3775,10 @@ class ASNApi
      * Create request for operation 'aSNReceiveItem'
      *
      * @param  int $id ID of the ASN (required)
-     * @param  \Swagger\Client\Model\ToolkitDataClassesStockASNItemAllocation[] $items Json list of the Items being receieved in the body of the request (required)
+     * @param  \Swagger\Client\Model\MintsoftStockASNItemAllocation[] $items Json list of the Items being receieved in the body of the request (required)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
+     *@throws \InvalidArgumentException
      */
     protected function aSNReceiveItemRequest($id, $items)
     {
@@ -3892,11 +3892,11 @@ class ASNApi
      * Update ASN Details
      *
      * @param  int $id ID of the ASN (required)
-     * @param  \Swagger\Client\Model\ToolkitDataClassesStockAPINewASN $asn  (required)
+     * @param  \Swagger\Client\Model\MintsoftStockAPINewASN $asn  (required)
      *
+     * @return \Swagger\Client\Model\MintsoftCommonToolkitResult
+     *@throws \InvalidArgumentException
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult
      */
     public function aSNUpdateASN($id, $asn)
     {
@@ -3910,15 +3910,15 @@ class ASNApi
      * Update ASN Details
      *
      * @param  int $id ID of the ASN (required)
-     * @param  \Swagger\Client\Model\ToolkitDataClassesStockAPINewASN $asn  (required)
+     * @param  \Swagger\Client\Model\MintsoftStockAPINewASN $asn  (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult, HTTP status code, HTTP response headers (array of strings)
+     *@throws \InvalidArgumentException
+     * @throws \Swagger\Client\ApiException on non-2xx response
      */
     public function aSNUpdateASNWithHttpInfo($id, $asn)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->aSNUpdateASNRequest($id, $asn);
 
         try {
@@ -3970,7 +3970,7 @@ class ASNApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult',
+                        '\Swagger\Client\Model\MintsoftCommonToolkitResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3986,10 +3986,10 @@ class ASNApi
      * Update ASN Details
      *
      * @param  int $id ID of the ASN (required)
-     * @param  \Swagger\Client\Model\ToolkitDataClassesStockAPINewASN $asn  (required)
+     * @param  \Swagger\Client\Model\MintsoftStockAPINewASN $asn  (required)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
+     *@throws \InvalidArgumentException
      */
     public function aSNUpdateASNAsync($id, $asn)
     {
@@ -4007,14 +4007,14 @@ class ASNApi
      * Update ASN Details
      *
      * @param  int $id ID of the ASN (required)
-     * @param  \Swagger\Client\Model\ToolkitDataClassesStockAPINewASN $asn  (required)
+     * @param  \Swagger\Client\Model\MintsoftStockAPINewASN $asn (required)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
+     *@throws \InvalidArgumentException
      */
     public function aSNUpdateASNAsyncWithHttpInfo($id, $asn)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->aSNUpdateASNRequest($id, $asn);
 
         return $this->client
@@ -4058,10 +4058,10 @@ class ASNApi
      * Create request for operation 'aSNUpdateASN'
      *
      * @param  int $id ID of the ASN (required)
-     * @param  \Swagger\Client\Model\ToolkitDataClassesStockAPINewASN $asn  (required)
+     * @param  \Swagger\Client\Model\MintsoftStockAPINewASN $asn (required)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
+     *@throws \InvalidArgumentException
      */
     protected function aSNUpdateASNRequest($id, $asn)
     {
@@ -4175,11 +4175,11 @@ class ASNApi
      * Register ASN Webhook / ASNConnect Action
      *
      * @param  int $id ID of the ASN (required)
-     * @param  \Swagger\Client\Model\ToolkitDataClassesStockAPINewASNConnectAction $connect_action Connect Action in Body of Result as Json - Type &#x3D; API, ExtraCode1 &#x3D; Callback Url,ExtraCode4 &#x3D; Auth Header Values Complete &#x3D; false (required)
+     * @param  \Swagger\Client\Model\MintsoftStockAPINewASNConnectAction $connect_action Connect Action in Body of Result as Json - Type &#x3D; API, ExtraCode1 &#x3D; Callback Url,ExtraCode4 &#x3D; Auth Header Values Complete &#x3D; false (required)
      *
+     * @return \Swagger\Client\Model\MintsoftCommonToolkitResult
+     *@throws \InvalidArgumentException
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult
      */
     public function aSNUploadConnectAction($id, $connect_action)
     {
@@ -4193,15 +4193,15 @@ class ASNApi
      * Register ASN Webhook / ASNConnect Action
      *
      * @param  int $id ID of the ASN (required)
-     * @param  \Swagger\Client\Model\ToolkitDataClassesStockAPINewASNConnectAction $connect_action Connect Action in Body of Result as Json - Type &#x3D; API, ExtraCode1 &#x3D; Callback Url,ExtraCode4 &#x3D; Auth Header Values Complete &#x3D; false (required)
+     * @param  \Swagger\Client\Model\MintsoftStockAPINewASNConnectAction $connect_action Connect Action in Body of Result as Json - Type &#x3D; API, ExtraCode1 &#x3D; Callback Url,ExtraCode4 &#x3D; Auth Header Values Complete &#x3D; false (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult, HTTP status code, HTTP response headers (array of strings)
+     *@throws \InvalidArgumentException
+     * @throws \Swagger\Client\ApiException on non-2xx response
      */
     public function aSNUploadConnectActionWithHttpInfo($id, $connect_action)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->aSNUploadConnectActionRequest($id, $connect_action);
 
         try {
@@ -4253,7 +4253,7 @@ class ASNApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult',
+                        '\Swagger\Client\Model\MintsoftCommonToolkitResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4269,10 +4269,10 @@ class ASNApi
      * Register ASN Webhook / ASNConnect Action
      *
      * @param  int $id ID of the ASN (required)
-     * @param  \Swagger\Client\Model\ToolkitDataClassesStockAPINewASNConnectAction $connect_action Connect Action in Body of Result as Json - Type &#x3D; API, ExtraCode1 &#x3D; Callback Url,ExtraCode4 &#x3D; Auth Header Values Complete &#x3D; false (required)
+     * @param  \Swagger\Client\Model\MintsoftStockAPINewASNConnectAction $connect_action Connect Action in Body of Result as Json - Type &#x3D; API, ExtraCode1 &#x3D; Callback Url,ExtraCode4 &#x3D; Auth Header Values Complete &#x3D; false (required)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
+     *@throws \InvalidArgumentException
      */
     public function aSNUploadConnectActionAsync($id, $connect_action)
     {
@@ -4290,14 +4290,14 @@ class ASNApi
      * Register ASN Webhook / ASNConnect Action
      *
      * @param  int $id ID of the ASN (required)
-     * @param  \Swagger\Client\Model\ToolkitDataClassesStockAPINewASNConnectAction $connect_action Connect Action in Body of Result as Json - Type &#x3D; API, ExtraCode1 &#x3D; Callback Url,ExtraCode4 &#x3D; Auth Header Values Complete &#x3D; false (required)
+     * @param  \Swagger\Client\Model\MintsoftStockAPINewASNConnectAction $connect_action Connect Action in Body of Result as Json - Type &#x3D; API, ExtraCode1 &#x3D; Callback Url,ExtraCode4 &#x3D; Auth Header Values Complete &#x3D; false (required)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
+     *@throws \InvalidArgumentException
      */
     public function aSNUploadConnectActionAsyncWithHttpInfo($id, $connect_action)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->aSNUploadConnectActionRequest($id, $connect_action);
 
         return $this->client
@@ -4341,10 +4341,10 @@ class ASNApi
      * Create request for operation 'aSNUploadConnectAction'
      *
      * @param  int $id ID of the ASN (required)
-     * @param  \Swagger\Client\Model\ToolkitDataClassesStockAPINewASNConnectAction $connect_action Connect Action in Body of Result as Json - Type &#x3D; API, ExtraCode1 &#x3D; Callback Url,ExtraCode4 &#x3D; Auth Header Values Complete &#x3D; false (required)
+     * @param  \Swagger\Client\Model\MintsoftStockAPINewASNConnectAction $connect_action Connect Action in Body of Result as Json - Type &#x3D; API, ExtraCode1 &#x3D; Callback Url,ExtraCode4 &#x3D; Auth Header Values Complete &#x3D; false (required)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
+     *@throws \InvalidArgumentException
      */
     protected function aSNUploadConnectActionRequest($id, $connect_action)
     {
@@ -4462,7 +4462,7 @@ class ASNApi
     {
         $options = [];
         if ($this->config->getDebug()) {
-            $options[RequestOptions::DEBUG] = fopen($this->config->getDebugFile(), 'a');
+            $options[RequestOptions::DEBUG] = fopen($this->config->getDebugFile(), 'ab');
             if (!$options[RequestOptions::DEBUG]) {
                 throw new \RuntimeException('Failed to open the debug file: ' . $this->config->getDebugFile());
             }

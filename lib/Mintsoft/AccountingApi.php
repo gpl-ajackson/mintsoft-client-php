@@ -101,7 +101,7 @@ class AccountingApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult
+     * @return \Swagger\Client\Model\MintsoftCommonToolkitResult
      */
     public function accountingAddAdditionalInvoiceItem($client_id, $type, $amount, $invoice_date, $comment = null, $warehouse_id = null)
     {
@@ -127,7 +127,7 @@ class AccountingApi
      */
     public function accountingAddAdditionalInvoiceItemWithHttpInfo($client_id, $type, $amount, $invoice_date, $comment = null, $warehouse_id = null)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->accountingAddAdditionalInvoiceItemRequest($client_id, $type, $amount, $invoice_date, $comment, $warehouse_id);
 
         try {
@@ -179,7 +179,7 @@ class AccountingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult',
+                        '\Swagger\Client\Model\MintsoftCommonToolkitResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -231,7 +231,7 @@ class AccountingApi
      */
     public function accountingAddAdditionalInvoiceItemAsyncWithHttpInfo($client_id, $type, $amount, $invoice_date, $comment = null, $warehouse_id = null)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->accountingAddAdditionalInvoiceItemRequest($client_id, $type, $amount, $invoice_date, $comment, $warehouse_id);
 
         return $this->client
@@ -422,9 +422,9 @@ class AccountingApi
      *
      * @param  \Swagger\Client\Model\MintsoftAPICommonClassesAccountingAddCourierCostRequest $request AddCourierCostRequest Json in the Body of the request - Either need to Supply OrderId, OrderNumber and ClientShortName or Tracking Number to locate a unique order (required)
      *
+     * @return \Swagger\Client\Model\MintsoftCommonToolkitResult
+     *@throws \InvalidArgumentException
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult
      */
     public function accountingAddCourierCost($request)
     {
@@ -445,7 +445,7 @@ class AccountingApi
      */
     public function accountingAddCourierCostWithHttpInfo($request)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->accountingAddCourierCostRequest($request);
 
         try {
@@ -497,7 +497,7 @@ class AccountingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult',
+                        '\Swagger\Client\Model\MintsoftCommonToolkitResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -539,7 +539,7 @@ class AccountingApi
      */
     public function accountingAddCourierCostAsyncWithHttpInfo($request)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->accountingAddCourierCostRequest($request);
 
         return $this->client
@@ -686,7 +686,7 @@ class AccountingApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesAccountCollectionInvoiceItem[]
+     * @return \Swagger\Client\Model\MintsoftAccountCollectionInvoiceItem[]
      */
     public function accountingGetInvoiceCollections($id)
     {
@@ -951,7 +951,7 @@ class AccountingApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesAccountGenericInvoiceItem[]
+     * @return \Swagger\Client\Model\MintsoftAccountGenericInvoiceItem[]
      */
     public function accountingGetInvoiceGenerics($id)
     {
@@ -1216,7 +1216,7 @@ class AccountingApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesAccountGoodsInInvoiceItem[]
+     * @return \Swagger\Client\Model\MintsoftAccountGoodsInInvoiceItem[]
      */
     public function accountingGetInvoiceGoodsIn($id)
     {
@@ -1479,9 +1479,9 @@ class AccountingApi
      *
      * @param  int $order_id order_id (required)
      *
+     * @return \Swagger\Client\Model\MintsoftAccountInvoiceItem
+     *@throws \InvalidArgumentException
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesAccountInvoiceItem
      */
     public function accountingGetInvoiceItemForOrder($order_id)
     {
@@ -1500,7 +1500,7 @@ class AccountingApi
      */
     public function accountingGetInvoiceItemForOrderWithHttpInfo($order_id)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesAccountInvoiceItem';
+        $returnType = '\Swagger\Client\Model\MintsoftAccountInvoiceItem';
         $request = $this->accountingGetInvoiceItemForOrderRequest($order_id);
 
         try {
@@ -1552,7 +1552,7 @@ class AccountingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesAccountInvoiceItem',
+                        '\Swagger\Client\Model\MintsoftAccountInvoiceItem',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1594,7 +1594,7 @@ class AccountingApi
      */
     public function accountingGetInvoiceItemForOrderAsyncWithHttpInfo($order_id)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesAccountInvoiceItem';
+        $returnType = '\Swagger\Client\Model\MintsoftAccountInvoiceItem';
         $request = $this->accountingGetInvoiceItemForOrderRequest($order_id);
 
         return $this->client
@@ -1747,7 +1747,7 @@ class AccountingApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesAccountInvoiceItemType[]
+     * @return \Swagger\Client\Model\MintsoftAccountInvoiceItemType[]
      */
     public function accountingGetInvoiceItemTypes()
     {
@@ -1994,9 +1994,9 @@ class AccountingApi
      *
      * @param  int $id id (required)
      *
+     * @return \Swagger\Client\Model\MintsoftAccountInvoiceItem[]
+     *@throws \InvalidArgumentException
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesAccountInvoiceItem[]
      */
     public function accountingGetInvoiceOrders($id)
     {
@@ -2261,7 +2261,7 @@ class AccountingApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesAccountReturnInvoiceItem[]
+     * @return \Swagger\Client\Model\MintsoftAccountReturnInvoiceItem[]
      */
     public function accountingGetInvoiceReturns($id)
     {
@@ -2524,9 +2524,9 @@ class AccountingApi
      *
      * @param  int $id id (required)
      *
+     * @return \Swagger\Client\Model\MintsoftAccountConfirmedInvoiceSummary
+     *@throws \InvalidArgumentException
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesAccountConfirmedInvoiceSummary
      */
     public function accountingGetInvoices($id)
     {
@@ -2545,7 +2545,7 @@ class AccountingApi
      */
     public function accountingGetInvoicesWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesAccountConfirmedInvoiceSummary';
+        $returnType = '\Swagger\Client\Model\MintsoftAccountConfirmedInvoiceSummary';
         $request = $this->accountingGetInvoicesRequest($id);
 
         try {
@@ -2597,7 +2597,7 @@ class AccountingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesAccountConfirmedInvoiceSummary',
+                        '\Swagger\Client\Model\MintsoftAccountConfirmedInvoiceSummary',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2639,7 +2639,7 @@ class AccountingApi
      */
     public function accountingGetInvoicesAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesAccountConfirmedInvoiceSummary';
+        $returnType = '\Swagger\Client\Model\MintsoftAccountConfirmedInvoiceSummary';
         $request = $this->accountingGetInvoicesRequest($id);
 
         return $this->client
@@ -2788,9 +2788,9 @@ class AccountingApi
      * Operation accountingGetInvoicesAll
      *
      *
+     * @return \Swagger\Client\Model\MintsoftAccountConfirmedInvoiceSummary[]
+     *@throws \InvalidArgumentException
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesAccountConfirmedInvoiceSummary[]
      */
     public function accountingGetInvoicesAll()
     {
@@ -3043,7 +3043,7 @@ class AccountingApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesAccountStorageInvoiceItem[]
+     * @return \Swagger\Client\Model\MintsoftAccountStorageInvoiceItem[]
      */
     public function accountingGetUnconfirmedInvoiceStorageCosts($client_id, $from_date, $to_date, $page_no = null, $limit = null)
     {
@@ -3354,7 +3354,7 @@ class AccountingApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesAccountInvoiceSummary
+     * @return \Swagger\Client\Model\MintsoftAccountInvoiceSummary
      */
     public function accountingGetUnconfirmedInvoiceSummary($client_id, $from_date, $to_date)
     {
@@ -3377,7 +3377,7 @@ class AccountingApi
      */
     public function accountingGetUnconfirmedInvoiceSummaryWithHttpInfo($client_id, $from_date, $to_date)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesAccountInvoiceSummary';
+        $returnType = '\Swagger\Client\Model\MintsoftAccountInvoiceSummary';
         $request = $this->accountingGetUnconfirmedInvoiceSummaryRequest($client_id, $from_date, $to_date);
 
         try {
@@ -3429,7 +3429,7 @@ class AccountingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesAccountInvoiceSummary',
+                        '\Swagger\Client\Model\MintsoftAccountInvoiceSummary',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3475,7 +3475,7 @@ class AccountingApi
      */
     public function accountingGetUnconfirmedInvoiceSummaryAsyncWithHttpInfo($client_id, $from_date, $to_date)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesAccountInvoiceSummary';
+        $returnType = '\Swagger\Client\Model\MintsoftAccountInvoiceSummary';
         $request = $this->accountingGetUnconfirmedInvoiceSummaryRequest($client_id, $from_date, $to_date);
 
         return $this->client
@@ -3646,9 +3646,9 @@ class AccountingApi
      * @param  int $limit limit (optional)
      * @param  \DateTime $since_date since_date (optional)
      *
+     * @return \Swagger\Client\Model\MintsoftAccountConfirmedInvoiceSummary[]
+     *@throws \InvalidArgumentException
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesAccountConfirmedInvoiceSummary[]
      */
     public function accountingListInvoices($client_id = null, $page_no = null, $limit = null, $since_date = null)
     {
@@ -3930,7 +3930,7 @@ class AccountingApi
     {
         $options = [];
         if ($this->config->getDebug()) {
-            $options[RequestOptions::DEBUG] = fopen($this->config->getDebugFile(), 'a');
+            $options[RequestOptions::DEBUG] = fopen($this->config->getDebugFile(), 'ab');
             if (!$options[RequestOptions::DEBUG]) {
                 throw new \RuntimeException('Failed to open the debug file: ' . $this->config->getDebugFile());
             }

@@ -91,11 +91,11 @@ class WarehouseApi
      * Operation warehouseBulkStockMovement
      *
      * @param  int $action action (required)
-     * @param  \Swagger\Client\Model\ToolkitDataClassesWarehouseBookStockRequest[] $requests requests (required)
+     * @param  \Swagger\Client\Model\MintsoftWarehouseBookStockRequest[] $requests requests (required)
      *
+     * @return \Swagger\Client\Model\MintsoftCommonToolkitResult[]
+     *@throws \InvalidArgumentException
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult[]
      */
     public function warehouseBulkStockMovement($action, $requests)
     {
@@ -107,11 +107,11 @@ class WarehouseApi
      * Operation warehouseBulkStockMovementWithHttpInfo
      *
      * @param  int $action (required)
-     * @param  \Swagger\Client\Model\ToolkitDataClassesWarehouseBookStockRequest[] $requests (required)
+     * @param  \Swagger\Client\Model\MintsoftWarehouseBookStockRequest[] $requests (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult[], HTTP status code, HTTP response headers (array of strings)
+     *@throws \InvalidArgumentException
+     * @throws \Swagger\Client\ApiException on non-2xx response
      */
     public function warehouseBulkStockMovementWithHttpInfo($action, $requests)
     {
@@ -183,10 +183,10 @@ class WarehouseApi
      * 
      *
      * @param  int $action (required)
-     * @param  \Swagger\Client\Model\ToolkitDataClassesWarehouseBookStockRequest[] $requests (required)
+     * @param  \Swagger\Client\Model\MintsoftWarehouseBookStockRequest[] $requests (required)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
+     *@throws \InvalidArgumentException
      */
     public function warehouseBulkStockMovementAsync($action, $requests)
     {
@@ -204,10 +204,10 @@ class WarehouseApi
      * 
      *
      * @param  int $action (required)
-     * @param  \Swagger\Client\Model\ToolkitDataClassesWarehouseBookStockRequest[] $requests (required)
+     * @param  \Swagger\Client\Model\MintsoftWarehouseBookStockRequest[] $requests (required)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
+     *@throws \InvalidArgumentException
      */
     public function warehouseBulkStockMovementAsyncWithHttpInfo($action, $requests)
     {
@@ -255,10 +255,10 @@ class WarehouseApi
      * Create request for operation 'warehouseBulkStockMovement'
      *
      * @param  int $action (required)
-     * @param  \Swagger\Client\Model\ToolkitDataClassesWarehouseBookStockRequest[] $requests (required)
+     * @param  \Swagger\Client\Model\MintsoftWarehouseBookStockRequest[] $requests (required)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
+     *@throws \InvalidArgumentException
      */
     protected function warehouseBulkStockMovementRequest($action, $requests)
     {
@@ -369,9 +369,9 @@ class WarehouseApi
      *
      * @param  int $id ID of the WarehouseTransfer (required)
      *
+     * @return \Swagger\Client\Model\MintsoftCommonToolkitResult
+     *@throws \InvalidArgumentException
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult
      */
     public function warehouseCancelWarehouseTransfer($id)
     {
@@ -392,7 +392,7 @@ class WarehouseApi
      */
     public function warehouseCancelWarehouseTransferWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->warehouseCancelWarehouseTransferRequest($id);
 
         try {
@@ -444,7 +444,7 @@ class WarehouseApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult',
+                        '\Swagger\Client\Model\MintsoftCommonToolkitResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -486,7 +486,7 @@ class WarehouseApi
      */
     public function warehouseCancelWarehouseTransferAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->warehouseCancelWarehouseTransferRequest($id);
 
         return $this->client
@@ -638,9 +638,9 @@ class WarehouseApi
      *
      * @param  int $id ID of the WarehouseTransfer (required)
      *
+     * @return \Swagger\Client\Model\MintsoftCommonToolkitResult
+     *@throws \InvalidArgumentException
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult
      */
     public function warehouseConfirmWarehouseTransfer($id)
     {
@@ -661,7 +661,7 @@ class WarehouseApi
      */
     public function warehouseConfirmWarehouseTransferWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->warehouseConfirmWarehouseTransferRequest($id);
 
         try {
@@ -713,7 +713,7 @@ class WarehouseApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult',
+                        '\Swagger\Client\Model\MintsoftCommonToolkitResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -755,7 +755,7 @@ class WarehouseApi
      */
     public function warehouseConfirmWarehouseTransferAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->warehouseConfirmWarehouseTransferRequest($id);
 
         return $this->client
@@ -905,11 +905,11 @@ class WarehouseApi
      *
      * Create new WarehouseTransfer
      *
-     * @param  \Swagger\Client\Model\ToolkitDataClassesWarehouseAPIWarehouseTransfer $warehouse_transfer WarehouseTransfer Json in the Body of the request (required)
+     * @param  \Swagger\Client\Model\MintsoftWarehouseAPIWarehouseTransfer $warehouse_transfer WarehouseTransfer Json in the Body of the request (required)
      *
+     * @return \Swagger\Client\Model\MintsoftCommonToolkitResult
+     *@throws \InvalidArgumentException
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult
      */
     public function warehouseCreateWarehouseTransfer($warehouse_transfer)
     {
@@ -922,15 +922,15 @@ class WarehouseApi
      *
      * Create new WarehouseTransfer
      *
-     * @param  \Swagger\Client\Model\ToolkitDataClassesWarehouseAPIWarehouseTransfer $warehouse_transfer WarehouseTransfer Json in the Body of the request (required)
+     * @param  \Swagger\Client\Model\MintsoftWarehouseAPIWarehouseTransfer $warehouse_transfer WarehouseTransfer Json in the Body of the request (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult, HTTP status code, HTTP response headers (array of strings)
+     *@throws \InvalidArgumentException
+     * @throws \Swagger\Client\ApiException on non-2xx response
      */
     public function warehouseCreateWarehouseTransferWithHttpInfo($warehouse_transfer)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->warehouseCreateWarehouseTransferRequest($warehouse_transfer);
 
         try {
@@ -982,7 +982,7 @@ class WarehouseApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult',
+                        '\Swagger\Client\Model\MintsoftCommonToolkitResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -997,10 +997,10 @@ class WarehouseApi
      *
      * Create new WarehouseTransfer
      *
-     * @param  \Swagger\Client\Model\ToolkitDataClassesWarehouseAPIWarehouseTransfer $warehouse_transfer WarehouseTransfer Json in the Body of the request (required)
+     * @param  \Swagger\Client\Model\MintsoftWarehouseAPIWarehouseTransfer $warehouse_transfer WarehouseTransfer Json in the Body of the request (required)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
+     *@throws \InvalidArgumentException
      */
     public function warehouseCreateWarehouseTransferAsync($warehouse_transfer)
     {
@@ -1017,14 +1017,14 @@ class WarehouseApi
      *
      * Create new WarehouseTransfer
      *
-     * @param  \Swagger\Client\Model\ToolkitDataClassesWarehouseAPIWarehouseTransfer $warehouse_transfer WarehouseTransfer Json in the Body of the request (required)
+     * @param  \Swagger\Client\Model\MintsoftWarehouseAPIWarehouseTransfer $warehouse_transfer WarehouseTransfer Json in the Body of the request (required)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
+     *@throws \InvalidArgumentException
      */
     public function warehouseCreateWarehouseTransferAsyncWithHttpInfo($warehouse_transfer)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->warehouseCreateWarehouseTransferRequest($warehouse_transfer);
 
         return $this->client
@@ -1067,10 +1067,10 @@ class WarehouseApi
     /**
      * Create request for operation 'warehouseCreateWarehouseTransfer'
      *
-     * @param  \Swagger\Client\Model\ToolkitDataClassesWarehouseAPIWarehouseTransfer $warehouse_transfer WarehouseTransfer Json in the Body of the request (required)
+     * @param  \Swagger\Client\Model\MintsoftWarehouseAPIWarehouseTransfer $warehouse_transfer WarehouseTransfer Json in the Body of the request (required)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
+     *@throws \InvalidArgumentException
      */
     protected function warehouseCreateWarehouseTransferRequest($warehouse_transfer)
     {
@@ -1171,9 +1171,9 @@ class WarehouseApi
      *
      * @param  int $id ID of the WarehouseTransfer (required)
      *
+     * @return \Swagger\Client\Model\MintsoftCommonToolkitResult
+     *@throws \InvalidArgumentException
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult
      */
     public function warehouseDeleteWarehouseTransfer($id)
     {
@@ -1194,7 +1194,7 @@ class WarehouseApi
      */
     public function warehouseDeleteWarehouseTransferWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->warehouseDeleteWarehouseTransferRequest($id);
 
         try {
@@ -1246,7 +1246,7 @@ class WarehouseApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult',
+                        '\Swagger\Client\Model\MintsoftCommonToolkitResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1288,7 +1288,7 @@ class WarehouseApi
      */
     public function warehouseDeleteWarehouseTransferAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->warehouseDeleteWarehouseTransferRequest($id);
 
         return $this->client
@@ -1439,9 +1439,9 @@ class WarehouseApi
      * @param  int $warehouse_id warehouse_id (required)
      * @param  int $location_id location_id (required)
      *
+     * @return \Swagger\Client\Model\MintsoftWarehouseLocation
+     *@throws \InvalidArgumentException
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesWarehouseLocation
      */
     public function warehouseGetLocation($warehouse_id, $location_id)
     {
@@ -1461,7 +1461,7 @@ class WarehouseApi
      */
     public function warehouseGetLocationWithHttpInfo($warehouse_id, $location_id)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesWarehouseLocation';
+        $returnType = '\Swagger\Client\Model\MintsoftWarehouseLocation';
         $request = $this->warehouseGetLocationRequest($warehouse_id, $location_id);
 
         try {
@@ -1513,7 +1513,7 @@ class WarehouseApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesWarehouseLocation',
+                        '\Swagger\Client\Model\MintsoftWarehouseLocation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1557,7 +1557,7 @@ class WarehouseApi
      */
     public function warehouseGetLocationAsyncWithHttpInfo($warehouse_id, $location_id)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesWarehouseLocation';
+        $returnType = '\Swagger\Client\Model\MintsoftWarehouseLocation';
         $request = $this->warehouseGetLocationRequest($warehouse_id, $location_id);
 
         return $this->client
@@ -1723,7 +1723,7 @@ class WarehouseApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesWarehouseLocationType[]
+     * @return \Swagger\Client\Model\MintsoftWarehouseLocationType[]
      */
     public function warehouseGetLocationTypes()
     {
@@ -1969,9 +1969,9 @@ class WarehouseApi
      * @param  int $warehouse_id warehouse_id (required)
      * @param  bool $include_un_assigned include_un_assigned (optional)
      *
+     * @return \Swagger\Client\Model\MintsoftWarehouseLocation[]
+     *@throws \InvalidArgumentException
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesWarehouseLocation[]
      */
     public function warehouseGetLocations($warehouse_id, $include_un_assigned = null)
     {
@@ -2494,9 +2494,9 @@ class WarehouseApi
      *
      * @param  int $id ID of the WarehouseTransfer (required)
      *
+     * @return \Swagger\Client\Model\MintsoftWarehouseWarehouseTransfer
+     *@throws \InvalidArgumentException
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesWarehouseWarehouseTransfer
      */
     public function warehouseGetWarehouseTransfer($id)
     {
@@ -2517,7 +2517,7 @@ class WarehouseApi
      */
     public function warehouseGetWarehouseTransferWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesWarehouseWarehouseTransfer';
+        $returnType = '\Swagger\Client\Model\MintsoftWarehouseWarehouseTransfer';
         $request = $this->warehouseGetWarehouseTransferRequest($id);
 
         try {
@@ -2569,7 +2569,7 @@ class WarehouseApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesWarehouseWarehouseTransfer',
+                        '\Swagger\Client\Model\MintsoftWarehouseWarehouseTransfer',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2611,7 +2611,7 @@ class WarehouseApi
      */
     public function warehouseGetWarehouseTransferAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesWarehouseWarehouseTransfer';
+        $returnType = '\Swagger\Client\Model\MintsoftWarehouseWarehouseTransfer';
         $request = $this->warehouseGetWarehouseTransferRequest($id);
 
         return $this->client
@@ -2763,7 +2763,7 @@ class WarehouseApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesWarehouseZone[]
+     * @return \Swagger\Client\Model\MintsoftWarehouseZone[]
      */
     public function warehouseGetWarehouseZones($id)
     {
@@ -3027,7 +3027,7 @@ class WarehouseApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesStockWarehouse[]
+     * @return \Swagger\Client\Model\MintsoftStockWarehouse[]
      */
     public function warehouseGetWarehouses()
     {
@@ -3281,7 +3281,7 @@ class WarehouseApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesWarehouseToReturnWarehouseTransfer[]
+     * @return \Swagger\Client\Model\MintsoftWarehouseToReturnWarehouseTransfer[]
      */
     public function warehouseListWarehouseTransfers($include_warehouse_transfer_items = null, $warehouse_transfer_statuses = null, $page_no = null, $limit = null, $client_id = null, $source_warehouse_id = null, $destination_warehouse_id = null, $since_last_updated = null)
     {
@@ -3591,9 +3591,9 @@ class WarehouseApi
      * @param  int $warehouse_id warehouse_id (required)
      * @param  string $location location (required)
      *
+     * @return \Swagger\Client\Model\MintsoftWarehouseLocation
+     *@throws \InvalidArgumentException
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesWarehouseLocation
      */
     public function warehouseLookupLocationId($warehouse_id, $location)
     {
@@ -3613,7 +3613,7 @@ class WarehouseApi
      */
     public function warehouseLookupLocationIdWithHttpInfo($warehouse_id, $location)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesWarehouseLocation';
+        $returnType = '\Swagger\Client\Model\MintsoftWarehouseLocation';
         $request = $this->warehouseLookupLocationIdRequest($warehouse_id, $location);
 
         try {
@@ -3665,7 +3665,7 @@ class WarehouseApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesWarehouseLocation',
+                        '\Swagger\Client\Model\MintsoftWarehouseLocation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3709,7 +3709,7 @@ class WarehouseApi
      */
     public function warehouseLookupLocationIdAsyncWithHttpInfo($warehouse_id, $location)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesWarehouseLocation';
+        $returnType = '\Swagger\Client\Model\MintsoftWarehouseLocation';
         $request = $this->warehouseLookupLocationIdRequest($warehouse_id, $location);
 
         return $this->client
@@ -3869,11 +3869,11 @@ class WarehouseApi
      * Operation warehouseStockMovement
      *
      * @param  int $action action (required)
-     * @param  \Swagger\Client\Model\ToolkitDataClassesWarehouseBookStockRequest $request request (required)
+     * @param  \Swagger\Client\Model\MintsoftWarehouseBookStockRequest $request request (required)
      *
+     * @return \Swagger\Client\Model\MintsoftCommonToolkitResult
+     *@throws \InvalidArgumentException
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult
      */
     public function warehouseStockMovement($action, $request)
     {
@@ -3885,15 +3885,15 @@ class WarehouseApi
      * Operation warehouseStockMovementWithHttpInfo
      *
      * @param  int $action (required)
-     * @param  \Swagger\Client\Model\ToolkitDataClassesWarehouseBookStockRequest $request (required)
+     * @param  \Swagger\Client\Model\MintsoftWarehouseBookStockRequest $request (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult, HTTP status code, HTTP response headers (array of strings)
+     *@throws \InvalidArgumentException
+     * @throws \Swagger\Client\ApiException on non-2xx response
      */
     public function warehouseStockMovementWithHttpInfo($action, $request)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->warehouseStockMovementRequest($action, $request);
 
         try {
@@ -3945,7 +3945,7 @@ class WarehouseApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult',
+                        '\Swagger\Client\Model\MintsoftCommonToolkitResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3961,10 +3961,10 @@ class WarehouseApi
      * 
      *
      * @param  int $action (required)
-     * @param  \Swagger\Client\Model\ToolkitDataClassesWarehouseBookStockRequest $request (required)
+     * @param  \Swagger\Client\Model\MintsoftWarehouseBookStockRequest $request (required)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
+     *@throws \InvalidArgumentException
      */
     public function warehouseStockMovementAsync($action, $request)
     {
@@ -3982,14 +3982,14 @@ class WarehouseApi
      * 
      *
      * @param  int $action (required)
-     * @param  \Swagger\Client\Model\ToolkitDataClassesWarehouseBookStockRequest $request (required)
+     * @param  \Swagger\Client\Model\MintsoftWarehouseBookStockRequest $request (required)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
+     *@throws \InvalidArgumentException
      */
     public function warehouseStockMovementAsyncWithHttpInfo($action, $request)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->warehouseStockMovementRequest($action, $request);
 
         return $this->client
@@ -4033,10 +4033,10 @@ class WarehouseApi
      * Create request for operation 'warehouseStockMovement'
      *
      * @param  int $action (required)
-     * @param  \Swagger\Client\Model\ToolkitDataClassesWarehouseBookStockRequest $request (required)
+     * @param  \Swagger\Client\Model\MintsoftWarehouseBookStockRequest $request (required)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
+     *@throws \InvalidArgumentException
      */
     protected function warehouseStockMovementRequest($action, $request)
     {
@@ -4153,7 +4153,7 @@ class WarehouseApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesWarehouseAPIDTOStockMovementDTO[]
+     * @return \Swagger\Client\Model\MintsoftWarehouseAPIDTOStockMovementDTO[]
      */
     public function warehouseStockMovements($warehouse_id, $product_id = null, $page_no = null, $limit = null, $since_date = null)
     {
@@ -4451,11 +4451,11 @@ class WarehouseApi
      * Update WarehouseTransfer Details
      *
      * @param  int $id ID of the WarehouseTransfer (required)
-     * @param  \Swagger\Client\Model\ToolkitDataClassesWarehouseAPIWarehouseTransfer $warehouse_transfer  (required)
+     * @param  \Swagger\Client\Model\MintsoftWarehouseAPIWarehouseTransfer $warehouse_transfer  (required)
      *
+     * @return \Swagger\Client\Model\MintsoftCommonToolkitResult
+     *@throws \InvalidArgumentException
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult
      */
     public function warehouseUpdateWarehouseTransfer($id, $warehouse_transfer)
     {
@@ -4469,15 +4469,15 @@ class WarehouseApi
      * Update WarehouseTransfer Details
      *
      * @param  int $id ID of the WarehouseTransfer (required)
-     * @param  \Swagger\Client\Model\ToolkitDataClassesWarehouseAPIWarehouseTransfer $warehouse_transfer  (required)
+     * @param  \Swagger\Client\Model\MintsoftWarehouseAPIWarehouseTransfer $warehouse_transfer  (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult, HTTP status code, HTTP response headers (array of strings)
+     *@throws \InvalidArgumentException
+     * @throws \Swagger\Client\ApiException on non-2xx response
      */
     public function warehouseUpdateWarehouseTransferWithHttpInfo($id, $warehouse_transfer)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->warehouseUpdateWarehouseTransferRequest($id, $warehouse_transfer);
 
         try {
@@ -4529,7 +4529,7 @@ class WarehouseApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult',
+                        '\Swagger\Client\Model\MintsoftCommonToolkitResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4545,10 +4545,10 @@ class WarehouseApi
      * Update WarehouseTransfer Details
      *
      * @param  int $id ID of the WarehouseTransfer (required)
-     * @param  \Swagger\Client\Model\ToolkitDataClassesWarehouseAPIWarehouseTransfer $warehouse_transfer  (required)
+     * @param  \Swagger\Client\Model\MintsoftWarehouseAPIWarehouseTransfer $warehouse_transfer  (required)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
+     *@throws \InvalidArgumentException
      */
     public function warehouseUpdateWarehouseTransferAsync($id, $warehouse_transfer)
     {
@@ -4566,14 +4566,14 @@ class WarehouseApi
      * Update WarehouseTransfer Details
      *
      * @param  int $id ID of the WarehouseTransfer (required)
-     * @param  \Swagger\Client\Model\ToolkitDataClassesWarehouseAPIWarehouseTransfer $warehouse_transfer  (required)
+     * @param  \Swagger\Client\Model\MintsoftWarehouseAPIWarehouseTransfer $warehouse_transfer  (required)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
+     *@throws \InvalidArgumentException
      */
     public function warehouseUpdateWarehouseTransferAsyncWithHttpInfo($id, $warehouse_transfer)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonToolkitResult';
         $request = $this->warehouseUpdateWarehouseTransferRequest($id, $warehouse_transfer);
 
         return $this->client
@@ -4617,10 +4617,10 @@ class WarehouseApi
      * Create request for operation 'warehouseUpdateWarehouseTransfer'
      *
      * @param  int $id ID of the WarehouseTransfer (required)
-     * @param  \Swagger\Client\Model\ToolkitDataClassesWarehouseAPIWarehouseTransfer $warehouse_transfer  (required)
+     * @param  \Swagger\Client\Model\MintsoftWarehouseAPIWarehouseTransfer $warehouse_transfer  (required)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
+     *@throws \InvalidArgumentException
      */
     protected function warehouseUpdateWarehouseTransferRequest($id, $warehouse_transfer)
     {
@@ -4738,7 +4738,7 @@ class WarehouseApi
     {
         $options = [];
         if ($this->config->getDebug()) {
-            $options[RequestOptions::DEBUG] = fopen($this->config->getDebugFile(), 'a');
+            $options[RequestOptions::DEBUG] = fopen($this->config->getDebugFile(), 'ab');
             if (!$options[RequestOptions::DEBUG]) {
                 throw new \RuntimeException('Failed to open the debug file: ' . $this->config->getDebugFile());
             }
