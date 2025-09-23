@@ -73,7 +73,7 @@ class MintsoftStockStockFlow implements ModelInterface, ArrayAccess
         'storage_item_id' => 'int',
         'parent_storage_item_id' => 'int',
         'order_id' => 'int',
-        'stock_flow_details' => '\Swagger\Client\Model\ToolkitDataClassesStockStockFlowDetail[]',
+        'stock_flow_details' => '\Swagger\Client\Model\MintsoftStockStockFlowDetail[]',
         'sku' => 'string',
         'warehouse_name' => 'string',
         'id' => 'int',

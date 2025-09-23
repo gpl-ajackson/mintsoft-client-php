@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**shipments** | [**\Swagger\Client\Model\ToolkitDataClassesOrdersOrderShipment[]**](ToolkitDataClassesOrdersOrderShipment.md) |  | [optional] 
+**shipments** | [**\Swagger\Client\Model\MintsoftOrdersOrderShipment[]**](ToolkitDataClassesOrdersOrderShipment.md) |  | [optional] 
 **id** | **int** |  | [optional] 
 **success** | **bool** |  | [optional] 
 **message** | **string** |  | [optional] 

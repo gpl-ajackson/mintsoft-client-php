@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **refDataCountries**
-> \Swagger\Client\Model\ToolkitDataClassesCommonCountry[] refDataCountries()
+> \Swagger\Client\Model\MintsoftCommonCountry[] refDataCountries()
 
 Get Countries
 
@@ -40,7 +40,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesCommonCountry[]**](../Model/ToolkitDataClassesCommonCountry.md)
+[**\Swagger\Client\Model\MintsoftCommonCountry[]**](../Model/ToolkitDataClassesCommonCountry.md)
 
 ### Authorization
 
@@ -54,7 +54,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **refDataCurrencies**
-> \Swagger\Client\Model\ToolkitDataClassesCurrenciesCurrency[] refDataCurrencies()
+> \Swagger\Client\Model\MintsoftCurrenciesCurrency[] refDataCurrencies()
 
 Get Currencies
 
@@ -83,7 +83,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesCurrenciesCurrency[]**](../Model/ToolkitDataClassesCurrenciesCurrency.md)
+[**\Swagger\Client\Model\MintsoftCurrenciesCurrency[]**](../Model/ToolkitDataClassesCurrenciesCurrency.md)
 
 ### Authorization
 
@@ -140,7 +140,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **refDataPricingTypes**
-> \Swagger\Client\Model\ToolkitDataClassesStockProductPriceType[] refDataPricingTypes()
+> \Swagger\Client\Model\MintsoftStockProductPriceType[] refDataPricingTypes()
 
 Get Product Price Types
 
@@ -169,7 +169,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesStockProductPriceType[]**](../Model/ToolkitDataClassesStockProductPriceType.md)
+[**\Swagger\Client\Model\MintsoftStockProductPriceType[]**](../Model/ToolkitDataClassesStockProductPriceType.md)
 
 ### Authorization
 

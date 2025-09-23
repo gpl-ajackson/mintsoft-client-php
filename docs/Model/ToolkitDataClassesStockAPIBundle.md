@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **sku** | **string** |  | [optional] 
 **name** | **string** |  | [optional] 
 **packing_instructions** | **string** |  | [optional] 
-**components** | [**\Swagger\Client\Model\ToolkitDataClassesStockAPIBundleItem[]**](ToolkitDataClassesStockAPIBundleItem.md) |  | [optional] 
+**components** | [**\Swagger\Client\Model\MintsoftStockAPIBundleItem[]**](ToolkitDataClassesStockAPIBundleItem.md) |  | [optional] 
 **client_id** | **int** |  | [optional] 
 **id** | **int** |  | [optional] 
 **last_updated** | [**\DateTime**](\DateTime.md) |  | [optional] 

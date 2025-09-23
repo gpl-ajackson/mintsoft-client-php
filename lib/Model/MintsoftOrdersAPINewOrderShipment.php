@@ -58,7 +58,7 @@ class MintsoftOrdersAPINewOrderShipment implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'number' => 'string',
-        'labels' => '\Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrderDocument[]'
+        'labels' => '\Swagger\Client\Model\MintsoftOrdersAPINewOrderDocument[]'
     ];
 
     /**

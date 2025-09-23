@@ -21,7 +21,7 @@ Method | HTTP request | Description
 
 
 # **accountingAddAdditionalInvoiceItem**
-> \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult accountingAddAdditionalInvoiceItem($client_id, $type, $amount, $invoice_date, $comment, $warehouse_id)
+> \Swagger\Client\Model\MintsoftCommonToolkitResult accountingAddAdditionalInvoiceItem($client_id, $type, $amount, $invoice_date, $comment, $warehouse_id)
 
 Add an additional invoice item.
 
@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
+[**\Swagger\Client\Model\MintsoftCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
 
 ### Authorization
 
@@ -78,7 +78,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **accountingAddCourierCost**
-> \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult accountingAddCourierCost($request)
+> \Swagger\Client\Model\MintsoftCommonToolkitResult accountingAddCourierCost($request)
 
 Add Courier Cost to InvoiceItem
 
@@ -113,7 +113,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
+[**\Swagger\Client\Model\MintsoftCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
 
 ### Authorization
 
@@ -127,7 +127,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **accountingGetInvoiceCollections**
-> \Swagger\Client\Model\ToolkitDataClassesAccountCollectionInvoiceItem[] accountingGetInvoiceCollections($id)
+> \Swagger\Client\Model\MintsoftAccountCollectionInvoiceItem[] accountingGetInvoiceCollections($id)
 
 
 
@@ -160,7 +160,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesAccountCollectionInvoiceItem[]**](../Model/ToolkitDataClassesAccountCollectionInvoiceItem.md)
+[**\Swagger\Client\Model\MintsoftAccountCollectionInvoiceItem[]**](../Model/ToolkitDataClassesAccountCollectionInvoiceItem.md)
 
 ### Authorization
 
@@ -174,7 +174,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **accountingGetInvoiceGenerics**
-> \Swagger\Client\Model\ToolkitDataClassesAccountGenericInvoiceItem[] accountingGetInvoiceGenerics($id)
+> \Swagger\Client\Model\MintsoftAccountGenericInvoiceItem[] accountingGetInvoiceGenerics($id)
 
 
 
@@ -207,7 +207,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesAccountGenericInvoiceItem[]**](../Model/ToolkitDataClassesAccountGenericInvoiceItem.md)
+[**\Swagger\Client\Model\MintsoftAccountGenericInvoiceItem[]**](../Model/ToolkitDataClassesAccountGenericInvoiceItem.md)
 
 ### Authorization
 
@@ -221,7 +221,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **accountingGetInvoiceGoodsIn**
-> \Swagger\Client\Model\ToolkitDataClassesAccountGoodsInInvoiceItem[] accountingGetInvoiceGoodsIn($id)
+> \Swagger\Client\Model\MintsoftAccountGoodsInInvoiceItem[] accountingGetInvoiceGoodsIn($id)
 
 
 
@@ -254,7 +254,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesAccountGoodsInInvoiceItem[]**](../Model/ToolkitDataClassesAccountGoodsInInvoiceItem.md)
+[**\Swagger\Client\Model\MintsoftAccountGoodsInInvoiceItem[]**](../Model/ToolkitDataClassesAccountGoodsInInvoiceItem.md)
 
 ### Authorization
 
@@ -268,7 +268,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **accountingGetInvoiceItemForOrder**
-> \Swagger\Client\Model\ToolkitDataClassesAccountInvoiceItem accountingGetInvoiceItemForOrder($order_id)
+> \Swagger\Client\Model\MintsoftAccountInvoiceItem accountingGetInvoiceItemForOrder($order_id)
 
 
 
@@ -301,7 +301,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesAccountInvoiceItem**](../Model/ToolkitDataClassesAccountInvoiceItem.md)
+[**\Swagger\Client\Model\MintsoftAccountInvoiceItem**](../Model/ToolkitDataClassesAccountInvoiceItem.md)
 
 ### Authorization
 
@@ -315,7 +315,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **accountingGetInvoiceItemTypes**
-> \Swagger\Client\Model\ToolkitDataClassesAccountInvoiceItemType[] accountingGetInvoiceItemTypes()
+> \Swagger\Client\Model\MintsoftAccountInvoiceItemType[] accountingGetInvoiceItemTypes()
 
 Get additional invoice item types.
 
@@ -344,7 +344,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesAccountInvoiceItemType[]**](../Model/ToolkitDataClassesAccountInvoiceItemType.md)
+[**\Swagger\Client\Model\MintsoftAccountInvoiceItemType[]**](../Model/ToolkitDataClassesAccountInvoiceItemType.md)
 
 ### Authorization
 
@@ -358,7 +358,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **accountingGetInvoiceOrders**
-> \Swagger\Client\Model\ToolkitDataClassesAccountInvoiceItem[] accountingGetInvoiceOrders($id)
+> \Swagger\Client\Model\MintsoftAccountInvoiceItem[] accountingGetInvoiceOrders($id)
 
 
 
@@ -391,7 +391,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesAccountInvoiceItem[]**](../Model/ToolkitDataClassesAccountInvoiceItem.md)
+[**\Swagger\Client\Model\MintsoftAccountInvoiceItem[]**](../Model/ToolkitDataClassesAccountInvoiceItem.md)
 
 ### Authorization
 
@@ -405,7 +405,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **accountingGetInvoiceReturns**
-> \Swagger\Client\Model\ToolkitDataClassesAccountReturnInvoiceItem[] accountingGetInvoiceReturns($id)
+> \Swagger\Client\Model\MintsoftAccountReturnInvoiceItem[] accountingGetInvoiceReturns($id)
 
 
 
@@ -438,7 +438,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesAccountReturnInvoiceItem[]**](../Model/ToolkitDataClassesAccountReturnInvoiceItem.md)
+[**\Swagger\Client\Model\MintsoftAccountReturnInvoiceItem[]**](../Model/ToolkitDataClassesAccountReturnInvoiceItem.md)
 
 ### Authorization
 
@@ -452,7 +452,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **accountingGetInvoices**
-> \Swagger\Client\Model\ToolkitDataClassesAccountConfirmedInvoiceSummary accountingGetInvoices($id)
+> \Swagger\Client\Model\MintsoftAccountConfirmedInvoiceSummary accountingGetInvoices($id)
 
 
 
@@ -485,7 +485,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesAccountConfirmedInvoiceSummary**](../Model/ToolkitDataClassesAccountConfirmedInvoiceSummary.md)
+[**\Swagger\Client\Model\MintsoftAccountConfirmedInvoiceSummary**](../Model/ToolkitDataClassesAccountConfirmedInvoiceSummary.md)
 
 ### Authorization
 
@@ -499,7 +499,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **accountingGetInvoicesAll**
-> \Swagger\Client\Model\ToolkitDataClassesAccountConfirmedInvoiceSummary[] accountingGetInvoicesAll()
+> \Swagger\Client\Model\MintsoftAccountConfirmedInvoiceSummary[] accountingGetInvoicesAll()
 
 
 
@@ -528,7 +528,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesAccountConfirmedInvoiceSummary[]**](../Model/ToolkitDataClassesAccountConfirmedInvoiceSummary.md)
+[**\Swagger\Client\Model\MintsoftAccountConfirmedInvoiceSummary[]**](../Model/ToolkitDataClassesAccountConfirmedInvoiceSummary.md)
 
 ### Authorization
 
@@ -542,7 +542,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **accountingGetUnconfirmedInvoiceStorageCosts**
-> \Swagger\Client\Model\ToolkitDataClassesAccountStorageInvoiceItem[] accountingGetUnconfirmedInvoiceStorageCosts($client_id, $from_date, $to_date, $page_no, $limit)
+> \Swagger\Client\Model\MintsoftAccountStorageInvoiceItem[] accountingGetUnconfirmedInvoiceStorageCosts($client_id, $from_date, $to_date, $page_no, $limit)
 
 Get unconfirmed invoice storage costs.
 
@@ -583,7 +583,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesAccountStorageInvoiceItem[]**](../Model/ToolkitDataClassesAccountStorageInvoiceItem.md)
+[**\Swagger\Client\Model\MintsoftAccountStorageInvoiceItem[]**](../Model/ToolkitDataClassesAccountStorageInvoiceItem.md)
 
 ### Authorization
 
@@ -597,7 +597,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **accountingGetUnconfirmedInvoiceSummary**
-> \Swagger\Client\Model\ToolkitDataClassesAccountInvoiceSummary accountingGetUnconfirmedInvoiceSummary($client_id, $from_date, $to_date)
+> \Swagger\Client\Model\MintsoftAccountInvoiceSummary accountingGetUnconfirmedInvoiceSummary($client_id, $from_date, $to_date)
 
 Get unconfirmed invoice summary.
 
@@ -634,7 +634,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesAccountInvoiceSummary**](../Model/ToolkitDataClassesAccountInvoiceSummary.md)
+[**\Swagger\Client\Model\MintsoftAccountInvoiceSummary**](../Model/ToolkitDataClassesAccountInvoiceSummary.md)
 
 ### Authorization
 
@@ -648,7 +648,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **accountingListInvoices**
-> \Swagger\Client\Model\ToolkitDataClassesAccountConfirmedInvoiceSummary[] accountingListInvoices($client_id, $page_no, $limit, $since_date)
+> \Swagger\Client\Model\MintsoftAccountConfirmedInvoiceSummary[] accountingListInvoices($client_id, $page_no, $limit, $since_date)
 
 
 
@@ -687,7 +687,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesAccountConfirmedInvoiceSummary[]**](../Model/ToolkitDataClassesAccountConfirmedInvoiceSummary.md)
+[**\Swagger\Client\Model\MintsoftAccountConfirmedInvoiceSummary[]**](../Model/ToolkitDataClassesAccountConfirmedInvoiceSummary.md)
 
 ### Authorization
 

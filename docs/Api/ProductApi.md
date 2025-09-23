@@ -105,7 +105,7 @@ $apiInstance = new Swagger\Client\Api\ProductApi(
     new GuzzleHttp\Client()
 );
 $id = 56; // int | Product ID
-$cartons = array(new \Swagger\Client\Model\MintsoftStockProductContainer()); // \Swagger\Client\Model\ToolkitDataClassesStockProductContainer[] | Array of Cartons for product
+$cartons = array(new \Swagger\Client\Model\MintsoftStockProductContainer()); // \Swagger\Client\Model\MintsoftStockProductContainer[] | Array of Cartons for product
 
 try {
     $apiInstance->productBulkAddCartons($id, $cartons);
@@ -120,7 +120,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| Product ID |
- **cartons** | [**\Swagger\Client\Model\ToolkitDataClassesStockProductContainer[]**](../Model/ToolkitDataClassesStockProductContainer.md)| Array of Cartons for product |
+ **cartons** | [**\Swagger\Client\Model\MintsoftStockProductContainer[]**](../Model/ToolkitDataClassesStockProductContainer.md)| Array of Cartons for product |
 
 ### Return type
 
@@ -138,7 +138,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **productBulkOnHandStockUpdate**
-> \Swagger\Client\Model\ToolkitDataClassesProductsAPIBulkStockUpdateResult[] productBulkOnHandStockUpdate($records, $client_id)
+> \Swagger\Client\Model\MintsoftProductsAPIBulkStockUpdateResult[] productBulkOnHandStockUpdate($records, $client_id)
 
 Bulk On Hand Stock Update
 
@@ -155,7 +155,7 @@ $apiInstance = new Swagger\Client\Api\ProductApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$records = array(new \Swagger\Client\Model\MintsoftStockAPIBulkOnHandStockUpdate()); // \Swagger\Client\Model\ToolkitDataClassesStockAPIBulkOnHandStockUpdate[] | Update Requests
+$records = array(new \Swagger\Client\Model\MintsoftStockAPIBulkOnHandStockUpdate()); // \Swagger\Client\Model\MintsoftStockAPIBulkOnHandStockUpdate[] | Update Requests
 $client_id = 56; // int | Client ID
 
 try {
@@ -171,12 +171,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **records** | [**\Swagger\Client\Model\ToolkitDataClassesStockAPIBulkOnHandStockUpdate[]**](../Model/ToolkitDataClassesStockAPIBulkOnHandStockUpdate.md)| Update Requests |
+ **records** | [**\Swagger\Client\Model\MintsoftStockAPIBulkOnHandStockUpdate[]**](../Model/ToolkitDataClassesStockAPIBulkOnHandStockUpdate.md)| Update Requests |
  **client_id** | **int**| Client ID | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesProductsAPIBulkStockUpdateResult[]**](../Model/ToolkitDataClassesProductsAPIBulkStockUpdateResult.md)
+[**\Swagger\Client\Model\MintsoftProductsAPIBulkStockUpdateResult[]**](../Model/ToolkitDataClassesProductsAPIBulkStockUpdateResult.md)
 
 ### Authorization
 
@@ -207,7 +207,7 @@ $apiInstance = new Swagger\Client\Api\ProductApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$bundle = new \Swagger\Client\Model\MintsoftStockAPIBundle(); // \Swagger\Client\Model\ToolkitDataClassesStockAPIBundle | Bundle
+$bundle = new \Swagger\Client\Model\MintsoftStockAPIBundle(); // \Swagger\Client\Model\MintsoftStockAPIBundle | Bundle
 
 try {
     $apiInstance->productCreateBundle($bundle);
@@ -221,7 +221,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **bundle** | [**\Swagger\Client\Model\ToolkitDataClassesStockAPIBundle**](../Model/ToolkitDataClassesStockAPIBundle.md)| Bundle |
+ **bundle** | [**\Swagger\Client\Model\MintsoftStockAPIBundle**](../Model/ToolkitDataClassesStockAPIBundle.md)| Bundle |
 
 ### Return type
 
@@ -256,7 +256,7 @@ $apiInstance = new Swagger\Client\Api\ProductApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$product = new \Swagger\Client\Model\MintsoftStockProduct(); // \Swagger\Client\Model\ToolkitDataClassesStockProduct | Product ID
+$product = new \Swagger\Client\Model\MintsoftStockProduct(); // \Swagger\Client\Model\MintsoftStockProduct | Product ID
 
 try {
     $apiInstance->productCreateProduct($product);
@@ -270,7 +270,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **product** | [**\Swagger\Client\Model\ToolkitDataClassesStockProduct**](../Model/ToolkitDataClassesStockProduct.md)| Product ID |
+ **product** | [**\Swagger\Client\Model\MintsoftStockProduct**](../Model/ToolkitDataClassesStockProduct.md)| Product ID |
 
 ### Return type
 
@@ -288,7 +288,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **productCreateSupplier**
-> \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult productCreateSupplier($product_supplier)
+> \Swagger\Client\Model\MintsoftCommonToolkitResult productCreateSupplier($product_supplier)
 
 Create New Product Supplier
 
@@ -305,7 +305,7 @@ $apiInstance = new Swagger\Client\Api\ProductApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$product_supplier = new \Swagger\Client\Model\MintsoftStockProductSupplier(); // \Swagger\Client\Model\ToolkitDataClassesStockProductSupplier | ProductSupplier
+$product_supplier = new \Swagger\Client\Model\MintsoftStockProductSupplier(); // \Swagger\Client\Model\MintsoftStockProductSupplier | ProductSupplier
 
 try {
     $result = $apiInstance->productCreateSupplier($product_supplier);
@@ -320,11 +320,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **product_supplier** | [**\Swagger\Client\Model\ToolkitDataClassesStockProductSupplier**](../Model/ToolkitDataClassesStockProductSupplier.md)| ProductSupplier |
+ **product_supplier** | [**\Swagger\Client\Model\MintsoftStockProductSupplier**](../Model/ToolkitDataClassesStockProductSupplier.md)| ProductSupplier |
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
+[**\Swagger\Client\Model\MintsoftCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
 
 ### Authorization
 
@@ -453,7 +453,7 @@ $apiInstance = new Swagger\Client\Api\ProductApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$prices = array(new \Swagger\Client\Model\MintsoftProductsAPINewProductPrice()); // \Swagger\Client\Model\ToolkitDataClassesProductsAPINewProductPrice[] | Product Prices
+$prices = array(new \Swagger\Client\Model\MintsoftProductsAPINewProductPrice()); // \Swagger\Client\Model\MintsoftProductsAPINewProductPrice[] | Product Prices
 
 try {
     $apiInstance->productDeleteProductPrices($prices);
@@ -467,7 +467,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **prices** | [**\Swagger\Client\Model\ToolkitDataClassesProductsAPINewProductPrice[]**](../Model/ToolkitDataClassesProductsAPINewProductPrice.md)| Product Prices |
+ **prices** | [**\Swagger\Client\Model\MintsoftProductsAPINewProductPrice[]**](../Model/ToolkitDataClassesProductsAPINewProductPrice.md)| Product Prices |
 
 ### Return type
 
@@ -1095,7 +1095,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **productListProducts**
-> \Swagger\Client\Model\ToolkitDataClassesStockProduct[] productListProducts($page_no, $limit, $client_id, $since_last_updated)
+> \Swagger\Client\Model\MintsoftStockProduct[] productListProducts($page_no, $limit, $client_id, $since_last_updated)
 
 
 
@@ -1134,7 +1134,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesStockProduct[]**](../Model/ToolkitDataClassesStockProduct.md)
+[**\Swagger\Client\Model\MintsoftStockProduct[]**](../Model/ToolkitDataClassesStockProduct.md)
 
 ### Authorization
 
@@ -1148,7 +1148,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **productListSuppliers**
-> \Swagger\Client\Model\ToolkitDataClassesStockProductSupplier[] productListSuppliers($client_id, $page_no, $limit)
+> \Swagger\Client\Model\MintsoftStockProductSupplier[] productListSuppliers($client_id, $page_no, $limit)
 
 List Product Suppliers
 
@@ -1187,7 +1187,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesStockProductSupplier[]**](../Model/ToolkitDataClassesStockProductSupplier.md)
+[**\Swagger\Client\Model\MintsoftStockProductSupplier[]**](../Model/ToolkitDataClassesStockProductSupplier.md)
 
 ### Authorization
 
@@ -1420,7 +1420,7 @@ $apiInstance = new Swagger\Client\Api\ProductApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$product = new \Swagger\Client\Model\MintsoftStockProduct(); // \Swagger\Client\Model\ToolkitDataClassesStockProduct | Product
+$product = new \Swagger\Client\Model\MintsoftStockProduct(); // \Swagger\Client\Model\MintsoftStockProduct | Product
 
 try {
     $apiInstance->productUpdateProduct($product);
@@ -1434,7 +1434,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **product** | [**\Swagger\Client\Model\ToolkitDataClassesStockProduct**](../Model/ToolkitDataClassesStockProduct.md)| Product |
+ **product** | [**\Swagger\Client\Model\MintsoftStockProduct**](../Model/ToolkitDataClassesStockProduct.md)| Product |
 
 ### Return type
 
@@ -1469,7 +1469,7 @@ $apiInstance = new Swagger\Client\Api\ProductApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$prices = array(new \Swagger\Client\Model\MintsoftProductsAPINewProductPrice()); // \Swagger\Client\Model\ToolkitDataClassesProductsAPINewProductPrice[] | Prices
+$prices = array(new \Swagger\Client\Model\MintsoftProductsAPINewProductPrice()); // \Swagger\Client\Model\MintsoftProductsAPINewProductPrice[] | Prices
 
 try {
     $apiInstance->productUpdateProductPrices($prices);
@@ -1483,7 +1483,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **prices** | [**\Swagger\Client\Model\ToolkitDataClassesProductsAPINewProductPrice[]**](../Model/ToolkitDataClassesProductsAPINewProductPrice.md)| Prices |
+ **prices** | [**\Swagger\Client\Model\MintsoftProductsAPINewProductPrice[]**](../Model/ToolkitDataClassesProductsAPINewProductPrice.md)| Prices |
 
 ### Return type
 

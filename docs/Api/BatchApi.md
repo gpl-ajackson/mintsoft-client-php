@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 
 # **batchAssignBatchToUser**
-> \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult batchAssignBatchToUser($batch_id, $assign_to_user, $picking_type)
+> \Swagger\Client\Model\MintsoftCommonToolkitResult batchAssignBatchToUser($batch_id, $assign_to_user, $picking_type)
 
 Assign Batch To user
 
@@ -56,7 +56,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
+[**\Swagger\Client\Model\MintsoftCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
 
 ### Authorization
 
@@ -70,7 +70,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **batchAssignOrderToUser**
-> \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult batchAssignOrderToUser($order_id, $assign_to_user)
+> \Swagger\Client\Model\MintsoftCommonToolkitResult batchAssignOrderToUser($order_id, $assign_to_user)
 
 Assign Order To user
 
@@ -107,7 +107,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
+[**\Swagger\Client\Model\MintsoftCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
 
 ### Authorization
 
@@ -121,7 +121,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **batchCreateBatch**
-> \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult batchCreateBatch($batch)
+> \Swagger\Client\Model\MintsoftCommonToolkitResult batchCreateBatch($batch)
 
 Create Batch
 
@@ -156,7 +156,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
+[**\Swagger\Client\Model\MintsoftCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
 
 ### Authorization
 
@@ -170,7 +170,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **batchCreateBatchFromTemplate**
-> \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult batchCreateBatchFromTemplate($batch_template_id)
+> \Swagger\Client\Model\MintsoftCommonToolkitResult batchCreateBatchFromTemplate($batch_template_id)
 
 Create Batch from Template
 
@@ -205,7 +205,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
+[**\Swagger\Client\Model\MintsoftCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
 
 ### Authorization
 
@@ -219,7 +219,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **batchDeleteBatch**
-> \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult batchDeleteBatch($batch_id)
+> \Swagger\Client\Model\MintsoftCommonToolkitResult batchDeleteBatch($batch_id)
 
 Delete Batch
 
@@ -254,7 +254,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
+[**\Swagger\Client\Model\MintsoftCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
 
 ### Authorization
 
@@ -268,7 +268,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **batchDespatchBatch**
-> \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult[] batchDespatchBatch($batch_id)
+> \Swagger\Client\Model\MintsoftCommonToolkitResult[] batchDespatchBatch($batch_id)
 
 Despatch a completed Batch
 
@@ -303,7 +303,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult[]**](../Model/ToolkitDataClassesCommonToolkitResult.md)
+[**\Swagger\Client\Model\MintsoftCommonToolkitResult[]**](../Model/ToolkitDataClassesCommonToolkitResult.md)
 
 ### Authorization
 
@@ -317,7 +317,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **batchGetBatch**
-> \Swagger\Client\Model\ToolkitDataClassesOrdersOrder[] batchGetBatch($id)
+> \Swagger\Client\Model\MintsoftOrdersOrder[] batchGetBatch($id)
 
 Get Batch by ID
 
@@ -352,7 +352,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesOrdersOrder[]**](../Model/ToolkitDataClassesOrdersOrder.md)
+[**\Swagger\Client\Model\MintsoftOrdersOrder[]**](../Model/ToolkitDataClassesOrdersOrder.md)
 
 ### Authorization
 
@@ -366,7 +366,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **batchListBatches**
-> \Swagger\Client\Model\ToolkitDataClassesOrdersBatch[] batchListBatches()
+> \Swagger\Client\Model\MintsoftOrdersBatch[] batchListBatches()
 
 List Batches
 
@@ -397,7 +397,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesOrdersBatch[]**](../Model/ToolkitDataClassesOrdersBatch.md)
+[**\Swagger\Client\Model\MintsoftOrdersBatch[]**](../Model/ToolkitDataClassesOrdersBatch.md)
 
 ### Authorization
 
@@ -411,7 +411,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **batchTemplates**
-> \Swagger\Client\Model\ToolkitDataClassesOrdersBatchTemplate[] batchTemplates()
+> \Swagger\Client\Model\MintsoftOrdersBatchTemplate[] batchTemplates()
 
 List available Batch Templates
 
@@ -442,7 +442,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesOrdersBatchTemplate[]**](../Model/ToolkitDataClassesOrdersBatchTemplate.md)
+[**\Swagger\Client\Model\MintsoftOrdersBatchTemplate[]**](../Model/ToolkitDataClassesOrdersBatchTemplate.md)
 
 ### Authorization
 
@@ -456,7 +456,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **batchUpdateBatchStatus**
-> \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult batchUpdateBatchStatus($id, $order_status)
+> \Swagger\Client\Model\MintsoftCommonToolkitResult batchUpdateBatchStatus($id, $order_status)
 
 Update Batch Status
 
@@ -493,7 +493,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
+[**\Swagger\Client\Model\MintsoftCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
 
 ### Authorization
 

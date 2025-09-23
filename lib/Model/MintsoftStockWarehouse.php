@@ -83,7 +83,7 @@ class MintsoftStockWarehouse implements ModelInterface, ArrayAccess
         'id' => 'int',
         'last_updated' => '\DateTime',
         'last_updated_by_user' => 'string',
-        'warehouse_reference_fields' => '\Swagger\Client\Model\ToolkitDataClassesWarehouseWarehouseReferenceField[]'
+        'warehouse_reference_fields' => '\Swagger\Client\Model\MintsoftWarehouseWarehouseReferenceField[]'
     ];
 
     /**

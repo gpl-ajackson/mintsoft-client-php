@@ -48,7 +48,7 @@ Name | Type | Description | Notes
 **total_vat** | **double** |  | [optional] 
 **client_id** | **int** |  | [optional] 
 **number_of_parcels** | **int** |  | [optional] 
-**cash_on_delivery** | [**\Swagger\Client\Model\ToolkitDataClassesOrdersAPICashOnDelivery**](ToolkitDataClassesOrdersAPICashOnDelivery.md) |  | [optional] 
+**cash_on_delivery** | [**\Swagger\Client\Model\MintsoftOrdersAPICashOnDelivery**](ToolkitDataClassesOrdersAPICashOnDelivery.md) |  | [optional] 
 **recipient_type** | **string** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

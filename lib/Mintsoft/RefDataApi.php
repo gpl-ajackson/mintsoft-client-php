@@ -111,11 +111,11 @@ class RefDataApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ToolkitDataClassesCommonCountry[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\MintsoftCommonCountry[], HTTP status code, HTTP response headers (array of strings)
      */
     public function refDataCountriesWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonCountry[]';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonCountry[]';
         $request = $this->refDataCountriesRequest();
 
         try {
@@ -167,7 +167,7 @@ class RefDataApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesCommonCountry[]',
+                        '\Swagger\Client\Model\MintsoftCommonCountry[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -207,7 +207,7 @@ class RefDataApi
      */
     public function refDataCountriesAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCommonCountry[]';
+        $returnType = '\Swagger\Client\Model\MintsoftCommonCountry[]';
         $request = $this->refDataCountriesRequest();
 
         return $this->client
@@ -361,11 +361,11 @@ class RefDataApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ToolkitDataClassesCurrenciesCurrency[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\MintsoftCurrenciesCurrency[], HTTP status code, HTTP response headers (array of strings)
      */
     public function refDataCurrenciesWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCurrenciesCurrency[]';
+        $returnType = '\Swagger\Client\Model\MintsoftCurrenciesCurrency[]';
         $request = $this->refDataCurrenciesRequest();
 
         try {
@@ -417,7 +417,7 @@ class RefDataApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesCurrenciesCurrency[]',
+                        '\Swagger\Client\Model\MintsoftCurrenciesCurrency[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -457,7 +457,7 @@ class RefDataApi
      */
     public function refDataCurrenciesAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesCurrenciesCurrency[]';
+        $returnType = '\Swagger\Client\Model\MintsoftCurrenciesCurrency[]';
         $request = $this->refDataCurrenciesRequest();
 
         return $this->client
@@ -861,11 +861,11 @@ class RefDataApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ToolkitDataClassesStockProductPriceType[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\MintsoftStockProductPriceType[], HTTP status code, HTTP response headers (array of strings)
      */
     public function refDataPricingTypesWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesStockProductPriceType[]';
+        $returnType = '\Swagger\Client\Model\MintsoftStockProductPriceType[]';
         $request = $this->refDataPricingTypesRequest();
 
         try {
@@ -917,7 +917,7 @@ class RefDataApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesStockProductPriceType[]',
+                        '\Swagger\Client\Model\MintsoftStockProductPriceType[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -957,7 +957,7 @@ class RefDataApi
      */
     public function refDataPricingTypesAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesStockProductPriceType[]';
+        $returnType = '\Swagger\Client\Model\MintsoftStockProductPriceType[]';
         $request = $this->refDataPricingTypesRequest();
 
         return $this->client

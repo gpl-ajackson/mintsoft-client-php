@@ -57,7 +57,7 @@ All URIs are relative to *https://api.mintsoft.co.uk*
 |[**orderUploadOrderShipment**](OrderApi.md#orderUploadOrderShipment) | **PUT** /api/Order/{id}/Shipments |     |
 
 # **orderAddOrderComment**
-> \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult orderAddOrderComment($id, $comment)
+> \Swagger\Client\Model\MintsoftCommonToolkitResult orderAddOrderComment($id, $comment)
 
 
 
@@ -73,7 +73,7 @@ $apiInstance = new Swagger\Client\Api\OrderApi(
     new GuzzleHttp\Client()
 );
 $id = 56; // int | 
-$comment = new \Swagger\Client\Model\MintsoftOrdersAPINewOrderComment(); // \Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrderComment | 
+$comment = new \Swagger\Client\Model\MintsoftOrdersAPINewOrderComment(); // \Swagger\Client\Model\MintsoftOrdersAPINewOrderComment | 
 
 try {
     $result = $apiInstance->orderAddOrderComment($id, $comment);
@@ -89,11 +89,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  |
- **comment** | [**\Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrderComment**](../Model/ToolkitDataClassesOrdersAPINewOrderComment.md)|  |
+ **comment** | [**\Swagger\Client\Model\MintsoftOrdersAPINewOrderComment**](../Model/ToolkitDataClassesOrdersAPINewOrderComment.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
+[**\Swagger\Client\Model\MintsoftCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
 
 ### Authorization
 
@@ -107,7 +107,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **orderAddOrderItem**
-> \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult orderAddOrderItem($id, $order_item)
+> \Swagger\Client\Model\MintsoftCommonToolkitResult orderAddOrderItem($id, $order_item)
 
 Add new item to the existing order
 
@@ -125,7 +125,7 @@ $apiInstance = new Swagger\Client\Api\OrderApi(
     new GuzzleHttp\Client()
 );
 $id = 56; // int | OrderId
-$order_item = new \Swagger\Client\Model\MintsoftOrdersAPINewOrderItem(); // \Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrderItem | 
+$order_item = new \Swagger\Client\Model\MintsoftOrdersAPINewOrderItem(); // \Swagger\Client\Model\MintsoftOrdersAPINewOrderItem | 
 
 try {
     $result = $apiInstance->orderAddOrderItem($id, $order_item);
@@ -141,11 +141,11 @@ try {
 | Name           | Type                                                                                                                     | Description | Notes |
 |----------------|--------------------------------------------------------------------------------------------------------------------------|-------------|-------|
 | **id**         | **int**                                                                                                                  | OrderId     |       |
-| **order_item** | [**\Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrderItem**](../Model/ToolkitDataClassesOrdersAPINewOrderItem.md) |             |       |
+| **order_item** | [**\Swagger\Client\Model\MintsoftOrdersAPINewOrderItem**](../Model/ToolkitDataClassesOrdersAPINewOrderItem.md) |             |       |
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
+[**\Swagger\Client\Model\MintsoftCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
 
 ### Authorization
 
@@ -159,7 +159,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **orderAddOrderTag**
-> \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult orderAddOrderTag($id, $tag)
+> \Swagger\Client\Model\MintsoftCommonToolkitResult orderAddOrderTag($id, $tag)
 
 
 
@@ -194,7 +194,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
+[**\Swagger\Client\Model\MintsoftCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
 
 ### Authorization
 
@@ -208,7 +208,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **orderAllocations**
-> \Swagger\Client\Model\ToolkitDataClassesWarehouseProductInLocation[] orderAllocations($id)
+> \Swagger\Client\Model\MintsoftWarehouseProductInLocation[] orderAllocations($id)
 
 Order Allocations
 
@@ -243,7 +243,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesWarehouseProductInLocation[]**](../Model/ToolkitDataClassesWarehouseProductInLocation.md)
+[**\Swagger\Client\Model\MintsoftWarehouseProductInLocation[]**](../Model/ToolkitDataClassesWarehouseProductInLocation.md)
 
 ### Authorization
 
@@ -257,7 +257,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **orderBarcodeVerifiedOrderItems**
-> \Swagger\Client\Model\ToolkitDataClassesOrdersBarcodeVerifiedOrderItem[] orderBarcodeVerifiedOrderItems($id)
+> \Swagger\Client\Model\MintsoftOrdersBarcodeVerifiedOrderItem[] orderBarcodeVerifiedOrderItems($id)
 
 Order Barcode Verifications
 
@@ -292,7 +292,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesOrdersBarcodeVerifiedOrderItem[]**](../Model/ToolkitDataClassesOrdersBarcodeVerifiedOrderItem.md)
+[**\Swagger\Client\Model\MintsoftOrdersBarcodeVerifiedOrderItem[]**](../Model/ToolkitDataClassesOrdersBarcodeVerifiedOrderItem.md)
 
 ### Authorization
 
@@ -306,7 +306,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **orderBillingAddress**
-> \Swagger\Client\Model\ToolkitDataClassesOrdersAddress orderBillingAddress($id)
+> \Swagger\Client\Model\MintsoftOrdersAddress orderBillingAddress($id)
 
 Get Billing Address for Order
 
@@ -341,7 +341,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesOrdersAddress**](../Model/ToolkitDataClassesOrdersAddress.md)
+[**\Swagger\Client\Model\MintsoftOrdersAddress**](../Model/ToolkitDataClassesOrdersAddress.md)
 
 ### Authorization
 
@@ -355,7 +355,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **orderCancelOrder**
-> \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult orderCancelOrder($id)
+> \Swagger\Client\Model\MintsoftCommonToolkitResult orderCancelOrder($id)
 
 
 
@@ -388,7 +388,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
+[**\Swagger\Client\Model\MintsoftCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
 
 ### Authorization
 
@@ -402,7 +402,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **orderCancelShipment**
-> \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult orderCancelShipment($id)
+> \Swagger\Client\Model\MintsoftCommonToolkitResult orderCancelShipment($id)
 
 Cancel Shipment - using Courier API Connection
 
@@ -437,7 +437,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
+[**\Swagger\Client\Model\MintsoftCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
 
 ### Authorization
 
@@ -451,7 +451,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **orderComments**
-> \Swagger\Client\Model\ToolkitDataClassesOrdersOrderComment[] orderComments($id)
+> \Swagger\Client\Model\MintsoftOrdersOrderComment[] orderComments($id)
 
 
 
@@ -484,7 +484,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesOrdersOrderComment[]**](../Model/ToolkitDataClassesOrdersOrderComment.md)
+[**\Swagger\Client\Model\MintsoftOrdersOrderComment[]**](../Model/ToolkitDataClassesOrdersOrderComment.md)
 
 ### Authorization
 
@@ -498,7 +498,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **orderCreateOrder**
-> \Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrderResult[] orderCreateOrder($order)
+> \Swagger\Client\Model\MintsoftOrdersAPINewOrderResult[] orderCreateOrder($order)
 
 Create a New Order
 
@@ -515,7 +515,7 @@ $apiInstance = new Swagger\Client\Api\OrderApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$order = new \Swagger\Client\Model\MintsoftOrdersAPINewOrderWithItems(); // \Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrderWithItems | 
+$order = new \Swagger\Client\Model\MintsoftOrdersAPINewOrderWithItems(); // \Swagger\Client\Model\MintsoftOrdersAPINewOrderWithItems | 
 
 try {
     $result = $apiInstance->orderCreateOrder($order);
@@ -530,11 +530,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **order** | [**\Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrderWithItems**](../Model/ToolkitDataClassesOrdersAPINewOrderWithItems.md)|  |
+ **order** | [**\Swagger\Client\Model\MintsoftOrdersAPINewOrderWithItems**](../Model/ToolkitDataClassesOrdersAPINewOrderWithItems.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrderResult[]**](../Model/ToolkitDataClassesOrdersAPINewOrderResult.md)
+[**\Swagger\Client\Model\MintsoftOrdersAPINewOrderResult[]**](../Model/ToolkitDataClassesOrdersAPINewOrderResult.md)
 
 ### Authorization
 
@@ -548,7 +548,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **orderCreateShipment**
-> \Swagger\Client\Model\ToolkitDataClassesShippingShipmentResult orderCreateShipment($id, $courier_service_id, $number_of_parcels)
+> \Swagger\Client\Model\MintsoftShippingShipmentResult orderCreateShipment($id, $courier_service_id, $number_of_parcels)
 
 Create Shipment - using Courier API Connection
 
@@ -587,7 +587,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesShippingShipmentResult**](../Model/ToolkitDataClassesShippingShipmentResult.md)
+[**\Swagger\Client\Model\MintsoftShippingShipmentResult**](../Model/ToolkitDataClassesShippingShipmentResult.md)
 
 ### Authorization
 
@@ -601,7 +601,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **orderDeleteOrderItem**
-> \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult orderDeleteOrderItem($id, $item_id)
+> \Swagger\Client\Model\MintsoftCommonToolkitResult orderDeleteOrderItem($id, $item_id)
 
 Delete Order Item
 
@@ -638,7 +638,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
+[**\Swagger\Client\Model\MintsoftCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
 
 ### Authorization
 
@@ -652,7 +652,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **orderDeleteOrderShipment**
-> \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult orderDeleteOrderShipment($id, $order_shipment_id)
+> \Swagger\Client\Model\MintsoftCommonToolkitResult orderDeleteOrderShipment($id, $order_shipment_id)
 
 
 
@@ -687,7 +687,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
+[**\Swagger\Client\Model\MintsoftCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
 
 ### Authorization
 
@@ -701,7 +701,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **orderDeleteOrderTag**
-> \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult orderDeleteOrderTag($id, $tag)
+> \Swagger\Client\Model\MintsoftCommonToolkitResult orderDeleteOrderTag($id, $tag)
 
 
 
@@ -736,7 +736,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
+[**\Swagger\Client\Model\MintsoftCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
 
 ### Authorization
 
@@ -797,7 +797,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **orderDocuments**
-> \Swagger\Client\Model\ToolkitDataClassesOrdersOrderDocument[] orderDocuments($id)
+> \Swagger\Client\Model\MintsoftOrdersOrderDocument[] orderDocuments($id)
 
 
 
@@ -830,7 +830,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesOrdersOrderDocument[]**](../Model/ToolkitDataClassesOrdersOrderDocument.md)
+[**\Swagger\Client\Model\MintsoftOrdersOrderDocument[]**](../Model/ToolkitDataClassesOrdersOrderDocument.md)
 
 ### Authorization
 
@@ -844,7 +844,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **orderGet**
-> \Swagger\Client\Model\ToolkitDataClassesOrdersOrder orderGet($id)
+> \Swagger\Client\Model\MintsoftOrdersOrder orderGet($id)
 
 
 
@@ -877,7 +877,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesOrdersOrder**](../Model/ToolkitDataClassesOrdersOrder.md)
+[**\Swagger\Client\Model\MintsoftOrdersOrder**](../Model/ToolkitDataClassesOrdersOrder.md)
 
 ### Authorization
 
@@ -891,7 +891,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **orderGetChannels**
-> \Swagger\Client\Model\ToolkitDataClassesChannelsChannel[] orderGetChannels()
+> \Swagger\Client\Model\MintsoftChannelsChannel[] orderGetChannels()
 
 
 
@@ -920,7 +920,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesChannelsChannel[]**](../Model/ToolkitDataClassesChannelsChannel.md)
+[**\Swagger\Client\Model\MintsoftChannelsChannel[]**](../Model/ToolkitDataClassesChannelsChannel.md)
 
 ### Authorization
 
@@ -934,7 +934,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **orderGetConnectAction**
-> \Swagger\Client\Model\ToolkitDataClassesOrdersOrderAwaitingAction[] orderGetConnectAction($id)
+> \Swagger\Client\Model\MintsoftOrdersOrderAwaitingAction[] orderGetConnectAction($id)
 
 
 
@@ -967,7 +967,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesOrdersOrderAwaitingAction[]**](../Model/ToolkitDataClassesOrdersOrderAwaitingAction.md)
+[**\Swagger\Client\Model\MintsoftOrdersOrderAwaitingAction[]**](../Model/ToolkitDataClassesOrdersOrderAwaitingAction.md)
 
 ### Authorization
 
@@ -981,7 +981,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **orderGetDocument**
-> \Swagger\Client\Model\ToolkitDataClassesOrdersOrderDocument orderGetDocument($id, $document_id)
+> \Swagger\Client\Model\MintsoftOrdersOrderDocument orderGetDocument($id, $document_id)
 
 
 
@@ -1016,7 +1016,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesOrdersOrderDocument**](../Model/ToolkitDataClassesOrdersOrderDocument.md)
+[**\Swagger\Client\Model\MintsoftOrdersOrderDocument**](../Model/ToolkitDataClassesOrdersOrderDocument.md)
 
 ### Authorization
 
@@ -1079,7 +1079,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **orderGetOrderDocumentPaperSizes**
-> \Swagger\Client\Model\ToolkitDataClassesCommonEnumPair[] orderGetOrderDocumentPaperSizes()
+> \Swagger\Client\Model\MintsoftCommonEnumPair[] orderGetOrderDocumentPaperSizes()
 
 
 
@@ -1108,7 +1108,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesCommonEnumPair[]**](../Model/ToolkitDataClassesCommonEnumPair.md)
+[**\Swagger\Client\Model\MintsoftCommonEnumPair[]**](../Model/ToolkitDataClassesCommonEnumPair.md)
 
 ### Authorization
 
@@ -1122,7 +1122,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **orderGetOrderDocumentTypes**
-> \Swagger\Client\Model\ToolkitDataClassesOrdersOrderDocumentType[] orderGetOrderDocumentTypes()
+> \Swagger\Client\Model\MintsoftOrdersOrderDocumentType[] orderGetOrderDocumentTypes()
 
 
 
@@ -1151,7 +1151,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesOrdersOrderDocumentType[]**](../Model/ToolkitDataClassesOrdersOrderDocumentType.md)
+[**\Swagger\Client\Model\MintsoftOrdersOrderDocumentType[]**](../Model/ToolkitDataClassesOrdersOrderDocumentType.md)
 
 ### Authorization
 
@@ -1165,7 +1165,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **orderGetOrderShipment**
-> \Swagger\Client\Model\ToolkitDataClassesOrdersOrderShipment[] orderGetOrderShipment($id)
+> \Swagger\Client\Model\MintsoftOrdersOrderShipment[] orderGetOrderShipment($id)
 
 
 
@@ -1198,7 +1198,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesOrdersOrderShipment[]**](../Model/ToolkitDataClassesOrdersOrderShipment.md)
+[**\Swagger\Client\Model\MintsoftOrdersOrderShipment[]**](../Model/ToolkitDataClassesOrdersOrderShipment.md)
 
 ### Authorization
 
@@ -1212,7 +1212,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **orderGetOrderShipmentTrackingEventsStatuses**
-> \Swagger\Client\Model\ToolkitDataClassesCommonEnumPair[] orderGetOrderShipmentTrackingEventsStatuses()
+> \Swagger\Client\Model\MintsoftCommonEnumPair[] orderGetOrderShipmentTrackingEventsStatuses()
 
 Tracking Event - Statuses
 
@@ -1243,7 +1243,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesCommonEnumPair[]**](../Model/ToolkitDataClassesCommonEnumPair.md)
+[**\Swagger\Client\Model\MintsoftCommonEnumPair[]**](../Model/ToolkitDataClassesCommonEnumPair.md)
 
 ### Authorization
 
@@ -1257,7 +1257,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **orderGetOrderStatuses**
-> \Swagger\Client\Model\ToolkitDataClassesOrdersOrderStatus[] orderGetOrderStatuses()
+> \Swagger\Client\Model\MintsoftOrdersOrderStatus[] orderGetOrderStatuses()
 
 
 
@@ -1286,7 +1286,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesOrdersOrderStatus[]**](../Model/ToolkitDataClassesOrdersOrderStatus.md)
+[**\Swagger\Client\Model\MintsoftOrdersOrderStatus[]**](../Model/ToolkitDataClassesOrdersOrderStatus.md)
 
 ### Authorization
 
@@ -1300,7 +1300,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **orderItems**
-> \Swagger\Client\Model\ToolkitDataClassesOrdersOrderItem[] orderItems($id)
+> \Swagger\Client\Model\MintsoftOrdersOrderItem[] orderItems($id)
 
 Get Order Items
 
@@ -1335,7 +1335,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesOrdersOrderItem[]**](../Model/ToolkitDataClassesOrdersOrderItem.md)
+[**\Swagger\Client\Model\MintsoftOrdersOrderItem[]**](../Model/ToolkitDataClassesOrdersOrderItem.md)
 
 ### Authorization
 
@@ -1349,7 +1349,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **orderListOrders**
-> \Swagger\Client\Model\ToolkitDataClassesOrdersOrder[] orderListOrders($order_status_id, $client_id, $channel_id, $courier_service_id, $warehouse_id, $page_no, $limit, $since_date, $since_last_updated, $since_despatch_date, $exclude_tags, $include_tags, $include_order_items, $show_b2_b_only)
+> \Swagger\Client\Model\MintsoftOrdersOrder[] orderListOrders($order_status_id, $client_id, $channel_id, $courier_service_id, $warehouse_id, $page_no, $limit, $since_date, $since_last_updated, $since_despatch_date, $exclude_tags, $include_tags, $include_order_items, $show_b2_b_only)
 
 
 
@@ -1408,7 +1408,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesOrdersOrder[]**](../Model/ToolkitDataClassesOrdersOrder.md)
+[**\Swagger\Client\Model\MintsoftOrdersOrder[]**](../Model/ToolkitDataClassesOrdersOrder.md)
 
 ### Authorization
 
@@ -1422,7 +1422,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **orderListTrackingEvents**
-> \Swagger\Client\Model\ToolkitDataClassesOrdersOrderShipmentTrackingEvent[] orderListTrackingEvents($page_no, $limit, $tracking_status_id, $since_last_updated)
+> \Swagger\Client\Model\MintsoftOrdersOrderShipmentTrackingEvent[] orderListTrackingEvents($page_no, $limit, $tracking_status_id, $since_last_updated)
 
 Shipment Tracking Events - List
 
@@ -1463,7 +1463,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesOrdersOrderShipmentTrackingEvent[]**](../Model/ToolkitDataClassesOrdersOrderShipmentTrackingEvent.md)
+[**\Swagger\Client\Model\MintsoftOrdersOrderShipmentTrackingEvent[]**](../Model/ToolkitDataClassesOrdersOrderShipmentTrackingEvent.md)
 
 ### Authorization
 
@@ -1477,7 +1477,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **orderMarkAwaitingConfirmation**
-> \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult orderMarkAwaitingConfirmation($id)
+> \Swagger\Client\Model\MintsoftCommonToolkitResult orderMarkAwaitingConfirmation($id)
 
 MarkAwaitingConfirmation
 
@@ -1512,7 +1512,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
+[**\Swagger\Client\Model\MintsoftCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
 
 ### Authorization
 
@@ -1526,7 +1526,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **orderMarkAwaitingPayment**
-> \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult orderMarkAwaitingPayment($id)
+> \Swagger\Client\Model\MintsoftCommonToolkitResult orderMarkAwaitingPayment($id)
 
 MarkAwaitingPayment
 
@@ -1561,7 +1561,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
+[**\Swagger\Client\Model\MintsoftCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
 
 ### Authorization
 
@@ -1575,7 +1575,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **orderMarkConfirmed**
-> \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult orderMarkConfirmed($id)
+> \Swagger\Client\Model\MintsoftCommonToolkitResult orderMarkConfirmed($id)
 
 MarkConfirmed
 
@@ -1610,7 +1610,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
+[**\Swagger\Client\Model\MintsoftCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
 
 ### Authorization
 
@@ -1624,7 +1624,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **orderMarkDespatched**
-> \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult orderMarkDespatched($id, $tracking_number)
+> \Swagger\Client\Model\MintsoftCommonToolkitResult orderMarkDespatched($id, $tracking_number)
 
 MarkDespatched
 
@@ -1661,7 +1661,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
+[**\Swagger\Client\Model\MintsoftCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
 
 ### Authorization
 
@@ -1723,7 +1723,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **orderMarkFraudRisk**
-> \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult orderMarkFraudRisk($id)
+> \Swagger\Client\Model\MintsoftCommonToolkitResult orderMarkFraudRisk($id)
 
 Marks Fraud Risk
 
@@ -1758,7 +1758,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
+[**\Swagger\Client\Model\MintsoftCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
 
 ### Authorization
 
@@ -1772,7 +1772,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **orderMarkFraudRiskAccepted**
-> \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult orderMarkFraudRiskAccepted($id)
+> \Swagger\Client\Model\MintsoftCommonToolkitResult orderMarkFraudRiskAccepted($id)
 
 Marks Fraud Risk Accepted
 
@@ -1807,7 +1807,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
+[**\Swagger\Client\Model\MintsoftCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
 
 ### Authorization
 
@@ -1821,7 +1821,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **orderMarkPackAndHold**
-> \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult orderMarkPackAndHold($id, $release_date)
+> \Swagger\Client\Model\MintsoftCommonToolkitResult orderMarkPackAndHold($id, $release_date)
 
 MarkPackAndHold
 
@@ -1858,7 +1858,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
+[**\Swagger\Client\Model\MintsoftCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
 
 ### Authorization
 
@@ -1872,7 +1872,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **orderMarkPaymentReceived**
-> \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult orderMarkPaymentReceived($id)
+> \Swagger\Client\Model\MintsoftCommonToolkitResult orderMarkPaymentReceived($id)
 
 MarkPaymentReceived
 
@@ -1907,7 +1907,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
+[**\Swagger\Client\Model\MintsoftCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
 
 ### Authorization
 
@@ -1921,7 +1921,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **orderMarkPrinted**
-> \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult orderMarkPrinted($id, $comment)
+> \Swagger\Client\Model\MintsoftCommonToolkitResult orderMarkPrinted($id, $comment)
 
 MarkPrinted
 
@@ -1958,7 +1958,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
+[**\Swagger\Client\Model\MintsoftCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
 
 ### Authorization
 
@@ -1972,7 +1972,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **orderMarkReleasePackAndHold**
-> \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult orderMarkReleasePackAndHold($id)
+> \Swagger\Client\Model\MintsoftCommonToolkitResult orderMarkReleasePackAndHold($id)
 
 MarkReleasePackAndHold
 
@@ -2007,7 +2007,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
+[**\Swagger\Client\Model\MintsoftCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
 
 ### Authorization
 
@@ -2021,7 +2021,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **orderOrderSplit**
-> \Swagger\Client\Model\ToolkitDataClassesOrdersOrderSplit[] orderOrderSplit($id)
+> \Swagger\Client\Model\MintsoftOrdersOrderSplit[] orderOrderSplit($id)
 
 
 
@@ -2054,7 +2054,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesOrdersOrderSplit[]**](../Model/ToolkitDataClassesOrdersOrderSplit.md)
+[**\Swagger\Client\Model\MintsoftOrdersOrderSplit[]**](../Model/ToolkitDataClassesOrdersOrderSplit.md)
 
 ### Authorization
 
@@ -2068,7 +2068,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **orderQueries**
-> \Swagger\Client\Model\ToolkitDataClassesHelpOrderQueriesOrderQuery[] orderQueries($id)
+> \Swagger\Client\Model\MintsoftHelpOrderQueriesOrderQuery[] orderQueries($id)
 
 
 
@@ -2101,7 +2101,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesHelpOrderQueriesOrderQuery[]**](../Model/ToolkitDataClassesHelpOrderQueriesOrderQuery.md)
+[**\Swagger\Client\Model\MintsoftHelpOrderQueriesOrderQuery[]**](../Model/ToolkitDataClassesHelpOrderQueriesOrderQuery.md)
 
 ### Authorization
 
@@ -2115,7 +2115,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **orderQueryComments**
-> \Swagger\Client\Model\ToolkitDataClassesHelpOrderQueriesOrderQueryComment[] orderQueryComments($id, $query_id)
+> \Swagger\Client\Model\MintsoftHelpOrderQueriesOrderQueryComment[] orderQueryComments($id, $query_id)
 
 
 
@@ -2150,7 +2150,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesHelpOrderQueriesOrderQueryComment[]**](../Model/ToolkitDataClassesHelpOrderQueriesOrderQueryComment.md)
+[**\Swagger\Client\Model\MintsoftHelpOrderQueriesOrderQueryComment[]**](../Model/ToolkitDataClassesHelpOrderQueriesOrderQueryComment.md)
 
 ### Authorization
 
@@ -2164,7 +2164,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **orderSearchOrder**
-> \Swagger\Client\Model\ToolkitDataClassesOrdersOrder[] orderSearchOrder($order_number)
+> \Swagger\Client\Model\MintsoftOrdersOrder[] orderSearchOrder($order_number)
 
 
 
@@ -2197,7 +2197,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesOrdersOrder[]**](../Model/ToolkitDataClassesOrdersOrder.md)
+[**\Swagger\Client\Model\MintsoftOrdersOrder[]**](../Model/ToolkitDataClassesOrdersOrder.md)
 
 ### Authorization
 
@@ -2211,7 +2211,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **orderSplitOrderItems**
-> \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult orderSplitOrderItems($id, $order_items_to_split)
+> \Swagger\Client\Model\MintsoftCommonToolkitResult orderSplitOrderItems($id, $order_items_to_split)
 
 SplitOrderItems
 
@@ -2229,7 +2229,7 @@ $apiInstance = new Swagger\Client\Api\OrderApi(
     new GuzzleHttp\Client()
 );
 $id = 56; // int | OrderId
-$order_items_to_split = array(new \Swagger\Client\Model\MintsoftOrdersSplitOrderOnOrderItems()); // \Swagger\Client\Model\ToolkitDataClassesOrdersSplitOrderOnOrderItems[] | Order Items to Split onto new order
+$order_items_to_split = array(new \Swagger\Client\Model\MintsoftOrdersSplitOrderOnOrderItems()); // \Swagger\Client\Model\MintsoftOrdersSplitOrderOnOrderItems[] | Order Items to Split onto new order
 
 try {
     $result = $apiInstance->orderSplitOrderItems($id, $order_items_to_split);
@@ -2245,11 +2245,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| OrderId |
- **order_items_to_split** | [**\Swagger\Client\Model\ToolkitDataClassesOrdersSplitOrderOnOrderItems[]**](../Model/ToolkitDataClassesOrdersSplitOrderOnOrderItems.md)| Order Items to Split onto new order |
+ **order_items_to_split** | [**\Swagger\Client\Model\MintsoftOrdersSplitOrderOnOrderItems[]**](../Model/ToolkitDataClassesOrdersSplitOrderOnOrderItems.md)| Order Items to Split onto new order |
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
+[**\Swagger\Client\Model\MintsoftCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
 
 ### Authorization
 
@@ -2263,7 +2263,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **orderUpdateNumberOfParcels**
-> \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult orderUpdateNumberOfParcels($id, $number_of_parcels)
+> \Swagger\Client\Model\MintsoftCommonToolkitResult orderUpdateNumberOfParcels($id, $number_of_parcels)
 
 Update Number Of Parcels
 
@@ -2300,7 +2300,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
+[**\Swagger\Client\Model\MintsoftCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
 
 ### Authorization
 
@@ -2314,7 +2314,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **orderUpdateOrder**
-> \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult orderUpdateOrder($id, $order)
+> \Swagger\Client\Model\MintsoftCommonToolkitResult orderUpdateOrder($id, $order)
 
 Update Order Details
 
@@ -2332,7 +2332,7 @@ $apiInstance = new Swagger\Client\Api\OrderApi(
     new GuzzleHttp\Client()
 );
 $id = 56; // int | 
-$order = new \Swagger\Client\Model\MintsoftOrdersAPINewOrder(); // \Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrder | 
+$order = new \Swagger\Client\Model\MintsoftOrdersAPINewOrder(); // \Swagger\Client\Model\MintsoftOrdersAPINewOrder | 
 
 try {
     $result = $apiInstance->orderUpdateOrder($id, $order);
@@ -2348,11 +2348,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  |
- **order** | [**\Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrder**](../Model/ToolkitDataClassesOrdersAPINewOrder.md)|  |
+ **order** | [**\Swagger\Client\Model\MintsoftOrdersAPINewOrder**](../Model/ToolkitDataClassesOrdersAPINewOrder.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
+[**\Swagger\Client\Model\MintsoftCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
 
 ### Authorization
 
@@ -2366,7 +2366,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **orderUpdateOrderItem**
-> \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult orderUpdateOrderItem($id, $item_id, $order_item)
+> \Swagger\Client\Model\MintsoftCommonToolkitResult orderUpdateOrderItem($id, $item_id, $order_item)
 
 Update Order Item
 
@@ -2385,7 +2385,7 @@ $apiInstance = new Swagger\Client\Api\OrderApi(
 );
 $id = 56; // int | OrderId
 $item_id = 56; // int | 
-$order_item = new \Swagger\Client\Model\MintsoftOrdersAPINewOrderItem(); // \Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrderItem | 
+$order_item = new \Swagger\Client\Model\MintsoftOrdersAPINewOrderItem(); // \Swagger\Client\Model\MintsoftOrdersAPINewOrderItem | 
 
 try {
     $result = $apiInstance->orderUpdateOrderItem($id, $item_id, $order_item);
@@ -2402,11 +2402,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| OrderId |
  **item_id** | **int**|  |
- **order_item** | [**\Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrderItem**](../Model/ToolkitDataClassesOrdersAPINewOrderItem.md)|  |
+ **order_item** | [**\Swagger\Client\Model\MintsoftOrdersAPINewOrderItem**](../Model/ToolkitDataClassesOrdersAPINewOrderItem.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
+[**\Swagger\Client\Model\MintsoftCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
 
 ### Authorization
 
@@ -2420,7 +2420,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **orderUploadConnectAction**
-> \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult orderUploadConnectAction($id, $order_shipment)
+> \Swagger\Client\Model\MintsoftCommonToolkitResult orderUploadConnectAction($id, $order_shipment)
 
 
 
@@ -2436,7 +2436,7 @@ $apiInstance = new Swagger\Client\Api\OrderApi(
     new GuzzleHttp\Client()
 );
 $id = 56; // int | 
-$order_shipment = new \Swagger\Client\Model\MintsoftOrdersAPINewOrderConnectAction(); // \Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrderConnectAction | 
+$order_shipment = new \Swagger\Client\Model\MintsoftOrdersAPINewOrderConnectAction(); // \Swagger\Client\Model\MintsoftOrdersAPINewOrderConnectAction | 
 
 try {
     $result = $apiInstance->orderUploadConnectAction($id, $order_shipment);
@@ -2452,11 +2452,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  |
- **order_shipment** | [**\Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrderConnectAction**](../Model/ToolkitDataClassesOrdersAPINewOrderConnectAction.md)|  |
+ **order_shipment** | [**\Swagger\Client\Model\MintsoftOrdersAPINewOrderConnectAction**](../Model/ToolkitDataClassesOrdersAPINewOrderConnectAction.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
+[**\Swagger\Client\Model\MintsoftCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
 
 ### Authorization
 
@@ -2470,7 +2470,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **orderUploadOrderDocument**
-> \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult orderUploadOrderDocument($id, $order_document, $print_with_order, $document_type_id, $paper_size)
+> \Swagger\Client\Model\MintsoftCommonToolkitResult orderUploadOrderDocument($id, $order_document, $print_with_order, $document_type_id, $paper_size)
 
 
 
@@ -2486,7 +2486,7 @@ $apiInstance = new Swagger\Client\Api\OrderApi(
     new GuzzleHttp\Client()
 );
 $id = 56; // int | 
-$order_document = new \Swagger\Client\Model\MintsoftOrdersAPINewOrderDocument(); // \Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrderDocument | 
+$order_document = new \Swagger\Client\Model\MintsoftOrdersAPINewOrderDocument(); // \Swagger\Client\Model\MintsoftOrdersAPINewOrderDocument | 
 $print_with_order = true; // bool | 
 $document_type_id = 56; // int | 
 $paper_size = 56; // int | 
@@ -2505,14 +2505,14 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  |
- **order_document** | [**\Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrderDocument**](../Model/ToolkitDataClassesOrdersAPINewOrderDocument.md)|  |
+ **order_document** | [**\Swagger\Client\Model\MintsoftOrdersAPINewOrderDocument**](../Model/ToolkitDataClassesOrdersAPINewOrderDocument.md)|  |
  **print_with_order** | **bool**|  |
  **document_type_id** | **int**|  |
  **paper_size** | **int**|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
+[**\Swagger\Client\Model\MintsoftCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
 
 ### Authorization
 
@@ -2526,7 +2526,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **orderUploadOrderShipment**
-> \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult orderUploadOrderShipment($id, $order_shipment)
+> \Swagger\Client\Model\MintsoftCommonToolkitResult orderUploadOrderShipment($id, $order_shipment)
 
 
 
@@ -2542,7 +2542,7 @@ $apiInstance = new Swagger\Client\Api\OrderApi(
     new GuzzleHttp\Client()
 );
 $id = 56; // int | 
-$order_shipment = new \Swagger\Client\Model\MintsoftOrdersAPINewOrderShipment(); // \Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrderShipment | 
+$order_shipment = new \Swagger\Client\Model\MintsoftOrdersAPINewOrderShipment(); // \Swagger\Client\Model\MintsoftOrdersAPINewOrderShipment | 
 
 try {
     $result = $apiInstance->orderUploadOrderShipment($id, $order_shipment);
@@ -2558,11 +2558,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  |
- **order_shipment** | [**\Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrderShipment**](../Model/ToolkitDataClassesOrdersAPINewOrderShipment.md)|  |
+ **order_shipment** | [**\Swagger\Client\Model\MintsoftOrdersAPINewOrderShipment**](../Model/ToolkitDataClassesOrdersAPINewOrderShipment.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
+[**\Swagger\Client\Model\MintsoftCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
 
 ### Authorization
 

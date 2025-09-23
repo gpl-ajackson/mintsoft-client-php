@@ -621,13 +621,13 @@ class ProductApi
      * @param  \Swagger\Client\Model\MintsoftStockAPIBulkOnHandStockUpdate[] $records Update Requests (required)
      * @param  int $client_id Client ID (optional)
      *
-     * @return array of \Swagger\Client\Model\ToolkitDataClassesProductsAPIBulkStockUpdateResult[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\MintsoftProductsAPIBulkStockUpdateResult[], HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \Swagger\Client\ApiException on non-2xx response
      */
     public function productBulkOnHandStockUpdateWithHttpInfo($records, $client_id = null)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesProductsAPIBulkStockUpdateResult[]';
+        $returnType = '\Swagger\Client\Model\MintsoftProductsAPIBulkStockUpdateResult[]';
         $request = $this->productBulkOnHandStockUpdateRequest($records, $client_id);
 
         try {
@@ -679,7 +679,7 @@ class ProductApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesProductsAPIBulkStockUpdateResult[]',
+                        '\Swagger\Client\Model\MintsoftProductsAPIBulkStockUpdateResult[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -723,7 +723,7 @@ class ProductApi
      */
     public function productBulkOnHandStockUpdateAsyncWithHttpInfo($records, $client_id = null)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesProductsAPIBulkStockUpdateResult[]';
+        $returnType = '\Swagger\Client\Model\MintsoftProductsAPIBulkStockUpdateResult[]';
         $request = $this->productBulkOnHandStockUpdateRequest($records, $client_id);
 
         return $this->client
@@ -1346,7 +1346,7 @@ class ProductApi
      *
      * @param  \Swagger\Client\Model\MintsoftStockProductSupplier $product_supplier ProductSupplier (required)
      *
-     * @return array of \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\MintsoftCommonToolkitResult, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \Swagger\Client\ApiException on non-2xx response
      */
@@ -5273,11 +5273,11 @@ class ProductApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ToolkitDataClassesStockProduct[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\MintsoftStockProduct[], HTTP status code, HTTP response headers (array of strings)
      */
     public function productListProductsWithHttpInfo($page_no = null, $limit = null, $client_id = null, $since_last_updated = null)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesStockProduct[]';
+        $returnType = '\Swagger\Client\Model\MintsoftStockProduct[]';
         $request = $this->productListProductsRequest($page_no, $limit, $client_id, $since_last_updated);
 
         try {
@@ -5329,7 +5329,7 @@ class ProductApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesStockProduct[]',
+                        '\Swagger\Client\Model\MintsoftStockProduct[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5377,7 +5377,7 @@ class ProductApi
      */
     public function productListProductsAsyncWithHttpInfo($page_no = null, $limit = null, $client_id = null, $since_last_updated = null)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesStockProduct[]';
+        $returnType = '\Swagger\Client\Model\MintsoftStockProduct[]';
         $request = $this->productListProductsRequest($page_no, $limit, $client_id, $since_last_updated);
 
         return $this->client
@@ -5557,11 +5557,11 @@ class ProductApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ToolkitDataClassesStockProductSupplier[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\MintsoftStockProductSupplier[], HTTP status code, HTTP response headers (array of strings)
      */
     public function productListSuppliersWithHttpInfo($client_id = null, $page_no = null, $limit = null)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesStockProductSupplier[]';
+        $returnType = '\Swagger\Client\Model\MintsoftStockProductSupplier[]';
         $request = $this->productListSuppliersRequest($client_id, $page_no, $limit);
 
         try {
@@ -5613,7 +5613,7 @@ class ProductApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesStockProductSupplier[]',
+                        '\Swagger\Client\Model\MintsoftStockProductSupplier[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5659,7 +5659,7 @@ class ProductApi
      */
     public function productListSuppliersAsyncWithHttpInfo($client_id = null, $page_no = null, $limit = null)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesStockProductSupplier[]';
+        $returnType = '\Swagger\Client\Model\MintsoftStockProductSupplier[]';
         $request = $this->productListSuppliersRequest($client_id, $page_no, $limit);
 
         return $this->client

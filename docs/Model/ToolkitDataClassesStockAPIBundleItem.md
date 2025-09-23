@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **product_id** | **int** |  | [optional] 
 **sku** | **string** |  | [optional] 
-**product** | [**\Swagger\Client\Model\ToolkitDataClassesStockProduct**](ToolkitDataClassesStockProduct.md) |  | [optional] 
+**product** | [**\Swagger\Client\Model\MintsoftStockProduct**](ToolkitDataClassesStockProduct.md) |  | [optional] 
 **quantity** | **int** |  | [optional] 
 **percentage_of_sales_value** | **double** |  | [optional] 
 **id** | **int** |  | [optional] 

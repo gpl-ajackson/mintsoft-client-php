@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **reportsCourierDespatchReport**
-> \Swagger\Client\Model\ToolkitDataClassesReportsCourierDespatchReportLine[] reportsCourierDespatchReport($despatch_date_start, $despatch_date_end, $courier_id, $warehouse_id, $breakdown_by_country)
+> \Swagger\Client\Model\MintsoftReportsCourierDespatchReportLine[] reportsCourierDespatchReport($despatch_date_start, $despatch_date_end, $courier_id, $warehouse_id, $breakdown_by_country)
 
 Courier Despatch Report
 
@@ -49,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesReportsCourierDespatchReportLine[]**](../Model/ToolkitDataClassesReportsCourierDespatchReportLine.md)
+[**\Swagger\Client\Model\MintsoftReportsCourierDespatchReportLine[]**](../Model/ToolkitDataClassesReportsCourierDespatchReportLine.md)
 
 ### Authorization
 

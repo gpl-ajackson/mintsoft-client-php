@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **warehouse_transfer_id** | **int** |  | [optional] 
-**warehouse_transfer** | [**\Swagger\Client\Model\ToolkitDataClassesWarehouseAPIWarehouseTransfer**](ToolkitDataClassesWarehouseAPIWarehouseTransfer.md) |  | [optional] 
+**warehouse_transfer** | [**\Swagger\Client\Model\MintsoftWarehouseAPIWarehouseTransfer**](ToolkitDataClassesWarehouseAPIWarehouseTransfer.md) |  | [optional] 
 **product_id** | **int** |  | [optional] 
 **sku** | **string** |  | [optional] 
 **quantity** | **int** |  | [optional] 

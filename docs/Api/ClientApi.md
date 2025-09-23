@@ -9,7 +9,7 @@ All URIs are relative to *https://api.mintsoft.co.uk*
 | [**clientSubClients**](ClientApi.md#clientSubClients)     | **GET** /api/Client/SubClients  | Get a list of SubClients |
 
 # **clientAddSubClient**
-> \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult clientAddSubClient($client)
+> \Swagger\Client\Model\MintsoftCommonToolkitResult clientAddSubClient($client)
 
 Add SubClient
 
@@ -26,7 +26,7 @@ $apiInstance = new Swagger\Client\Api\ClientApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$client = new \Swagger\Client\Model\MintsoftClientsAPIAddSubClient(); // \Swagger\Client\Model\ToolkitDataClassesClientsAPIAddSubClient | 
+$client = new \Swagger\Client\Model\MintsoftClientsAPIAddSubClient(); // \Swagger\Client\Model\MintsoftClientsAPIAddSubClient | 
 
 try {
     $result = $apiInstance->clientAddSubClient($client);
@@ -41,11 +41,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **client** | [**\Swagger\Client\Model\ToolkitDataClassesClientsAPIAddSubClient**](../Model/ToolkitDataClassesClientsAPIAddSubClient.md)|  |
+ **client** | [**\Swagger\Client\Model\MintsoftClientsAPIAddSubClient**](../Model/ToolkitDataClassesClientsAPIAddSubClient.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
+[**\Swagger\Client\Model\MintsoftCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
 
 ### Authorization
 
@@ -111,7 +111,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **clientSubClients**
-> \Swagger\Client\Model\ToolkitDataClassesClientsAPISubClient[] clientSubClients()
+> \Swagger\Client\Model\MintsoftClientsAPISubClient[] clientSubClients()
 
 Get a list of SubClients
 
@@ -142,7 +142,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesClientsAPISubClient[]**](../Model/ToolkitDataClassesClientsAPISubClient.md)
+[**\Swagger\Client\Model\MintsoftClientsAPISubClient[]**](../Model/ToolkitDataClassesClientsAPISubClient.md)
 
 ### Authorization
 

@@ -29,7 +29,7 @@ Name | Type | Description | Notes
 **id** | **int** |  | [optional] 
 **last_updated** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **last_updated_by_user** | **string** |  | [optional] 
-**warehouse_reference_fields** | [**\Swagger\Client\Model\ToolkitDataClassesWarehouseWarehouseReferenceField[]**](ToolkitDataClassesWarehouseWarehouseReferenceField.md) |  | [optional] 
+**warehouse_reference_fields** | [**\Swagger\Client\Model\MintsoftWarehouseWarehouseReferenceField[]**](ToolkitDataClassesWarehouseWarehouseReferenceField.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

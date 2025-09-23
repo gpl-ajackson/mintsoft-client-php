@@ -22,7 +22,7 @@ All URIs are relative to *https://api.mintsoft.co.uk*
 | [**aSNUploadConnectAction**](ASNApi.md#aSNUploadConnectAction) | **PUT** /api/ASN/{id}/ConnectActions      | Register ASN Webhook / ASNConnect Action  |
 
 # **aSNBookInASN**
-> \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult aSNBookInASN($id)
+> \Swagger\Client\Model\MintsoftCommonToolkitResult aSNBookInASN($id)
 
 Book In ASN - Admin Only
 
@@ -57,7 +57,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
+[**\Swagger\Client\Model\MintsoftCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
 
 ### Authorization
 
@@ -71,7 +71,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **aSNBookInASNPartial**
-> \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult aSNBookInASNPartial($id)
+> \Swagger\Client\Model\MintsoftCommonToolkitResult aSNBookInASNPartial($id)
 
 Book In  Partial ASN - Admin Only
 
@@ -106,7 +106,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
+[**\Swagger\Client\Model\MintsoftCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
 
 ### Authorization
 
@@ -120,7 +120,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **aSNConfirmASN**
-> \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult aSNConfirmASN($id)
+> \Swagger\Client\Model\MintsoftCommonToolkitResult aSNConfirmASN($id)
 
 Confirm ASN
 
@@ -155,7 +155,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
+[**\Swagger\Client\Model\MintsoftCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
 
 ### Authorization
 
@@ -169,7 +169,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **aSNCreateASN**
-> \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult aSNCreateASN($asn)
+> \Swagger\Client\Model\MintsoftCommonToolkitResult aSNCreateASN($asn)
 
 Create new ASN(Advanced Shipping Notice)
 
@@ -186,7 +186,7 @@ $apiInstance = new Swagger\Client\Api\ASNApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$asn = new \Swagger\Client\Model\MintsoftStockAPINewASN(); // \Swagger\Client\Model\ToolkitDataClassesStockAPINewASN | ASN Json in the Body of the request
+$asn = new \Swagger\Client\Model\MintsoftStockAPINewASN(); // \Swagger\Client\Model\MintsoftStockAPINewASN | ASN Json in the Body of the request
 
 try {
     $result = $apiInstance->aSNCreateASN($asn);
@@ -201,11 +201,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **asn** | [**\Swagger\Client\Model\ToolkitDataClassesStockAPINewASN**](../Model/ToolkitDataClassesStockAPINewASN.md)| ASN Json in the Body of the request |
+ **asn** | [**\Swagger\Client\Model\MintsoftStockAPINewASN**](../Model/ToolkitDataClassesStockAPINewASN.md)| ASN Json in the Body of the request |
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
+[**\Swagger\Client\Model\MintsoftCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
 
 ### Authorization
 
@@ -219,7 +219,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **aSNDeleteASN**
-> \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult aSNDeleteASN($id)
+> \Swagger\Client\Model\MintsoftCommonToolkitResult aSNDeleteASN($id)
 
 Delete ASN
 
@@ -254,7 +254,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
+[**\Swagger\Client\Model\MintsoftCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
 
 ### Authorization
 
@@ -268,7 +268,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **aSNGetASN**
-> \Swagger\Client\Model\ToolkitDataClassesStockASN aSNGetASN($id)
+> \Swagger\Client\Model\MintsoftStockASN aSNGetASN($id)
 
 Get ASN(Advanced Shipping Notice)
 
@@ -303,7 +303,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesStockASN**](../Model/ToolkitDataClassesStockASN.md)
+[**\Swagger\Client\Model\MintsoftStockASN**](../Model/ToolkitDataClassesStockASN.md)
 
 ### Authorization
 
@@ -317,7 +317,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **aSNGetGoodsInTypes**
-> \Swagger\Client\Model\ToolkitDataClassesCommonEnumPair[] aSNGetGoodsInTypes()
+> \Swagger\Client\Model\MintsoftCommonEnumPair[] aSNGetGoodsInTypes()
 
 Get Goods In Types
 
@@ -348,7 +348,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesCommonEnumPair[]**](../Model/ToolkitDataClassesCommonEnumPair.md)
+[**\Swagger\Client\Model\MintsoftCommonEnumPair[]**](../Model/ToolkitDataClassesCommonEnumPair.md)
 
 ### Authorization
 
@@ -411,7 +411,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **aSNGetStatuses**
-> \Swagger\Client\Model\ToolkitDataClassesStockASNStatus[] aSNGetStatuses()
+> \Swagger\Client\Model\MintsoftStockASNStatus[] aSNGetStatuses()
 
 Get ASN Statuses
 
@@ -442,7 +442,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesStockASNStatus[]**](../Model/ToolkitDataClassesStockASNStatus.md)
+[**\Swagger\Client\Model\MintsoftStockASNStatus[]**](../Model/ToolkitDataClassesStockASNStatus.md)
 
 ### Authorization
 
@@ -456,7 +456,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **aSNListASNs**
-> \Swagger\Client\Model\ToolkitDataClassesStockASN[] aSNListASNs($asn_status_id, $client_id, $page_no, $limit, $warehouse_id, $since_last_updated, $booked_in_start_interval, $booked_in_end_interval, $include_asn_items)
+> \Swagger\Client\Model\MintsoftStockASN[] aSNListASNs($asn_status_id, $client_id, $page_no, $limit, $warehouse_id, $since_last_updated, $booked_in_start_interval, $booked_in_end_interval, $include_asn_items)
 
 List Of ASN(Advanced Shipping Notice)
 
@@ -507,7 +507,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesStockASN[]**](../Model/ToolkitDataClassesStockASN.md)
+[**\Swagger\Client\Model\MintsoftStockASN[]**](../Model/ToolkitDataClassesStockASN.md)
 
 ### Authorization
 
@@ -521,7 +521,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **aSNMarkAwaitingPutAway**
-> \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult aSNMarkAwaitingPutAway($id)
+> \Swagger\Client\Model\MintsoftCommonToolkitResult aSNMarkAwaitingPutAway($id)
 
 Mark ASN as Awiating PutAway - Admin Only
 
@@ -556,7 +556,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
+[**\Swagger\Client\Model\MintsoftCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
 
 ### Authorization
 
@@ -570,7 +570,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **aSNMarkPutAwayComplete**
-> \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult aSNMarkPutAwayComplete($id)
+> \Swagger\Client\Model\MintsoftCommonToolkitResult aSNMarkPutAwayComplete($id)
 
 Mark ASN as PutAway Complete - Admin Only
 
@@ -605,7 +605,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
+[**\Swagger\Client\Model\MintsoftCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
 
 ### Authorization
 
@@ -619,7 +619,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **aSNPartBook**
-> \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult aSNPartBook($id)
+> \Swagger\Client\Model\MintsoftCommonToolkitResult aSNPartBook($id)
 
 Part Book In ASN - Admin Only
 
@@ -654,7 +654,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
+[**\Swagger\Client\Model\MintsoftCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
 
 ### Authorization
 
@@ -668,7 +668,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **aSNReceiveItem**
-> \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult aSNReceiveItem($id, $items)
+> \Swagger\Client\Model\MintsoftCommonToolkitResult aSNReceiveItem($id, $items)
 
 ASN - Receive Items
 
@@ -686,7 +686,7 @@ $apiInstance = new Swagger\Client\Api\ASNApi(
     new GuzzleHttp\Client()
 );
 $id = 56; // int | ID of the ASN
-$items = array(new \Swagger\Client\Model\MintsoftStockASNItemAllocation()); // \Swagger\Client\Model\ToolkitDataClassesStockASNItemAllocation[] | Json list of the Items being receieved in the body of the request
+$items = array(new \Swagger\Client\Model\MintsoftStockASNItemAllocation()); // \Swagger\Client\Model\MintsoftStockASNItemAllocation[] | Json list of the Items being receieved in the body of the request
 
 try {
     $result = $apiInstance->aSNReceiveItem($id, $items);
@@ -702,11 +702,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| ID of the ASN |
- **items** | [**\Swagger\Client\Model\ToolkitDataClassesStockASNItemAllocation[]**](../Model/ToolkitDataClassesStockASNItemAllocation.md)| Json list of the Items being receieved in the body of the request |
+ **items** | [**\Swagger\Client\Model\MintsoftStockASNItemAllocation[]**](../Model/ToolkitDataClassesStockASNItemAllocation.md)| Json list of the Items being receieved in the body of the request |
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
+[**\Swagger\Client\Model\MintsoftCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
 
 ### Authorization
 
@@ -720,7 +720,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **aSNUpdateASN**
-> \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult aSNUpdateASN($id, $asn)
+> \Swagger\Client\Model\MintsoftCommonToolkitResult aSNUpdateASN($id, $asn)
 
 Update ASN Details
 
@@ -738,7 +738,7 @@ $apiInstance = new Swagger\Client\Api\ASNApi(
     new GuzzleHttp\Client()
 );
 $id = 56; // int | ID of the ASN
-$asn = new \Swagger\Client\Model\MintsoftStockAPINewASN(); // \Swagger\Client\Model\ToolkitDataClassesStockAPINewASN | 
+$asn = new \Swagger\Client\Model\MintsoftStockAPINewASN(); // \Swagger\Client\Model\MintsoftStockAPINewASN | 
 
 try {
     $result = $apiInstance->aSNUpdateASN($id, $asn);
@@ -754,11 +754,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| ID of the ASN |
- **asn** | [**\Swagger\Client\Model\ToolkitDataClassesStockAPINewASN**](../Model/ToolkitDataClassesStockAPINewASN.md)|  |
+ **asn** | [**\Swagger\Client\Model\MintsoftStockAPINewASN**](../Model/ToolkitDataClassesStockAPINewASN.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
+[**\Swagger\Client\Model\MintsoftCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
 
 ### Authorization
 
@@ -772,7 +772,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **aSNUploadConnectAction**
-> \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult aSNUploadConnectAction($id, $connect_action)
+> \Swagger\Client\Model\MintsoftCommonToolkitResult aSNUploadConnectAction($id, $connect_action)
 
 Register ASN Webhook / ASNConnect Action
 
@@ -790,7 +790,7 @@ $apiInstance = new Swagger\Client\Api\ASNApi(
     new GuzzleHttp\Client()
 );
 $id = 56; // int | ID of the ASN
-$connect_action = new \Swagger\Client\Model\MintsoftStockAPINewASNConnectAction(); // \Swagger\Client\Model\ToolkitDataClassesStockAPINewASNConnectAction | Connect Action in Body of Result as Json - Type = API, ExtraCode1 = Callback Url,ExtraCode4 = Auth Header Values Complete = false
+$connect_action = new \Swagger\Client\Model\MintsoftStockAPINewASNConnectAction(); // \Swagger\Client\Model\MintsoftStockAPINewASNConnectAction | Connect Action in Body of Result as Json - Type = API, ExtraCode1 = Callback Url,ExtraCode4 = Auth Header Values Complete = false
 
 try {
     $result = $apiInstance->aSNUploadConnectAction($id, $connect_action);
@@ -806,11 +806,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| ID of the ASN |
- **connect_action** | [**\Swagger\Client\Model\ToolkitDataClassesStockAPINewASNConnectAction**](../Model/ToolkitDataClassesStockAPINewASNConnectAction.md)| Connect Action in Body of Result as Json - Type &#x3D; API, ExtraCode1 &#x3D; Callback Url,ExtraCode4 &#x3D; Auth Header Values Complete &#x3D; false |
+ **connect_action** | [**\Swagger\Client\Model\MintsoftStockAPINewASNConnectAction**](../Model/ToolkitDataClassesStockAPINewASNConnectAction.md)| Connect Action in Body of Result as Json - Type &#x3D; API, ExtraCode1 &#x3D; Callback Url,ExtraCode4 &#x3D; Auth Header Values Complete &#x3D; false |
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
+[**\Swagger\Client\Model\MintsoftCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
 
 ### Authorization
 

@@ -67,7 +67,7 @@ class MintsoftStockAPINewASN implements ModelInterface, ArrayAccess
         'quantity' => 'int',
         'product_supplier_id' => 'int',
         'client_id' => 'int',
-        'items' => '\Swagger\Client\Model\ToolkitDataClassesStockAPINewASNItem[]'
+        'items' => '\Swagger\Client\Model\MintsoftStockAPINewASNItem[]'
     ];
 
     /**

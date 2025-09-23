@@ -57,8 +57,8 @@ class MintsoftOrdersAPINewOrderWithItems implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'order_items' => '\Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrderItem[]',
-        'order_name_values' => '\Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrderNameValue[]',
+        'order_items' => '\Swagger\Client\Model\MintsoftOrdersAPINewOrderItem[]',
+        'order_name_values' => '\Swagger\Client\Model\MintsoftOrdersAPINewOrderNameValue[]',
         'order_number' => 'string',
         'external_order_reference' => 'string',
         'title' => 'string',

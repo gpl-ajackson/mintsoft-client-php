@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **quantity** | **int** |  | [optional] 
 **product_supplier_id** | **int** |  | [optional] 
 **client_id** | **int** |  | [optional] 
-**items** | [**\Swagger\Client\Model\ToolkitDataClassesStockAPINewASNItem[]**](ToolkitDataClassesStockAPINewASNItem.md) |  | [optional] 
+**items** | [**\Swagger\Client\Model\MintsoftStockAPINewASNItem[]**](ToolkitDataClassesStockAPINewASNItem.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

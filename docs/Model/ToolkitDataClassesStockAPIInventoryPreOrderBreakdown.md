@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **required_by_back_order** | **int** |  | [optional] 
 **available_for_pre_order** | **int** |  | [optional] 
 **eta_for_new_orders** | [**\DateTime**](\DateTime.md) |  | [optional] 
-**breakdown** | [**\Swagger\Client\Model\ToolkitDataClassesStockAPIASNBreakdown[]**](ToolkitDataClassesStockAPIASNBreakdown.md) |  | [optional] 
+**breakdown** | [**\Swagger\Client\Model\MintsoftStockAPIASNBreakdown[]**](ToolkitDataClassesStockAPIASNBreakdown.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -64,7 +64,7 @@ class MintsoftOrdersAPINewOrderResult implements ModelInterface, ArrayAccess
         'order_status_id' => 'int',
         'order_status' => 'string',
         'message' => 'string',
-        'order_items' => '\Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrderResultItems[]'
+        'order_items' => '\Swagger\Client\Model\MintsoftOrdersAPINewOrderResultItems[]'
     ];
 
     /**

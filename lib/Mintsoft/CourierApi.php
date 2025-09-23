@@ -109,7 +109,7 @@ class CourierApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ToolkitDataClassesShippingCourierService, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\MintsoftShippingCourierService, HTTP status code, HTTP response headers (array of strings)
      */
     public function courierGetCourierServiceWithHttpInfo($id)
     {
@@ -372,11 +372,11 @@ class CourierApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ToolkitDataClassesShippingCourierServiceType[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\MintsoftShippingCourierServiceType[], HTTP status code, HTTP response headers (array of strings)
      */
     public function courierGetCourierServiceTypesWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesShippingCourierServiceType[]';
+        $returnType = '\Swagger\Client\Model\MintsoftShippingCourierServiceType[]';
         $request = $this->courierGetCourierServiceTypesRequest();
 
         try {
@@ -428,7 +428,7 @@ class CourierApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesShippingCourierServiceType[]',
+                        '\Swagger\Client\Model\MintsoftShippingCourierServiceType[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -468,7 +468,7 @@ class CourierApi
      */
     public function courierGetCourierServiceTypesAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesShippingCourierServiceType[]';
+        $returnType = '\Swagger\Client\Model\MintsoftShippingCourierServiceType[]';
         $request = $this->courierGetCourierServiceTypesRequest();
 
         return $this->client
@@ -618,11 +618,11 @@ class CourierApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ToolkitDataClassesShippingCourierService[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\MintsoftShippingCourierService[], HTTP status code, HTTP response headers (array of strings)
      */
     public function courierGetCourierServicesWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesShippingCourierService[]';
+        $returnType = '\Swagger\Client\Model\MintsoftShippingCourierService[]';
         $request = $this->courierGetCourierServicesRequest();
 
         try {
@@ -674,7 +674,7 @@ class CourierApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesShippingCourierService[]',
+                        '\Swagger\Client\Model\MintsoftShippingCourierService[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -714,7 +714,7 @@ class CourierApi
      */
     public function courierGetCourierServicesAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesShippingCourierService[]';
+        $returnType = '\Swagger\Client\Model\MintsoftShippingCourierService[]';
         $request = $this->courierGetCourierServicesRequest();
 
         return $this->client
@@ -866,11 +866,11 @@ class CourierApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ToolkitDataClassesShippingExternalCourierServiceName[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\MintsoftShippingExternalCourierServiceName[], HTTP status code, HTTP response headers (array of strings)
      */
     public function courierGetExternalCourierServiceNamesWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesShippingExternalCourierServiceName[]';
+        $returnType = '\Swagger\Client\Model\MintsoftShippingExternalCourierServiceName[]';
         $request = $this->courierGetExternalCourierServiceNamesRequest($id);
 
         try {
@@ -922,7 +922,7 @@ class CourierApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesShippingExternalCourierServiceName[]',
+                        '\Swagger\Client\Model\MintsoftShippingExternalCourierServiceName[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -964,7 +964,7 @@ class CourierApi
      */
     public function courierGetExternalCourierServiceNamesAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesShippingExternalCourierServiceName[]';
+        $returnType = '\Swagger\Client\Model\MintsoftShippingExternalCourierServiceName[]';
         $request = $this->courierGetExternalCourierServiceNamesRequest($id);
 
         return $this->client

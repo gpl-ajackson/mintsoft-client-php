@@ -109,7 +109,7 @@ class ReturnApi
      * @param  int $id (required)
      * @param  \Swagger\Client\Model\MintsoftReturnsAPIReturnItemAPI $item (required)
      *
-     * @return array of \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\MintsoftCommonToolkitResult, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \Swagger\Client\ApiException on non-2xx response
      */
@@ -394,7 +394,7 @@ class ReturnApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\MintsoftCommonToolkitResult, HTTP status code, HTTP response headers (array of strings)
      */
     public function returnAllocateItemLocationWithHttpInfo($id, $returnitem_id, $quantity, $location_id)
     {
@@ -698,7 +698,7 @@ class ReturnApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\MintsoftCommonToolkitResult, HTTP status code, HTTP response headers (array of strings)
      */
     public function returnConfirmReturnWithHttpInfo($id)
     {
@@ -963,7 +963,7 @@ class ReturnApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\MintsoftCommonToolkitResult, HTTP status code, HTTP response headers (array of strings)
      */
     public function returnCreateReturnWithHttpInfo($order_id)
     {
@@ -1228,7 +1228,7 @@ class ReturnApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ToolkitDataClassesReturnsReturn, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\MintsoftReturnsReturn, HTTP status code, HTTP response headers (array of strings)
      */
     public function returnGetReturnWithHttpInfo($id)
     {
@@ -1493,11 +1493,11 @@ class ReturnApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ToolkitDataClassesReturnsReturnItem[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\MintsoftReturnsReturnItem[], HTTP status code, HTTP response headers (array of strings)
      */
     public function returnGetReturnItemsWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesReturnsReturnItem[]';
+        $returnType = '\Swagger\Client\Model\MintsoftReturnsReturnItem[]';
         $request = $this->returnGetReturnItemsRequest($id);
 
         try {
@@ -1549,7 +1549,7 @@ class ReturnApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesReturnsReturnItem[]',
+                        '\Swagger\Client\Model\MintsoftReturnsReturnItem[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1591,7 +1591,7 @@ class ReturnApi
      */
     public function returnGetReturnItemsAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesReturnsReturnItem[]';
+        $returnType = '\Swagger\Client\Model\MintsoftReturnsReturnItem[]';
         $request = $this->returnGetReturnItemsRequest($id);
 
         return $this->client
@@ -1756,11 +1756,11 @@ class ReturnApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ToolkitDataClassesReturnsReturnReason[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\MintsoftReturnsReturnReason[], HTTP status code, HTTP response headers (array of strings)
      */
     public function returnGetReturnReasonsWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesReturnsReturnReason[]';
+        $returnType = '\Swagger\Client\Model\MintsoftReturnsReturnReason[]';
         $request = $this->returnGetReturnReasonsRequest();
 
         try {
@@ -1812,7 +1812,7 @@ class ReturnApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesReturnsReturnReason[]',
+                        '\Swagger\Client\Model\MintsoftReturnsReturnReason[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1852,7 +1852,7 @@ class ReturnApi
      */
     public function returnGetReturnReasonsAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesReturnsReturnReason[]';
+        $returnType = '\Swagger\Client\Model\MintsoftReturnsReturnReason[]';
         $request = $this->returnGetReturnReasonsRequest();
 
         return $this->client
@@ -2004,11 +2004,11 @@ class ReturnApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ToolkitDataClassesReturnsReturn[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\MintsoftReturnsReturn[], HTTP status code, HTTP response headers (array of strings)
      */
     public function returnGetReturnsOnDateWithHttpInfo($date)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesReturnsReturn[]';
+        $returnType = '\Swagger\Client\Model\MintsoftReturnsReturn[]';
         $request = $this->returnGetReturnsOnDateRequest($date);
 
         try {
@@ -2060,7 +2060,7 @@ class ReturnApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesReturnsReturn[]',
+                        '\Swagger\Client\Model\MintsoftReturnsReturn[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2102,7 +2102,7 @@ class ReturnApi
      */
     public function returnGetReturnsOnDateAsyncWithHttpInfo($date)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesReturnsReturn[]';
+        $returnType = '\Swagger\Client\Model\MintsoftReturnsReturn[]';
         $request = $this->returnGetReturnsOnDateRequest($date);
 
         return $this->client

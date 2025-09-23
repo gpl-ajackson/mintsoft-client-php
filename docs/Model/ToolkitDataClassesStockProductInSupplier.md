@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **product_id** | **int** |  | [optional] 
 **product_supplier_id** | **int** |  | [optional] 
-**product_supplier** | [**\Swagger\Client\Model\ToolkitDataClassesStockProductSupplier**](ToolkitDataClassesStockProductSupplier.md) |  | [optional] 
+**product_supplier** | [**\Swagger\Client\Model\MintsoftStockProductSupplier**](ToolkitDataClassesStockProductSupplier.md) |  | [optional] 
 **id** | **int** |  | [optional] 
 **last_updated** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **last_updated_by_user** | **string** |  | [optional] 

@@ -67,7 +67,7 @@ class MintsoftStockASNItem implements ModelInterface, ArrayAccess
         'complete' => 'bool',
         'comments' => 'string',
         'source_line_id' => 'string',
-        'asn_item_name_values' => '\Swagger\Client\Model\ToolkitDataClassesStockASNItemNameValue[]',
+        'asn_item_name_values' => '\Swagger\Client\Model\MintsoftStockASNItemNameValue[]',
         'sku' => 'string',
         'ean' => 'string',
         'upc' => 'string',
@@ -76,7 +76,7 @@ class MintsoftStockASNItem implements ModelInterface, ArrayAccess
         'has_expiry_date' => 'bool',
         'has_batch_number' => 'bool',
         'product_image_url' => 'string',
-        'asn_item_allocations' => '\Swagger\Client\Model\ToolkitDataClassesStockASNItemAllocation[]',
+        'asn_item_allocations' => '\Swagger\Client\Model\MintsoftStockASNItemAllocation[]',
         'id' => 'int',
         'last_updated' => '\DateTime',
         'last_updated_by_user' => 'string'

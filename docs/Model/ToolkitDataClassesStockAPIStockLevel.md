@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **bundle** | **bool** |  | [optional] 
 **low_stock_level** | **int** |  | [optional] 
 **last_updated** | [**\DateTime**](\DateTime.md) |  | [optional] 
-**breakdown** | [**\Swagger\Client\Model\ToolkitDataClassesStockAPIStockLevelBreakdown[]**](ToolkitDataClassesStockAPIStockLevelBreakdown.md) |  | [optional] 
+**breakdown** | [**\Swagger\Client\Model\MintsoftStockAPIStockLevelBreakdown[]**](ToolkitDataClassesStockAPIStockLevelBreakdown.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

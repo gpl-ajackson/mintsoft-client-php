@@ -64,7 +64,7 @@ class MintsoftOrdersAPINewOrderItem implements ModelInterface, ArrayAccess
         'unit_price' => 'double',
         'unit_price_vat' => 'double',
         'discount' => 'double',
-        'order_item_name_values' => '\Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrderItemNameValue[]',
+        'order_item_name_values' => '\Swagger\Client\Model\MintsoftOrdersAPINewOrderItemNameValue[]',
         'warehouse_id' => 'int',
         'requested_serial_no' => 'string',
         'requested_batch_no' => 'string',

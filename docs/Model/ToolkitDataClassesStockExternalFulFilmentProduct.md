@@ -9,9 +9,9 @@ Name | Type | Description | Notes
 **carton_label_quantity** | **int** |  | [optional] 
 **total_quantity** | **int** |  | [optional] 
 **quantity_last_updated** | [**\DateTime**](\DateTime.md) |  | [optional] 
-**external_ful_filment_product_inventory** | [**\Swagger\Client\Model\ToolkitDataClassesStockExternalFulFilmentProductInventory[]**](ToolkitDataClassesStockExternalFulFilmentProductInventory.md) |  | [optional] 
+**external_ful_filment_product_inventory** | [**\Swagger\Client\Model\MintsoftStockExternalFulFilmentProductInventory[]**](ToolkitDataClassesStockExternalFulFilmentProductInventory.md) |  | [optional] 
 **product_id** | **int** |  | [optional] 
-**product** | [**\Swagger\Client\Model\ToolkitDataClassesStockProduct**](ToolkitDataClassesStockProduct.md) |  | [optional] 
+**product** | [**\Swagger\Client\Model\MintsoftStockProduct**](ToolkitDataClassesStockProduct.md) |  | [optional] 
 **last_updated** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **last_updated_by_user** | **string** |  | [optional] 
 

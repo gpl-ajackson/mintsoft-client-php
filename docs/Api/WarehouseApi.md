@@ -23,7 +23,7 @@ All URIs are relative to *https://api.mintsoft.co.uk*
 | [**warehouseUpdateWarehouseTransfer**](WarehouseApi.md#warehouseUpdateWarehouseTransfer)   | **POST** /api/WarehouseTransfer/{id}                           | Update WarehouseTransfer Details                                                                               |
 
 # **warehouseBulkStockMovement**
-> \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult[] warehouseBulkStockMovement($action, $requests)
+> \Swagger\Client\Model\MintsoftCommonToolkitResult[] warehouseBulkStockMovement($action, $requests)
 
 
 
@@ -39,7 +39,7 @@ $apiInstance = new Swagger\Client\Api\WarehouseApi(
     new GuzzleHttp\Client()
 );
 $action = 56; // int | 
-$requests = array(new \Swagger\Client\Model\MintsoftWarehouseBookStockRequest()); // \Swagger\Client\Model\ToolkitDataClassesWarehouseBookStockRequest[] | 
+$requests = array(new \Swagger\Client\Model\MintsoftWarehouseBookStockRequest()); // \Swagger\Client\Model\MintsoftWarehouseBookStockRequest[] | 
 
 try {
     $result = $apiInstance->warehouseBulkStockMovement($action, $requests);
@@ -55,11 +55,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **action** | **int**|  |
- **requests** | [**\Swagger\Client\Model\ToolkitDataClassesWarehouseBookStockRequest[]**](../Model/ToolkitDataClassesWarehouseBookStockRequest.md)|  |
+ **requests** | [**\Swagger\Client\Model\MintsoftWarehouseBookStockRequest[]**](../Model/ToolkitDataClassesWarehouseBookStockRequest.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult[]**](../Model/ToolkitDataClassesCommonToolkitResult.md)
+[**\Swagger\Client\Model\MintsoftCommonToolkitResult[]**](../Model/ToolkitDataClassesCommonToolkitResult.md)
 
 ### Authorization
 
@@ -73,7 +73,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **warehouseCancelWarehouseTransfer**
-> \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult warehouseCancelWarehouseTransfer($id)
+> \Swagger\Client\Model\MintsoftCommonToolkitResult warehouseCancelWarehouseTransfer($id)
 
 Cancel WarehouseTransfer
 
@@ -108,7 +108,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
+[**\Swagger\Client\Model\MintsoftCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
 
 ### Authorization
 
@@ -122,7 +122,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **warehouseConfirmWarehouseTransfer**
-> \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult warehouseConfirmWarehouseTransfer($id)
+> \Swagger\Client\Model\MintsoftCommonToolkitResult warehouseConfirmWarehouseTransfer($id)
 
 Confirm WarehouseTransfer
 
@@ -157,7 +157,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
+[**\Swagger\Client\Model\MintsoftCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
 
 ### Authorization
 
@@ -171,7 +171,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **warehouseCreateWarehouseTransfer**
-> \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult warehouseCreateWarehouseTransfer($warehouse_transfer)
+> \Swagger\Client\Model\MintsoftCommonToolkitResult warehouseCreateWarehouseTransfer($warehouse_transfer)
 
 Create new WarehouseTransfer
 
@@ -188,7 +188,7 @@ $apiInstance = new Swagger\Client\Api\WarehouseApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$warehouse_transfer = new \Swagger\Client\Model\MintsoftWarehouseAPIWarehouseTransfer(); // \Swagger\Client\Model\ToolkitDataClassesWarehouseAPIWarehouseTransfer | WarehouseTransfer Json in the Body of the request
+$warehouse_transfer = new \Swagger\Client\Model\MintsoftWarehouseAPIWarehouseTransfer(); // \Swagger\Client\Model\MintsoftWarehouseAPIWarehouseTransfer | WarehouseTransfer Json in the Body of the request
 
 try {
     $result = $apiInstance->warehouseCreateWarehouseTransfer($warehouse_transfer);
@@ -203,11 +203,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **warehouse_transfer** | [**\Swagger\Client\Model\ToolkitDataClassesWarehouseAPIWarehouseTransfer**](../Model/ToolkitDataClassesWarehouseAPIWarehouseTransfer.md)| WarehouseTransfer Json in the Body of the request |
+ **warehouse_transfer** | [**\Swagger\Client\Model\MintsoftWarehouseAPIWarehouseTransfer**](../Model/ToolkitDataClassesWarehouseAPIWarehouseTransfer.md)| WarehouseTransfer Json in the Body of the request |
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
+[**\Swagger\Client\Model\MintsoftCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
 
 ### Authorization
 
@@ -221,7 +221,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **warehouseDeleteWarehouseTransfer**
-> \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult warehouseDeleteWarehouseTransfer($id)
+> \Swagger\Client\Model\MintsoftCommonToolkitResult warehouseDeleteWarehouseTransfer($id)
 
 Delete WarehouseTransfer
 
@@ -256,7 +256,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
+[**\Swagger\Client\Model\MintsoftCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
 
 ### Authorization
 
@@ -270,7 +270,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **warehouseGetLocation**
-> \Swagger\Client\Model\ToolkitDataClassesWarehouseLocation warehouseGetLocation($warehouse_id, $location_id)
+> \Swagger\Client\Model\MintsoftWarehouseLocation warehouseGetLocation($warehouse_id, $location_id)
 
 
 
@@ -305,7 +305,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesWarehouseLocation**](../Model/ToolkitDataClassesWarehouseLocation.md)
+[**\Swagger\Client\Model\MintsoftWarehouseLocation**](../Model/ToolkitDataClassesWarehouseLocation.md)
 
 ### Authorization
 
@@ -319,7 +319,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **warehouseGetLocationTypes**
-> \Swagger\Client\Model\ToolkitDataClassesWarehouseLocationType[] warehouseGetLocationTypes()
+> \Swagger\Client\Model\MintsoftWarehouseLocationType[] warehouseGetLocationTypes()
 
 
 
@@ -348,7 +348,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesWarehouseLocationType[]**](../Model/ToolkitDataClassesWarehouseLocationType.md)
+[**\Swagger\Client\Model\MintsoftWarehouseLocationType[]**](../Model/ToolkitDataClassesWarehouseLocationType.md)
 
 ### Authorization
 
@@ -362,7 +362,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **warehouseGetLocations**
-> \Swagger\Client\Model\ToolkitDataClassesWarehouseLocation[] warehouseGetLocations($warehouse_id, $include_un_assigned)
+> \Swagger\Client\Model\MintsoftWarehouseLocation[] warehouseGetLocations($warehouse_id, $include_un_assigned)
 
 
 
@@ -397,7 +397,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesWarehouseLocation[]**](../Model/ToolkitDataClassesWarehouseLocation.md)
+[**\Swagger\Client\Model\MintsoftWarehouseLocation[]**](../Model/ToolkitDataClassesWarehouseLocation.md)
 
 ### Authorization
 
@@ -456,7 +456,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **warehouseGetWarehouseTransfer**
-> \Swagger\Client\Model\ToolkitDataClassesWarehouseWarehouseTransfer warehouseGetWarehouseTransfer($id)
+> \Swagger\Client\Model\MintsoftWarehouseWarehouseTransfer warehouseGetWarehouseTransfer($id)
 
 Get WarehouseTransfer
 
@@ -491,7 +491,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesWarehouseWarehouseTransfer**](../Model/ToolkitDataClassesWarehouseWarehouseTransfer.md)
+[**\Swagger\Client\Model\MintsoftWarehouseWarehouseTransfer**](../Model/ToolkitDataClassesWarehouseWarehouseTransfer.md)
 
 ### Authorization
 
@@ -505,7 +505,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **warehouseGetWarehouseZones**
-> \Swagger\Client\Model\ToolkitDataClassesWarehouseZone[] warehouseGetWarehouseZones($id)
+> \Swagger\Client\Model\MintsoftWarehouseZone[] warehouseGetWarehouseZones($id)
 
 
 
@@ -538,7 +538,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesWarehouseZone[]**](../Model/ToolkitDataClassesWarehouseZone.md)
+[**\Swagger\Client\Model\MintsoftWarehouseZone[]**](../Model/ToolkitDataClassesWarehouseZone.md)
 
 ### Authorization
 
@@ -552,7 +552,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **warehouseGetWarehouses**
-> \Swagger\Client\Model\ToolkitDataClassesStockWarehouse[] warehouseGetWarehouses()
+> \Swagger\Client\Model\MintsoftStockWarehouse[] warehouseGetWarehouses()
 
 
 
@@ -581,7 +581,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesStockWarehouse[]**](../Model/ToolkitDataClassesStockWarehouse.md)
+[**\Swagger\Client\Model\MintsoftStockWarehouse[]**](../Model/ToolkitDataClassesStockWarehouse.md)
 
 ### Authorization
 
@@ -595,7 +595,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **warehouseListWarehouseTransfers**
-> \Swagger\Client\Model\ToolkitDataClassesWarehouseToReturnWarehouseTransfer[] warehouseListWarehouseTransfers($include_warehouse_transfer_items, $warehouse_transfer_statuses, $page_no, $limit, $client_id, $source_warehouse_id, $destination_warehouse_id, $since_last_updated)
+> \Swagger\Client\Model\MintsoftWarehouseToReturnWarehouseTransfer[] warehouseListWarehouseTransfers($include_warehouse_transfer_items, $warehouse_transfer_statuses, $page_no, $limit, $client_id, $source_warehouse_id, $destination_warehouse_id, $since_last_updated)
 
 
 
@@ -642,7 +642,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesWarehouseToReturnWarehouseTransfer[]**](../Model/ToolkitDataClassesWarehouseToReturnWarehouseTransfer.md)
+[**\Swagger\Client\Model\MintsoftWarehouseToReturnWarehouseTransfer[]**](../Model/ToolkitDataClassesWarehouseToReturnWarehouseTransfer.md)
 
 ### Authorization
 
@@ -656,7 +656,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **warehouseLookupLocationId**
-> \Swagger\Client\Model\ToolkitDataClassesWarehouseLocation warehouseLookupLocationId($warehouse_id, $location)
+> \Swagger\Client\Model\MintsoftWarehouseLocation warehouseLookupLocationId($warehouse_id, $location)
 
 
 
@@ -691,7 +691,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesWarehouseLocation**](../Model/ToolkitDataClassesWarehouseLocation.md)
+[**\Swagger\Client\Model\MintsoftWarehouseLocation**](../Model/ToolkitDataClassesWarehouseLocation.md)
 
 ### Authorization
 
@@ -705,7 +705,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **warehouseStockMovement**
-> \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult warehouseStockMovement($action, $request)
+> \Swagger\Client\Model\MintsoftCommonToolkitResult warehouseStockMovement($action, $request)
 
 
 
@@ -721,7 +721,7 @@ $apiInstance = new Swagger\Client\Api\WarehouseApi(
     new GuzzleHttp\Client()
 );
 $action = 56; // int | 
-$request = new \Swagger\Client\Model\MintsoftWarehouseBookStockRequest(); // \Swagger\Client\Model\ToolkitDataClassesWarehouseBookStockRequest | 
+$request = new \Swagger\Client\Model\MintsoftWarehouseBookStockRequest(); // \Swagger\Client\Model\MintsoftWarehouseBookStockRequest | 
 
 try {
     $result = $apiInstance->warehouseStockMovement($action, $request);
@@ -737,11 +737,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **action** | **int**|  |
- **request** | [**\Swagger\Client\Model\ToolkitDataClassesWarehouseBookStockRequest**](../Model/ToolkitDataClassesWarehouseBookStockRequest.md)|  |
+ **request** | [**\Swagger\Client\Model\MintsoftWarehouseBookStockRequest**](../Model/ToolkitDataClassesWarehouseBookStockRequest.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
+[**\Swagger\Client\Model\MintsoftCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
 
 ### Authorization
 
@@ -755,7 +755,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **warehouseStockMovements**
-> \Swagger\Client\Model\ToolkitDataClassesWarehouseAPIDTOStockMovementDTO[] warehouseStockMovements($warehouse_id, $product_id, $page_no, $limit, $since_date)
+> \Swagger\Client\Model\MintsoftWarehouseAPIDTOStockMovementDTO[] warehouseStockMovements($warehouse_id, $product_id, $page_no, $limit, $since_date)
 
 Get a List of Stock Movements that have happened in a warehouse e.g. moving stock from one location to another
 
@@ -796,7 +796,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesWarehouseAPIDTOStockMovementDTO[]**](../Model/ToolkitDataClassesWarehouseAPIDTOStockMovementDTO.md)
+[**\Swagger\Client\Model\MintsoftWarehouseAPIDTOStockMovementDTO[]**](../Model/ToolkitDataClassesWarehouseAPIDTOStockMovementDTO.md)
 
 ### Authorization
 
@@ -810,7 +810,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **warehouseUpdateWarehouseTransfer**
-> \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult warehouseUpdateWarehouseTransfer($id, $warehouse_transfer)
+> \Swagger\Client\Model\MintsoftCommonToolkitResult warehouseUpdateWarehouseTransfer($id, $warehouse_transfer)
 
 Update WarehouseTransfer Details
 
@@ -828,7 +828,7 @@ $apiInstance = new Swagger\Client\Api\WarehouseApi(
     new GuzzleHttp\Client()
 );
 $id = 56; // int | ID of the WarehouseTransfer
-$warehouse_transfer = new \Swagger\Client\Model\MintsoftWarehouseAPIWarehouseTransfer(); // \Swagger\Client\Model\ToolkitDataClassesWarehouseAPIWarehouseTransfer | 
+$warehouse_transfer = new \Swagger\Client\Model\MintsoftWarehouseAPIWarehouseTransfer(); // \Swagger\Client\Model\MintsoftWarehouseAPIWarehouseTransfer | 
 
 try {
     $result = $apiInstance->warehouseUpdateWarehouseTransfer($id, $warehouse_transfer);
@@ -844,11 +844,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| ID of the WarehouseTransfer |
- **warehouse_transfer** | [**\Swagger\Client\Model\ToolkitDataClassesWarehouseAPIWarehouseTransfer**](../Model/ToolkitDataClassesWarehouseAPIWarehouseTransfer.md)|  |
+ **warehouse_transfer** | [**\Swagger\Client\Model\MintsoftWarehouseAPIWarehouseTransfer**](../Model/ToolkitDataClassesWarehouseAPIWarehouseTransfer.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
+[**\Swagger\Client\Model\MintsoftCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
 
 ### Authorization
 

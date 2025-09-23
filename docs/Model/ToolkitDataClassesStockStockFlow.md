@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 **storage_item_id** | **int** |  | [optional] 
 **parent_storage_item_id** | **int** |  | [optional] 
 **order_id** | **int** |  | [optional] 
-**stock_flow_details** | [**\Swagger\Client\Model\ToolkitDataClassesStockStockFlowDetail[]**](ToolkitDataClassesStockStockFlowDetail.md) |  | [optional] 
+**stock_flow_details** | [**\Swagger\Client\Model\MintsoftStockStockFlowDetail[]**](ToolkitDataClassesStockStockFlowDetail.md) |  | [optional] 
 **sku** | **string** |  | [optional] 
 **warehouse_name** | **string** |  | [optional] 
 **id** | **int** |  | [optional] 

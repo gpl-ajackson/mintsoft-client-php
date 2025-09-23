@@ -72,7 +72,7 @@ class MintsoftStockASN implements ModelInterface, ArrayAccess
         'asn_status_id' => 'int',
         'shipped' => 'bool',
         'hours_logged' => 'double',
-        'items' => '\Swagger\Client\Model\ToolkitDataClassesStockASNItem[]',
+        'items' => '\Swagger\Client\Model\MintsoftStockASNItem[]',
         'warehouse_id' => 'int',
         'client_id' => 'int',
         'id' => 'int',

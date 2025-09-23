@@ -72,7 +72,7 @@ class MintsoftStockInventoryItem implements ModelInterface, ArrayAccess
         'sku' => 'string',
         'warehouse_id' => 'int',
         'location_id' => 'int',
-        'breakdown' => '\Swagger\Client\Model\ToolkitDataClassesStockAPIStockLevelBreakdown[]',
+        'breakdown' => '\Swagger\Client\Model\MintsoftStockAPIStockLevelBreakdown[]',
         'id' => 'int',
         'last_updated' => '\DateTime',
         'last_updated_by_user' => 'string'

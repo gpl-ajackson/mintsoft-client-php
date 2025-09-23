@@ -7,9 +7,9 @@ Name | Type | Description | Notes
 **external_fulfiler** | **string** |  | [optional] 
 **total_stock** | **int** |  | [optional] 
 **on_hand_stock** | **int** |  | [optional] 
-**external_ful_filment_product** | [**\Swagger\Client\Model\ToolkitDataClassesStockExternalFulFilmentProduct**](ToolkitDataClassesStockExternalFulFilmentProduct.md) |  | [optional] 
+**external_ful_filment_product** | [**\Swagger\Client\Model\MintsoftStockExternalFulFilmentProduct**](ToolkitDataClassesStockExternalFulFilmentProduct.md) |  | [optional] 
 **product_id** | **int** |  | [optional] 
-**product** | [**\Swagger\Client\Model\ToolkitDataClassesStockProduct**](ToolkitDataClassesStockProduct.md) |  | [optional] 
+**product** | [**\Swagger\Client\Model\MintsoftStockProduct**](ToolkitDataClassesStockProduct.md) |  | [optional] 
 **last_updated** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **last_updated_by_user** | **string** |  | [optional] 
 

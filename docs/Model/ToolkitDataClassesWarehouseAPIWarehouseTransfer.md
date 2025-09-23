@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **expected_delivery_date** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **comments** | **string** |  | [optional] 
 **warehouse_transfer_status** | **string** |  | [optional] 
-**items** | [**\Swagger\Client\Model\ToolkitDataClassesWarehouseAPIWarehouseTransferItem[]**](ToolkitDataClassesWarehouseAPIWarehouseTransferItem.md) |  | [optional] 
+**items** | [**\Swagger\Client\Model\MintsoftWarehouseAPIWarehouseTransferItem[]**](ToolkitDataClassesWarehouseAPIWarehouseTransferItem.md) |  | [optional] 
 **goods_in_type** | **string** |  | [optional] 
 **quantity** | **int** |  | [optional] 
 **courier_service_id** | **int** |  | [optional] 

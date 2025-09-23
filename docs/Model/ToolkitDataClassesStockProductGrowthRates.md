@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **product_id** | **int** |  | [optional] 
-**product** | [**\Swagger\Client\Model\ToolkitDataClassesStockProduct**](ToolkitDataClassesStockProduct.md) |  | [optional] 
+**product** | [**\Swagger\Client\Model\MintsoftStockProduct**](ToolkitDataClassesStockProduct.md) |  | [optional] 
 **week_no** | **int** |  | [optional] 
 **sales_growth** | **double** |  | [optional] 
 **seasonal_growth** | **double** |  | [optional] 

@@ -57,7 +57,7 @@ class MintsoftShippingShipmentResult implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'shipments' => '\Swagger\Client\Model\ToolkitDataClassesOrdersOrderShipment[]',
+        'shipments' => '\Swagger\Client\Model\MintsoftOrdersOrderShipment[]',
         'id' => 'int',
         'success' => 'bool',
         'message' => 'string',

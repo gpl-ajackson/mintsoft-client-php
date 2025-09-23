@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**order_items** | [**\Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrderItem[]**](ToolkitDataClassesOrdersAPINewOrderItem.md) |  | [optional] 
-**order_name_values** | [**\Swagger\Client\Model\ToolkitDataClassesOrdersAPINewOrderNameValue[]**](ToolkitDataClassesOrdersAPINewOrderNameValue.md) |  | [optional] 
+**order_items** | [**\Swagger\Client\Model\MintsoftOrdersAPINewOrderItem[]**](ToolkitDataClassesOrdersAPINewOrderItem.md) |  | [optional] 
+**order_name_values** | [**\Swagger\Client\Model\MintsoftOrdersAPINewOrderNameValue[]**](ToolkitDataClassesOrdersAPINewOrderNameValue.md) |  | [optional] 
 **order_number** | **string** |  | [optional] 
 **external_order_reference** | **string** |  | [optional] 
 **title** | **string** |  | [optional] 
@@ -50,7 +50,7 @@ Name | Type | Description | Notes
 **total_vat** | **double** |  | [optional] 
 **client_id** | **int** |  | [optional] 
 **number_of_parcels** | **int** |  | [optional] 
-**cash_on_delivery** | [**\Swagger\Client\Model\ToolkitDataClassesOrdersAPICashOnDelivery**](ToolkitDataClassesOrdersAPICashOnDelivery.md) |  | [optional] 
+**cash_on_delivery** | [**\Swagger\Client\Model\MintsoftOrdersAPICashOnDelivery**](ToolkitDataClassesOrdersAPICashOnDelivery.md) |  | [optional] 
 **recipient_type** | **string** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

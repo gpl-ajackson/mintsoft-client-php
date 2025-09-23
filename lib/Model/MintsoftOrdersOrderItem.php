@@ -81,7 +81,7 @@ class MintsoftOrdersOrderItem implements ModelInterface, ArrayAccess
         'total_tax' => 'double',
         'details' => 'string',
         'sku' => 'string',
-        'order_item_name_values' => '\Swagger\Client\Model\ToolkitDataClassesOrdersOrderItemNameValue[]',
+        'order_item_name_values' => '\Swagger\Client\Model\MintsoftOrdersOrderItemNameValue[]',
         'id' => 'int',
         'last_updated' => '\DateTime',
         'last_updated_by_user' => 'string'

@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 **sku** | **string** |  | [optional] 
 **warehouse_id** | **int** |  | [optional] 
 **location_id** | **int** |  | [optional] 
-**breakdown** | [**\Swagger\Client\Model\ToolkitDataClassesStockAPIStockLevelBreakdown[]**](ToolkitDataClassesStockAPIStockLevelBreakdown.md) |  | [optional] 
+**breakdown** | [**\Swagger\Client\Model\MintsoftStockAPIStockLevelBreakdown[]**](ToolkitDataClassesStockAPIStockLevelBreakdown.md) |  | [optional] 
 **id** | **int** |  | [optional] 
 **last_updated** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **last_updated_by_user** | **string** |  | [optional] 

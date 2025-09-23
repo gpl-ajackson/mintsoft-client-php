@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **order_shipment_id** | **int** |  | [optional] 
-**order_shipment** | [**\Swagger\Client\Model\ToolkitDataClassesOrdersOrderShipment**](ToolkitDataClassesOrdersOrderShipment.md) |  | [optional] 
+**order_shipment** | [**\Swagger\Client\Model\MintsoftOrdersOrderShipment**](ToolkitDataClassesOrdersOrderShipment.md) |  | [optional] 
 **tracking_status_id** | **int** |  | [optional] 
 **courier_customer_description** | **string** |  | [optional] 
 **courier_external_description** | **string** |  | [optional] 

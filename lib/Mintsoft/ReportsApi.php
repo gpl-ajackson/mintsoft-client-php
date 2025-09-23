@@ -121,11 +121,11 @@ class ReportsApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ToolkitDataClassesReportsCourierDespatchReportLine[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\MintsoftReportsCourierDespatchReportLine[], HTTP status code, HTTP response headers (array of strings)
      */
     public function reportsCourierDespatchReportWithHttpInfo($despatch_date_start, $despatch_date_end, $courier_id = null, $warehouse_id = null, $breakdown_by_country = null)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesReportsCourierDespatchReportLine[]';
+        $returnType = '\Swagger\Client\Model\MintsoftReportsCourierDespatchReportLine[]';
         $request = $this->reportsCourierDespatchReportRequest($despatch_date_start, $despatch_date_end, $courier_id, $warehouse_id, $breakdown_by_country);
 
         try {
@@ -177,7 +177,7 @@ class ReportsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesReportsCourierDespatchReportLine[]',
+                        '\Swagger\Client\Model\MintsoftReportsCourierDespatchReportLine[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -227,7 +227,7 @@ class ReportsApi
      */
     public function reportsCourierDespatchReportAsyncWithHttpInfo($despatch_date_start, $despatch_date_end, $courier_id = null, $warehouse_id = null, $breakdown_by_country = null)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesReportsCourierDespatchReportLine[]';
+        $returnType = '\Swagger\Client\Model\MintsoftReportsCourierDespatchReportLine[]';
         $request = $this->reportsCourierDespatchReportRequest($despatch_date_start, $despatch_date_end, $courier_id, $warehouse_id, $breakdown_by_country);
 
         return $this->client

@@ -27,7 +27,7 @@ Name | Type | Description | Notes
 **total_tax** | **double** |  | [optional] 
 **details** | **string** |  | [optional] 
 **sku** | **string** |  | [optional] 
-**order_item_name_values** | [**\Swagger\Client\Model\ToolkitDataClassesOrdersOrderItemNameValue[]**](ToolkitDataClassesOrdersOrderItemNameValue.md) |  | [optional] 
+**order_item_name_values** | [**\Swagger\Client\Model\MintsoftOrdersOrderItemNameValue[]**](ToolkitDataClassesOrdersOrderItemNameValue.md) |  | [optional] 
 **id** | **int** |  | [optional] 
 **last_updated** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **last_updated_by_user** | **string** |  | [optional] 

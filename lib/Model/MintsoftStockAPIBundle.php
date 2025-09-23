@@ -60,7 +60,7 @@ class MintsoftStockAPIBundle implements ModelInterface, ArrayAccess
         'sku' => 'string',
         'name' => 'string',
         'packing_instructions' => 'string',
-        'components' => '\Swagger\Client\Model\ToolkitDataClassesStockAPIBundleItem[]',
+        'components' => '\Swagger\Client\Model\MintsoftStockAPIBundleItem[]',
         'client_id' => 'int',
         'id' => 'int',
         'last_updated' => '\DateTime',

@@ -70,7 +70,7 @@ class MintsoftWarehouseToReturnWarehouseTransfer implements ModelInterface, Arra
         'expected_delivery_date' => '\DateTime',
         'comments' => 'string',
         'warehouse_transfer_status' => 'string',
-        'items' => '\Swagger\Client\Model\ToolkitDataClassesWarehouseAPIWarehouseTransferItem[]',
+        'items' => '\Swagger\Client\Model\MintsoftWarehouseAPIWarehouseTransferItem[]',
         'goods_in_type' => 'string',
         'quantity' => 'int',
         'courier_service_id' => 'int',

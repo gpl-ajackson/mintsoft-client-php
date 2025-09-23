@@ -63,7 +63,7 @@ class MintsoftStockExternalFulFilmentProduct implements ModelInterface, ArrayAcc
         'carton_label_quantity' => 'int',
         'total_quantity' => 'int',
         'quantity_last_updated' => '\DateTime',
-        'external_ful_filment_product_inventory' => '\Swagger\Client\Model\ToolkitDataClassesStockExternalFulFilmentProductInventory[]',
+        'external_ful_filment_product_inventory' => '\Swagger\Client\Model\MintsoftStockExternalFulFilmentProductInventory[]',
         'product_id' => 'int',
         'product' => '\Swagger\Client\Model\MintsoftStockProduct',
         'last_updated' => '\DateTime',

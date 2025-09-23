@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **courierGetCourierService**
-> \Swagger\Client\Model\ToolkitDataClassesShippingCourierService courierGetCourierService($id)
+> \Swagger\Client\Model\MintsoftShippingCourierService courierGetCourierService($id)
 
 
 
@@ -44,7 +44,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesShippingCourierService**](../Model/ToolkitDataClassesShippingCourierService.md)
+[**\Swagger\Client\Model\MintsoftShippingCourierService**](../Model/ToolkitDataClassesShippingCourierService.md)
 
 ### Authorization
 
@@ -58,7 +58,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **courierGetCourierServiceTypes**
-> \Swagger\Client\Model\ToolkitDataClassesShippingCourierServiceType[] courierGetCourierServiceTypes()
+> \Swagger\Client\Model\MintsoftShippingCourierServiceType[] courierGetCourierServiceTypes()
 
 
 
@@ -87,7 +87,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesShippingCourierServiceType[]**](../Model/ToolkitDataClassesShippingCourierServiceType.md)
+[**\Swagger\Client\Model\MintsoftShippingCourierServiceType[]**](../Model/ToolkitDataClassesShippingCourierServiceType.md)
 
 ### Authorization
 
@@ -101,7 +101,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **courierGetCourierServices**
-> \Swagger\Client\Model\ToolkitDataClassesShippingCourierService[] courierGetCourierServices()
+> \Swagger\Client\Model\MintsoftShippingCourierService[] courierGetCourierServices()
 
 
 
@@ -130,7 +130,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesShippingCourierService[]**](../Model/ToolkitDataClassesShippingCourierService.md)
+[**\Swagger\Client\Model\MintsoftShippingCourierService[]**](../Model/ToolkitDataClassesShippingCourierService.md)
 
 ### Authorization
 
@@ -144,7 +144,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **courierGetExternalCourierServiceNames**
-> \Swagger\Client\Model\ToolkitDataClassesShippingExternalCourierServiceName[] courierGetExternalCourierServiceNames($id)
+> \Swagger\Client\Model\MintsoftShippingExternalCourierServiceName[] courierGetExternalCourierServiceNames($id)
 
 
 
@@ -177,7 +177,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesShippingExternalCourierServiceName[]**](../Model/ToolkitDataClassesShippingExternalCourierServiceName.md)
+[**\Swagger\Client\Model\MintsoftShippingExternalCourierServiceName[]**](../Model/ToolkitDataClassesShippingExternalCourierServiceName.md)
 
 ### Authorization
 

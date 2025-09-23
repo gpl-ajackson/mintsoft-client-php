@@ -63,7 +63,7 @@ class MintsoftWarehouseWarehouseTransfer implements ModelInterface, ArrayAccess
         'expected_delivery_date' => '\DateTime',
         'comments' => 'string',
         'warehouse_transfer_status' => 'string',
-        'items' => '\Swagger\Client\Model\ToolkitDataClassesWarehouseWarehouseTransferItem[]',
+        'items' => '\Swagger\Client\Model\MintsoftWarehouseWarehouseTransferItem[]',
         'order_id' => 'int',
         'asnid' => 'int',
         'goods_in_type' => 'string',

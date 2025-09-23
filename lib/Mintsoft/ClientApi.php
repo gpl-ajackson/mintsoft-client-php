@@ -111,7 +111,7 @@ class ClientApi
      *
      * @param  \Swagger\Client\Model\MintsoftClientsAPIAddSubClient $client (required)
      *
-     * @return array of \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\MintsoftCommonToolkitResult, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \Swagger\Client\ApiException on non-2xx response
      */
@@ -385,7 +385,7 @@ class ClientApi
      */
     public function clientGetWithHttpInfo($page_no = null, $limit = null, $since_last_updated = null)
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesClientsClient[]';
+        $returnType = '\Swagger\Client\Model\MintsoftClientsClient[]';
         $request = $this->clientGetRequest($page_no, $limit, $since_last_updated);
 
         try {
@@ -645,11 +645,11 @@ class ClientApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ToolkitDataClassesClientsAPISubClient[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\MintsoftClientsAPISubClient[], HTTP status code, HTTP response headers (array of strings)
      */
     public function clientSubClientsWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesClientsAPISubClient[]';
+        $returnType = '\Swagger\Client\Model\MintsoftClientsAPISubClient[]';
         $request = $this->clientSubClientsRequest();
 
         try {
@@ -701,7 +701,7 @@ class ClientApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ToolkitDataClassesClientsAPISubClient[]',
+                        '\Swagger\Client\Model\MintsoftClientsAPISubClient[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -741,7 +741,7 @@ class ClientApi
      */
     public function clientSubClientsAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\ToolkitDataClassesClientsAPISubClient[]';
+        $returnType = '\Swagger\Client\Model\MintsoftClientsAPISubClient[]';
         $request = $this->clientSubClientsRequest();
 
         return $this->client

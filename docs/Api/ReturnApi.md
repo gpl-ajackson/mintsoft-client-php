@@ -14,7 +14,7 @@ All URIs are relative to *https://api.mintsoft.co.uk*
 | [**returnGetReturnsOnDate**](ReturnApi.md#returnGetReturnsOnDate)         | **GET** /api/Return/SearchByDate               |             |
 
 # **returnAddReturnItem**
-> \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult returnAddReturnItem($id, $item)
+> \Swagger\Client\Model\MintsoftCommonToolkitResult returnAddReturnItem($id, $item)
 
 
 
@@ -30,7 +30,7 @@ $apiInstance = new Swagger\Client\Api\ReturnApi(
     new GuzzleHttp\Client()
 );
 $id = 56; // int | 
-$item = new \Swagger\Client\Model\MintsoftReturnsAPIReturnItemAPI(); // \Swagger\Client\Model\ToolkitDataClassesReturnsAPIReturnItemAPI | 
+$item = new \Swagger\Client\Model\MintsoftReturnsAPIReturnItemAPI(); // \Swagger\Client\Model\MintsoftReturnsAPIReturnItemAPI | 
 
 try {
     $result = $apiInstance->returnAddReturnItem($id, $item);
@@ -46,11 +46,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  |
- **item** | [**\Swagger\Client\Model\ToolkitDataClassesReturnsAPIReturnItemAPI**](../Model/ToolkitDataClassesReturnsAPIReturnItemAPI.md)|  |
+ **item** | [**\Swagger\Client\Model\MintsoftReturnsAPIReturnItemAPI**](../Model/ToolkitDataClassesReturnsAPIReturnItemAPI.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
+[**\Swagger\Client\Model\MintsoftCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
 
 ### Authorization
 
@@ -64,7 +64,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **returnAllocateItemLocation**
-> \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult returnAllocateItemLocation($id, $returnitem_id, $quantity, $location_id)
+> \Swagger\Client\Model\MintsoftCommonToolkitResult returnAllocateItemLocation($id, $returnitem_id, $quantity, $location_id)
 
 
 
@@ -103,7 +103,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
+[**\Swagger\Client\Model\MintsoftCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
 
 ### Authorization
 
@@ -117,7 +117,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **returnConfirmReturn**
-> \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult returnConfirmReturn($id)
+> \Swagger\Client\Model\MintsoftCommonToolkitResult returnConfirmReturn($id)
 
 
 
@@ -150,7 +150,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
+[**\Swagger\Client\Model\MintsoftCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
 
 ### Authorization
 
@@ -164,7 +164,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **returnCreateReturn**
-> \Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult returnCreateReturn($order_id)
+> \Swagger\Client\Model\MintsoftCommonToolkitResult returnCreateReturn($order_id)
 
 
 
@@ -197,7 +197,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
+[**\Swagger\Client\Model\MintsoftCommonToolkitResult**](../Model/ToolkitDataClassesCommonToolkitResult.md)
 
 ### Authorization
 
@@ -211,7 +211,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **returnGetReturn**
-> \Swagger\Client\Model\ToolkitDataClassesReturnsReturn returnGetReturn($id)
+> \Swagger\Client\Model\MintsoftReturnsReturn returnGetReturn($id)
 
 
 
@@ -244,7 +244,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesReturnsReturn**](../Model/ToolkitDataClassesReturnsReturn.md)
+[**\Swagger\Client\Model\MintsoftReturnsReturn**](../Model/ToolkitDataClassesReturnsReturn.md)
 
 ### Authorization
 
@@ -258,7 +258,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **returnGetReturnItems**
-> \Swagger\Client\Model\ToolkitDataClassesReturnsReturnItem[] returnGetReturnItems($id)
+> \Swagger\Client\Model\MintsoftReturnsReturnItem[] returnGetReturnItems($id)
 
 
 
@@ -291,7 +291,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesReturnsReturnItem[]**](../Model/ToolkitDataClassesReturnsReturnItem.md)
+[**\Swagger\Client\Model\MintsoftReturnsReturnItem[]**](../Model/ToolkitDataClassesReturnsReturnItem.md)
 
 ### Authorization
 
@@ -305,7 +305,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **returnGetReturnReasons**
-> \Swagger\Client\Model\ToolkitDataClassesReturnsReturnReason[] returnGetReturnReasons()
+> \Swagger\Client\Model\MintsoftReturnsReturnReason[] returnGetReturnReasons()
 
 
 
@@ -334,7 +334,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesReturnsReturnReason[]**](../Model/ToolkitDataClassesReturnsReturnReason.md)
+[**\Swagger\Client\Model\MintsoftReturnsReturnReason[]**](../Model/ToolkitDataClassesReturnsReturnReason.md)
 
 ### Authorization
 
@@ -348,7 +348,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **returnGetReturnsOnDate**
-> \Swagger\Client\Model\ToolkitDataClassesReturnsReturn[] returnGetReturnsOnDate($date)
+> \Swagger\Client\Model\MintsoftReturnsReturn[] returnGetReturnsOnDate($date)
 
 
 
@@ -381,7 +381,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ToolkitDataClassesReturnsReturn[]**](../Model/ToolkitDataClassesReturnsReturn.md)
+[**\Swagger\Client\Model\MintsoftReturnsReturn[]**](../Model/ToolkitDataClassesReturnsReturn.md)
 
 ### Authorization
 
