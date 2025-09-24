@@ -379,7 +379,8 @@ class ClientApi
      */
     public function clientGet($page_no = null, $limit = null, $since_last_updated = null)
     {
-        return $this->clientGetWithHttpInfo($page_no, $limit, $since_last_updated);
+        list($response) = $this->clientGetWithHttpInfo($page_no, $limit, $since_last_updated);
+        return $response;
     }
 
     /**
