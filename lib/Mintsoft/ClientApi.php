@@ -28,15 +28,26 @@
 
 namespace Swagger\Client\Mintsoft;
 
+use DateTime;
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
+use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\Exception\RequestException;
+use GuzzleHttp\Promise\PromiseInterface;
 use GuzzleHttp\Psr7\MultipartStream;
+use GuzzleHttp\Psr7\Query;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
+use InvalidArgumentException;
+use RuntimeException;
+use stdClass;
 use Swagger\Client\ApiException;
 use Swagger\Client\Configuration;
 use Swagger\Client\HeaderSelector;
+use Swagger\Client\Model\MintsoftClientsAPIAddSubClient;
+use Swagger\Client\Model\MintsoftClientsAPISubClient;
+use Swagger\Client\Model\MintsoftClientsClient;
+use Swagger\Client\Model\MintsoftCommonToolkitResult;
 use Swagger\Client\ObjectSerializer;
 
 /**
@@ -92,11 +103,11 @@ class ClientApi
      *
      * Add SubClient
      *
-     * @param  \Swagger\Client\Model\MintsoftClientsAPIAddSubClient $client client (required)
+     * @param  MintsoftClientsAPIAddSubClient $client client (required)
      *
-     * @return \Swagger\Client\Model\MintsoftCommonToolkitResult
-     *@throws \InvalidArgumentException
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @return MintsoftCommonToolkitResult
+     *@throws InvalidArgumentException
+     * @throws ApiException on non-2xx response
      */
     public function clientAddSubClient($client)
     {
@@ -109,11 +120,11 @@ class ClientApi
      *
      * Add SubClient
      *
-     * @param  \Swagger\Client\Model\MintsoftClientsAPIAddSubClient $client (required)
+     * @param  MintsoftClientsAPIAddSubClient $client (required)
      *
      * @return array of \Swagger\Client\Model\MintsoftCommonToolkitResult, HTTP status code, HTTP response headers (array of strings)
-     *@throws \InvalidArgumentException
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     *@throws InvalidArgumentException
+     * @throws ApiException on non-2xx response
      */
     public function clientAddSubClientWithHttpInfo($client)
     {
@@ -184,10 +195,10 @@ class ClientApi
      *
      * Add SubClient
      *
-     * @param  \Swagger\Client\Model\MintsoftClientsAPIAddSubClient $client (required)
+     * @param  MintsoftClientsAPIAddSubClient $client (required)
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     *@throws \InvalidArgumentException
+     * @return PromiseInterface
+     *@throws InvalidArgumentException
      */
     public function clientAddSubClientAsync($client)
     {
@@ -204,10 +215,10 @@ class ClientApi
      *
      * Add SubClient
      *
-     * @param  \Swagger\Client\Model\MintsoftClientsAPIAddSubClient $client (required)
+     * @param  MintsoftClientsAPIAddSubClient $client (required)
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     *@throws \InvalidArgumentException
+     * @return PromiseInterface
+     *@throws InvalidArgumentException
      */
     public function clientAddSubClientAsyncWithHttpInfo($client)
     {
@@ -254,16 +265,16 @@ class ClientApi
     /**
      * Create request for operation 'clientAddSubClient'
      *
-     * @param  \Swagger\Client\Model\MintsoftClientsAPIAddSubClient $client (required)
+     * @param  MintsoftClientsAPIAddSubClient $client (required)
      *
-     * @return \GuzzleHttp\Psr7\Request
-     *@throws \InvalidArgumentException
+     * @return Request
+     *@throws InvalidArgumentException
      */
     protected function clientAddSubClientRequest($client)
     {
         // verify the required parameter 'client' is set
         if ($client === null || (is_array($client) && count($client) === 0)) {
-            throw new \InvalidArgumentException(
+            throw new InvalidArgumentException(
                 'Missing the required parameter $client when calling clientAddSubClient'
             );
         }
@@ -301,7 +312,7 @@ class ClientApi
             
             if($headers['Content-Type'] === 'application/json') {
                 // \stdClass has no __toString(), so we should encode it manually
-                if ($httpBody instanceof \stdClass) {
+                if ($httpBody instanceof stdClass) {
                     $httpBody = \GuzzleHttp\json_encode($httpBody);
                 }
                 // array has no __toString(), so we should encode it manually
@@ -326,7 +337,7 @@ class ClientApi
 
             } else {
                 // for HTTP post (form)
-                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams);
+                $httpBody = Query::build($formParams);
             }
         }
 
@@ -342,7 +353,7 @@ class ClientApi
             $headers
         );
 
-        $query = \GuzzleHttp\Psr7\Query::build($queryParams);
+        $query = Query::build($queryParams);
         return new Request(
             'POST',
             $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
@@ -356,18 +367,19 @@ class ClientApi
      *
      * Get Clients
      *
-     * @param  int $page_no Page Number (optional)
-     * @param  int $limit Number per page (max 100) (optional)
-     * @param  \DateTime $since_last_updated Updated Since (optional)
+     * @param int $page_no Page Number (optional)
+     * @param int $limit Number per page (max 100) (optional)
+     * @param DateTime $since_last_updated Updated Since (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array
+     * @return array of data, HTTP status code, HTTP response headers (array of strings)
+     * @throws InvalidArgumentException
+     * @throws InvalidArgumentException
+     * @throws ApiException on non-2xx response
+     * @throws GuzzleException
      */
     public function clientGet($page_no = null, $limit = null, $since_last_updated = null)
     {
-        list($response) =         $this->clientGetWithHttpInfo($page_no, $limit, $since_last_updated);
-        return $response;
+        return $this->clientGetWithHttpInfo($page_no, $limit, $since_last_updated);
     }
 
     /**
@@ -377,11 +389,11 @@ class ClientApi
      *
      * @param  int $page_no Page Number (optional)
      * @param  int $limit Number per page (max 100) (optional)
-     * @param  \DateTime $since_last_updated Updated Since (optional)
+     * @param  DateTime $since_last_updated Updated Since (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     * @return array of data, HTTP status code, HTTP response headers (array of strings)
+     * @throws InvalidArgumentException
+     * @throws ApiException|GuzzleException on non-2xx response
      */
     public function clientGetWithHttpInfo($page_no = null, $limit = null, $since_last_updated = null)
     {
@@ -446,10 +458,10 @@ class ClientApi
      *
      * @param  int $page_no Page Number (optional)
      * @param  int $limit Number per page (max 100) (optional)
-     * @param  \DateTime $since_last_updated Updated Since (optional)
+     * @param  DateTime $since_last_updated Updated Since (optional)
      *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @throws InvalidArgumentException
+     * @return PromiseInterface
      */
     public function clientGetAsync($page_no = null, $limit = null, $since_last_updated = null)
     {
@@ -468,10 +480,10 @@ class ClientApi
      *
      * @param  int $page_no Page Number (optional)
      * @param  int $limit Number per page (max 100) (optional)
-     * @param  \DateTime $since_last_updated Updated Since (optional)
+     * @param  DateTime $since_last_updated Updated Since (optional)
      *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @throws InvalidArgumentException
+     * @return PromiseInterface
      */
     public function clientGetAsyncWithHttpInfo($page_no = null, $limit = null, $since_last_updated = null)
     {
@@ -521,10 +533,10 @@ class ClientApi
      *
      * @param  int $page_no Page Number (optional)
      * @param  int $limit Number per page (max 100) (optional)
-     * @param  \DateTime $since_last_updated Updated Since (optional)
+     * @param  DateTime $since_last_updated Updated Since (optional)
      *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
+     * @return Request
+     *@throws InvalidArgumentException
      */
     protected function clientGetRequest($page_no = null, $limit = null, $since_last_updated = null)
     {
@@ -571,7 +583,7 @@ class ClientApi
             
             if($headers['Content-Type'] === 'application/json') {
                 // \stdClass has no __toString(), so we should encode it manually
-                if ($httpBody instanceof \stdClass) {
+                if ($httpBody instanceof stdClass) {
                     $httpBody = \GuzzleHttp\json_encode($httpBody);
                 }
                 // array has no __toString(), so we should encode it manually
@@ -596,7 +608,7 @@ class ClientApi
 
             } else {
                 // for HTTP post (form)
-                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams);
+                $httpBody = Query::build($formParams);
             }
         }
 
@@ -612,7 +624,7 @@ class ClientApi
             $headers
         );
 
-        $query = \GuzzleHttp\Psr7\Query::build($queryParams);
+        $query = Query::build($queryParams);
         return new Request(
             'GET',
             $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
@@ -627,9 +639,9 @@ class ClientApi
      * Get a list of SubClients
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\MintsoftClientsAPISubClient[]
+     * @return MintsoftClientsAPISubClient[]
+     *@throws InvalidArgumentException
+     * @throws ApiException on non-2xx response
      */
     public function clientSubClients()
     {
@@ -643,9 +655,9 @@ class ClientApi
      * Get a list of SubClients
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\Model\MintsoftClientsAPISubClient[], HTTP status code, HTTP response headers (array of strings)
+     *@throws InvalidArgumentException
+     * @throws ApiException on non-2xx response
      */
     public function clientSubClientsWithHttpInfo()
     {
@@ -717,8 +729,8 @@ class ClientApi
      * Get a list of SubClients
      *
      *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @throws InvalidArgumentException
+     * @return PromiseInterface
      */
     public function clientSubClientsAsync()
     {
@@ -736,8 +748,8 @@ class ClientApi
      * Get a list of SubClients
      *
      *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @throws InvalidArgumentException
+     * @return PromiseInterface
      */
     public function clientSubClientsAsyncWithHttpInfo()
     {
@@ -785,8 +797,8 @@ class ClientApi
      * Create request for operation 'clientSubClients'
      *
      *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
+     * @return Request
+     *@throws InvalidArgumentException
      */
     protected function clientSubClientsRequest()
     {
@@ -821,7 +833,7 @@ class ClientApi
             
             if($headers['Content-Type'] === 'application/json') {
                 // \stdClass has no __toString(), so we should encode it manually
-                if ($httpBody instanceof \stdClass) {
+                if ($httpBody instanceof stdClass) {
                     $httpBody = \GuzzleHttp\json_encode($httpBody);
                 }
                 // array has no __toString(), so we should encode it manually
@@ -846,7 +858,7 @@ class ClientApi
 
             } else {
                 // for HTTP post (form)
-                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams);
+                $httpBody = Query::build($formParams);
             }
         }
 
@@ -862,7 +874,7 @@ class ClientApi
             $headers
         );
 
-        $query = \GuzzleHttp\Psr7\Query::build($queryParams);
+        $query = Query::build($queryParams);
         return new Request(
             'GET',
             $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
@@ -874,7 +886,7 @@ class ClientApi
     /**
      * Create http client option
      *
-     * @throws \RuntimeException on file opening failure
+     * @throws RuntimeException on file opening failure
      * @return array of http client options
      */
     protected function createHttpClientOption()
@@ -883,7 +895,7 @@ class ClientApi
         if ($this->config->getDebug()) {
             $options[RequestOptions::DEBUG] = fopen($this->config->getDebugFile(), 'ab');
             if (!$options[RequestOptions::DEBUG]) {
-                throw new \RuntimeException('Failed to open the debug file: ' . $this->config->getDebugFile());
+                throw new RuntimeException('Failed to open the debug file: ' . $this->config->getDebugFile());
             }
         }
 
