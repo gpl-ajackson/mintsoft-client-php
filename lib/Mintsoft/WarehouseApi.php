@@ -28,15 +28,31 @@
 
 namespace Swagger\Client\Mintsoft;
 
+use DateTime;
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\RequestException;
+use GuzzleHttp\Promise\PromiseInterface;
 use GuzzleHttp\Psr7\MultipartStream;
+use GuzzleHttp\Psr7\Query;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
+use InvalidArgumentException;
+use RuntimeException;
+use stdClass;
 use Swagger\Client\ApiException;
 use Swagger\Client\Configuration;
 use Swagger\Client\HeaderSelector;
+use Swagger\Client\Model\MintsoftCommonToolkitResult;
+use Swagger\Client\Model\MintsoftStockWarehouse;
+use Swagger\Client\Model\MintsoftWarehouseAPIDTOStockMovementDTO;
+use Swagger\Client\Model\MintsoftWarehouseAPIWarehouseTransfer;
+use Swagger\Client\Model\MintsoftWarehouseBookStockRequest;
+use Swagger\Client\Model\MintsoftWarehouseLocation;
+use Swagger\Client\Model\MintsoftWarehouseLocationType;
+use Swagger\Client\Model\MintsoftWarehouseToReturnWarehouseTransfer;
+use Swagger\Client\Model\MintsoftWarehouseWarehouseTransfer;
+use Swagger\Client\Model\MintsoftWarehouseZone;
 use Swagger\Client\ObjectSerializer;
 
 /**
@@ -91,11 +107,11 @@ class WarehouseApi
      * Operation warehouseBulkStockMovement
      *
      * @param  int $action action (required)
-     * @param  \Swagger\Client\Model\MintsoftWarehouseBookStockRequest[] $requests requests (required)
+     * @param  MintsoftWarehouseBookStockRequest[] $requests requests (required)
      *
-     * @return \Swagger\Client\Model\MintsoftCommonToolkitResult[]
-     *@throws \InvalidArgumentException
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @return MintsoftCommonToolkitResult[]
+     *@throws InvalidArgumentException
+     * @throws ApiException on non-2xx response
      */
     public function warehouseBulkStockMovement($action, $requests)
     {
@@ -107,11 +123,11 @@ class WarehouseApi
      * Operation warehouseBulkStockMovementWithHttpInfo
      *
      * @param  int $action (required)
-     * @param  \Swagger\Client\Model\MintsoftWarehouseBookStockRequest[] $requests (required)
+     * @param  MintsoftWarehouseBookStockRequest[] $requests (required)
      *
      * @return array of \Swagger\Client\Model\MintsoftCommonToolkitResult[], HTTP status code, HTTP response headers (array of strings)
-     *@throws \InvalidArgumentException
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     *@throws InvalidArgumentException
+     * @throws ApiException on non-2xx response
      */
     public function warehouseBulkStockMovementWithHttpInfo($action, $requests)
     {
@@ -183,10 +199,10 @@ class WarehouseApi
      * 
      *
      * @param  int $action (required)
-     * @param  \Swagger\Client\Model\MintsoftWarehouseBookStockRequest[] $requests (required)
+     * @param  MintsoftWarehouseBookStockRequest[] $requests (required)
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     *@throws \InvalidArgumentException
+     * @return PromiseInterface
+     *@throws InvalidArgumentException
      */
     public function warehouseBulkStockMovementAsync($action, $requests)
     {
@@ -204,10 +220,10 @@ class WarehouseApi
      * 
      *
      * @param  int $action (required)
-     * @param  \Swagger\Client\Model\MintsoftWarehouseBookStockRequest[] $requests (required)
+     * @param  MintsoftWarehouseBookStockRequest[] $requests (required)
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     *@throws \InvalidArgumentException
+     * @return PromiseInterface
+     *@throws InvalidArgumentException
      */
     public function warehouseBulkStockMovementAsyncWithHttpInfo($action, $requests)
     {
@@ -255,22 +271,22 @@ class WarehouseApi
      * Create request for operation 'warehouseBulkStockMovement'
      *
      * @param  int $action (required)
-     * @param  \Swagger\Client\Model\MintsoftWarehouseBookStockRequest[] $requests (required)
+     * @param  MintsoftWarehouseBookStockRequest[] $requests (required)
      *
-     * @return \GuzzleHttp\Psr7\Request
-     *@throws \InvalidArgumentException
+     * @return Request
+     *@throws InvalidArgumentException
      */
     protected function warehouseBulkStockMovementRequest($action, $requests)
     {
         // verify the required parameter 'action' is set
         if ($action === null || (is_array($action) && count($action) === 0)) {
-            throw new \InvalidArgumentException(
+            throw new InvalidArgumentException(
                 'Missing the required parameter $action when calling warehouseBulkStockMovement'
             );
         }
         // verify the required parameter 'requests' is set
         if ($requests === null || (is_array($requests) && count($requests) === 0)) {
-            throw new \InvalidArgumentException(
+            throw new InvalidArgumentException(
                 'Missing the required parameter $requests when calling warehouseBulkStockMovement'
             );
         }
@@ -312,7 +328,7 @@ class WarehouseApi
             
             if($headers['Content-Type'] === 'application/json') {
                 // \stdClass has no __toString(), so we should encode it manually
-                if ($httpBody instanceof \stdClass) {
+                if ($httpBody instanceof stdClass) {
                     $httpBody = \GuzzleHttp\json_encode($httpBody);
                 }
                 // array has no __toString(), so we should encode it manually
@@ -337,7 +353,7 @@ class WarehouseApi
 
             } else {
                 // for HTTP post (form)
-                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams);
+                $httpBody = Query::build($formParams);
             }
         }
 
@@ -353,7 +369,7 @@ class WarehouseApi
             $headers
         );
 
-        $query = \GuzzleHttp\Psr7\Query::build($queryParams);
+        $query = Query::build($queryParams);
         return new Request(
             'POST',
             $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
@@ -369,9 +385,9 @@ class WarehouseApi
      *
      * @param  int $id ID of the WarehouseTransfer (required)
      *
-     * @return \Swagger\Client\Model\MintsoftCommonToolkitResult
-     *@throws \InvalidArgumentException
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @return MintsoftCommonToolkitResult
+     *@throws InvalidArgumentException
+     * @throws ApiException on non-2xx response
      */
     public function warehouseCancelWarehouseTransfer($id)
     {
@@ -386,9 +402,9 @@ class WarehouseApi
      *
      * @param  int $id ID of the WarehouseTransfer (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\Model\MintsoftCommonToolkitResult, HTTP status code, HTTP response headers (array of strings)
+     *@throws InvalidArgumentException
+     * @throws ApiException on non-2xx response
      */
     public function warehouseCancelWarehouseTransferWithHttpInfo($id)
     {
@@ -461,8 +477,8 @@ class WarehouseApi
      *
      * @param  int $id ID of the WarehouseTransfer (required)
      *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @throws InvalidArgumentException
+     * @return PromiseInterface
      */
     public function warehouseCancelWarehouseTransferAsync($id)
     {
@@ -481,8 +497,8 @@ class WarehouseApi
      *
      * @param  int $id ID of the WarehouseTransfer (required)
      *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @throws InvalidArgumentException
+     * @return PromiseInterface
      */
     public function warehouseCancelWarehouseTransferAsyncWithHttpInfo($id)
     {
@@ -531,14 +547,14 @@ class WarehouseApi
      *
      * @param  int $id ID of the WarehouseTransfer (required)
      *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
+     * @return Request
+     *@throws InvalidArgumentException
      */
     protected function warehouseCancelWarehouseTransferRequest($id)
     {
         // verify the required parameter 'id' is set
         if ($id === null || (is_array($id) && count($id) === 0)) {
-            throw new \InvalidArgumentException(
+            throw new InvalidArgumentException(
                 'Missing the required parameter $id when calling warehouseCancelWarehouseTransfer'
             );
         }
@@ -581,7 +597,7 @@ class WarehouseApi
             
             if($headers['Content-Type'] === 'application/json') {
                 // \stdClass has no __toString(), so we should encode it manually
-                if ($httpBody instanceof \stdClass) {
+                if ($httpBody instanceof stdClass) {
                     $httpBody = \GuzzleHttp\json_encode($httpBody);
                 }
                 // array has no __toString(), so we should encode it manually
@@ -606,7 +622,7 @@ class WarehouseApi
 
             } else {
                 // for HTTP post (form)
-                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams);
+                $httpBody = Query::build($formParams);
             }
         }
 
@@ -622,7 +638,7 @@ class WarehouseApi
             $headers
         );
 
-        $query = \GuzzleHttp\Psr7\Query::build($queryParams);
+        $query = Query::build($queryParams);
         return new Request(
             'GET',
             $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
@@ -638,9 +654,9 @@ class WarehouseApi
      *
      * @param  int $id ID of the WarehouseTransfer (required)
      *
-     * @return \Swagger\Client\Model\MintsoftCommonToolkitResult
-     *@throws \InvalidArgumentException
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @return MintsoftCommonToolkitResult
+     *@throws InvalidArgumentException
+     * @throws ApiException on non-2xx response
      */
     public function warehouseConfirmWarehouseTransfer($id)
     {
@@ -655,9 +671,9 @@ class WarehouseApi
      *
      * @param  int $id ID of the WarehouseTransfer (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\Model\MintsoftCommonToolkitResult, HTTP status code, HTTP response headers (array of strings)
+     *@throws InvalidArgumentException
+     * @throws ApiException on non-2xx response
      */
     public function warehouseConfirmWarehouseTransferWithHttpInfo($id)
     {
@@ -730,8 +746,8 @@ class WarehouseApi
      *
      * @param  int $id ID of the WarehouseTransfer (required)
      *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @throws InvalidArgumentException
+     * @return PromiseInterface
      */
     public function warehouseConfirmWarehouseTransferAsync($id)
     {
@@ -750,8 +766,8 @@ class WarehouseApi
      *
      * @param  int $id ID of the WarehouseTransfer (required)
      *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @throws InvalidArgumentException
+     * @return PromiseInterface
      */
     public function warehouseConfirmWarehouseTransferAsyncWithHttpInfo($id)
     {
@@ -800,14 +816,14 @@ class WarehouseApi
      *
      * @param  int $id ID of the WarehouseTransfer (required)
      *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
+     * @return Request
+     *@throws InvalidArgumentException
      */
     protected function warehouseConfirmWarehouseTransferRequest($id)
     {
         // verify the required parameter 'id' is set
         if ($id === null || (is_array($id) && count($id) === 0)) {
-            throw new \InvalidArgumentException(
+            throw new InvalidArgumentException(
                 'Missing the required parameter $id when calling warehouseConfirmWarehouseTransfer'
             );
         }
@@ -850,7 +866,7 @@ class WarehouseApi
             
             if($headers['Content-Type'] === 'application/json') {
                 // \stdClass has no __toString(), so we should encode it manually
-                if ($httpBody instanceof \stdClass) {
+                if ($httpBody instanceof stdClass) {
                     $httpBody = \GuzzleHttp\json_encode($httpBody);
                 }
                 // array has no __toString(), so we should encode it manually
@@ -875,7 +891,7 @@ class WarehouseApi
 
             } else {
                 // for HTTP post (form)
-                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams);
+                $httpBody = Query::build($formParams);
             }
         }
 
@@ -891,7 +907,7 @@ class WarehouseApi
             $headers
         );
 
-        $query = \GuzzleHttp\Psr7\Query::build($queryParams);
+        $query = Query::build($queryParams);
         return new Request(
             'GET',
             $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
@@ -905,11 +921,11 @@ class WarehouseApi
      *
      * Create new WarehouseTransfer
      *
-     * @param  \Swagger\Client\Model\MintsoftWarehouseAPIWarehouseTransfer $warehouse_transfer WarehouseTransfer Json in the Body of the request (required)
+     * @param  MintsoftWarehouseAPIWarehouseTransfer $warehouse_transfer WarehouseTransfer Json in the Body of the request (required)
      *
-     * @return \Swagger\Client\Model\MintsoftCommonToolkitResult
-     *@throws \InvalidArgumentException
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @return MintsoftCommonToolkitResult
+     *@throws InvalidArgumentException
+     * @throws ApiException on non-2xx response
      */
     public function warehouseCreateWarehouseTransfer($warehouse_transfer)
     {
@@ -922,11 +938,11 @@ class WarehouseApi
      *
      * Create new WarehouseTransfer
      *
-     * @param  \Swagger\Client\Model\MintsoftWarehouseAPIWarehouseTransfer $warehouse_transfer WarehouseTransfer Json in the Body of the request (required)
+     * @param  MintsoftWarehouseAPIWarehouseTransfer $warehouse_transfer WarehouseTransfer Json in the Body of the request (required)
      *
      * @return array of \Swagger\Client\Model\MintsoftCommonToolkitResult, HTTP status code, HTTP response headers (array of strings)
-     *@throws \InvalidArgumentException
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     *@throws InvalidArgumentException
+     * @throws ApiException on non-2xx response
      */
     public function warehouseCreateWarehouseTransferWithHttpInfo($warehouse_transfer)
     {
@@ -997,10 +1013,10 @@ class WarehouseApi
      *
      * Create new WarehouseTransfer
      *
-     * @param  \Swagger\Client\Model\MintsoftWarehouseAPIWarehouseTransfer $warehouse_transfer WarehouseTransfer Json in the Body of the request (required)
+     * @param  MintsoftWarehouseAPIWarehouseTransfer $warehouse_transfer WarehouseTransfer Json in the Body of the request (required)
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     *@throws \InvalidArgumentException
+     * @return PromiseInterface
+     *@throws InvalidArgumentException
      */
     public function warehouseCreateWarehouseTransferAsync($warehouse_transfer)
     {
@@ -1017,10 +1033,10 @@ class WarehouseApi
      *
      * Create new WarehouseTransfer
      *
-     * @param  \Swagger\Client\Model\MintsoftWarehouseAPIWarehouseTransfer $warehouse_transfer WarehouseTransfer Json in the Body of the request (required)
+     * @param  MintsoftWarehouseAPIWarehouseTransfer $warehouse_transfer WarehouseTransfer Json in the Body of the request (required)
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     *@throws \InvalidArgumentException
+     * @return PromiseInterface
+     *@throws InvalidArgumentException
      */
     public function warehouseCreateWarehouseTransferAsyncWithHttpInfo($warehouse_transfer)
     {
@@ -1067,16 +1083,16 @@ class WarehouseApi
     /**
      * Create request for operation 'warehouseCreateWarehouseTransfer'
      *
-     * @param  \Swagger\Client\Model\MintsoftWarehouseAPIWarehouseTransfer $warehouse_transfer WarehouseTransfer Json in the Body of the request (required)
+     * @param  MintsoftWarehouseAPIWarehouseTransfer $warehouse_transfer WarehouseTransfer Json in the Body of the request (required)
      *
-     * @return \GuzzleHttp\Psr7\Request
-     *@throws \InvalidArgumentException
+     * @return Request
+     *@throws InvalidArgumentException
      */
     protected function warehouseCreateWarehouseTransferRequest($warehouse_transfer)
     {
         // verify the required parameter 'warehouse_transfer' is set
         if ($warehouse_transfer === null || (is_array($warehouse_transfer) && count($warehouse_transfer) === 0)) {
-            throw new \InvalidArgumentException(
+            throw new InvalidArgumentException(
                 'Missing the required parameter $warehouse_transfer when calling warehouseCreateWarehouseTransfer'
             );
         }
@@ -1114,7 +1130,7 @@ class WarehouseApi
             
             if($headers['Content-Type'] === 'application/json') {
                 // \stdClass has no __toString(), so we should encode it manually
-                if ($httpBody instanceof \stdClass) {
+                if ($httpBody instanceof stdClass) {
                     $httpBody = \GuzzleHttp\json_encode($httpBody);
                 }
                 // array has no __toString(), so we should encode it manually
@@ -1139,7 +1155,7 @@ class WarehouseApi
 
             } else {
                 // for HTTP post (form)
-                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams);
+                $httpBody = Query::build($formParams);
             }
         }
 
@@ -1155,7 +1171,7 @@ class WarehouseApi
             $headers
         );
 
-        $query = \GuzzleHttp\Psr7\Query::build($queryParams);
+        $query = Query::build($queryParams);
         return new Request(
             'PUT',
             $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
@@ -1171,9 +1187,9 @@ class WarehouseApi
      *
      * @param  int $id ID of the WarehouseTransfer (required)
      *
-     * @return \Swagger\Client\Model\MintsoftCommonToolkitResult
-     *@throws \InvalidArgumentException
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @return MintsoftCommonToolkitResult
+     *@throws InvalidArgumentException
+     * @throws ApiException on non-2xx response
      */
     public function warehouseDeleteWarehouseTransfer($id)
     {
@@ -1188,9 +1204,9 @@ class WarehouseApi
      *
      * @param  int $id ID of the WarehouseTransfer (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\Model\MintsoftCommonToolkitResult, HTTP status code, HTTP response headers (array of strings)
+     *@throws InvalidArgumentException
+     * @throws ApiException on non-2xx response
      */
     public function warehouseDeleteWarehouseTransferWithHttpInfo($id)
     {
@@ -1263,8 +1279,8 @@ class WarehouseApi
      *
      * @param  int $id ID of the WarehouseTransfer (required)
      *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @throws InvalidArgumentException
+     * @return PromiseInterface
      */
     public function warehouseDeleteWarehouseTransferAsync($id)
     {
@@ -1283,8 +1299,8 @@ class WarehouseApi
      *
      * @param  int $id ID of the WarehouseTransfer (required)
      *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @throws InvalidArgumentException
+     * @return PromiseInterface
      */
     public function warehouseDeleteWarehouseTransferAsyncWithHttpInfo($id)
     {
@@ -1333,14 +1349,14 @@ class WarehouseApi
      *
      * @param  int $id ID of the WarehouseTransfer (required)
      *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
+     * @return Request
+     *@throws InvalidArgumentException
      */
     protected function warehouseDeleteWarehouseTransferRequest($id)
     {
         // verify the required parameter 'id' is set
         if ($id === null || (is_array($id) && count($id) === 0)) {
-            throw new \InvalidArgumentException(
+            throw new InvalidArgumentException(
                 'Missing the required parameter $id when calling warehouseDeleteWarehouseTransfer'
             );
         }
@@ -1383,7 +1399,7 @@ class WarehouseApi
             
             if($headers['Content-Type'] === 'application/json') {
                 // \stdClass has no __toString(), so we should encode it manually
-                if ($httpBody instanceof \stdClass) {
+                if ($httpBody instanceof stdClass) {
                     $httpBody = \GuzzleHttp\json_encode($httpBody);
                 }
                 // array has no __toString(), so we should encode it manually
@@ -1408,7 +1424,7 @@ class WarehouseApi
 
             } else {
                 // for HTTP post (form)
-                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams);
+                $httpBody = Query::build($formParams);
             }
         }
 
@@ -1424,7 +1440,7 @@ class WarehouseApi
             $headers
         );
 
-        $query = \GuzzleHttp\Psr7\Query::build($queryParams);
+        $query = Query::build($queryParams);
         return new Request(
             'DELETE',
             $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
@@ -1439,9 +1455,9 @@ class WarehouseApi
      * @param  int $warehouse_id warehouse_id (required)
      * @param  int $location_id location_id (required)
      *
-     * @return \Swagger\Client\Model\MintsoftWarehouseLocation
-     *@throws \InvalidArgumentException
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @return MintsoftWarehouseLocation
+     *@throws InvalidArgumentException
+     * @throws ApiException on non-2xx response
      */
     public function warehouseGetLocation($warehouse_id, $location_id)
     {
@@ -1455,9 +1471,9 @@ class WarehouseApi
      * @param  int $warehouse_id (required)
      * @param  int $location_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\Model\MintsoftWarehouseLocation, HTTP status code, HTTP response headers (array of strings)
+     *@throws InvalidArgumentException
+     * @throws ApiException on non-2xx response
      */
     public function warehouseGetLocationWithHttpInfo($warehouse_id, $location_id)
     {
@@ -1531,8 +1547,8 @@ class WarehouseApi
      * @param  int $warehouse_id (required)
      * @param  int $location_id (required)
      *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @throws InvalidArgumentException
+     * @return PromiseInterface
      */
     public function warehouseGetLocationAsync($warehouse_id, $location_id)
     {
@@ -1552,8 +1568,8 @@ class WarehouseApi
      * @param  int $warehouse_id (required)
      * @param  int $location_id (required)
      *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @throws InvalidArgumentException
+     * @return PromiseInterface
      */
     public function warehouseGetLocationAsyncWithHttpInfo($warehouse_id, $location_id)
     {
@@ -1603,20 +1619,20 @@ class WarehouseApi
      * @param  int $warehouse_id (required)
      * @param  int $location_id (required)
      *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
+     * @return Request
+     *@throws InvalidArgumentException
      */
     protected function warehouseGetLocationRequest($warehouse_id, $location_id)
     {
         // verify the required parameter 'warehouse_id' is set
         if ($warehouse_id === null || (is_array($warehouse_id) && count($warehouse_id) === 0)) {
-            throw new \InvalidArgumentException(
+            throw new InvalidArgumentException(
                 'Missing the required parameter $warehouse_id when calling warehouseGetLocation'
             );
         }
         // verify the required parameter 'location_id' is set
         if ($location_id === null || (is_array($location_id) && count($location_id) === 0)) {
-            throw new \InvalidArgumentException(
+            throw new InvalidArgumentException(
                 'Missing the required parameter $location_id when calling warehouseGetLocation'
             );
         }
@@ -1667,7 +1683,7 @@ class WarehouseApi
             
             if($headers['Content-Type'] === 'application/json') {
                 // \stdClass has no __toString(), so we should encode it manually
-                if ($httpBody instanceof \stdClass) {
+                if ($httpBody instanceof stdClass) {
                     $httpBody = \GuzzleHttp\json_encode($httpBody);
                 }
                 // array has no __toString(), so we should encode it manually
@@ -1692,7 +1708,7 @@ class WarehouseApi
 
             } else {
                 // for HTTP post (form)
-                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams);
+                $httpBody = Query::build($formParams);
             }
         }
 
@@ -1708,7 +1724,7 @@ class WarehouseApi
             $headers
         );
 
-        $query = \GuzzleHttp\Psr7\Query::build($queryParams);
+        $query = Query::build($queryParams);
         return new Request(
             'GET',
             $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
@@ -1721,9 +1737,9 @@ class WarehouseApi
      * Operation warehouseGetLocationTypes
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\MintsoftWarehouseLocationType[]
+     * @return MintsoftWarehouseLocationType[]
+     *@throws InvalidArgumentException
+     * @throws ApiException on non-2xx response
      */
     public function warehouseGetLocationTypes()
     {
@@ -1735,9 +1751,9 @@ class WarehouseApi
      * Operation warehouseGetLocationTypesWithHttpInfo
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\Model\MintsoftWarehouseLocationType[], HTTP status code, HTTP response headers (array of strings)
+     *@throws InvalidArgumentException
+     * @throws ApiException on non-2xx response
      */
     public function warehouseGetLocationTypesWithHttpInfo()
     {
@@ -1809,8 +1825,8 @@ class WarehouseApi
      * 
      *
      *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @throws InvalidArgumentException
+     * @return PromiseInterface
      */
     public function warehouseGetLocationTypesAsync()
     {
@@ -1828,8 +1844,8 @@ class WarehouseApi
      * 
      *
      *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @throws InvalidArgumentException
+     * @return PromiseInterface
      */
     public function warehouseGetLocationTypesAsyncWithHttpInfo()
     {
@@ -1877,8 +1893,8 @@ class WarehouseApi
      * Create request for operation 'warehouseGetLocationTypes'
      *
      *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
+     * @return Request
+     *@throws InvalidArgumentException
      */
     protected function warehouseGetLocationTypesRequest()
     {
@@ -1913,7 +1929,7 @@ class WarehouseApi
             
             if($headers['Content-Type'] === 'application/json') {
                 // \stdClass has no __toString(), so we should encode it manually
-                if ($httpBody instanceof \stdClass) {
+                if ($httpBody instanceof stdClass) {
                     $httpBody = \GuzzleHttp\json_encode($httpBody);
                 }
                 // array has no __toString(), so we should encode it manually
@@ -1938,7 +1954,7 @@ class WarehouseApi
 
             } else {
                 // for HTTP post (form)
-                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams);
+                $httpBody = Query::build($formParams);
             }
         }
 
@@ -1954,7 +1970,7 @@ class WarehouseApi
             $headers
         );
 
-        $query = \GuzzleHttp\Psr7\Query::build($queryParams);
+        $query = Query::build($queryParams);
         return new Request(
             'GET',
             $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
@@ -1969,9 +1985,9 @@ class WarehouseApi
      * @param  int $warehouse_id warehouse_id (required)
      * @param  bool $include_un_assigned include_un_assigned (optional)
      *
-     * @return \Swagger\Client\Model\MintsoftWarehouseLocation[]
-     *@throws \InvalidArgumentException
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @return array
+     * @throws InvalidArgumentException
+     * @throws ApiException on non-2xx response
      */
     public function warehouseGetLocations($warehouse_id, $include_un_assigned = null)
     {
@@ -1985,9 +2001,9 @@ class WarehouseApi
      * @param  int $warehouse_id (required)
      * @param  bool $include_un_assigned (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\Model\MintsoftWarehouseLocation[], HTTP status code, HTTP response headers (array of strings)
+     *@throws InvalidArgumentException
+     * @throws ApiException on non-2xx response
      */
     public function warehouseGetLocationsWithHttpInfo($warehouse_id, $include_un_assigned = null)
     {
@@ -2061,8 +2077,8 @@ class WarehouseApi
      * @param  int $warehouse_id (required)
      * @param  bool $include_un_assigned (optional)
      *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @throws InvalidArgumentException
+     * @return PromiseInterface
      */
     public function warehouseGetLocationsAsync($warehouse_id, $include_un_assigned = null)
     {
@@ -2082,8 +2098,8 @@ class WarehouseApi
      * @param  int $warehouse_id (required)
      * @param  bool $include_un_assigned (optional)
      *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @throws InvalidArgumentException
+     * @return PromiseInterface
      */
     public function warehouseGetLocationsAsyncWithHttpInfo($warehouse_id, $include_un_assigned = null)
     {
@@ -2133,14 +2149,14 @@ class WarehouseApi
      * @param  int $warehouse_id (required)
      * @param  bool $include_un_assigned (optional)
      *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
+     * @return Request
+     *@throws InvalidArgumentException
      */
     protected function warehouseGetLocationsRequest($warehouse_id, $include_un_assigned = null)
     {
         // verify the required parameter 'warehouse_id' is set
         if ($warehouse_id === null || (is_array($warehouse_id) && count($warehouse_id) === 0)) {
-            throw new \InvalidArgumentException(
+            throw new InvalidArgumentException(
                 'Missing the required parameter $warehouse_id when calling warehouseGetLocations'
             );
         }
@@ -2187,7 +2203,7 @@ class WarehouseApi
             
             if($headers['Content-Type'] === 'application/json') {
                 // \stdClass has no __toString(), so we should encode it manually
-                if ($httpBody instanceof \stdClass) {
+                if ($httpBody instanceof stdClass) {
                     $httpBody = \GuzzleHttp\json_encode($httpBody);
                 }
                 // array has no __toString(), so we should encode it manually
@@ -2212,7 +2228,7 @@ class WarehouseApi
 
             } else {
                 // for HTTP post (form)
-                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams);
+                $httpBody = Query::build($formParams);
             }
         }
 
@@ -2228,7 +2244,7 @@ class WarehouseApi
             $headers
         );
 
-        $query = \GuzzleHttp\Psr7\Query::build($queryParams);
+        $query = Query::build($queryParams);
         return new Request(
             'GET',
             $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
@@ -2243,9 +2259,9 @@ class WarehouseApi
      * Get WarehouseTransfer Statuses
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
      * @return string[]
+     * @throws InvalidArgumentException
+     * @throws ApiException on non-2xx response
      */
     public function warehouseGetStatuses()
     {
@@ -2259,9 +2275,9 @@ class WarehouseApi
      * Get WarehouseTransfer Statuses
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
      * @return array of string[], HTTP status code, HTTP response headers (array of strings)
+     *@throws InvalidArgumentException
+     * @throws ApiException on non-2xx response
      */
     public function warehouseGetStatusesWithHttpInfo()
     {
@@ -2333,8 +2349,8 @@ class WarehouseApi
      * Get WarehouseTransfer Statuses
      *
      *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @throws InvalidArgumentException
+     * @return PromiseInterface
      */
     public function warehouseGetStatusesAsync()
     {
@@ -2352,8 +2368,8 @@ class WarehouseApi
      * Get WarehouseTransfer Statuses
      *
      *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @throws InvalidArgumentException
+     * @return PromiseInterface
      */
     public function warehouseGetStatusesAsyncWithHttpInfo()
     {
@@ -2401,8 +2417,8 @@ class WarehouseApi
      * Create request for operation 'warehouseGetStatuses'
      *
      *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
+     * @return Request
+     *@throws InvalidArgumentException
      */
     protected function warehouseGetStatusesRequest()
     {
@@ -2437,7 +2453,7 @@ class WarehouseApi
             
             if($headers['Content-Type'] === 'application/json') {
                 // \stdClass has no __toString(), so we should encode it manually
-                if ($httpBody instanceof \stdClass) {
+                if ($httpBody instanceof stdClass) {
                     $httpBody = \GuzzleHttp\json_encode($httpBody);
                 }
                 // array has no __toString(), so we should encode it manually
@@ -2462,7 +2478,7 @@ class WarehouseApi
 
             } else {
                 // for HTTP post (form)
-                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams);
+                $httpBody = Query::build($formParams);
             }
         }
 
@@ -2478,7 +2494,7 @@ class WarehouseApi
             $headers
         );
 
-        $query = \GuzzleHttp\Psr7\Query::build($queryParams);
+        $query = Query::build($queryParams);
         return new Request(
             'GET',
             $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
@@ -2494,9 +2510,9 @@ class WarehouseApi
      *
      * @param  int $id ID of the WarehouseTransfer (required)
      *
-     * @return \Swagger\Client\Model\MintsoftWarehouseWarehouseTransfer
-     *@throws \InvalidArgumentException
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @return MintsoftWarehouseWarehouseTransfer
+     *@throws InvalidArgumentException
+     * @throws ApiException on non-2xx response
      */
     public function warehouseGetWarehouseTransfer($id)
     {
@@ -2511,9 +2527,9 @@ class WarehouseApi
      *
      * @param  int $id ID of the WarehouseTransfer (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\Model\MintsoftWarehouseWarehouseTransfer, HTTP status code, HTTP response headers (array of strings)
+     *@throws InvalidArgumentException
+     * @throws ApiException on non-2xx response
      */
     public function warehouseGetWarehouseTransferWithHttpInfo($id)
     {
@@ -2586,8 +2602,8 @@ class WarehouseApi
      *
      * @param  int $id ID of the WarehouseTransfer (required)
      *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @throws InvalidArgumentException
+     * @return PromiseInterface
      */
     public function warehouseGetWarehouseTransferAsync($id)
     {
@@ -2606,8 +2622,8 @@ class WarehouseApi
      *
      * @param  int $id ID of the WarehouseTransfer (required)
      *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @throws InvalidArgumentException
+     * @return PromiseInterface
      */
     public function warehouseGetWarehouseTransferAsyncWithHttpInfo($id)
     {
@@ -2656,14 +2672,14 @@ class WarehouseApi
      *
      * @param  int $id ID of the WarehouseTransfer (required)
      *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
+     * @return Request
+     *@throws InvalidArgumentException
      */
     protected function warehouseGetWarehouseTransferRequest($id)
     {
         // verify the required parameter 'id' is set
         if ($id === null || (is_array($id) && count($id) === 0)) {
-            throw new \InvalidArgumentException(
+            throw new InvalidArgumentException(
                 'Missing the required parameter $id when calling warehouseGetWarehouseTransfer'
             );
         }
@@ -2706,7 +2722,7 @@ class WarehouseApi
             
             if($headers['Content-Type'] === 'application/json') {
                 // \stdClass has no __toString(), so we should encode it manually
-                if ($httpBody instanceof \stdClass) {
+                if ($httpBody instanceof stdClass) {
                     $httpBody = \GuzzleHttp\json_encode($httpBody);
                 }
                 // array has no __toString(), so we should encode it manually
@@ -2731,7 +2747,7 @@ class WarehouseApi
 
             } else {
                 // for HTTP post (form)
-                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams);
+                $httpBody = Query::build($formParams);
             }
         }
 
@@ -2747,7 +2763,7 @@ class WarehouseApi
             $headers
         );
 
-        $query = \GuzzleHttp\Psr7\Query::build($queryParams);
+        $query = Query::build($queryParams);
         return new Request(
             'GET',
             $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
@@ -2761,9 +2777,9 @@ class WarehouseApi
      *
      * @param  int $id id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\MintsoftWarehouseZone[]
+     * @return MintsoftWarehouseZone[]
+     *@throws InvalidArgumentException
+     * @throws ApiException on non-2xx response
      */
     public function warehouseGetWarehouseZones($id)
     {
@@ -2776,9 +2792,9 @@ class WarehouseApi
      *
      * @param  int $id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\Model\MintsoftWarehouseZone[], HTTP status code, HTTP response headers (array of strings)
+     *@throws InvalidArgumentException
+     * @throws ApiException on non-2xx response
      */
     public function warehouseGetWarehouseZonesWithHttpInfo($id)
     {
@@ -2851,8 +2867,8 @@ class WarehouseApi
      *
      * @param  int $id (required)
      *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @throws InvalidArgumentException
+     * @return PromiseInterface
      */
     public function warehouseGetWarehouseZonesAsync($id)
     {
@@ -2871,8 +2887,8 @@ class WarehouseApi
      *
      * @param  int $id (required)
      *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @throws InvalidArgumentException
+     * @return PromiseInterface
      */
     public function warehouseGetWarehouseZonesAsyncWithHttpInfo($id)
     {
@@ -2921,14 +2937,14 @@ class WarehouseApi
      *
      * @param  int $id (required)
      *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
+     * @return Request
+     *@throws InvalidArgumentException
      */
     protected function warehouseGetWarehouseZonesRequest($id)
     {
         // verify the required parameter 'id' is set
         if ($id === null || (is_array($id) && count($id) === 0)) {
-            throw new \InvalidArgumentException(
+            throw new InvalidArgumentException(
                 'Missing the required parameter $id when calling warehouseGetWarehouseZones'
             );
         }
@@ -2971,7 +2987,7 @@ class WarehouseApi
             
             if($headers['Content-Type'] === 'application/json') {
                 // \stdClass has no __toString(), so we should encode it manually
-                if ($httpBody instanceof \stdClass) {
+                if ($httpBody instanceof stdClass) {
                     $httpBody = \GuzzleHttp\json_encode($httpBody);
                 }
                 // array has no __toString(), so we should encode it manually
@@ -2996,7 +3012,7 @@ class WarehouseApi
 
             } else {
                 // for HTTP post (form)
-                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams);
+                $httpBody = Query::build($formParams);
             }
         }
 
@@ -3012,7 +3028,7 @@ class WarehouseApi
             $headers
         );
 
-        $query = \GuzzleHttp\Psr7\Query::build($queryParams);
+        $query = Query::build($queryParams);
         return new Request(
             'GET',
             $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
@@ -3025,9 +3041,9 @@ class WarehouseApi
      * Operation warehouseGetWarehouses
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\MintsoftStockWarehouse[]
+     * @return MintsoftStockWarehouse[]
+     *@throws InvalidArgumentException
+     * @throws ApiException on non-2xx response
      */
     public function warehouseGetWarehouses()
     {
@@ -3039,9 +3055,9 @@ class WarehouseApi
      * Operation warehouseGetWarehousesWithHttpInfo
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\Model\MintsoftStockWarehouse[], HTTP status code, HTTP response headers (array of strings)
+     *@throws InvalidArgumentException
+     * @throws ApiException on non-2xx response
      */
     public function warehouseGetWarehousesWithHttpInfo()
     {
@@ -3113,8 +3129,8 @@ class WarehouseApi
      * 
      *
      *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @throws InvalidArgumentException
+     * @return PromiseInterface
      */
     public function warehouseGetWarehousesAsync()
     {
@@ -3132,8 +3148,8 @@ class WarehouseApi
      * 
      *
      *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @throws InvalidArgumentException
+     * @return PromiseInterface
      */
     public function warehouseGetWarehousesAsyncWithHttpInfo()
     {
@@ -3181,8 +3197,8 @@ class WarehouseApi
      * Create request for operation 'warehouseGetWarehouses'
      *
      *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
+     * @throws InvalidArgumentException
+     * @return Request
      */
     protected function warehouseGetWarehousesRequest()
     {
@@ -3217,7 +3233,7 @@ class WarehouseApi
             
             if($headers['Content-Type'] === 'application/json') {
                 // \stdClass has no __toString(), so we should encode it manually
-                if ($httpBody instanceof \stdClass) {
+                if ($httpBody instanceof stdClass) {
                     $httpBody = \GuzzleHttp\json_encode($httpBody);
                 }
                 // array has no __toString(), so we should encode it manually
@@ -3242,7 +3258,7 @@ class WarehouseApi
 
             } else {
                 // for HTTP post (form)
-                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams);
+                $httpBody = Query::build($formParams);
             }
         }
 
@@ -3258,7 +3274,7 @@ class WarehouseApi
             $headers
         );
 
-        $query = \GuzzleHttp\Psr7\Query::build($queryParams);
+        $query = Query::build($queryParams);
         return new Request(
             'GET',
             $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
@@ -3277,11 +3293,11 @@ class WarehouseApi
      * @param  int $client_id client_id (optional)
      * @param  int $source_warehouse_id source_warehouse_id (optional)
      * @param  int $destination_warehouse_id destination_warehouse_id (optional)
-     * @param  \DateTime $since_last_updated since_last_updated (optional)
+     * @param  DateTime $since_last_updated since_last_updated (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\MintsoftWarehouseToReturnWarehouseTransfer[]
+     * @return MintsoftWarehouseToReturnWarehouseTransfer[]
+     *@throws ApiException on non-2xx response
+     * @throws InvalidArgumentException
      */
     public function warehouseListWarehouseTransfers($include_warehouse_transfer_items = null, $warehouse_transfer_statuses = null, $page_no = null, $limit = null, $client_id = null, $source_warehouse_id = null, $destination_warehouse_id = null, $since_last_updated = null)
     {
@@ -3299,11 +3315,11 @@ class WarehouseApi
      * @param  int $client_id (optional)
      * @param  int $source_warehouse_id (optional)
      * @param  int $destination_warehouse_id (optional)
-     * @param  \DateTime $since_last_updated (optional)
+     * @param  DateTime $since_last_updated (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\Model\MintsoftWarehouseToReturnWarehouseTransfer[], HTTP status code, HTTP response headers (array of strings)
+     *@throws ApiException on non-2xx response
+     * @throws InvalidArgumentException
      */
     public function warehouseListWarehouseTransfersWithHttpInfo($include_warehouse_transfer_items = null, $warehouse_transfer_statuses = null, $page_no = null, $limit = null, $client_id = null, $source_warehouse_id = null, $destination_warehouse_id = null, $since_last_updated = null)
     {
@@ -3381,10 +3397,10 @@ class WarehouseApi
      * @param  int $client_id (optional)
      * @param  int $source_warehouse_id (optional)
      * @param  int $destination_warehouse_id (optional)
-     * @param  \DateTime $since_last_updated (optional)
+     * @param  DateTime $since_last_updated (optional)
      *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @throws InvalidArgumentException
+     * @return PromiseInterface
      */
     public function warehouseListWarehouseTransfersAsync($include_warehouse_transfer_items = null, $warehouse_transfer_statuses = null, $page_no = null, $limit = null, $client_id = null, $source_warehouse_id = null, $destination_warehouse_id = null, $since_last_updated = null)
     {
@@ -3408,10 +3424,10 @@ class WarehouseApi
      * @param  int $client_id (optional)
      * @param  int $source_warehouse_id (optional)
      * @param  int $destination_warehouse_id (optional)
-     * @param  \DateTime $since_last_updated (optional)
+     * @param  DateTime $since_last_updated (optional)
      *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @throws InvalidArgumentException
+     * @return PromiseInterface
      */
     public function warehouseListWarehouseTransfersAsyncWithHttpInfo($include_warehouse_transfer_items = null, $warehouse_transfer_statuses = null, $page_no = null, $limit = null, $client_id = null, $source_warehouse_id = null, $destination_warehouse_id = null, $since_last_updated = null)
     {
@@ -3465,10 +3481,10 @@ class WarehouseApi
      * @param  int $client_id (optional)
      * @param  int $source_warehouse_id (optional)
      * @param  int $destination_warehouse_id (optional)
-     * @param  \DateTime $since_last_updated (optional)
+     * @param  DateTime $since_last_updated (optional)
      *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
+     * @throws InvalidArgumentException
+     * @return Request
      */
     protected function warehouseListWarehouseTransfersRequest($include_warehouse_transfer_items = null, $warehouse_transfer_statuses = null, $page_no = null, $limit = null, $client_id = null, $source_warehouse_id = null, $destination_warehouse_id = null, $since_last_updated = null)
     {
@@ -3535,7 +3551,7 @@ class WarehouseApi
             
             if($headers['Content-Type'] === 'application/json') {
                 // \stdClass has no __toString(), so we should encode it manually
-                if ($httpBody instanceof \stdClass) {
+                if ($httpBody instanceof stdClass) {
                     $httpBody = \GuzzleHttp\json_encode($httpBody);
                 }
                 // array has no __toString(), so we should encode it manually
@@ -3560,7 +3576,7 @@ class WarehouseApi
 
             } else {
                 // for HTTP post (form)
-                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams);
+                $httpBody = Query::build($formParams);
             }
         }
 
@@ -3576,7 +3592,7 @@ class WarehouseApi
             $headers
         );
 
-        $query = \GuzzleHttp\Psr7\Query::build($queryParams);
+        $query = Query::build($queryParams);
         return new Request(
             'GET',
             $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
@@ -3591,9 +3607,9 @@ class WarehouseApi
      * @param  int $warehouse_id warehouse_id (required)
      * @param  string $location location (required)
      *
-     * @return \Swagger\Client\Model\MintsoftWarehouseLocation
-     *@throws \InvalidArgumentException
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @return MintsoftWarehouseLocation
+     *@throws InvalidArgumentException
+     * @throws ApiException on non-2xx response
      */
     public function warehouseLookupLocationId($warehouse_id, $location)
     {
@@ -3607,9 +3623,9 @@ class WarehouseApi
      * @param  int $warehouse_id (required)
      * @param  string $location (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\Model\MintsoftWarehouseLocation, HTTP status code, HTTP response headers (array of strings)
+     *@throws InvalidArgumentException
+     * @throws ApiException on non-2xx response
      */
     public function warehouseLookupLocationIdWithHttpInfo($warehouse_id, $location)
     {
@@ -3683,8 +3699,8 @@ class WarehouseApi
      * @param  int $warehouse_id (required)
      * @param  string $location (required)
      *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @throws InvalidArgumentException
+     * @return PromiseInterface
      */
     public function warehouseLookupLocationIdAsync($warehouse_id, $location)
     {
@@ -3704,8 +3720,8 @@ class WarehouseApi
      * @param  int $warehouse_id (required)
      * @param  string $location (required)
      *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @throws InvalidArgumentException
+     * @return PromiseInterface
      */
     public function warehouseLookupLocationIdAsyncWithHttpInfo($warehouse_id, $location)
     {
@@ -3755,20 +3771,20 @@ class WarehouseApi
      * @param  int $warehouse_id (required)
      * @param  string $location (required)
      *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
+     * @throws InvalidArgumentException
+     * @return Request
      */
     protected function warehouseLookupLocationIdRequest($warehouse_id, $location)
     {
         // verify the required parameter 'warehouse_id' is set
         if ($warehouse_id === null || (is_array($warehouse_id) && count($warehouse_id) === 0)) {
-            throw new \InvalidArgumentException(
+            throw new InvalidArgumentException(
                 'Missing the required parameter $warehouse_id when calling warehouseLookupLocationId'
             );
         }
         // verify the required parameter 'location' is set
         if ($location === null || (is_array($location) && count($location) === 0)) {
-            throw new \InvalidArgumentException(
+            throw new InvalidArgumentException(
                 'Missing the required parameter $location when calling warehouseLookupLocationId'
             );
         }
@@ -3815,7 +3831,7 @@ class WarehouseApi
             
             if($headers['Content-Type'] === 'application/json') {
                 // \stdClass has no __toString(), so we should encode it manually
-                if ($httpBody instanceof \stdClass) {
+                if ($httpBody instanceof stdClass) {
                     $httpBody = \GuzzleHttp\json_encode($httpBody);
                 }
                 // array has no __toString(), so we should encode it manually
@@ -3840,7 +3856,7 @@ class WarehouseApi
 
             } else {
                 // for HTTP post (form)
-                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams);
+                $httpBody = Query::build($formParams);
             }
         }
 
@@ -3856,7 +3872,7 @@ class WarehouseApi
             $headers
         );
 
-        $query = \GuzzleHttp\Psr7\Query::build($queryParams);
+        $query = Query::build($queryParams);
         return new Request(
             'GET',
             $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
@@ -3869,11 +3885,11 @@ class WarehouseApi
      * Operation warehouseStockMovement
      *
      * @param  int $action action (required)
-     * @param  \Swagger\Client\Model\MintsoftWarehouseBookStockRequest $request request (required)
+     * @param  MintsoftWarehouseBookStockRequest $request request (required)
      *
-     * @return \Swagger\Client\Model\MintsoftCommonToolkitResult
-     *@throws \InvalidArgumentException
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @return MintsoftCommonToolkitResult
+     *@throws InvalidArgumentException
+     * @throws ApiException on non-2xx response
      */
     public function warehouseStockMovement($action, $request)
     {
@@ -3885,11 +3901,11 @@ class WarehouseApi
      * Operation warehouseStockMovementWithHttpInfo
      *
      * @param  int $action (required)
-     * @param  \Swagger\Client\Model\MintsoftWarehouseBookStockRequest $request (required)
+     * @param  MintsoftWarehouseBookStockRequest $request (required)
      *
      * @return array of \Swagger\Client\Model\MintsoftCommonToolkitResult, HTTP status code, HTTP response headers (array of strings)
-     *@throws \InvalidArgumentException
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     *@throws InvalidArgumentException
+     * @throws ApiException on non-2xx response
      */
     public function warehouseStockMovementWithHttpInfo($action, $request)
     {
@@ -3961,10 +3977,10 @@ class WarehouseApi
      * 
      *
      * @param  int $action (required)
-     * @param  \Swagger\Client\Model\MintsoftWarehouseBookStockRequest $request (required)
+     * @param  MintsoftWarehouseBookStockRequest $request (required)
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     *@throws \InvalidArgumentException
+     * @return PromiseInterface
+     *@throws InvalidArgumentException
      */
     public function warehouseStockMovementAsync($action, $request)
     {
@@ -3982,10 +3998,10 @@ class WarehouseApi
      * 
      *
      * @param  int $action (required)
-     * @param  \Swagger\Client\Model\MintsoftWarehouseBookStockRequest $request (required)
+     * @param  MintsoftWarehouseBookStockRequest $request (required)
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     *@throws \InvalidArgumentException
+     * @return PromiseInterface
+     *@throws InvalidArgumentException
      */
     public function warehouseStockMovementAsyncWithHttpInfo($action, $request)
     {
@@ -4033,22 +4049,22 @@ class WarehouseApi
      * Create request for operation 'warehouseStockMovement'
      *
      * @param  int $action (required)
-     * @param  \Swagger\Client\Model\MintsoftWarehouseBookStockRequest $request (required)
+     * @param  MintsoftWarehouseBookStockRequest $request (required)
      *
-     * @return \GuzzleHttp\Psr7\Request
-     *@throws \InvalidArgumentException
+     * @return Request
+     * @throws InvalidArgumentException
      */
     protected function warehouseStockMovementRequest($action, $request)
     {
         // verify the required parameter 'action' is set
         if ($action === null || (is_array($action) && count($action) === 0)) {
-            throw new \InvalidArgumentException(
+            throw new InvalidArgumentException(
                 'Missing the required parameter $action when calling warehouseStockMovement'
             );
         }
         // verify the required parameter 'request' is set
         if ($request === null || (is_array($request) && count($request) === 0)) {
-            throw new \InvalidArgumentException(
+            throw new InvalidArgumentException(
                 'Missing the required parameter $request when calling warehouseStockMovement'
             );
         }
@@ -4090,7 +4106,7 @@ class WarehouseApi
             
             if($headers['Content-Type'] === 'application/json') {
                 // \stdClass has no __toString(), so we should encode it manually
-                if ($httpBody instanceof \stdClass) {
+                if ($httpBody instanceof stdClass) {
                     $httpBody = \GuzzleHttp\json_encode($httpBody);
                 }
                 // array has no __toString(), so we should encode it manually
@@ -4115,7 +4131,7 @@ class WarehouseApi
 
             } else {
                 // for HTTP post (form)
-                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams);
+                $httpBody = Query::build($formParams);
             }
         }
 
@@ -4131,7 +4147,7 @@ class WarehouseApi
             $headers
         );
 
-        $query = \GuzzleHttp\Psr7\Query::build($queryParams);
+        $query = Query::build($queryParams);
         return new Request(
             'POST',
             $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
@@ -4149,11 +4165,11 @@ class WarehouseApi
      * @param  int $product_id Product ID - Optional (optional)
      * @param  int $page_no Page No - Default 1 (optional)
      * @param  int $limit Max number of results to return - Default 100 - Max 100 (optional)
-     * @param  \DateTime $since_date filter to only get results since a certain date - useful last 24 hours etc (optional)
+     * @param  DateTime $since_date filter to only get results since a certain date - useful last 24 hours etc (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\MintsoftWarehouseAPIDTOStockMovementDTO[]
+     * @return MintsoftWarehouseAPIDTOStockMovementDTO[]
+     *@throws InvalidArgumentException
+     * @throws ApiException on non-2xx response
      */
     public function warehouseStockMovements($warehouse_id, $product_id = null, $page_no = null, $limit = null, $since_date = null)
     {
@@ -4170,11 +4186,11 @@ class WarehouseApi
      * @param  int $product_id Product ID - Optional (optional)
      * @param  int $page_no Page No - Default 1 (optional)
      * @param  int $limit Max number of results to return - Default 100 - Max 100 (optional)
-     * @param  \DateTime $since_date filter to only get results since a certain date - useful last 24 hours etc (optional)
+     * @param  DateTime $since_date filter to only get results since a certain date - useful last 24 hours etc (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\Model\MintsoftWarehouseAPIDTOStockMovementDTO[], HTTP status code, HTTP response headers (array of strings)
+     *@throws InvalidArgumentException
+     * @throws ApiException on non-2xx response
      */
     public function warehouseStockMovementsWithHttpInfo($warehouse_id, $product_id = null, $page_no = null, $limit = null, $since_date = null)
     {
@@ -4249,10 +4265,10 @@ class WarehouseApi
      * @param  int $product_id Product ID - Optional (optional)
      * @param  int $page_no Page No - Default 1 (optional)
      * @param  int $limit Max number of results to return - Default 100 - Max 100 (optional)
-     * @param  \DateTime $since_date filter to only get results since a certain date - useful last 24 hours etc (optional)
+     * @param  DateTime $since_date filter to only get results since a certain date - useful last 24 hours etc (optional)
      *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @throws InvalidArgumentException
+     * @return PromiseInterface
      */
     public function warehouseStockMovementsAsync($warehouse_id, $product_id = null, $page_no = null, $limit = null, $since_date = null)
     {
@@ -4273,10 +4289,10 @@ class WarehouseApi
      * @param  int $product_id Product ID - Optional (optional)
      * @param  int $page_no Page No - Default 1 (optional)
      * @param  int $limit Max number of results to return - Default 100 - Max 100 (optional)
-     * @param  \DateTime $since_date filter to only get results since a certain date - useful last 24 hours etc (optional)
+     * @param  DateTime $since_date filter to only get results since a certain date - useful last 24 hours etc (optional)
      *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
+     * @throws InvalidArgumentException
+     * @return PromiseInterface
      */
     public function warehouseStockMovementsAsyncWithHttpInfo($warehouse_id, $product_id = null, $page_no = null, $limit = null, $since_date = null)
     {
@@ -4327,16 +4343,16 @@ class WarehouseApi
      * @param  int $product_id Product ID - Optional (optional)
      * @param  int $page_no Page No - Default 1 (optional)
      * @param  int $limit Max number of results to return - Default 100 - Max 100 (optional)
-     * @param  \DateTime $since_date filter to only get results since a certain date - useful last 24 hours etc (optional)
+     * @param  DateTime $since_date filter to only get results since a certain date - useful last 24 hours etc (optional)
      *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
+     * @throws InvalidArgumentException
+     * @return Request
      */
     protected function warehouseStockMovementsRequest($warehouse_id, $product_id = null, $page_no = null, $limit = null, $since_date = null)
     {
         // verify the required parameter 'warehouse_id' is set
         if ($warehouse_id === null || (is_array($warehouse_id) && count($warehouse_id) === 0)) {
-            throw new \InvalidArgumentException(
+            throw new InvalidArgumentException(
                 'Missing the required parameter $warehouse_id when calling warehouseStockMovements'
             );
         }
@@ -4395,7 +4411,7 @@ class WarehouseApi
             
             if($headers['Content-Type'] === 'application/json') {
                 // \stdClass has no __toString(), so we should encode it manually
-                if ($httpBody instanceof \stdClass) {
+                if ($httpBody instanceof stdClass) {
                     $httpBody = \GuzzleHttp\json_encode($httpBody);
                 }
                 // array has no __toString(), so we should encode it manually
@@ -4420,7 +4436,7 @@ class WarehouseApi
 
             } else {
                 // for HTTP post (form)
-                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams);
+                $httpBody = Query::build($formParams);
             }
         }
 
@@ -4436,7 +4452,7 @@ class WarehouseApi
             $headers
         );
 
-        $query = \GuzzleHttp\Psr7\Query::build($queryParams);
+        $query = Query::build($queryParams);
         return new Request(
             'GET',
             $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
@@ -4451,11 +4467,11 @@ class WarehouseApi
      * Update WarehouseTransfer Details
      *
      * @param  int $id ID of the WarehouseTransfer (required)
-     * @param  \Swagger\Client\Model\MintsoftWarehouseAPIWarehouseTransfer $warehouse_transfer  (required)
+     * @param  MintsoftWarehouseAPIWarehouseTransfer $warehouse_transfer  (required)
      *
-     * @return \Swagger\Client\Model\MintsoftCommonToolkitResult
-     *@throws \InvalidArgumentException
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @return MintsoftCommonToolkitResult
+     *@throws InvalidArgumentException
+     * @throws ApiException on non-2xx response
      */
     public function warehouseUpdateWarehouseTransfer($id, $warehouse_transfer)
     {
@@ -4469,11 +4485,11 @@ class WarehouseApi
      * Update WarehouseTransfer Details
      *
      * @param  int $id ID of the WarehouseTransfer (required)
-     * @param  \Swagger\Client\Model\MintsoftWarehouseAPIWarehouseTransfer $warehouse_transfer  (required)
+     * @param  MintsoftWarehouseAPIWarehouseTransfer $warehouse_transfer  (required)
      *
      * @return array of \Swagger\Client\Model\MintsoftCommonToolkitResult, HTTP status code, HTTP response headers (array of strings)
-     *@throws \InvalidArgumentException
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     *@throws InvalidArgumentException
+     * @throws ApiException on non-2xx response
      */
     public function warehouseUpdateWarehouseTransferWithHttpInfo($id, $warehouse_transfer)
     {
@@ -4545,10 +4561,10 @@ class WarehouseApi
      * Update WarehouseTransfer Details
      *
      * @param  int $id ID of the WarehouseTransfer (required)
-     * @param  \Swagger\Client\Model\MintsoftWarehouseAPIWarehouseTransfer $warehouse_transfer  (required)
+     * @param  MintsoftWarehouseAPIWarehouseTransfer $warehouse_transfer  (required)
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     *@throws \InvalidArgumentException
+     * @return PromiseInterface
+     *@throws InvalidArgumentException
      */
     public function warehouseUpdateWarehouseTransferAsync($id, $warehouse_transfer)
     {
@@ -4566,10 +4582,10 @@ class WarehouseApi
      * Update WarehouseTransfer Details
      *
      * @param  int $id ID of the WarehouseTransfer (required)
-     * @param  \Swagger\Client\Model\MintsoftWarehouseAPIWarehouseTransfer $warehouse_transfer  (required)
+     * @param  MintsoftWarehouseAPIWarehouseTransfer $warehouse_transfer  (required)
      *
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     *@throws \InvalidArgumentException
+     * @return PromiseInterface
+     *@throws InvalidArgumentException
      */
     public function warehouseUpdateWarehouseTransferAsyncWithHttpInfo($id, $warehouse_transfer)
     {
@@ -4617,22 +4633,22 @@ class WarehouseApi
      * Create request for operation 'warehouseUpdateWarehouseTransfer'
      *
      * @param  int $id ID of the WarehouseTransfer (required)
-     * @param  \Swagger\Client\Model\MintsoftWarehouseAPIWarehouseTransfer $warehouse_transfer  (required)
+     * @param  MintsoftWarehouseAPIWarehouseTransfer $warehouse_transfer  (required)
      *
-     * @return \GuzzleHttp\Psr7\Request
-     *@throws \InvalidArgumentException
+     * @return Request
+     * @throws InvalidArgumentException
      */
     protected function warehouseUpdateWarehouseTransferRequest($id, $warehouse_transfer)
     {
         // verify the required parameter 'id' is set
         if ($id === null || (is_array($id) && count($id) === 0)) {
-            throw new \InvalidArgumentException(
+            throw new InvalidArgumentException(
                 'Missing the required parameter $id when calling warehouseUpdateWarehouseTransfer'
             );
         }
         // verify the required parameter 'warehouse_transfer' is set
         if ($warehouse_transfer === null || (is_array($warehouse_transfer) && count($warehouse_transfer) === 0)) {
-            throw new \InvalidArgumentException(
+            throw new InvalidArgumentException(
                 'Missing the required parameter $warehouse_transfer when calling warehouseUpdateWarehouseTransfer'
             );
         }
@@ -4678,7 +4694,7 @@ class WarehouseApi
             
             if($headers['Content-Type'] === 'application/json') {
                 // \stdClass has no __toString(), so we should encode it manually
-                if ($httpBody instanceof \stdClass) {
+                if ($httpBody instanceof stdClass) {
                     $httpBody = \GuzzleHttp\json_encode($httpBody);
                 }
                 // array has no __toString(), so we should encode it manually
@@ -4703,7 +4719,7 @@ class WarehouseApi
 
             } else {
                 // for HTTP post (form)
-                $httpBody = \GuzzleHttp\Psr7\Query::build($formParams);
+                $httpBody = Query::build($formParams);
             }
         }
 
@@ -4719,7 +4735,7 @@ class WarehouseApi
             $headers
         );
 
-        $query = \GuzzleHttp\Psr7\Query::build($queryParams);
+        $query = Query::build($queryParams);
         return new Request(
             'POST',
             $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
@@ -4731,7 +4747,7 @@ class WarehouseApi
     /**
      * Create http client option
      *
-     * @throws \RuntimeException on file opening failure
+     * @throws RuntimeException on file opening failure
      * @return array of http client options
      */
     protected function createHttpClientOption()
@@ -4740,7 +4756,7 @@ class WarehouseApi
         if ($this->config->getDebug()) {
             $options[RequestOptions::DEBUG] = fopen($this->config->getDebugFile(), 'ab');
             if (!$options[RequestOptions::DEBUG]) {
-                throw new \RuntimeException('Failed to open the debug file: ' . $this->config->getDebugFile());
+                throw new RuntimeException('Failed to open the debug file: ' . $this->config->getDebugFile());
             }
         }
 
