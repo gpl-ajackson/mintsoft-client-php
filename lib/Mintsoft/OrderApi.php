@@ -7379,15 +7379,16 @@ class OrderApi
      * @param  string $include_tags (optional)
      * @param  bool $include_order_items (optional)
      * @param  bool $show_b2_b_only (optional)
+     * @param bool $sort_oldest_first (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\Model\MintsoftOrdersOrder[], HTTP status code, HTTP response headers (array of strings)
+     *@throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
      */
-    public function orderListOrdersWithHttpInfo($order_status_id = null, $client_id = null, $channel_id = null, $courier_service_id = null, $warehouse_id = null, $page_no = null, $limit = null, $since_date = null, $since_last_updated = null, $since_despatch_date = null, $exclude_tags = null, $include_tags = null, $include_order_items = null, $show_b2_b_only = null)
+    public function orderListOrdersWithHttpInfo($order_status_id = null, $client_id = null, $channel_id = null, $courier_service_id = null, $warehouse_id = null, $page_no = null, $limit = null, $since_date = null, $since_last_updated = null, $since_despatch_date = null, $exclude_tags = null, $include_tags = null, $include_order_items = null, $show_b2_b_only = null, bool $sort_oldest_first = null)
     {
         $returnType = '\Swagger\Client\Model\MintsoftOrdersOrder[]';
-        $request = $this->orderListOrdersRequest($order_status_id, $client_id, $channel_id, $courier_service_id, $warehouse_id, $page_no, $limit, $since_date, $since_last_updated, $since_despatch_date, $exclude_tags, $include_tags, $include_order_items, $show_b2_b_only);
+        $request = $this->orderListOrdersRequest($order_status_id, $client_id, $channel_id, $courier_service_id, $warehouse_id, $page_no, $limit, $since_date, $since_last_updated, $since_despatch_date, $exclude_tags, $include_tags, $include_order_items, $show_b2_b_only, $sort_oldest_first);
 
         try {
             $options = $this->createHttpClientOption();
@@ -7500,14 +7501,15 @@ class OrderApi
      * @param  string $include_tags (optional)
      * @param  bool $include_order_items (optional)
      * @param  bool $show_b2_b_only (optional)
+     * @param bool $sort_oldest_first (optional)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
+     *@throws \InvalidArgumentException
      */
-    public function orderListOrdersAsyncWithHttpInfo($order_status_id = null, $client_id = null, $channel_id = null, $courier_service_id = null, $warehouse_id = null, $page_no = null, $limit = null, $since_date = null, $since_last_updated = null, $since_despatch_date = null, $exclude_tags = null, $include_tags = null, $include_order_items = null, $show_b2_b_only = null)
+    public function orderListOrdersAsyncWithHttpInfo($order_status_id = null, $client_id = null, $channel_id = null, $courier_service_id = null, $warehouse_id = null, $page_no = null, $limit = null, $since_date = null, $since_last_updated = null, $since_despatch_date = null, $exclude_tags = null, $include_tags = null, $include_order_items = null, $show_b2_b_only = null, bool $sort_oldest_first = null)
     {
         $returnType = '\Swagger\Client\Model\MintsoftOrdersOrder[]';
-        $request = $this->orderListOrdersRequest($order_status_id, $client_id, $channel_id, $courier_service_id, $warehouse_id, $page_no, $limit, $since_date, $since_last_updated, $since_despatch_date, $exclude_tags, $include_tags, $include_order_items, $show_b2_b_only);
+        $request = $this->orderListOrdersRequest($order_status_id, $client_id, $channel_id, $courier_service_id, $warehouse_id, $page_no, $limit, $since_date, $since_last_updated, $since_despatch_date, $exclude_tags, $include_tags, $include_order_items, $show_b2_b_only, $sort_oldest_first);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
