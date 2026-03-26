@@ -7563,11 +7563,12 @@ class OrderApi
      * @param  string $include_tags (optional)
      * @param  bool $include_order_items (optional)
      * @param  bool $show_b2_b_only (optional)
+     * @param bool $sort_oldest_first (optional, default to false)
      *
-     * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
+     *@throws \InvalidArgumentException
      */
-    protected function orderListOrdersRequest($order_status_id = null, $client_id = null, $channel_id = null, $courier_service_id = null, $warehouse_id = null, $page_no = null, $limit = null, $since_date = null, $since_last_updated = null, $since_despatch_date = null, $exclude_tags = null, $include_tags = null, $include_order_items = null, $show_b2_b_only = null)
+    protected function orderListOrdersRequest($order_status_id = null, $client_id = null, $channel_id = null, $courier_service_id = null, $warehouse_id = null, $page_no = null, $limit = null, $since_date = null, $since_last_updated = null, $since_despatch_date = null, $exclude_tags = null, $include_tags = null, $include_order_items = null, $show_b2_b_only = null, $sort_oldest_first = 'false')
     {
 
         $resourcePath = '/api/Order/List';
@@ -7632,6 +7633,10 @@ class OrderApi
         // query params
         if ($show_b2_b_only !== null) {
             $queryParams['showB2BOnly'] = ObjectSerializer::toQueryValue($show_b2_b_only);
+        }
+        // query params
+        if ($sort_oldest_first !== null) {
+            $queryParams['SortOldestFirst'] = ObjectSerializer::toQueryValue($sort_oldest_first);
         }
 
 
