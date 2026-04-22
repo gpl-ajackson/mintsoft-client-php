@@ -1615,9 +1615,9 @@ class MintsoftOrdersAPINewOrder implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Sets tags
+     * Sets the order tags
      *
-     * @param $tags
+     * @param string $tags
      * @return $this
      */
     public function setTags($tags)
@@ -1628,9 +1628,9 @@ class MintsoftOrdersAPINewOrder implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets tags
+     * Gets the order tags tags
      *
-     * @return mixed
+     * @return string
      */
     public function getTags()
     {
