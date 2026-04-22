@@ -103,7 +103,8 @@ class MintsoftOrdersAPINewOrder implements ModelInterface, ArrayAccess
         'client_id' => 'int',
         'number_of_parcels' => 'int',
         'cash_on_delivery' => '\Swagger\Client\Model\MintsoftOrdersAPICashOnDelivery',
-        'recipient_type' => 'string'
+        'recipient_type' => 'string',
+        'tags' => 'string',
     ];
 
     /**
@@ -158,7 +159,8 @@ class MintsoftOrdersAPINewOrder implements ModelInterface, ArrayAccess
         'client_id' => 'int32',
         'number_of_parcels' => 'int32',
         'cash_on_delivery' => null,
-        'recipient_type' => null
+        'recipient_type' => null,
+        'tags' => null,
     ];
 
     /**
@@ -234,7 +236,8 @@ class MintsoftOrdersAPINewOrder implements ModelInterface, ArrayAccess
         'client_id' => 'ClientId',
         'number_of_parcels' => 'NumberOfParcels',
         'cash_on_delivery' => 'CashOnDelivery',
-        'recipient_type' => 'RecipientType'
+        'recipient_type' => 'RecipientType',
+        'tags' => 'Tags',
     ];
 
     /**
@@ -289,7 +292,8 @@ class MintsoftOrdersAPINewOrder implements ModelInterface, ArrayAccess
         'client_id' => 'setClientId',
         'number_of_parcels' => 'setNumberOfParcels',
         'cash_on_delivery' => 'setCashOnDelivery',
-        'recipient_type' => 'setRecipientType'
+        'recipient_type' => 'setRecipientType',
+        'tags' => 'setTags',
     ];
 
     /**
@@ -344,7 +348,8 @@ class MintsoftOrdersAPINewOrder implements ModelInterface, ArrayAccess
         'client_id' => 'getClientId',
         'number_of_parcels' => 'getNumberOfParcels',
         'cash_on_delivery' => 'getCashOnDelivery',
-        'recipient_type' => 'getRecipientType'
+        'recipient_type' => 'getRecipientType',
+        'tags' => 'getTags',
     ];
 
     /**
@@ -454,6 +459,7 @@ class MintsoftOrdersAPINewOrder implements ModelInterface, ArrayAccess
         $this->container['number_of_parcels'] = isset($data['number_of_parcels']) ? $data['number_of_parcels'] : null;
         $this->container['cash_on_delivery'] = isset($data['cash_on_delivery']) ? $data['cash_on_delivery'] : null;
         $this->container['recipient_type'] = isset($data['recipient_type']) ? $data['recipient_type'] : null;
+        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
     }
 
     /**
@@ -1606,6 +1612,29 @@ class MintsoftOrdersAPINewOrder implements ModelInterface, ArrayAccess
         $this->container['recipient_type'] = $recipient_type;
 
         return $this;
+    }
+
+    /**
+     * Sets tags
+     *
+     * @param $tags
+     * @return $this
+     */
+    public function setTags($tags)
+    {
+        $this->container['tags'] = $tags;
+
+        return $this;
+    }
+
+    /**
+     * Gets tags
+     *
+     * @return mixed
+     */
+    public function getTags()
+    {
+        return $this->container['tags'];
     }
     /**
      * Returns true if offset exists. False otherwise.
